@@ -132,3 +132,19 @@ Plain `pd.read_csv(path)` works for 23 of the 32 CSVs. For the rest:
   one file, so even `comment="#"` fails (`Expected N fields, saw M`). Split on the
   section markers first: `c1_dcr_ncv_multiclass.csv`, `c1_dcr_ncv_summary.csv`,
   `deployment_metrics.csv`, `predictability_3arch.csv`.
+
+## 2026-10-10 additions (post-repair wave)
+
+Three artifacts beyond the inventory counts above (54 files total: 33 CSVs,
+9 *NOTICE* files incl. the 2026-10-10 val-leak notice, and 12 other files):
+
+- \e3_patient_bca_cells.csv\ / \e3_patient_bca_summary.json\ /
+  \e3_patient_bca_pooled_draws.npz\ — the **registered-unit NCV/DCR
+  deliverable**: patient-level cluster bootstrap, B = 10,000, BCa per cell with
+  leave-one-patient-out acceleration; equal-cell-weight pooled draws archived.
+  Producer \scripts/e3_patient_bca.py\; per-cell recomputed NCV/DCR are
+  integrity-gate-matched to \c1_dcr_ncv_multiclass.csv\ (60/60 exact at 1e-9).
+  Pooled OOD NCV $+0.000238$, BCa CI $[+0.000125, +0.000353]$; DCR
+  $+0.000526$, $[+0.000280, +0.000775]$; ID side covers zero. This is the
+  registered unit closed out after the 2026-10-10 review exchange (previously
+  the paper reported proxy units only).

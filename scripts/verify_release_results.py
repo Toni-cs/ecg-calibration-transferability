@@ -57,9 +57,9 @@ def csv_census() -> None:
                 comment.append(p.name)
             except Exception:
                 blocked.append(p.name)
-    ok = (len(csvs), len(plain), len(comment), len(blocked)) == (32, 24, 5, 3)
+    ok = (len(csvs), len(plain), len(comment), len(blocked)) == (33, 25, 5, 3)
     check("csv_census", ok,
-          f"32 CSVs = 24 plain + 5 comment-header + 3 multi-block; "
+          f"33 CSVs = 25 plain + 5 comment-header + 3 multi-block; "
           f"got {len(csvs)} = {len(plain)} + {len(comment)} + {len(blocked)}")
 
 
@@ -188,9 +188,31 @@ def withheld_absent() -> None:
           else "present but must not be shipped: " + ", ".join(present))
 
 
+def e3_patient_bca() -> None:
+    """Registered-unit E3 deliverable: patient-level BCa summary."""
+    summ = json.loads((RESULTS / "e3_patient_bca_summary.json").read_text(encoding="utf-8"))
+    pooled = summ["pooled"]
+    ncv = pooled["ncv_ood"]
+    dcr = pooled["dcr_ood"]
+    idc = pooled["ncv_id"]
+    ok = (close(ncv["point"], 0.000238, 5e-5) and ncv["bca_lo"] > 0
+          and close(ncv["bca_lo"], 0.000125, 5e-5)
+          and close(ncv["bca_hi"], 0.000353, 5e-5)
+          and close(dcr["point"], 0.000526, 5e-5) and dcr["bca_lo"] > 0
+          and close(dcr["bca_lo"], 0.000280, 5e-5) and close(dcr["bca_hi"], 0.000775, 5e-5)
+          and idc["bca_lo"] < 0 < idc["bca_hi"])
+    count_cells = len(pd.read_csv(RESULTS / "e3_patient_bca_cells.csv"))
+    ok = ok and count_cells == 60 and summ["percell_support_counts"]["ncv_ood_lo_gt0"] == 9
+    check("e3_patient_bca", ok,
+          f"pooled OOD NCV {ncv['point']:+.6f}, patient-level BCa CI "
+          f"[{ncv['bca_lo']:+.6f}, {ncv['bca_hi']:+.6f}] excludes zero; DCR CI "
+          f"[{dcr['bca_lo']:+.6f}, {dcr['bca_hi']:+.6f}]; per-cell support 9/60 "
+          f"(published: patient-level registered unit, B=10,000, integrity gate 60/60)")
+
+
 CHECKS = [csv_census, primary_endpoint, pooled_estimates, l2_grid,
           deployment_table, raw_ece_range, dose_response, bootstrap_widths,
-          withheld_absent]
+          e3_patient_bca, withheld_absent]
 
 
 def main() -> int:

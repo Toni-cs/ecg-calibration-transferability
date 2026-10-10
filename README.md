@@ -72,7 +72,7 @@ Each preprocessor writes `metadata_single_label.csv`, `preprocess_summary.json` 
 # 0. Quick self-check: re-derive every number quoted in this README from results/
 #    (seconds; needs no dataset, no checkpoints, no GPU; exit 1 on any mismatch)
 python scripts/verify_release_results.py
-# current status: 11 checks PASS, exit 0
+# current status: 12 checks PASS, exit 0
 
 # 1. Install and preprocess (see above)
 
@@ -308,7 +308,8 @@ stays re-runnable; it is *not* part of the reproduction pipeline above.
 | Small-sample dose-response (protocol §S2) | `scripts/run_s2_small_sample.py` | `results/s2_dose_response.csv`, `results/s2_dose_response_summary.json` |
 | Counter-example discrimination | `scripts/discriminate_counterexamples.py` | `results/counterexample_discrimination.csv`, `.json` |
 | Shapley decomposition rebuilds | `scripts/rebuild_shapley_crossfit.py`, `scripts/rebuild_shapley_slopeT.py` | `results/rebuild_shapley_*.csv/.json` |
-| README self-check (re-derives every number quoted above) | `scripts/verify_release_results.py` | exit 0 = 11 checks PASS |
+| Registered-unit NCV/DCR (patient-level BCa, B=10,000) | `scripts/e3_patient_bca.py` | `results/e3_patient_bca_cells.csv`, `results/e3_patient_bca_summary.json`, `results/e3_patient_bca_pooled_draws.npz` |
+| README self-check (re-derives every number quoted above) | `scripts/verify_release_results.py` | exit 0 = 12 checks PASS |
 | Preregistered protocol and amendments A1, A2 | — (archived, not generated) | `docs/EXPERIMENT_PROTOCOL.md`, `docs/PROTOCOL_AMENDMENT_A1_*.md`, `docs/PROTOCOL_AMENDMENT_A2_*.md` — byte-identical to OSF archive [10.17605/OSF.IO/53H64](https://doi.org/10.17605/OSF.IO/53H64) (immutable, per-file SHA-256 checksums); amendment A3 ships here but is not in the OSF deposit (see [`docs/PREREGISTRATION_ALIGNMENT.md`](docs/PREREGISTRATION_ALIGNMENT.md)) |
 
 Generators that are **not** in this checkout (data are shipped, script is not):
