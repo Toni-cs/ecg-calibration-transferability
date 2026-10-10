@@ -279,6 +279,15 @@ Each row names the script that *writes* the artifact (verified by locating the
 per-file inventory of `results/` — including files whose generator is not in any
 branch — see [`results/README.md`](results/README.md).
 
+**Script tiers.** `scripts/` deliberately holds two layers. The pipeline layer
+(train / eval / export_splits / preprocess / run_e* / step* / regenerate_* /
+verify_release) is what the rows below name. The audit-provenance layer
+(`probe_*`, `adjudicate_*`, `diagnose_*`, `recompute_*_old_encoding`,
+`retrain_cpsc_ptbxl_it_seed42_43`, `verify_*_encoding`, …) re-derives or
+cross-checks numbers cited by the notices in [`results/`](results/) and the
+reports in [`reports/`](reports/) — it is kept verbatim so every archived claim
+stays re-runnable; it is *not* part of the reproduction pipeline above.
+
 | Paper element | Script | Artifact |
 |---|---|---|
 | Data splits (all experiments) | `scripts/export_splits.py` | `splits/*.csv` |
@@ -303,8 +312,10 @@ branch — see [`results/README.md`](results/README.md).
 | Preregistered protocol and amendments A1, A2 | — (archived, not generated) | `docs/EXPERIMENT_PROTOCOL.md`, `docs/PROTOCOL_AMENDMENT_A1_*.md`, `docs/PROTOCOL_AMENDMENT_A2_*.md` — byte-identical to OSF archive [10.17605/OSF.IO/53H64](https://doi.org/10.17605/OSF.IO/53H64) (immutable, per-file SHA-256 checksums); amendment A3 ships here but is not in the OSF deposit (see [`docs/PREREGISTRATION_ALIGNMENT.md`](docs/PREREGISTRATION_ALIGNMENT.md)) |
 
 Generators that are **not** in this checkout (data are shipped, script is not):
-`results/real_prior_recovery_summary.json` has no writer in this checkout, the lab
-tree, or the `full-work` branch. `results/decomposition_validation.csv` (no suffix)
+`results/real_prior_recovery_summary.json` has no writer in this checkout or the
+lab tree; its September-era generator lived on the now-retired `full-work`
+branch, whose full 69-commit snapshot is preserved indefinitely as tag
+`historical/full-work-20260917`. `results/decomposition_validation.csv` (no suffix)
 is a legacy name for the archived n = 500 run — byte-identical to the archived
 `decomposition_validation_n500_20260829.bak.csv` — and is *not* the n = 20,000
 table.
