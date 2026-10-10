@@ -56,6 +56,10 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
+    # `logs/` is intentionally git-ignored (see .gitignore), so a fresh clone has
+    # no such directory: opening the log would raise FileNotFoundError before a
+    # single experiment ran. Create it on demand instead.
+    Path(LOG).parent.mkdir(parents=True, exist_ok=True)
     open(LOG, "w").close()
     todo, skip_n = [], 0
     for src, tgt, sd, td in PAIRS:

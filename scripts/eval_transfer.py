@@ -188,6 +188,14 @@ def run_pair(args, source_name, source_dir, target_name, target_dir,
 
     rng = np.random.default_rng(seed)
     for mname in args.methods:
+        # Per-method fit parameters. This MUST be reset on every iteration:
+        # `fit_params` is read unconditionally below (the meta "T" column) but
+        # was historically only assigned in the non-prior branch. As a result a
+        # prior method (em_prior / bbse_prior, which fit no temperature)
+        # inherited the *previous* method's parameters -- so `--methods ts
+        # em_prior` recorded ts's T under em_prior's entry -- and crashed with
+        # UnboundLocalError if a prior method ran first.
+        fit_params = {}
         if mname in ("em_prior", "bbse_prior"):
             # S1 (target-domain unsupervised prior adaptation; Saerens 2002 / BBSE, Lipton 2018):
             # estimate the target prior pi_hat from source-cal (labeled) + target-test (unlabeled) -> rescale probabilities.

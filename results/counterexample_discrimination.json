@@ -1,0 +1,130 @@
+{
+  "rule": "predict deltaECE_OOD > 0 iff T_src > 1",
+  "n": 60,
+  "confusion": {
+    "TP": 45,
+    "FP": 0,
+    "FN": 0,
+    "TN": 15
+  },
+  "sensitivity": 1.0,
+  "specificity": 1.0,
+  "accuracy": 1.0,
+  "constant_positive_baseline_accuracy": 0.75,
+  "obs_positive_rate": 0.75,
+  "roc_auc": 1.0,
+  "mw_p_two_sided": "<1e-12 (numerically zero; perfect separation, U=0)",
+  "n_strata_pair_x_arch": 12,
+  "strata_fully_consistent": "2/12",
+  "strata_with_T_below_1_all_negative": "0/0",
+  "stratum_negative_list": [],
+  "bootstrap": {
+    "B": 10000,
+    "cluster_unit": "transfer pair",
+    "auc_ci95": [
+      1.0,
+      1.0
+    ],
+    "sens_ci95": [
+      1.0,
+      1.0
+    ],
+    "spec_ci95": [
+      1.0,
+      1.0
+    ]
+  },
+  "negative_cells_detail": [
+    {
+      "cell": "chapman_cpsc_inceptiontime_seed45",
+      "T_src": 0.9701,
+      "delta_obs_orig": -0.00565,
+      "predicted": "negative"
+    },
+    {
+      "cell": "chapman_cpsc_resnet1d_seed43",
+      "T_src": 0.9971,
+      "delta_obs_orig": -0.0006,
+      "predicted": "negative"
+    },
+    {
+      "cell": "chapman_ptbxl_inceptiontime_seed42",
+      "T_src": 0.9844,
+      "delta_obs_orig": -0.002479,
+      "predicted": "negative"
+    },
+    {
+      "cell": "chapman_ptbxl_resnet1d_seed45",
+      "T_src": 0.9879,
+      "delta_obs_orig": -0.003567,
+      "predicted": "negative"
+    },
+    {
+      "cell": "cpsc_chapman_resnet1d_seed42",
+      "T_src": 0.9925,
+      "delta_obs_orig": -0.000998,
+      "predicted": "negative"
+    },
+    {
+      "cell": "cpsc_chapman_resnet1d_seed44",
+      "T_src": 0.932,
+      "delta_obs_orig": -0.016788,
+      "predicted": "negative"
+    },
+    {
+      "cell": "cpsc_ptbxl_inceptiontime_seed43",
+      "T_src": 0.9752,
+      "delta_obs_orig": -0.005657,
+      "predicted": "negative"
+    },
+    {
+      "cell": "cpsc_ptbxl_resnet1d_seed43",
+      "T_src": 0.9801,
+      "delta_obs_orig": -0.004964,
+      "predicted": "negative"
+    },
+    {
+      "cell": "cpsc_ptbxl_resnet1d_seed44",
+      "T_src": 0.9812,
+      "delta_obs_orig": -0.004855,
+      "predicted": "negative"
+    },
+    {
+      "cell": "ptbxl_chapman_inceptiontime_seed44",
+      "T_src": 0.9896,
+      "delta_obs_orig": -0.003295,
+      "predicted": "negative"
+    },
+    {
+      "cell": "ptbxl_cpsc_inceptiontime_seed42",
+      "T_src": 0.967,
+      "delta_obs_orig": -0.008325,
+      "predicted": "negative"
+    },
+    {
+      "cell": "ptbxl_cpsc_inceptiontime_seed45",
+      "T_src": 0.9528,
+      "delta_obs_orig": -0.012308,
+      "predicted": "negative"
+    },
+    {
+      "cell": "ptbxl_cpsc_resnet1d_seed42",
+      "T_src": 0.9697,
+      "delta_obs_orig": -0.006912,
+      "predicted": "negative"
+    },
+    {
+      "cell": "ptbxl_cpsc_resnet1d_seed45",
+      "T_src": 0.9778,
+      "delta_obs_orig": -0.005738,
+      "predicted": "negative"
+    },
+    {
+      "cell": "ptbxl_cpsc_resnet1d_seed46",
+      "T_src": 0.9809,
+      "delta_obs_orig": -0.004777,
+      "predicted": "negative"
+    }
+  ],
+  "note": "The rule's entire value over the constant-positive baseline (sens 100%, spec 0%) is the specificity it buys without losing sensitivity; report both, never the accuracy alone."
+}

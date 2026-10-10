@@ -1,0 +1,83 @@
+{
+ "timestamp_utc": "2026-09-16T02:44:47.871553+00:00",
+ "project": "DECAL: ECG Calibration Repair ID→OOD Decay Decomposition",
+ "target_venue": "CMPB (Computer Methods and Programs in Biomedicine, Elsevier)",
+ "osf_project_doi": "10.17605/OSF.IO/53H64",
+ "osf_project_url": "https://osf.io/53h64/",
+ "osf_registration_doi": "10.17605/OSF.IO/WJZ3Y",
+ "osf_registration_url": "https://osf.io/wjz3y/",
+ "osf_doi_note": "Both DOIs above were verified to resolve on 2026-09-18 (HTTP 200 through doi.org). The OSF registration metadata page displays a Registration DOI of 10.17605/OSF.IO/NGJE2Y, but that DOI does NOT resolve (HTTP 404 through doi.org on 2026-09-18) and must not be cited. The only registration under project 53h64 is GUID wjz3y (OSF Preregistration, registered 2026-09-14, public, title matches); its DOI is 10.17605/OSF.IO/WJZ3Y. The manuscript and cover letter cite the project DOI 10.17605/OSF.IO/53H64, which resolves.",
+ "files": {
+  "docs/EXPERIMENT_PROTOCOL.md": {
+   "sha256": "0e8afa923986aba3f5030133c59b8a87b475c3551b819b0137ab9da66eeb9498",
+   "size_bytes": 52641,
+   "mtime": "2026-09-09T01:33:51.039391+00:00"
+  },
+  "paper/main_bspc.tex": {
+   "sha256": "ae24f68ee1721551a38d59f78ed511aea68a3f13fc7d5aaaf8d573af3bcf9937",
+   "size_bytes": 111108,
+   "mtime": "2026-09-16T02:21:31.818520+00:00"
+  },
+  "scripts/eval_transfer.py": {
+   "sha256": "06860d8b9abd1e1684e8940847f64f1fbdfbdbf4a229bc8fe951a91a8c49522c",
+   "size_bytes": 19312,
+   "mtime": "2026-09-10T06:12:01.636785+00:00"
+  },
+  "scripts/eval_l2_shift.py": {
+   "sha256": "369d8d959d72895e910b788d0515a105710ea04d1eacd39aa3cd1d06767d4759",
+   "size_bytes": 10585,
+   "mtime": "2026-09-10T04:46:53.571830+00:00"
+  },
+  "scripts/step2_predictability.py": {
+   "sha256": "ace6a52c32bc50e15bcc5e975c2b587e5e147d35ca18e169b9f7be84e591dec6",
+   "size_bytes": 11431,
+   "mtime": "2026-09-06T10:38:34.105860+00:00"
+  },
+  "scripts/step3_deployment.py": {
+   "sha256": "430241673e4d270f479f1b3b32d60264afc8a9c8f84e56e98d91dca2821f42c9",
+   "size_bytes": 21760,
+   "mtime": "2026-09-06T10:38:34.105860+00:00"
+  },
+  "scripts/summarize_l2_shifts.py": {
+   "sha256": "ff8d537a169e575f59e8bb68281c7f1248358de4f647f88cb8415e8340c713b8",
+   "size_bytes": 5235,
+   "mtime": "2026-09-05T04:28:32.352459+00:00"
+  },
+  "src/data/l2_shifts.py": {
+   "sha256": "7bea546b0d6b705aeb180fb613d66692fde63c49ee32217e897a84254fff94cd",
+   "size_bytes": 8789,
+   "mtime": "2026-09-10T03:03:09.989067+00:00"
+  },
+  "src/data/mapping.py": {
+   "sha256": "649bde9e4e13ffd31ab77b9cad8b21d372e495a2fa0cda52d8658b50686b2db2",
+   "size_bytes": 30018,
+   "mtime": "2026-09-09T12:26:34.407877+00:00"
+  },
+  "src/utils/calibration.py": {
+   "sha256": "41f54797a6f03bb7143608274403beee47f537464d5b734bc7828ff68310cb54",
+   "size_bytes": 32237,
+   "mtime": "2026-09-12T14:00:23.473622+00:00"
+  },
+  "src/utils/calibration_methods.py": {
+   "sha256": "254c7d50325dad1cda602590cd282687758d75bede8d615b0973ca40e078ae72",
+   "size_bytes": 16973,
+   "mtime": "2026-09-02T01:16:38.352194+00:00"
+  },
+  "src/utils/prior_shift.py": {
+   "sha256": "1da4788a59920803d75fee7168ba1e5bbc2c663ed73821c63cd33280cda04cc9",
+   "size_bytes": 9852,
+   "mtime": "2026-09-04T00:14:00.404263+00:00"
+  },
+  "src/models/ecg_classifier.py": {
+   "sha256": "43066bd74840696600835edb0ab8b04b348ad48411e7252cfcaefef74b68713a",
+   "size_bytes": 5706,
+   "mtime": "2026-09-02T05:11:05.561670+00:00"
+  },
+  "src/models/baselines.py": {
+   "sha256": "277f68763a4a3d3222c6c8faa51ee3908eb52126e3c7cb4b25296315ebf1c0b3",
+   "size_bytes": 11568,
+   "mtime": "2026-09-09T12:27:44.067105+00:00"
+  }
+ },
+ "_post_manifest_corrections": "Snapshot is intentionally NOT rewritten. Six of the 14 recorded files changed after this timestamp (src/data/mapping.py, scripts/eval_transfer.py, scripts/eval_l2_shift.py, scripts/step2_predictability.py, scripts/summarize_l2_shifts.py, paper/main_bspc.tex) and target_venue is superseded (now CMPB). See docs/OSF_MANIFEST_POST_CORRECTIONS_2026-09-17.md (supersedes the 2026-09-16 record, which observed only 2 of the 6) and run scripts/audit_manifest_drift.py. The 8 remaining hashes, including the pre-registered protocol itself and the metric implementation src/utils/calibration.py, are unchanged."
+}

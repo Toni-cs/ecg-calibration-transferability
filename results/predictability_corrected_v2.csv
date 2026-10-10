@@ -1,0 +1,15 @@
+# ECG-Lab 可预测性分析（修正世界 v2，单一编码口径）
+# y,"delta_obs_orig (corrected world, rebuild_shapley_slopeT.csv; 断言=raw-cal)"
+# T,"T_src (corrected world, rebuild_shapley_slopeT.csv; 与E2重跑新表一致)"
+# wass/ent,strengthening_battle_corrected.json（标签无关）
+# 交叉断言,counterexample_discrimination.csv 逐格一致 (A2); sign=60/60 (A3)
+# n,60
+# ridge alpha,1.0,# bootstrap B,4000,# cluster,"(arch,pair)"
+# sign_accuracy,1.000000,# const_positive_baseline,0.833333
+# verdict,失败分支触发
+
+feature_set,corr,r2_corr2,loo_cell,loo_pair,loo_arch_pair,ci_arch_pair_lo,ci_arch_pair_hi,ci_cell_lo,ci_cell_hi
+T,0.975905,0.952391,0.371843,0.303364,0.349727,0.058475,0.370883,0.215817,0.589610
+wasserstein,-0.130251,0.016965,-0.054332,-0.184635,-0.074369,-0.526877,0.060089,-0.086685,0.102600
+entropy_diff,-0.195363,0.038167,-0.018894,-0.075969,-0.033642,-0.269940,0.014827,-0.045359,0.079721
+T+wass+ent,nan,nan,0.370142,0.248755,0.343973,-0.106511,0.381469,0.225459,0.591955

@@ -123,6 +123,17 @@ def main():
 
     results = {}
     for exp in exps:
+        # Defensive guard: skip an entry point whose script file is missing
+        # instead of aborting the whole batch with a bare traceback, which is
+        # what a partial checkout used to do at the first missing script.
+        # All seven scripts are present in this checkout, so the guard only
+        # fires in a stripped-down tree.
+        script = next((a for a in exp["cmd"] if a.endswith(".py")), None)
+        if script and not os.path.exists(os.path.join(WORK_DIR, script)):
+            print(f"\nSkipping {exp['name']}: {script} is not present in this "
+                  f"checkout (expected at {os.path.join(WORK_DIR, script)}).")
+            results[exp["name"]] = None
+            continue
         ok = run_experiment(exp)
         results[exp["name"]] = ok
         if not ok and exp["name"] != "E5":
@@ -132,7 +143,7 @@ def main():
     print("All experiments complete")
     print(f"{'='*80}")
     for name, ok in results.items():
-        status = "✓ success" if ok else "✗ failed"
+        status = "✓ success" if ok else ("· skipped (script not in this checkout)" if ok is None else "✗ failed")
         print(f"  {name}: {status}")
 
 
