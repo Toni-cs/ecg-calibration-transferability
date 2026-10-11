@@ -212,9 +212,13 @@ sha256sum docs/EXPERIMENT_PROTOCOL.md
 # (the SHA-256 the OSF API reports for 02_PROTOCOL_ZH_original.md)
 ```
 
-A3 and A4 ship here and are **queued for the OSF deposit upload**
-(the deposit currently predates them; see
-[`docs/PREREGISTRATION_ALIGNMENT.md`](docs/PREREGISTRATION_ALIGNMENT.md) finding F2).
+A3 and A4 ship here and are **in the project deposit** (53h64 Files,
+uploaded 2026-10-11 with per-file SHA-256 verified bit-identical to the
+repository copies; the frozen registration WJZ3Y still carries v1 — a
+registration-update draft to mint v2 with the same four files is
+authored and pending submission; see
+[`docs/PREREGISTRATION_ALIGNMENT.md`](docs/PREREGISTRATION_ALIGNMENT.md)
+and [`docs/OSF_ADDENDUM_2026-10-12.md`](docs/OSF_ADDENDUM_2026-10-12.md)).
 
 They are duplicated deliberately rather than left to the OSF record alone: the
 manuscript cites two of these files by path, and eleven files already committed to

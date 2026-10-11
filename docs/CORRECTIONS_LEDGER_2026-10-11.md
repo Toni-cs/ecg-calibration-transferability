@@ -47,9 +47,16 @@ manuscript) and the delivered set, superseding stale readouts elsewhere.
    artifact is the delivered alternative.
 3. **NCV artifacts** (e3/c3 families) — second-source adjudication of the
    post-retrain NCV shrinkage wording remains open.
-5. **OSF deposit housekeeping**: A3 not in the deposit (now disclosed in the
-   README), dead project-page link (F1), frozen registration cannot carry the
-   51→50→45 evolution — upload the addendum instead.
+5. **OSF deposit housekeeping** — **project layer closed 2026-10-11**: the
+   four closure files (A3, A4, corrections ledger, OSF addendum) are in the
+   project deposit (53h64 Files), each SHA-256 verified bit-identical to the
+   repository copies (A3 `2025126e…`, A4 `cfc8955…`, ledger `75bd139…`,
+   addendum `97d3c42a…`). Remaining user-side items: submit the registration
+   update draft (WJZ3Y → v2, justification + four files authored) and apply
+   the full-text description replacement (original verbatim + appended
+   ADDENDUM block, prepared as `OSF_DESC_FULL_2026-10-12.txt`). The frozen
+   registration value itself stays untouched by design (F3 doctrine:
+   frozen record + additive disclosure).
 6. **Submission recompile**: done on 2026-10-11 — `main_cmpb.pdf` (81 pages
    after A15/A16, exit 0, zero undefined citations), `cover_letter.pdf`
    (2 pages, exit 0), `supplementary.pdf` (12 pages, exit 0) rebuilt from the
