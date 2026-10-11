@@ -1,0 +1,14 @@
+scheme,holdout_level,best_threshold,sensitivity,specificity,youden_J,TP,FP,TN,FN,note,mean_delta_routed,std_delta_routed,n_routed
+in_sample_780grid,*,0.20608394861804966,0.7717391304347826,0.5339805825242718,0.3057197129590543,284.0,192.0,220.0,84.0,"780-grid recompute (beneficial = ts_delta_ece < -0.01, deployment-metrics strict convention)",,,
+downsample,fs125,0.20897388423359614,0.6666666666666666,0.7,0.3666666666666667,20.0,9.0,21.0,10.0,"780-grid recompute (beneficial = ts_delta_ece < -0.01, deployment-metrics strict convention)",,,
+lead_drop,leads2,0.20595202995222212,0.96,0.4857142857142857,0.44571428571428573,24.0,18.0,17.0,1.0,"780-grid recompute (beneficial = ts_delta_ece < -0.01, deployment-metrics strict convention)",,,
+noise,noise0,0.20602091144405346,0.7777777777777778,0.6060606060606061,0.38383838383838387,21.0,13.0,20.0,6.0,"780-grid recompute (beneficial = ts_delta_ece < -0.01, deployment-metrics strict convention)",,,
+gain,gain2.0,0.20603766881208646,0.8709677419354839,0.41379310344827586,0.2847608453837598,27.0,17.0,12.0,4.0,"780-grid recompute (beneficial = ts_delta_ece < -0.01, deployment-metrics strict convention)",,,
+frozen_threshold_poolera,4 holdout levels,0.126725,0.9292035398230089,0.2283464566929134,0.15754999651592216,105.0,98.0,29.0,8.0,"780-grid recompute (beneficial = ts_delta_ece < -0.01, deployment-metrics strict convention)",,,
+fixed_t_0.073,*,0.073,0.9728260869565217,0.0970873786407767,0.06991346559729839,358.0,372.0,40.0,10.0,"780-grid recompute (beneficial = ts_delta_ece < -0.01, deployment-metrics strict convention)",,,
+fixed_t_0.102,*,0.102,0.9592391304347826,0.18932038834951456,0.14855951878429718,353.0,334.0,78.0,15.0,"780-grid recompute (beneficial = ts_delta_ece < -0.01, deployment-metrics strict convention)",,,
+fixed_t_0.172,*,0.172,0.8070652173913043,0.4587378640776699,0.26580308146897424,297.0,223.0,189.0,71.0,"780-grid recompute (beneficial = ts_delta_ece < -0.01, deployment-metrics strict convention)",,,
+fixed_t_0.213,*,0.213,0.7445652173913043,0.5461165048543689,0.29068172224567324,274.0,187.0,225.0,94.0,"780-grid recompute (beneficial = ts_delta_ece < -0.01, deployment-metrics strict convention)",,,
+fixed_t_0.321,*,0.321,0.35597826086956524,0.7718446601941747,0.12782292106374005,131.0,94.0,318.0,237.0,"780-grid recompute (beneficial = ts_delta_ece < -0.01, deployment-metrics strict convention)",,,
+in_sample_780grid,*,0.20608394861804966,,,,,,,,,,,
+lookup_table_strategy,raw_ece > in-sample optimum,0.20608394861804966,,,,,,,,,-0.011632387564812982,0.011622798522985466,476

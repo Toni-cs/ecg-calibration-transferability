@@ -53,6 +53,7 @@ to this checkout to close the result↔script gap; the rest were already here.
 | `meta_analytic_pooled.csv` | fixed-effect / DerSimonian–Laird pooled rows and Q statistics | `regenerate_stats_60exp.py` (repo root) | 2026-10-10 (post-retrain regeneration wave) |
 | `bh_fdr_correction.csv` | BH-60 and Bonferroni multiple-testing control | `regenerate_stats_60exp.py` (repo root) | 2026-09-06 ⚠ pre-retrain era snapshot (51/60-generation readout), retained for provenance; the current confirmatory counts quoted by the article (BH-12 = 7/12, Bonferroni-12 = 6/12) come from `robustness_validation_5seeds.csv` via `regenerate_stats_60exp.py` and are re-derived in `verify_release_results.py` — do not quote this file's counts |
 | `bootstrap_diagnostics.csv` | per-method bootstrap bookkeeping | `p2_optional_fixes.py` | 2026-10-08 |
+| `robustness_val_8method_perbranch_recheck.csv` | 8-method OOD ΔECE recomputed from the cached probability arrays with per-branch correctness (TS gate: 60/60 exact; EM $-0.0040 \to -0.0378$ corrected; see the ledger) | `recheck_method_semantics.py` | 2026-10-11 |
 
 ### Deployment safety and the L2 grid
 
@@ -63,6 +64,7 @@ to this checkout to close the result↔script gap; the rest were already here.
 | `l2_shift_full_390cells.csv` | 390-cell (pair, seed, shift) safety grid | `run_e1a_l2_shift_full.py` | 2026-10-09 |
 | `l2_shift_full_780cells_detail.csv` | per-architecture detail behind it | `run_e1a_l2_shift_full.py` | 2026-10-09 |
 | `l2_shift_full_summary.json` | counters (`n_safe_cells` = 348; 348/390 = 89.2% pass with ≥1 architecture, 222/390 = 56.9% with both) | `run_e1a_l2_shift_full.py` | 2026-10-09 |
+| `deployment_780grid_recompute.csv` | the article's `tab:deploy_sens` sens/spec/J rows recomputed on the delivered 780-cell grid (P=368/N=412, matching `deployment_metrics.csv` exactly) + leave-shift-type-out rows + the `tab:trivial` lookup-table strategy row (n_routed=476, mean −0.0116) | `recompute_deployment_780grid.py` | 2026-10-11 |
 
 ### Decomposition estimator
 

@@ -332,6 +332,8 @@ stays re-runnable; it is *not* part of the reproduction pipeline above.
 | Counter-example discrimination | `scripts/discriminate_counterexamples.py` | `results/counterexample_discrimination.csv`, `.json` |
 | Shapley decomposition rebuilds | `scripts/rebuild_shapley_crossfit.py`, `scripts/rebuild_shapley_slopeT.py` | `results/rebuild_shapley_*.csv/.json` |
 | Registered-unit NCV/DCR (patient-level BCa, B=10,000) | `scripts/e3_patient_bca.py` | `results/e3_patient_bca_cells.csv`, `results/e3_patient_bca_summary.json`, `results/e3_patient_bca_pooled_draws.npz` |
+| 8-method per-branch semantics recheck | `scripts/recheck_method_semantics.py` | `results/robustness_val_8method_perbranch_recheck.csv` |
+| Deployment sens/spec + lookup-table (780-cell grid) | `scripts/recompute_deployment_780grid.py` | `results/deployment_780grid_recompute.csv` |
 | README self-check (re-derives the README's headline aggregates; a table-level integrity check, not an estimator re-run) | `scripts/verify_release_results.py` | exit 0 = 12 checks PASS |
 | Preregistered protocol and amendments A1, A2 | — (archived, not generated) | `docs/EXPERIMENT_PROTOCOL.md`, `docs/PROTOCOL_AMENDMENT_A1_*.md`, `docs/PROTOCOL_AMENDMENT_A2_*.md` — byte-identical to OSF archive [10.17605/OSF.IO/53H64](https://doi.org/10.17605/OSF.IO/53H64) (immutable, per-file SHA-256 checksums); amendment A3 ships here but is not in the OSF deposit (see [`docs/PREREGISTRATION_ALIGNMENT.md`](docs/PREREGISTRATION_ALIGNMENT.md)) |
 

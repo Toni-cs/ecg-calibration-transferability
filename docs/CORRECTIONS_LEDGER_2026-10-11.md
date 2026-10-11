@@ -25,6 +25,8 @@ manuscript) and the delivered set, superseding stale readouts elsewhere.
 | A12 | Delivered 8-method ΔECE per-cell tables share the calibrated-argmax correctness across both bootstrap branches (affects only argmax-flipping methods; TS / fixed-T Platt unaffected) | `benefit_inference` extended (`labels_raw`), `eval_transfer.py` now passes per-branch correctness, meta stamps the semantics; `_group_jackknife_benefit` consumes the caller rng instead of a hardcoded `default_rng(0)`; `_bca_interval` gained a percentile-inversion guard; `two_layer` refit failures no longer propagate NaN and `t_std` uses ddof=1 | code edits; release tests pass; delivered numbers unchanged (ts primary endpoint unaffected; the delivered non-TS rows keep the shared-label semantics and are flagged here — see section B) |
 | A13 | Released checkpoint assets mismatched the delivered tables (v1.0.0 = pre-repair snapshot + 2 byte-duplicate direction weights) | **Post-repair asset built**: `ecg-release_assets_transfer_checkpoints_post_repair_2026-10-11.zip` — 62 .pt (60 grid + 2 partial-mamba toys), all 60 grid weights gate-verified against `results/robustness_validation_5seeds.csv` before packing | gate: 60/60 cells, max \|json−csv\| = 4.9e-7; duplicate-fix cells now differ; 60 unique grid hashes; manifest 62/62 inside the zip; README weight-caveat block updated |
 | A14 | Manuscript quoted only the n=500 seed-42 decomposition readout (21/27), never the 4-seed rerun (12/27 all-pass, 22/27 majority) now present in the delivered CSV | Body (§ decomposition) + conclusion C3 now disclose the four-seed agreement explicitly | edits; numbers from `decomposition_validation_n500_seeds4.csv` |
+| A15 | The delivered 8-method rows carry the historical shared-correctness semantics (see A12); the paper's C4 claims (EM harmful, BBSE positive) had no corrected-semantics counterparty | `scripts/recheck_method_semantics.py` recomputes the OOD branch of all 8 methods directly from the lab-tree probability caches with per-branch correctness; output `results/robustness_val_8method_perbranch_recheck.csv`; paper C4 (contribution + conclusion) now discloses the recheck | **TS gate: 60/60 rows reproduce the delivered values exactly (0 argmax flips)** — machinery proven; stamps 60/60 consistent per class-count; EM $-0.0040 \to -0.0378$ (claim strengthened), BBSE $+0.0270 \to +0.0172$ (still positive), parametric methods shift ≤0.003, no qualitative claim flips |
+| A16 | `tab:deploy_sens` + the lookup-table row of `tab:trivial` had no delivered-grid-computable generator (pool era); placeholders/honest tags were interim | `scripts/recompute_deployment_780grid.py` recomputes the full Youden / leave-shift-type-out / frozen-threshold scheme on the delivered `l2_shift_full_780cells_detail.csv` (strict beneficial convention, P=368 exact match to `deployment_metrics.csv`); manuscript table + prose replaced with the 780-grid values; `tab:trivial` lookup row now carries computed values (476/780 routed, mean −0.0116) | `P/N` exact match (368/412); new in-sample optimum J=+0.306 @ 0.206; every leave-type-out J exceeds in-sample (generalization claim survives and is stronger); main PDF recompiled 81 pp, zero undefined citations |
 
 ## B. Queued (not addressable without lab-tree compute / author action)
 
@@ -32,21 +34,23 @@ manuscript) and the delivered set, superseding stale readouts elsewhere.
    promised in the protocol, never executed): requires mapping-variant reruns on
    real data in the lab tree. Until then the cross-corpus claims must keep their
    label-drift caveat (`main_cmpb.tex` L862-865-class wording).
-2. **780-grid deployment recomputation** (`tab:deploy_sens` + lookup-table row):
-   the pool-side numbers in the manuscript are provenance-tagged as of today;
-   the 780-grid recomputation of the same table is queued.
+2. **780-grid deployment recomputation** — **done 2026-10-11** (A16): the
+   manuscript now carries the 780-grid values; the remaining cosmetic step is
+   copying `deployment_780grid_recompute.csv` + the two recheck artifacts into
+   the supplementary package and re-signing (performed the same day).
+4. **Semantics change notice** — the recheck (A15) quantifies the drift;
+   the delivered non-TS rows keep shared-correctness semantics and are now
+   explicitly disclosed in the paper's C4. Full per-branch regeneration of the
+   delivered 8-method table would still require the lab-tree runner
+   (`l2_shift_results.json` per checkpoint remains absent) — the recheck
+   artifact is the delivered alternative.
 3. **NCV artifacts** (e3/c3 families) — second-source adjudication of the
    post-retrain NCV shrinkage wording remains open.
-4. **Semantics change notice**: results computed by the *pre-fix*
-   `benefit_inference` (shared labels) for non-argmax-preserving methods carry
-   the shared-correctness semantics; this ledger line is the reveal. Recomputing
-   those rows requires the lab-tree checkpoint pool (`l2_shift_results.json`
-   per checkpoint — currently absent from both trees), same blocker as (2).
 5. **OSF deposit housekeeping**: A3 not in the deposit (now disclosed in the
    README), dead project-page link (F1), frozen registration cannot carry the
    51→50→45 evolution — upload the addendum instead.
-6. **Submission recompile**: done on 2026-10-11 — `main_cmpb.pdf` (80 pages,
-   exit 0, zero undefined citations after the second pass), `cover_letter.pdf`
+6. **Submission recompile**: done on 2026-10-11 — `main_cmpb.pdf` (81 pages
+   after A15/A16, exit 0, zero undefined citations), `cover_letter.pdf`
    (2 pages, exit 0), `supplementary.pdf` (12 pages, exit 0) rebuilt from the
    corrected sources. Remaining step: copy the rebuilt PDFs into the
    submission bundle per the author's packaging convention and re-sign that
