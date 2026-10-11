@@ -202,14 +202,19 @@ OSF as an immutable record with per-file SHA-256 checksums:
 [https://doi.org/10.17605/OSF.IO/53H64](https://doi.org/10.17605/OSF.IO/53H64)
 (project `53h64`; registration `wjz3y`, registered 2026-09-14).
 
-The protocol and amendments A1 and A2 also ship in this repository under
-[`docs/`](docs/), **byte-identical to the deposited files** — check with
+The protocol and amendments A1, A2, A3, A4 also ship in this
+repository under [`docs/`](docs/), **byte-identical to the deposited
+files for A1 and A2** — check with
 
 ```bash
 sha256sum docs/EXPERIMENT_PROTOCOL.md
 # 0e8afa923986aba3f5030133c59b8a87b475c3551b819b0137ab9da66eeb9498
 # (the SHA-256 the OSF API reports for 02_PROTOCOL_ZH_original.md)
 ```
+
+A3 and A4 ship here and are **queued for the OSF deposit upload**
+(the deposit currently predates them; see
+[`docs/PREREGISTRATION_ALIGNMENT.md`](docs/PREREGISTRATION_ALIGNMENT.md) finding F2).
 
 They are duplicated deliberately rather than left to the OSF record alone: the
 manuscript cites two of these files by path, and eleven files already committed to
@@ -335,7 +340,7 @@ stays re-runnable; it is *not* part of the reproduction pipeline above.
 | 8-method per-branch semantics recheck | `scripts/recheck_method_semantics.py` | `results/robustness_val_8method_perbranch_recheck.csv` |
 | Deployment sens/spec + lookup-table (780-cell grid) | `scripts/recompute_deployment_780grid.py` | `results/deployment_780grid_recompute.csv` |
 | README self-check (re-derives the README's headline aggregates; a table-level integrity check, not an estimator re-run) | `scripts/verify_release_results.py` | exit 0 = 12 checks PASS |
-| Preregistered protocol and amendments A1, A2 | — (archived, not generated) | `docs/EXPERIMENT_PROTOCOL.md`, `docs/PROTOCOL_AMENDMENT_A1_*.md`, `docs/PROTOCOL_AMENDMENT_A2_*.md` — byte-identical to OSF archive [10.17605/OSF.IO/53H64](https://doi.org/10.17605/OSF.IO/53H64) (immutable, per-file SHA-256 checksums); amendment A3 ships here but is not in the OSF deposit (see [`docs/PREREGISTRATION_ALIGNMENT.md`](docs/PREREGISTRATION_ALIGNMENT.md)) |
+| Preregistered protocol and amendments A1–A4 | — (archived, not generated) | `docs/EXPERIMENT_PROTOCOL.md`, `docs/PROTOCOL_AMENDMENT_A1_*.md`, `docs/PROTOCOL_AMENDMENT_A2_*.md`, `docs/PROTOCOL_AMENDMENT_A3_*.md`, `docs/PROTOCOL_AMENDMENT_A4_*.md` — A1/A2 byte-identical to OSF archive [10.17605/OSF.IO/53H64](https://doi.org/10.17605/OSF.IO/53H64) (immutable, per-file SHA-256); amendments A3/A4 ship here and are queued for the deposit upload (see [`docs/PREREGISTRATION_ALIGNMENT.md`](docs/PREREGISTRATION_ALIGNMENT.md)) |
 
 Generators that are **not** in this checkout (data are shipped, script is not):
 `results/real_prior_recovery_summary.json` has no writer in this checkout or the
