@@ -145,7 +145,8 @@ cd checkpoints && sha256sum -c CHECKSUMS.sha256                   # expect 62/62
 > [`reports/CHECKPOINT_INDEPENDENCE_AUDIT_2026-09-17.md`](reports/CHECKPOINT_INDEPENDENCE_AUDIT_2026-09-17.md)).
 > **A post-repair asset resolves this**:
 > `ecg-release_assets_transfer_checkpoints_post_repair_2026-10-11.zip`
-> (workspace build; queued for the next release tag) ships 60 unique-hash grid
+> (GitHub release [**v1.1.0**](https://github.com/Toni-cs/ecg-calibration-transportability/releases/tag/v1.1.0),
+> published 2026-10-11) ships 60 unique-hash grid
 > weights including all 20 post-val-leak retrained cells, gate-verified cell by
 > cell against `results/robustness_validation_5seeds.csv` (methods.ts ood/id
 > ΔECE, max diff < 5·10⁻⁶) before packing; manifest 62/62 verified (60 grid +

@@ -67,8 +67,12 @@ manuscript) and the delivered set, superseding stale readouts elsewhere.
    (`decomposition_validation_n500_20260829.bak.csv`,
    `...n20000_postfix_20260830.csv`, `..._rerun_20260830.csv`): retained
    deliberately as archives; do not quote them as current readouts.
-8. **GitHub release asset upload** for the post-repair checkpoint zip (queued
-   for the next tag).
+8. **GitHub release asset upload** — **done 2026-10-11**: published as release
+   [**v1.1.0**](https://github.com/Toni-cs/ecg-calibration-transportability/releases/tag/v1.1.0)
+   (created by Toni-cs), asset `ecg-release_assets_transfer_checkpoints_post_repair_2026-10-11.zip`
+   (51,691,627 bytes, state `uploaded`), asset SHA-256 `7151b52a8c171c1d…`;
+   README weight-caveat block now points at the published release instead of
+   the workspace build.
 
 ## C. Calibration of prior audit artifacts
 
