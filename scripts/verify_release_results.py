@@ -57,9 +57,12 @@ def csv_census() -> None:
                 comment.append(p.name)
             except Exception:
                 blocked.append(p.name)
-    ok = (len(csvs), len(plain), len(comment), len(blocked)) == (33, 25, 5, 3)
+    # 2026-10-11: +2 plain CSVs from the A15/A16 compute pass
+    # (robustness_val_8method_perbranch_recheck.csv, deployment_780grid_recompute.csv)
+    expect = (35, 27, 5, 3)
+    ok = (len(csvs), len(plain), len(comment), len(blocked)) == expect
     check("csv_census", ok,
-          f"33 CSVs = 25 plain + 5 comment-header + 3 multi-block; "
+          f"35 CSVs = 27 plain + 5 comment-header + 3 multi-block; "
           f"got {len(csvs)} = {len(plain)} + {len(comment)} + {len(blocked)}")
 
 

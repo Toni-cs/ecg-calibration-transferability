@@ -2,11 +2,13 @@
 
 ## Provenance rule
 
-- **40 of the 54 files are byte-identical (SHA-256, verified 2026-10-11) to the
+- **40 of the 56 files are byte-identical (SHA-256, verified 2026-10-11) to the
   same-named result tables in the article's submitted supplementary package**
-  (`paper/submission/supplementary/S2_result_tables/`). The other 14 are the
-  integrity notices, the figure, the npz draw file, and auxiliary files that are
-  not tables. (The directory holds 54 files in total — 53 + this inventory.)
+  (`paper/submission/supplementary/S2_result_tables/`; the two compute-pass
+  artifacts added on 2026-10-11 are mirrored into the package as well). The
+  other 16 are the integrity notices, the figure, the npz draw file, and
+  auxiliary files that are not tables. (The directory holds 56 files in total
+  — 55 + this inventory.)
 - The directory is the **corrected** set. Earlier snapshots of this repository
   shipped pre-correction copies of 17 of these tables; they have been replaced
   with the corrected ones. What was wrong, when, and what replaced it is recorded
