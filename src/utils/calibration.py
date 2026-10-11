@@ -394,6 +394,14 @@ def _bca_interval(theta_hat: float, boot_stats: np.ndarray,
     a1 = np.clip(_adj(z_alpha), 1e-6, 1 - 1e-6)
     a2 = np.clip(_adj(z_1alpha), 1e-6, 1 - 1e-6)
     lo, hi = np.percentile(boot_stats, [a1 * 100, a2 * 100])
+    # 2026-10-11: ordering guard. The BCa percentile mapping can invert exactly when
+    # a*(z0+z) crosses 1 between the two cut points; without this guard a degenerate
+    # run silently produced lo > hi and poisoned every downstream (lo<0<hi) check.
+    if lo > hi:
+        lo, hi = hi, lo
+        warnings.warn("BCa percentile mapping inverted (a*(z0+z) crossed 1 between the two "
+                      "cut points); endpoints swapped. This run is degenerate -- prefer the "
+                      "percentile CI sensitivity check for this cell.")
     if lo == hi:
         warnings.warn("BCa interval degenerated to zero width (z0 saturated: point estimate lies at an extreme of the bootstrap distribution),"
                       " CI unavailable -- consider checking the effect size or using a percentile sensitivity check")
@@ -401,13 +409,19 @@ def _bca_interval(theta_hat: float, boot_stats: np.ndarray,
 
 
 def _group_jackknife_benefit(probs_raw, probs_cal, labels, metric, clusters,
-                             n_groups=100):
+                             n_groups=100, labels_raw=None, rng=None):
     """Jackknife influence values of ΔECE (for the BCa acceleration term).
 
     When clusters are provided, uses leave-one-cluster-out (patient-level, per protocol);
     otherwise delete-group jackknife (G=min(100,n) groups removed, approximating delete-m,
     to control cost under O(n^2) metrics). Returns ΔECE after each removal.
+
+    labels_raw: correctness (0/1) for the RAW branch. None -> the shared `labels` are
+    used on both branches (legacy pre-2026-10-11 semantics; per-branch correctness
+    matters only for calibration methods that can flip the argmax, e.g. per-class Platt).
     """
+    labels = np.asarray(labels, dtype=float)
+    labels_r = np.asarray(labels_raw, dtype=float) if labels_raw is not None else labels
     n = len(labels)
     if clusters is not None:
         clusters = np.asarray(clusters)
@@ -415,7 +429,9 @@ def _group_jackknife_benefit(probs_raw, probs_cal, labels, metric, clusters,
         member_idx = [np.where(clusters == u)[0] for u in units]
     else:
         g = min(n_groups, n)
-        perm = np.random.default_rng(0).permutation(n)
+        # 2026-10-11: consume the caller's rng (legacy behavior reproducible with rng=None);
+        # the old code re-created default_rng(0) here, which silently ignored the caller's seed contract.
+        perm = (rng if rng is not None else np.random.default_rng(0)).permutation(n)
         member_idx = np.array_split(perm, g)
     jacks = np.empty(len(member_idx))
     for k, idxs in enumerate(member_idx):
@@ -424,7 +440,7 @@ def _group_jackknife_benefit(probs_raw, probs_cal, labels, metric, clusters,
         if keep.sum() < 10:
             jacks[k] = np.nan
             continue
-        r_b = float(metric(probs_raw[keep], labels[keep]))
+        r_b = float(metric(probs_raw[keep], labels_r[keep]))
         c_b = float(metric(probs_cal[keep], labels[keep]))
         jacks[k] = r_b - c_b
     return jacks
@@ -440,6 +456,7 @@ def benefit_inference(
     clusters: Optional[np.ndarray] = None,
     rng: Optional[np.random.Generator] = None,
     bci_method: str = "bca",
+    labels_raw: Optional[np.ndarray] = None,
 ) -> dict:
     """Paired bootstrap inference of calibration benefit (paper primary endpoint).
 
@@ -456,13 +473,12 @@ def benefit_inference(
     Args:
         probs_raw: uncalibrated probabilities
         probs_cal: calibrated probabilities (same order as probs_raw)
-        labels: ground-truth labels
-        metric: calibration-error function (default ece; smooth_ece allowed)
-        n_bootstrap: number of resamples
-        confidence: confidence level
-        clusters: patient id (optional)
-        rng: Generator
-        bci_method: 'bca' (default) | 'percentile'
+        labels: ground-truth correctness for the CALIBRATED branch (0/1; top-label case =
+            per-branch semantics). If None -> `labels` is used on both branches.
+        labels_raw: 0/1 correctness vector for the RAW branch. Defaults to None (legacy:
+            the calibrated-argmax correctness was shared across both branches). Pass the
+            raw-branch correctness explicitly when the calibration method can flip the
+            argmax (per-class Platt, isotonic, vector/matrix/dirichlet, prior rescaling).
 
     Returns:
         dict(benefit=ΔECE, benefit_ci=(lo,hi), ratio=R, ratio_ci=(lo,hi),
@@ -471,11 +487,15 @@ def benefit_inference(
     probs_raw = np.asarray(probs_raw, dtype=float)
     probs_cal = np.asarray(probs_cal, dtype=float)
     labels = np.asarray(labels, dtype=float)
+    # 2026-10-11: per-branch correctness. labels is the calibrated-branch correctness;
+    # labels_r is the raw-branch correctness (defaults to the shared vector for back-compat).
+    labels_r = (np.asarray(labels_raw, dtype=float)
+                if labels_raw is not None else labels)
     n = len(labels)
     if rng is None:
         rng = np.random.default_rng(0)
 
-    raw_point = float(metric(probs_raw, labels))
+    raw_point = float(metric(probs_raw, labels_r))
     cal_point = float(metric(probs_cal, labels))
     benefit_point = raw_point - cal_point
     ratio_point = raw_point / cal_point if cal_point > 0 else np.inf
@@ -507,7 +527,7 @@ def benefit_inference(
     ratios = np.empty(n_bootstrap)
     for b in range(n_bootstrap):
         idx = draw_indices()
-        r_b = float(metric(probs_raw[idx], labels[idx]))
+        r_b = float(metric(probs_raw[idx], labels_r[idx]))
         c_b = float(metric(probs_cal[idx], labels[idx]))
         benefits[b] = r_b - c_b
         ratios[b] = r_b / c_b if c_b > 0 else np.nan
@@ -517,7 +537,8 @@ def benefit_inference(
 
     if bci_method == "bca":
         jacks = _group_jackknife_benefit(probs_raw, probs_cal, labels,
-                                         metric, clusters)
+                                         metric, clusters,
+                                         labels_raw=labels_r, rng=rng)
         b_lo, b_hi = _bca_interval(benefit_point, benefits, jacks, confidence)
     else:
         b_lo, b_hi = np.percentile(benefits, [alpha * 100, (1 - alpha) * 100])
@@ -842,10 +863,21 @@ def two_layer_benefit_inference(
     n_test = len(labels_test)
 
     t_draws = np.empty(b_val)
+    n_fit_failed = 0
     for b in range(b_val):
         idx = rng.choice(n_fit, n_fit, replace=True)
-        t_draws[b] = float(fit_fn(fit_probs[idx], fit_labels[idx]))
-    t_std = float(np.std(t_draws)) if b_val > 1 else 0.0
+        try:
+            t_draws[b] = float(fit_fn(fit_probs[idx], fit_labels[idx]))
+        except Exception:
+            # 2026-10-11: degenerate resample (e.g. all-one-class or rank-loss) used to
+            # propagate a NaN straight into t_draws/t_std. Fall back to the full-set
+            # temperature so the layer-2 draw stays finite.
+            t_draws[b] = t_hat
+            n_fit_failed += 1
+    if n_fit_failed:
+        warnings.warn(f"two_layer bootstrap: {n_fit_failed}/{b_val} layer-1 refits "
+                      f"failed and fell back to the full-set temperature t_hat.")
+    t_std = float(np.std(t_draws, ddof=1)) if b_val > 1 else 0.0
 
     benefits = np.empty(b_test)
     for b in range(b_test):

@@ -9,13 +9,15 @@ Output: splits/{dataset}[_sub4]_seed{S}.csv with columns:
   patient_id      patient id
   split           train / val / cal / test (data-loader semantics, see below)
   in_train_loader yes/no -- whether the record also enters the training loader
-[Important: PTB-XL as-used semantics] In train.py build_ptbxl_datasets, the carved-out
-val patient records are still kept in the training loader (folds 1-8 are trained in full;
-val is only used for early-stopping monitoring) -- this is the actual run convention of
-the 60 experiments, and this export reflects it faithfully (flagged in_train_loader=yes),
-with no post-hoc cosmetic change. cal (fold9) / test (fold10) have zero patient overlap
-with folds 1-8 (asserted), so the primary-endpoint evaluation is unaffected. For
-Chapman/CPSC the val patients are correctly removed from the train set (in_train_loader=no).
+[PTB-XL as-used semantics, post-repair] Since the 2026-10-05 val-leak repair, train.py
+build_ptbxl_datasets subtracts the carved val-patient records from the training loader
+(np.setdiff1d); the carve is patient-level and assert_no_leakage is re-derived from the
+final loader positions. This export therefore flags in_train_loader=yes iff the record
+enters the train loader (split == 'train'), and the 21,397 val-patient rows across the
+10 ptbxl-family seed files read in_train_loader=no (they read yes in the pre-repair
+snapshots). cal (fold9) / test (fold10) have zero patient overlap with folds 1-8
+(asserted). For Chapman/CPSC the val patients were always removed from the train set
+(in_train_loader=no).
 
 Lockstep contract with the builder: this script's split logic mirrors, line by line,
 build_ptbxl_datasets / build_chapman_datasets / build_cpsc_datasets in scripts/train.py.
@@ -110,8 +112,8 @@ def _split_ptbxl(meta: pd.DataFrame, seed: int,
     """PTB-XL split: official folds 1-8/9/10 + 12.5% patient-level val carve within folds 1-8.
 
     Line-by-line mirror of the split section in train.py build_ptbxl_datasets (lockstep).
-    as-used semantics: the train loader = all folds 1-8 records (including val patient records),
-    see the module docstring.
+    Post-repair semantics (2026-10-05 fix, ported 2026-10-11): the train loader =
+    folds-1-8 records minus the carved val-patient records.
     """
     split_meta = meta
     if subspace is not None:
@@ -147,8 +149,10 @@ def _split_ptbxl(meta: pd.DataFrame, seed: int,
         "fold": split_meta["strat_fold"].astype(int),
     })
     out["split"] = out.apply(_s, axis=1)
-      # as-used: train loader = all folds 1-8 records (including val patients; see module docstring)
-    out["in_train_loader"] = np.where(out["fold"] <= 8, "yes", "no")
+    # Fixed semantics 2026-10-05 (ported 2026-10-11): the train loader = folds-1-8 records
+    # minus the val-patient records (split=='train' iff fold<=8 AND pid NOT a carved val
+    # patient), mirroring train.py build_ptbxl_datasets np.setdiff1d (lockstep).
+    out["in_train_loader"] = np.where(out["split"] == "train", "yes", "no")
     return out.drop(columns=["fold"]).sort_values("record_id").reset_index(drop=True)
 
 

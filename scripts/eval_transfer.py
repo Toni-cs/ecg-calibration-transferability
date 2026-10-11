@@ -48,6 +48,7 @@ from train import (  # noqa: E402
     build_ptbxl_datasets, build_chapman_datasets, build_cpsc_datasets,
 )
 from src.data.mapping import SUBSPACE_CPSC, SUPERCLASSES  # noqa: E402
+from src.utils.encoding_guard import checkpoint_subspace, encoding_stamp  # noqa: E402
 
 DATASET_BUILDERS = {
     "ptbxl": build_ptbxl_datasets,
@@ -100,7 +101,33 @@ def run_pair(args, source_name, source_dir, target_name, target_dir,
     # ---------- num_classes / subspace inference (preregistered protocol §2: CPSC -> 4-class symmetric reduction) ----------
     num_classes = min(DATASET_NUM_CLASSES[source_name],
                       DATASET_NUM_CLASSES[target_name])
-    subspace = SUBSPACE_CPSC if num_classes == 4 else None
+    runtime_subspace = SUBSPACE_CPSC if num_classes == 4 else None
+
+    run_dir = Path(args.save_dir) / f"{source_name}_{target_name}" / \
+        args.arch / f"seed{seed}"
+    run_dir.mkdir(parents=True, exist_ok=True)
+    ckpt_path = run_dir / "best_model.pt"
+    reusing_ckpt = bool(args.load_model and ckpt_path.exists())
+    if args.load_model and not ckpt_path.exists():
+        # Fix 2026-10-11: --load-model used to fall through to a full 50-epoch retrain and
+        # then save a new best_model.pt over the official published path -- silently producing
+        # non-released weights and shadowing future --load-model calls.
+        raise FileNotFoundError(
+            f"--load-model requested but checkpoint not found: {ckpt_path}\n"
+            "Unpack the released checkpoint assets under checkpoints/ first (see README "
+            "'Licensed checkpoint assets'), or drop --load-model to train explicitly.")
+
+    # ---------- encoding guard (ported from the lab tree, 2026-10-11) ----------
+    # When reusing a checkpoint, labels must be rebuilt under the encoding the checkpoint
+    # itself was trained with; if its stored subspace differs from the runtime SUBSPACE_CPSC,
+    # raise instead of silently computing contaminated numbers. This is exactly the entry
+    # point of the 2026-09-09/10 label-encoding contamination (results/
+    # _TEMPERATURE_CONTAMINATION_NOTICE.md / README): checkpoints carry the old encoding,
+    # the constant was re-ordered on 09-09, and any reuse without this guard swaps every
+    # CPSC label array. Fresh training is always self-consistent, so the runtime encoding
+    # is used directly.
+    subspace = (checkpoint_subspace(run_dir, num_classes, runtime_subspace)
+                if reusing_ckpt else runtime_subspace)
 
     # ---------- source model training (train/val/cal/test) ----------
     src_ds, src_clusters = _build(source_name, source_dir, seed, args.limit,
@@ -180,6 +207,10 @@ def run_pair(args, source_name, source_dir, target_name, target_dir,
         "subspace": list(subspace) if subspace else None,
         "label_map": {c: i for i, c in enumerate(subspace)} if subspace
                      else {c: i for i, c in enumerate(SUPERCLASSES)},
+        # Encoding stamp + provenance (ported from the lab tree, 2026-10-11): lets downstream
+        # encoding_guard.assert_encoding_record certify which label encoding this result used.
+        "label_encoding": encoding_stamp(num_classes, subspace),
+        "reused_checkpoint": bool(reusing_ckpt),
         "n_id": int(len(id_probs)), "n_ood": int(len(ood_probs)),
         "id_acc": float((id_probs.argmax(1) == id_labels).mean()),
         "ood_acc": float((ood_probs.argmax(1) == ood_labels).mean()),
@@ -272,12 +303,14 @@ def run_pair(args, source_name, source_dir, target_name, target_dir,
         ood_ben = benefit_inference(
             _maxprob(ood_probs), _maxprob(ood_cal), _bin(ood_cal, ood_labels),
             metric=metric_fn, n_bootstrap=args.bootstrap, rng=rng,
-            clusters=ood_clusters, bci_method=args.bci_method)
+            clusters=ood_clusters, bci_method=args.bci_method,
+            labels_raw=_bin(ood_probs, ood_labels))
         print(f"  [{mname}] ID bootstrap inference in progress...")
         id_ben = benefit_inference(
             _maxprob(id_probs), _maxprob(id_cal), _bin(id_cal, id_labels),
             metric=metric_fn, n_bootstrap=args.bootstrap, rng=rng,
-            clusters=src_clusters, bci_method=args.bci_method)
+            clusters=src_clusters, bci_method=args.bci_method,
+            labels_raw=_bin(id_probs, id_labels))
 
         results["methods"][mname] = {
             "id": {"deltaECE": id_ben["benefit"], "ci": list(id_ben["benefit_ci"]),
@@ -288,6 +321,7 @@ def run_pair(args, source_name, source_dir, target_name, target_dir,
             "meta": {"n_bootstrap": int(args.bootstrap), "bci_method": args.bci_method,
                      "ts_fit": "source_cal" if mname == "ts" else "source_cal_or_target_unlabeled",
                      "metric": "smooth_ece_0.45*(n/2000)^-0.2",
+                     "correctness": "per-branch (raw branch = raw-argmax correct; cal branch = calibrated-argmax correct; fix 2026-10-11, previously the calibrated-argmax correctness was shared across branches -- affects only non-argmax-preserving methods, ts/platt-shared-T unaffected)",
                      "T": float(fit_params.get('T', float('nan'))) if fit_params else float('nan')},
         }
         print(f"[{mname:9s}] ID ΔECE={id_ben['benefit']:+.4f} "

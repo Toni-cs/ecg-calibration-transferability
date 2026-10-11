@@ -69,14 +69,21 @@ Each preprocessor writes `metadata_single_label.csv`, `preprocess_summary.json` 
 ## Reproducing the results
 
 ```bash
-# 0. Quick self-check: re-derive every number quoted in this README from results/
+# 0. Quick self-check: re-derive the README's headline aggregates (primary endpoint,
+#    cluster-robust CI, pooled estimates, deployment table, dose response, L2 grid
+#    counts, patient-level BCa unit, raw-ECE range, bootstrap widths) from results/
+#    and assert that the 4 withheld contaminated artifacts stay absent. It is a
+#    table-level integrity check against results/ -- NOT a re-run of the estimators;
+#    generation provenance is documented in the paper-to-artifact map below.
 #    (seconds; needs no dataset, no checkpoints, no GPU; exit 1 on any mismatch)
 python scripts/verify_release_results.py
 # current status: 12 checks PASS, exit 0
 
 # 1. Install and preprocess (see above)
 
-# 2. Regenerate the exact as-used split indices (should be byte-identical to splits/*.csv)
+# 2. Regenerate the exact as-used split indices (byte-identical to splits/*.csv;
+#    verified 2026-10-11: seed 42 regenerates all 5 variants byte-identical, and
+#    --validate 42 passes 20/20 against the real builders)
 python scripts/export_splits.py
 python scripts/export_splits.py --validate 42   # cross-check against the dataset builders
 
@@ -108,7 +115,8 @@ python scripts/validate_decomposition.py --boot 500
 # directory is created if absent, and tmp_*/ is gitignored:
 #   python scripts/validate_decomposition.py --n 500 --boot 0 --output tmp_decomp
 
-# 6. Unit tests (no data, no GPU, <10 s)
+# 6. Unit tests (no data, no GPU, ~13 s; 5 mapping-encoding tests + 6 builder/export
+#    lockstep tests pinning the val-holdout fix)
 python -m pytest -q
 ```
 
@@ -128,17 +136,21 @@ cd checkpoints && sha256sum -c CHECKSUMS.sha256                   # expect 62/62
 > full layout. The release's **checkpoint assets** are unaffected by this and are
 > the ones unpacked above.
 
-> **Weight caveat.** The v1.0.0 assets are the **pre-repair** snapshot: 40 of the
-> 60 grid weights behind the current tables are byte-identical to the released
-> ones, but the 20 PTB-XL-source cells were retrained on/after 2026-10-07 under
-> the repaired split semantics (this includes the
-> `transfer/cpsc_ptbxl/inceptiontime/seed42` and `seed43` cells that had already
-> been retrained on 2026-09-17 for the label-encoding repair; see
-> [`results/_PROBS_CACHE_LABEL_REPAIR_NOTICE_2026-09-18.md`](results/_PROBS_CACHE_LABEL_REPAIR_NOTICE_2026-09-18.md)
-> and the [post-publication repair](#post-publication-repair-ptb-xl-early-stopping-val-leak) section).
-> The retrained checkpoints are planned for the next release tag; until then,
-> the released assets reproduce the 40 unchanged cells but **not** the 20 retrained
-> cells of the shipped tables.
+> **Weight caveat.** The v1.0.0 assets are the **pre-repair** snapshot: they
+> reproduce the 40 non-PTB-XL-source cell tables but **not** the 20 retrained
+> PTB-XL-source cells, and two InceptionTime weight files inside them are
+> byte-duplicates across directions (`transfer/cpsc_chapman/inceptiontime/seed42`
+> == `transfer/cpsc_ptbxl/inceptiontime/seed42`, same for `seed43`) predating the
+> 2026-09-17 checkpoint-independence retrain (see
+> [`reports/CHECKPOINT_INDEPENDENCE_AUDIT_2026-09-17.md`](reports/CHECKPOINT_INDEPENDENCE_AUDIT_2026-09-17.md)).
+> **A post-repair asset resolves this**:
+> `ecg-release_assets_transfer_checkpoints_post_repair_2026-10-11.zip`
+> (workspace build; queued for the next release tag) ships 60 unique-hash grid
+> weights including all 20 post-val-leak retrained cells, gate-verified cell by
+> cell against `results/robustness_validation_5seeds.csv` (methods.ts ood/id
+> ΔECE, max diff < 5·10⁻⁶) before packing; manifest 62/62 verified (60 grid +
+> 2 partial-mamba toys). See the [post-publication repair](#post-publication-repair-ptb-xl-early-stopping-val-leak) section
+> and `docs/CORRECTIONS_LEDGER_2026-10-11.md` for the fix history.
 
 ## Post-publication repair: PTB-XL early-stopping val leak
 
@@ -151,14 +163,22 @@ test/cal evaluation: fold-9 `cal` and fold-10 `test` patients were always
 asserted disjoint from folds 1–8). This is a protocol deviation, not a
 label breach.
 
-**Fix (2026-10-07).** `scripts/train.py` excludes all `val` patients from the
-training loader (`np.setdiff1d` patient filter plus a build-time disjointness
-assertion); `scripts/export_splits.py` mirrors the logic line-by-line and
-`--validate 42` passes 20/20 against the dataset builders. A regression test
-(`tests/test_ptbxl_val_holdout.py`) pins the semantics, and the full test suite
-passes (189 tests). Across the ten PTB-XL-family split exports the **only**
-changes are `val` rows: 21,397 records switched from `in_train_loader=yes`
-to `no`.
+**Fix (2026-10-05 lab tree; shipped to this repository's scripts 2026-10-11).**
+`scripts/train.py` excludes all `val` patients from the training loader
+(`np.setdiff1d` record filter plus a disjointness assertion that is re-derived
+from the final loader positions, not from the pre-carve patient lists);
+`scripts/export_splits.py` mirrors the logic line-by-line, and `--validate 42`
+passes 20/20 against the dataset builders on real preprocessed data
+(re-verified 2026-10-11). A regression test (`tests/test_ptbxl_val_holdout.py`)
+pins the semantics; the release test suite passes (11 tests). Honest
+provenance note: the 2026-10-10 regeneration wave updated `splits/`,
+`results/` and this README but **missed the two scripts** (their previous
+commits predate the fix: `train.py` 2026-09-16, `export_splits.py`
+2026-09-13), so the scripts carried here between 2026-10-07 and 2026-10-11
+were the leak-era versions; they have now been synchronized and the fix is
+verified end-to-end. Across the ten PTB-XL-family split exports the **only**
+data changes remain the `val` rows: 21,397 records switched from
+`in_train_loader=yes` to `no` (committed 2026-10-10).
 
 **Retrain.** The affected cells are the PTB-XL-source cells — 2 directed pairs
 × 2 architectures × 5 seeds = **20 of 60** — retrained under the fixed splits.
@@ -206,10 +226,13 @@ Two documents are worth reading first:
 
 ## Data integrity notices
 
-`results/` is the **regenerated, post-repair** set: every result table here is
-byte-identical to the article's supplementary result tables, and both the
-contamination-era and the pre-repair versions that earlier snapshots of this
-repository shipped have been replaced. The correction history is kept as
+`results/` is the **regenerated, post-repair** set: all 40 co-named result
+tables are byte-identical (SHA-256, verified 2026-10-11) to the article's
+supplementary result tables after the same-day package refresh (29 stale
+pre-retrain tables in the package were replaced and the manifest re-signed;
+three package-only legacy archive tables are kept and named explicitly), and
+both the contamination-era and the pre-repair versions that earlier snapshots
+of this repository shipped have been replaced. The correction history is kept as
 notices inside [`results/`](results/) — read them before quoting a number:
 
 | Notice | What it records |
@@ -309,7 +332,7 @@ stays re-runnable; it is *not* part of the reproduction pipeline above.
 | Counter-example discrimination | `scripts/discriminate_counterexamples.py` | `results/counterexample_discrimination.csv`, `.json` |
 | Shapley decomposition rebuilds | `scripts/rebuild_shapley_crossfit.py`, `scripts/rebuild_shapley_slopeT.py` | `results/rebuild_shapley_*.csv/.json` |
 | Registered-unit NCV/DCR (patient-level BCa, B=10,000) | `scripts/e3_patient_bca.py` | `results/e3_patient_bca_cells.csv`, `results/e3_patient_bca_summary.json`, `results/e3_patient_bca_pooled_draws.npz` |
-| README self-check (re-derives every number quoted above) | `scripts/verify_release_results.py` | exit 0 = 12 checks PASS |
+| README self-check (re-derives the README's headline aggregates; a table-level integrity check, not an estimator re-run) | `scripts/verify_release_results.py` | exit 0 = 12 checks PASS |
 | Preregistered protocol and amendments A1, A2 | — (archived, not generated) | `docs/EXPERIMENT_PROTOCOL.md`, `docs/PROTOCOL_AMENDMENT_A1_*.md`, `docs/PROTOCOL_AMENDMENT_A2_*.md` — byte-identical to OSF archive [10.17605/OSF.IO/53H64](https://doi.org/10.17605/OSF.IO/53H64) (immutable, per-file SHA-256 checksums); amendment A3 ships here but is not in the OSF deposit (see [`docs/PREREGISTRATION_ALIGNMENT.md`](docs/PREREGISTRATION_ALIGNMENT.md)) |
 
 Generators that are **not** in this checkout (data are shipped, script is not):
@@ -329,7 +352,10 @@ G = ECE_S1 − ECE_oracle). Over the 60-experiment grid (6 corpus pairs ×
 2 architectures × 5 seeds, post-retrain) it is **positive in 45/60 cells
 (75.0%), mean +0.0093** — `results/robustness_validation_5seeds.csv`, column
 `ood_deltaECE`, rows with `method == ts`. InceptionTime supports 24/30
-(mean +0.0098) and ResNet-1D 21/30 (mean +0.0089). 30/60 cells (50.0%) have a
+(mean +0.0098) and ResNet-1D 21/30 (mean +0.0089). On the OOD primary
+endpoint every cell's BCa CI is sign-resolved: 45 fully positive, 15 fully
+negative (the disclosed counter-examples), none contains zero. On the **ID**
+side (ΔECE_ID, a different response), 30/60 cells (50.0%) have a
 patient-level paired BCa CI containing zero — the pre-registered ID-boundary
 branch fired.
 

@@ -2,10 +2,11 @@
 
 ## Provenance rule
 
-- **38 of the 47 result files are byte-identical (SHA-256) to the article's
-  submitted supplementary result tables** (`paper/submission/supplementary/S2_result_tables/`).
-  The other 9 are the 8 integrity notices below plus `decomposition_error_map_n20000.png`.
-  (The directory holds 48 files in total — those 47 plus this inventory.)
+- **40 of the 54 files are byte-identical (SHA-256, verified 2026-10-11) to the
+  same-named result tables in the article's submitted supplementary package**
+  (`paper/submission/supplementary/S2_result_tables/`). The other 14 are the
+  integrity notices, the figure, the npz draw file, and auxiliary files that are
+  not tables. (The directory holds 54 files in total — 53 + this inventory.)
 - The directory is the **corrected** set. Earlier snapshots of this repository
   shipped pre-correction copies of 17 of these tables; they have been replaced
   with the corrected ones. What was wrong, when, and what replaced it is recorded
@@ -48,27 +49,27 @@ to this checkout to close the result↔script gap; the rest were already here.
 
 | File | Holds | Generator | Generated |
 |---|---|---|---|
-| `robustness_validation_5seeds.csv` | 60-cell per-method ΔECE with paired BCa CIs (the primary-endpoint table) | `generate_robustness_report_v2.py` (repo root) | 2026-09-17 |
-| `meta_analytic_pooled.csv` | fixed-effect / DerSimonian–Laird pooled rows and Q statistics | `regenerate_stats_60exp.py` (repo root) | 2026-09-06 ⚠ predates the 2026-09-17 retrain (see notice-free note in the main README) |
-| `bh_fdr_correction.csv` | BH-60 and Bonferroni multiple-testing control | `regenerate_stats_60exp.py` (repo root) | 2026-09-06 |
-| `bootstrap_diagnostics.csv` | per-method bootstrap bookkeeping | `p2_optional_fixes.py` | 2026-09-18 |
+| `robustness_validation_5seeds.csv` | 60-cell per-method ΔECE with paired BCa CIs (the primary-endpoint table) | `generate_robustness_report_v2.py` (repo root) | 2026-10-08 |
+| `meta_analytic_pooled.csv` | fixed-effect / DerSimonian–Laird pooled rows and Q statistics | `regenerate_stats_60exp.py` (repo root) | 2026-10-10 (post-retrain regeneration wave) |
+| `bh_fdr_correction.csv` | BH-60 and Bonferroni multiple-testing control | `regenerate_stats_60exp.py` (repo root) | 2026-09-06 ⚠ pre-retrain era snapshot (51/60-generation readout), retained for provenance; the current confirmatory counts quoted by the article (BH-12 = 7/12, Bonferroni-12 = 6/12) come from `robustness_validation_5seeds.csv` via `regenerate_stats_60exp.py` and are re-derived in `verify_release_results.py` — do not quote this file's counts |
+| `bootstrap_diagnostics.csv` | per-method bootstrap bookkeeping | `p2_optional_fixes.py` | 2026-10-08 |
 
 ### Deployment safety and the L2 grid
 
 | File | Holds | Generator | Generated |
 |---|---|---|---|
-| `deployment_metrics.csv` | the 157-cell deployment-safety table (Table 6) and the DCA/lookup sections — **multi-block file**, see parsing notes | `step3_deployment.py` | 2026-09-05 (pre-window; explicitly cleared by `_L2_SHIFT_CONTAMINATION_NOTICE.md`) |
-| `deployment_holdout_recompute.csv` | holdout threshold / Youden recompute | `deployment_holdout_recompute.py` | 2026-09-08 |
-| `l2_shift_full_390cells.csv` | 390-cell (pair, seed, shift) safety grid | `run_e1a_l2_shift_full.py` | 2026-09-18 |
-| `l2_shift_full_780cells_detail.csv` | per-architecture detail behind it | `run_e1a_l2_shift_full.py` | 2026-09-18 |
-| `l2_shift_full_summary.json` | counters (`n_safe_cells` = 376) | `run_e1a_l2_shift_full.py` | 2026-09-18 |
+| `deployment_metrics.csv` | the strict deployment-safety aggregate: `method,ts,780,8,368,18,0.010256` (n_total / n_safe / n_beneficial / n_calibrated, strict: ΔECE ≤ −0.01 AND calibrated ECE ≤ 0.05) + per-architecture strict rows | redeployed by `regenerate_deployment_metrics.py` (2026-10-10 regeneration wave) | 2026-10-10 |
+| `deployment_holdout_recompute.csv` | holdout threshold / Youden recompute | `deployment_holdout_recompute.py` | 2026-10-09 ⚠ these rows come from the checkpoint method pool (`load_l2_data()` over `checkpoints/…/l2_shift_results.json`), **not** from the 780-cell grid the article quotes alongside it; the article's `tab:deploy_sens` sens/spec rows carry the same pool lineage and were re-stated in the paper's post-2026-10-10 pass (recompute on the delivered 780-grid detail CSV is queued) |
+| `l2_shift_full_390cells.csv` | 390-cell (pair, seed, shift) safety grid | `run_e1a_l2_shift_full.py` | 2026-10-09 |
+| `l2_shift_full_780cells_detail.csv` | per-architecture detail behind it | `run_e1a_l2_shift_full.py` | 2026-10-09 |
+| `l2_shift_full_summary.json` | counters (`n_safe_cells` = 348; 348/390 = 89.2% pass with ≥1 architecture, 222/390 = 56.9% with both) | `run_e1a_l2_shift_full.py` | 2026-10-09 |
 
 ### Decomposition estimator
 
 | File | Holds | Generator | Generated |
 |---|---|---|---|
 | `decomposition_validation_n20000.csv` | n = 20,000 baseline validation | `validate_decomposition.py` (default `--n`) | 2026-09-01 |
-| `decomposition_validation_n500_seeds4.csv` | n = 500, 4 seeds | `validate_decomposition.py --n 500 --seeds 4` | 2026-09-01 |
+| `decomposition_validation_n500_seeds4.csv` | n = 500, 4 seeds | `validate_decomposition.py --n 500 --seeds 4` | 2026-09-01 — full transparency: per-seed single-seed passes are 21/22/21/22 (the article quotes the seed-42 readout, 21/27); cells passing all four seeds = **12/27**, majority (≥3 of 4) = **22/27** |
 | `decomposition_validation.csv` | ⚠ **legacy file name**: byte-identical to the archived `decomposition_validation_n500_20260829.bak.csv`, i.e. the **n = 500 single-seed** run, *not* the n = 20,000 table | `validate_decomposition.py --n 500` (written under this name by an earlier invocation) | 2026-08-31 |
 | `decomposition_error_map_n20000.png` | error-map figure for the n = 20,000 run | `validate_decomposition.py` | 2026-09-01 |
 

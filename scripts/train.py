@@ -310,6 +310,11 @@ def build_ptbxl_datasets(data_dir: str, seed: int, limit: Optional[int] = None,
 
     - Splitting uses src.data.splits.ptbxl_official_folds (official strat_fold; patients never cross folds).
     - Val carve: within folds 1-8, sample 12.5% of patients stratified by patient majority label (patient-level, avoids record-level leakage).
+    - Fix (2026-10-05 lab tree; ported to this tree 2026-10-11): the carved val records are excluded from the
+      training loader via np.setdiff1d, and assert_no_leakage is re-derived from the FINAL loader positions
+      (pos) instead of the pre-carve patient lists -- previously the assertion checked a different, already-reduced
+      variable and therefore passed while val records stayed in the train loader (early stopping was monitoring
+      the training set; see docs/PTBXL_VAL_LEAK_RETRAIN_PLAN.md, 20/60 cells retrained 2026-10-07).
     - assert_no_leakage hard-asserts that train/val/cal/test patient sets are pairwise disjoint (protocol-mandated check).
     - Returns clusters_test (patient ids of test records, aligned to dataset order) for the patient-level cluster bootstrap in the primary endpoint.
       patient-level cluster bootstrap for the primary endpoint (via benefit_inference(clusters=)).
@@ -364,16 +369,30 @@ def build_ptbxl_datasets(data_dir: str, seed: int, limit: Optional[int] = None,
     cal_patients = sorted(set(np.asarray(splits['cal']['patients'], dtype=object).tolist()))
     test_patients = sorted(set(np.asarray(splits['test']['patients'], dtype=object).tolist()))
 
-    assert_no_leakage({
-        'train': train_patients, 'val': sorted(val_patients),
-        'cal': cal_patients, 'test': test_patients,
-    })
-
     def _pos_of(patients):
         return _pos_of_patients(split_meta, patients)
 
-    pos = {'train': np.sort(train_pos), 'val': _pos_of(val_patients),
+    # ---- Fix [VAL-LEAK-2026-10-05], ported from the lab tree on 2026-10-11 ----
+    # Old behavior: pos['train'] took the FULL folds-1-8 train_pos, while train_patients
+    # (already minus val) only fed assert_no_leakage -- the asserted object and the dataset
+    # object were mismatched, so the assertion always passed while val-patient records
+    # entered BOTH the train and val loaders (early stopping was monitoring the training
+    # set -> model selection silently invalid; this is the leak documented in
+    # docs/PTBXL_VAL_LEAK_RETRAIN_PLAN.md, 20/60 cells retrained on 2026-10-07).
+    # The fix subtracts val records from train_pos and re-derives the assertion FROM pos,
+    # so the asserted patient sets are exactly the records entering each loader.
+    val_pos = _pos_of(val_patients)
+    train_pos = np.setdiff1d(train_pos, val_pos)
+
+    pos = {'train': np.sort(train_pos), 'val': val_pos,
            'cal': _pos_of(cal_patients), 'test': _pos_of(test_patients)}
+
+    # Hard assertion: the four splits are pairwise disjoint by patient (protocol §2);
+    # asserted sets are derived from pos (the final loader positions), not from the pre-carve lists.
+    assert_no_leakage({
+        k: sorted(set(split_meta.loc[v, 'patient_id'].tolist()))
+        for k, v in pos.items()
+    })
     if limit is not None:  # For debugging: truncate each split to the first limit//4 records (deterministic).
         pos = {k: v[:max(limit // 4, 20)] for k, v in pos.items()}
 
@@ -568,16 +587,42 @@ def main():
     parser.add_argument('--n_layers', type=int, default=2)
     parser.add_argument('--arch', type=str, default='mamba',
                         choices=['mamba', 'resnet1d', 'inceptiontime'],
-                        help='Backbone architecture (preregistered protocol §4: mamba primary, resnet1d/inceptiontime baselines)')
-    parser.add_argument('--num_classes', type=int, default=5)
+                        help='Backbone: inceptiontime | resnet1d (the preregistered 60-cell '
+                             'transfer grid); mamba is exploratory-only and NOT part of the '
+                             '60-cell grid (see README "Reproducing the results")')
+    parser.add_argument('--num_classes', type=int, default=None,
+                        help='Class count. Auto-derived from --dataset for real datasets '
+                             '(ptbxl/chapman=5, cpsc=4); defaults to 5 for --dataset synthetic. '
+                             'An explicit mismatch raises.')
     parser.add_argument('--seq_length', type=int, default=1000)
     parser.add_argument('--seed', type=int, default=42)
     parser.add_argument('--save_dir', type=str, default='checkpoints')
     parser.add_argument('--limit', type=int, default=None,
-                        help='[debug] [debug] truncate each ptbxl split to the first limit/4 records (smoke test)')
+                        help='[debug] truncate each ptbxl split to the first limit/4 records (smoke test)')
     parser.add_argument('--two-layer', action='store_true',
                         help='Enable two-layer joint bootstrap (preregistered protocol §7:117; propagate temperature-fit-set uncertainty into the CI. Recommended for real-data runs)')
     args = parser.parse_args()
+
+    # ---- num_classes resolution (fix 2026-10-11: the old default 5 silently built a 5-head
+    # model for cpsc (4 classes), which eval_transfer --load-model then refused; a ghost head
+    # you only discover at the end of the chain). ----
+    DATASET_NUM_CLASSES = {'ptbxl': 5, 'chapman': 5, 'cpsc': 4}
+    if args.dataset == 'synthetic':
+        if args.num_classes is None:
+            args.num_classes = 5
+    else:
+        expected = DATASET_NUM_CLASSES[args.dataset]
+        if args.num_classes is not None and args.num_classes != expected:
+            raise ValueError(
+                f"--num_classes={args.num_classes} != class count of dataset "
+                f"'{args.dataset}' ({expected}). Pass --num_classes {expected} "
+                f"(or omit it) -- a mismatched head cannot be evaluated by eval_transfer.")
+        args.num_classes = expected
+
+    if args.arch == 'mamba':
+        print("[WARN] --arch mamba is NOT part of the preregistered 60-cell grid "
+              "{inceptiontime, resnet1d}; pass --arch explicitly for grid reproduction "
+              "(README: 'Reproducing the results').")
 
     set_seed(args.seed)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
