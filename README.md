@@ -225,11 +225,11 @@ sha256sum docs/EXPERIMENT_PROTOCOL.md
 
 A3 and A4 ship here and are **in the project deposit** (53h64 Files,
 uploaded 2026-10-11 with per-file SHA-256 verified bit-identical to the
-repository copies; the frozen registration WJZ3Y still carries v1 — a
-registration-update draft to mint v2 with the same four files is
-authored and pending submission; see
+repository copies); the frozen registration WJZ3Y is intentionally left
+at v1 (frozen-snapshot doctrine: the registration is the dated record of
+its date, amendments live in the project deposit); see
 [`docs/PREREGISTRATION_ALIGNMENT.md`](docs/PREREGISTRATION_ALIGNMENT.md)
-and [`docs/OSF_ADDENDUM_2026-10-12.md`](docs/OSF_ADDENDUM_2026-10-12.md)).
+and [`docs/OSF_ADDENDUM_2026-10-12.md`](docs/OSF_ADDENDUM_2026-10-12.md).
 
 They are duplicated deliberately rather than left to the OSF record alone: the
 manuscript cites two of these files by path, and eleven files already committed to
@@ -355,7 +355,7 @@ stays re-runnable; it is *not* part of the reproduction pipeline above.
 | 8-method per-branch semantics recheck | `scripts/recheck_method_semantics.py` | `results/robustness_val_8method_perbranch_recheck.csv` |
 | Deployment sens/spec + lookup-table (780-cell grid) | `scripts/recompute_deployment_780grid.py` | `results/deployment_780grid_recompute.csv` |
 | README self-check (re-derives the README's headline aggregates; a table-level integrity check, not an estimator re-run) | `scripts/verify_release_results.py` | exit 0 = 12 checks PASS |
-| Preregistered protocol and amendments A1–A4 | — (archived, not generated) | `docs/EXPERIMENT_PROTOCOL.md`, `docs/PROTOCOL_AMENDMENT_A1_*.md`, `docs/PROTOCOL_AMENDMENT_A2_*.md`, `docs/PROTOCOL_AMENDMENT_A3_*.md`, `docs/PROTOCOL_AMENDMENT_A4_*.md`, `docs/OSF_ADDENDUM_2026-10-12.md` — A1/A2 byte-identical to OSF archive [10.17605/OSF.IO/53H64](https://doi.org/10.17605/OSF.IO/53H64) (immutable, per-file SHA-256); **A3/A4/addendum/ledger are in the project deposit (53h64 Files, 2026-10-11 uploads, per-file SHA-256 verified)**; the frozen-registration update draft (WJZ3Y → v2) is authored and pending submission |
+| Preregistered protocol and amendments A1–A4 | — (archived, not generated) | `docs/EXPERIMENT_PROTOCOL.md`, `docs/PROTOCOL_AMENDMENT_A1_*.md`, `docs/PROTOCOL_AMENDMENT_A2_*.md`, `docs/PROTOCOL_AMENDMENT_A3_*.md`, `docs/PROTOCOL_AMENDMENT_A4_*.md`, `docs/OSF_ADDENDUM_2026-10-12.md` — A1/A2 byte-identical to OSF archive [10.17605/OSF.IO/53H64](https://doi.org/10.17605/OSF.IO/53H64) (immutable, per-file SHA-256); **A3/A4/addendum/ledger are in the project deposit (53h64 Files, 2026-10-11 uploads, per-file SHA-256 verified)**; the frozen registration WJZ3Y is intentionally left at v1 (frozen-snapshot doctrine) |
 
 Generators that are **no longer missing** (fixed 2026-10-12, ledger B1):
 `results/real_prior_recovery_summary.json`'s generator was reconstructed as
