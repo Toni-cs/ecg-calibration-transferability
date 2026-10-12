@@ -29,50 +29,76 @@ manuscript) and the delivered set, superseding stale readouts elsewhere.
 | A16 | `tab:deploy_sens` + the lookup-table row of `tab:trivial` had no delivered-grid-computable generator (pool era); placeholders/honest tags were interim | `scripts/recompute_deployment_780grid.py` recomputes the full Youden / leave-shift-type-out / frozen-threshold scheme on the delivered `l2_shift_full_780cells_detail.csv` (strict beneficial convention, P=368 exact match to `deployment_metrics.csv`); manuscript table + prose replaced with the 780-grid values; `tab:trivial` lookup row now carries computed values (476/780 routed, mean −0.0116) | `P/N` exact match (368/412); new in-sample optimum J=+0.306 @ 0.206; every leave-type-out J exceeds in-sample (generalization claim survives and is stronger); main PDF recompiled 81 pp, zero undefined citations |
 | A17 | The preregistered §10 mapping-sensitivity promise was unexecutable as written: its τ≥0.8 gate is defined on the secondary endpoint G, which the paper's own Limitations (xviii) acknowledge as undelivered on real data; execution status was also falsely implicit (never run, never registered as a deviation) | **Amendment A4** (`docs/PROTOCOL_AMENDMENT_A4_MAPPING_SENSITIVITY.md`, both trees, 2026-10-11) re-operationalizes the gate on delivered ΔECE_OOD: 6-pair ordering Kendall τ≥0.8 + confirmatory counts unchanged (7/12, 6/12), failure clause unchanged (claim downgrade); variants V1/V2 enumerated, V3 excluded with reason; anti-HARKing: criterion defined before any variant result exists; paper gains a §amendment-A4 subsection, the preregistration record lists A1–A4, cover letter synchronized; A3+A4 deposit upload queued and disclosed | main PDF recompiled; no delivered value touched; battery execution remains an author-scheduled deliverable (est. 2–5 GPU-days for two variants) |
 
-## B. Queued (not addressable without lab-tree compute / author action)
+## B. Resolved on 2026-10-12 (zero-compute wave; verification for each)
 
-1. **§10 preregistered CPSC mapping-sensitivity analysis** (Kendall τ≥0.8 gate;
-   promised in the protocol, never executed): requires mapping-variant reruns on
-   real data in the lab tree. Until then the cross-corpus claims must keep their
-   label-drift caveat (`main_cmpb.tex` L862-865-class wording).
-2. **780-grid deployment recomputation** — **done 2026-10-11** (A16): the
-   manuscript now carries the 780-grid values; the remaining cosmetic step is
-   copying `deployment_780grid_recompute.csv` + the two recheck artifacts into
-   the supplementary package and re-signing (performed the same day).
-4. **Semantics change notice** — the recheck (A15) quantifies the drift;
-   the delivered non-TS rows keep shared-correctness semantics and are now
-   explicitly disclosed in the paper's C4. Full per-branch regeneration of the
-   delivered 8-method table would still require the lab-tree runner
-   (`l2_shift_results.json` per checkpoint remains absent) — the recheck
-   artifact is the delivered alternative.
-3. **NCV artifacts** (e3/c3 families) — second-source adjudication of the
-   post-retrain NCV shrinkage wording remains open.
-5. **OSF deposit housekeeping** — **project layer closed 2026-10-11**: the
-   four closure files (A3, A4, corrections ledger, OSF addendum) are in the
-   project deposit (53h64 Files), each SHA-256 verified bit-identical to the
-   repository copies (A3 `2025126e…`, A4 `cfc8955…`, ledger `75bd139…`,
-   addendum `97d3c42a…`). Remaining user-side items: submit the registration
-   update draft (WJZ3Y → v2, justification + four files authored) and apply
-   the full-text description replacement (original verbatim + appended
-   ADDENDUM block, prepared as `OSF_DESC_FULL_2026-10-12.txt`). The frozen
-   registration value itself stays untouched by design (F3 doctrine:
-   frozen record + additive disclosure).
-6. **Submission recompile**: done on 2026-10-11 — `main_cmpb.pdf` (81 pages
-   after A15/A16, exit 0, zero undefined citations), `cover_letter.pdf`
-   (2 pages, exit 0), `supplementary.pdf` (12 pages, exit 0) rebuilt from the
-   corrected sources. Remaining step: copy the rebuilt PDFs into the
-   submission bundle per the author's packaging convention and re-sign that
-   bundle if it is ever hash-manifested.
-7. **Package-only legacy tables kept in the supplementary**
-   (`decomposition_validation_n500_20260829.bak.csv`,
-   `...n20000_postfix_20260830.csv`, `..._rerun_20260830.csv`): retained
-   deliberately as archives; do not quote them as current readouts.
-8. **GitHub release asset upload** — **done 2026-10-11**: published as release
-   [**v1.1.0**](https://github.com/Toni-cs/ecg-calibration-transportability/releases/tag/v1.1.0)
-   (created by Toni-cs), asset `ecg-release_assets_transfer_checkpoints_post_repair_2026-10-11.zip`
-   (51,691,627 bytes, state `uploaded`), asset SHA-256 `7151b52a8c171c1d…`;
-   README weight-caveat block now points at the published release instead of
-   the workspace build.
+1. **Two orphan results files given generators / archived (ledger A18).**
+   - `real_prior_recovery_summary.json`: generator **reconstructed** as
+     `scripts/real_prior_recovery_summary.py` (route A). Byte-stable across
+     repeated runs; its output matches the delivered CSV's quoted numbers
+     (err_bbse 0.1109, 42.1%, 56/60, 33/60) and the archived 2026-09-27 copy
+     differs exactly as the two retrain epochs predict (0.1127/0.1377/41.2%/
+     38/60). The pair-cluster CI fields are honestly `null` from the CSV alone
+     (needs patient-level clusters; the manuscript quotes the runner-side CI).
+     The stale predecessor is archived at
+     `results/archive/no-generator/real_prior_recovery_summary.2026-09-27.json`.
+   - `predictability_sensitivity.json`: no generator in any branch → route B,
+     archived at the lab tree's
+     `results/archive/no-generator/predictability_sensitivity.withheld.json`
+     (inventory updated; it was already withheld from the release tree).
+2. **Downstream propagation guard for the leak-era snapshots (A19).**
+   README top banner added ("re-clone or checkout v1.1.0, tag commit
+   `46dadf1`"); the **v1.0.0 GitHub release page** now opens with a ⚠️
+   DO-NOT-USE preamble listing the three defects (incomplete script archive /
+   two byte-duplicate weights / leak-era split semantics) and redirects to
+   v1.1.0 (correction visible on the release page; PATCH verified 200).
+3. **Submission bundle repackaged + re-signed (A20).** The rebuilt PDFs
+   (main 83 pp, supplementary 12 pp, cover 3 pp) are packaged at
+   `S0_manuscript/`; the three pre-retrain legacy decomposition tables moved
+   out of the live-table namespace into `S2_result_tables/archive_pre_retrain/`
+   (with the archive README inside); `real_prior_recovery_summary.json` in the
+   package refreshed to the regenerated post-retrain epoch (byte-identical to
+   the release tree). `SHA256SUMS.txt` re-signed: **178 entries, ALL OK**.
+4. **Legacy-table quarantine (A21).** Lab tree: the two pre-retrain rerun CSVs
+   and the 2026-08-29 .bak moved to `results/archive/pre-retrain/`;
+   `predictability_sensitivity.json` and the stale summary JSON to
+   `results/archive/no-generator/`; both trees got `archive/README.md`
+   (nothing in the tree is quotable). Inventories updated accordingly.
+5. **NCV/DCR second-source adjudication (A22).** **Decision (2026-10-12):
+   keep the current post-retrain wording.** Rationale: the manuscript already
+   discloses the one-order-of-magnitude NCV shrinkage and reports the
+   registered patient-level BCa unit as the operative interval; those numbers
+   are bound by `verify_release_results.py` check 11 (`e3_patient_bca`, NCV
+   CI [+0.000125, +0.000353]) and by `e3_patient_bca_summary.json` (born
+   2026-10-10, the post-retrain wave). No second run is material; the item is
+   closed as *resolved-by-existing-disclosure*.
+6. **8-method semantics labeling layer (A23; the fallback branch of the
+   compute item).** `results/_EIGHT_METHOD_SEMANTICS_NOTICE.md` written (exact
+   shared-correctness definition, affected rows, measured per-method shift
+   table, quoting rules); mirrored into the lab tree; the robustness row of
+   `results/README.md` now points at it, and the main text's C4 already
+   discloses the recheck. Full regeneration of the delivered non-TS rows
+   remains queued on lab-tree compute (see C.1).
+
+## C. Still queued (compute-bound or user-side only)
+
+1. **Full per-branch regeneration of the delivered 8-method rows** — needs the
+   lab-tree runner (`l2_shift_results.json` per checkpoint is absent from both
+   trees). The labeling layer (B6) + the recheck artifact (A15) cover the
+  citation risk in the meantime.
+2. **§10 preregistered CPSC mapping-sensitivity battery (A4)** — est. 2–5
+   GPU-days for variants V1/V2 (gate re-operationalized on delivered
+   ΔECE_OOD). Incremental plan: one pair per run, partial CSV + ledger dot once
+   committed. If compute never materializes, the A4-registered failure clause
+   and the paper's disclosure ("not executed") remain the honest fallback.
+3. **OSF registration-layer closure (user-side).** Project deposit ✅ (B
+   section, A18 context). Still pending: submitting the registration-update
+   draft (justification + four files authored) so WJZ3Y mints v2, and applying
+   the full-text description replacement (`OSF_DESC_FULL_2026-10-12.txt`; the
+   dead related-material link itself was already corrected on 2026-10-11 in
+   the registration metadata — API-verified). API probe 2026-10-12:
+   `revision_state: in_progress`, description not yet carrying the ADDENDUM
+   block. The frozen value stays untouched by design (F3 doctrine: frozen
+   record + additive disclosure).
 
 ## C. Calibration of prior audit artifacts
 

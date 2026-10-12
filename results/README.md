@@ -2,13 +2,15 @@
 
 ## Provenance rule
 
-- **40 of the 56 files are byte-identical (SHA-256, verified 2026-10-11) to the
+- **40 of the 57 top-level files are byte-identical (SHA-256, verified 2026-10-11) to the
   same-named result tables in the article's submitted supplementary package**
   (`paper/submission/supplementary/S2_result_tables/`; the two compute-pass
   artifacts added on 2026-10-11 are mirrored into the package as well). The
-  other 16 are the integrity notices, the figure, the npz draw file, and
-  auxiliary files that are not tables. (The directory holds 56 files in total
-  — 55 + this inventory.)
+  other 17 are the integrity notices, the figure, the npz draw file, and
+  auxiliary files that are not tables. (The directory holds 57 top-level
+  files — 56 + this inventory.) The `archive/` subtree additionally holds
+  frozencopies kept only for provenance — see
+  [`archive/README.md`](archive/README.md); nothing there is quotable.
 - The directory is the **corrected** set. Earlier snapshots of this repository
   shipped pre-correction copies of 17 of these tables; they have been replaced
   with the corrected ones. What was wrong, when, and what replaced it is recorded
@@ -51,7 +53,7 @@ to this checkout to close the result↔script gap; the rest were already here.
 
 | File | Holds | Generator | Generated |
 |---|---|---|---|
-| `robustness_validation_5seeds.csv` | 60-cell per-method ΔECE with paired BCa CIs (the primary-endpoint table) | `generate_robustness_report_v2.py` (repo root) | 2026-10-08 |
+| `robustness_validation_5seeds.csv` | 60-cell per-method ΔECE with paired BCa CIs (the primary-endpoint table). ⚠ **read [`_EIGHT_METHOD_SEMANTICS_NOTICE.md`](_EIGHT_METHOD_SEMANTICS_NOTICE.md) before quoting any non-`ts` row** — the delivered non-TS rows carry the historical shared-correctness semantics; the per-branch recheck artifact is `robustness_val_8method_perbranch_recheck.csv` | `generate_robustness_report_v2.py` (repo root) | 2026-10-08 |
 | `meta_analytic_pooled.csv` | fixed-effect / DerSimonian–Laird pooled rows and Q statistics | `regenerate_stats_60exp.py` (repo root) | 2026-10-10 (post-retrain regeneration wave) |
 | `bh_fdr_correction.csv` | BH-60 and Bonferroni multiple-testing control | `regenerate_stats_60exp.py` (repo root) | 2026-09-06 ⚠ pre-retrain era snapshot (51/60-generation readout), retained for provenance; the current confirmatory counts quoted by the article (BH-12 = 7/12, Bonferroni-12 = 6/12) come from `robustness_validation_5seeds.csv` via `regenerate_stats_60exp.py` and are re-derived in `verify_release_results.py` — do not quote this file's counts |
 | `bootstrap_diagnostics.csv` | per-method bootstrap bookkeeping | `p2_optional_fixes.py` | 2026-10-08 |
@@ -109,7 +111,7 @@ to this checkout to close the result↔script gap; the rest were already here.
 | `predictability_3arch.csv` | label-free predictability experiment, corrected — **multi-block file** | `step2_predictability.py` | 2026-09-27 |
 | `predictability_corrected_v2.csv` | T-based directional discrimination (v2) — needs `comment="#"` | `predictability_corrected_v2.py` | 2026-09-27 |
 | `real_prior_recovery.csv` | prior-recovery check on real checkpoints | `real_prior_recovery.py` | 2026-09-18 |
-| `real_prior_recovery_summary.json` | ⚠ **no generator found** in this checkout, the lab tree or the `full-work` branch (the CSV beside it is generated; the summary is not) | — | 2026-09-27 |
+| `real_prior_recovery_summary.json` | ⚠ **generator reconstructed on 2026-10-12** (`scripts/real_prior_recovery_summary.py`): route-A diff vs the archived 2026-09-27 copy = exactly the cross-epoch deltas (ledger B1); the pair-cluster CI fields are intentionally `null` from the CSV alone (needs patient clusters) — archived predecessor at `archive/no-generator/` | `real_prior_recovery_summary.py` | 2026-10-12 |
 | `s2_dose_response.csv`, `s2_dose_response_summary.json` | small-sample recalibration dose-response (protocol §S2): 5 budgets × 5 methods × 60 cells × 20 repeats | `run_s2_small_sample.py` | 2026-09-27 |
 
 ### Notices {#notices}

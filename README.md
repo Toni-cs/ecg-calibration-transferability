@@ -2,6 +2,16 @@
 
 Official code and data-split release for the accompanying article.
 
+> **⚠️ If you cloned before 2026-10-11 or are on the v1.0.0 tag:** the scripts
+> carried in earlier snapshots still implement the pre-fix PTB-XL split
+> semantics (the 2026-10-05 val-leak repair ships from 2026-10-11 onward),
+> and the v1.0.0 checkpoint asset contains two byte-duplicate direction
+> weights. **Re-clone or checkout
+> [`v1.1.0`](https://github.com/Toni-cs/ecg-calibration-transportability/releases/tag/v1.1.0)**
+> (tag commit `46dadf1`: leak-free code line, 60 unique-hash grid weights,
+> gate-verified against the delivered result tables). Details and the fix
+> history: `docs/CORRECTIONS_LEDGER_2026-10-11.md`.
+
 Given a calibration fix with a benefit in-distribution (ID), this study measures how much of that benefit survives out-of-distribution (OOD) transfer across three public ECG corpora, decomposes the decay into three interpretable components (slope / intercept / prevalence), and derives a deployment-safety criterion for recalibration before transfer.
 
 ## Contents
@@ -345,13 +355,21 @@ stays re-runnable; it is *not* part of the reproduction pipeline above.
 | 8-method per-branch semantics recheck | `scripts/recheck_method_semantics.py` | `results/robustness_val_8method_perbranch_recheck.csv` |
 | Deployment sens/spec + lookup-table (780-cell grid) | `scripts/recompute_deployment_780grid.py` | `results/deployment_780grid_recompute.csv` |
 | README self-check (re-derives the README's headline aggregates; a table-level integrity check, not an estimator re-run) | `scripts/verify_release_results.py` | exit 0 = 12 checks PASS |
-| Preregistered protocol and amendments A1–A4 | — (archived, not generated) | `docs/EXPERIMENT_PROTOCOL.md`, `docs/PROTOCOL_AMENDMENT_A1_*.md`, `docs/PROTOCOL_AMENDMENT_A2_*.md`, `docs/PROTOCOL_AMENDMENT_A3_*.md`, `docs/PROTOCOL_AMENDMENT_A4_*.md` — A1/A2 byte-identical to OSF archive [10.17605/OSF.IO/53H64](https://doi.org/10.17605/OSF.IO/53H64) (immutable, per-file SHA-256); amendments A3/A4 ship here and are queued for the deposit upload (see [`docs/PREREGISTRATION_ALIGNMENT.md`](docs/PREREGISTRATION_ALIGNMENT.md)) |
+| Preregistered protocol and amendments A1–A4 | — (archived, not generated) | `docs/EXPERIMENT_PROTOCOL.md`, `docs/PROTOCOL_AMENDMENT_A1_*.md`, `docs/PROTOCOL_AMENDMENT_A2_*.md`, `docs/PROTOCOL_AMENDMENT_A3_*.md`, `docs/PROTOCOL_AMENDMENT_A4_*.md`, `docs/OSF_ADDENDUM_2026-10-12.md` — A1/A2 byte-identical to OSF archive [10.17605/OSF.IO/53H64](https://doi.org/10.17605/OSF.IO/53H64) (immutable, per-file SHA-256); **A3/A4/addendum/ledger are in the project deposit (53h64 Files, 2026-10-11 uploads, per-file SHA-256 verified)**; the frozen-registration update draft (WJZ3Y → v2) is authored and pending submission |
 
-Generators that are **not** in this checkout (data are shipped, script is not):
-`results/real_prior_recovery_summary.json` has no writer in this checkout or the
-lab tree; its September-era generator lived on the now-retired `full-work`
-branch, whose full 69-commit snapshot is preserved indefinitely as tag
-`historical/full-work-20260917`. `results/decomposition_validation.csv` (no suffix)
+Generators that are **no longer missing** (fixed 2026-10-12, ledger B1):
+`results/real_prior_recovery_summary.json`'s generator was reconstructed as
+`scripts/real_prior_recovery_summary.py` — its route-A diff against the
+archived 2026-09-27 copy (`results/archive/no-generator/`) shows exactly the
+expected cross-epoch deltas; the pair-cluster CI fields are intentionally
+`null` when derived from the CSV alone (they need patient-level clusters;
+the manuscript quotes the runner-side CI). The pre-correction /
+duplicate-rerun decomposition copies and the no-generator
+`predictability_sensitivity.json` are archived rather than co-located with
+live tables: the lab tree keeps them under `results/archive/pre-retrain/`
+and `results/archive/no-generator/` (see `results/archive/README.md`), and
+the submission package keeps them under `S2_result_tables/archive_pre_retrain/`.
+`results/decomposition_validation.csv` (no suffix)
 is a legacy name for the archived n = 500 run — byte-identical to the archived
 `decomposition_validation_n500_20260829.bak.csv` — and is *not* the n = 20,000
 table.
