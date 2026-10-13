@@ -112,6 +112,7 @@ to this checkout to close the result↔script gap; the rest were already here.
 | `predictability_corrected_v2.csv` | T-based directional discrimination (v2) — needs `comment="#"` | `predictability_corrected_v2.py` | 2026-09-27 |
 | `real_prior_recovery.csv` | prior-recovery check on real checkpoints | `real_prior_recovery.py` | 2026-09-18 |
 | `real_prior_recovery_summary.json` | ⚠ **generator reconstructed on 2026-10-12** (`scripts/real_prior_recovery_summary.py`): route-A diff vs the archived 2026-09-27 copy = exactly the cross-epoch deltas (ledger B1); the pair-cluster CI fields are intentionally `null` from the CSV alone (needs patient clusters) — archived predecessor at `archive/no-generator/` | `real_prior_recovery_summary.py` | 2026-10-12 |
+| `samplelevel_ts_60cells.csv` | **sample-level (adaptive) TS baseline**, Robey et al. AISTATS 2021 (`scripts/samplelevel_ts.py`): HW head T(x) fitted on source-cal and applied to the target, per-branch correctness convention. Headline: mean +0.0190 (47/60 positive), beats global TS on 41/60 cells (pearson r 0.646), deployment bar again 0/60 strict criteria met. | `samplelevel_ts.py` | 2026-10-13 |
 | `s2_dose_response.csv`, `s2_dose_response_summary.json` | small-sample recalibration dose-response (protocol §S2): 5 budgets × 5 methods × 60 cells × 20 repeats | `run_s2_small_sample.py` | 2026-09-27 |
 
 ### Notices {#notices}
