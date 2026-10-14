@@ -110,3 +110,19 @@ manuscript) and the delivered set, superseding stale readouts elsewhere.
 - The `p0r2` fix chain on `SUBSPACE_CPSC` order was subsequently reverted
   (2026-09-16, tombstone comment in `src/data/mapping.py`); that event is
   documented in `reports/CPSC_OFFICIAL_DEFINITION_VERDICT_2026-09-16.md`.
+
+## C. Project fork record (2026-10-14)
+
+- New project forked per the author's whitepaper v2.0 (cross-corpus calibration
+  drift quantification & correction): repo at `D:\A1\ecg-drift\`, governed by
+  its own signed-protocol chain (WHITEPAPER_v2.0 transcription + sign-blockers
+  appendix v2.1 + prefilled seeds.md; pre-registration commit chain
+  `9208b1b` / `ac801ff` / `8caa87a`).
+- Ledger boundary: queued items C.1-C.3 above remain obligations of THIS tree;
+  the fork neither absorbs nor closes them. Conversely, the new project
+  consumes no resources from this repo (it re-fetches data and re-derives
+  backbone configs per its own protocol).
+- A24 deliverables (`scripts/samplelevel_ts.py`, `results/samplelevel_ts_60cells.csv`)
+  stay paper-side in this repo; the new project's Tier 0-4 ladder
+  (raw -> TS -> PTS -> BCTS-BBSE -> oracle) is an independent methodological
+  line and does not supersede the delivered per-branch tables here.
