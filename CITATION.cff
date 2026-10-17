@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "When Does Temperature Scaling Pay Off in Cross-Corpus ECG Transfer? A Multi-Seed Calibration Boundary Study"
+title: "A Deployment-Safety-Oriented Framework for ECG Model Calibration Transferability: A 60-Experiment Boundary Validation Across Three Public Corpora"
 message: >-
   If you use this codebase or the released data-split indices, please cite it using this metadata.
 type: software
@@ -8,8 +8,24 @@ authors:
     given-names: Toni
     affiliation: "College of Information Technology, Shenyang Institute of Technology, Shenyang, China"
     email: guantong490@gmail.com
-version: v1.0.0
-date-released: "2026-09-13"
+  - family-names: Liu
+    given-names: Ziyan
+    affiliation: "College of Information Technology, Shenyang Institute of Technology, Shenyang, China"
+    email: jonson694@outlook.com
+  - family-names: Gao
+    given-names: Yingrui
+    affiliation: "College of Information Technology, Shenyang Institute of Technology, Shenyang, China"
+    email: muyao061202@gmail.com
+  - family-names: Feng
+    given-names: Chuhan
+    affiliation: "College of Information Technology, Shenyang Institute of Technology, Shenyang, China"
+    email: outlook_E19E1D40B2EFE814@outlook.com
+  - family-names: Li
+    given-names: Yue
+    affiliation: "College of Information Technology, Shenyang Institute of Technology, Shenyang, China"
+    email: 3394481360@qq.com
+version: v1.1.1
+date-released: "2026-10-17"
 license: MIT
 repository-code: "https://github.com/Toni-cs/ecg-calibration-transportability"
 keywords:
@@ -17,6 +33,7 @@ keywords:
   - calibration
   - distribution shift
   - recalibration
+  - deployment safety
   - PTB-XL
   - PhysioNet
   - uncertainty quantification

@@ -2,12 +2,12 @@
 
 ## Provenance rule
 
-- **40 of the 58 top-level files are byte-identical (SHA-256, verified 2026-10-11) to the
+- **40 of the 59 top-level files are byte-identical (SHA-256, verified 2026-10-11) to the
   same-named result tables in the article's submitted supplementary package**
   (`paper/submission/supplementary/S2_result_tables/`; the two compute-pass
   artifacts added on 2026-10-11 are mirrored into the package as well). The
   other 17 are the integrity notices, the figure, the npz draw file, and
-  auxiliary files that are not tables. (The directory holds 58 top-level
+  auxiliary files that are not tables. (The directory holds 59 top-level
   files — 56 + this inventory.) The `archive/` subtree additionally holds
   frozencopies kept only for provenance — see
   [`archive/README.md`](archive/README.md); nothing there is quotable.
@@ -97,7 +97,7 @@ to this checkout to close the result↔script gap; the rest were already here.
 |---|---|---|---|
 | `ablation_ts_components.csv` | four-stage TS-component ablation, 64 raw cells under the corrected labels — **manuscript source**: its `stage=raw` rows over the 60 main-grid cells give raw smooth-ECE 0.062–0.357, mean 0.2054 (all-64 mean 0.2033) | `run_e2_ablation_discrimination.py` | 2026-09-27 |
 | `ablation_ts_components.OLD_ENCODING.csv` | pre-retrain-era ablation under the label-restored 2026-09-16 encoding, 62 cells (raw smooth-ECE all-62 mean 0.2114, range 0.036–0.357) — **not** manuscript-cited since the retrain wave; retained for release-lineage comparison only | `recompute_ablation_old_encoding.py` | 2026-09-17 |
-| `counterexample_discrimination.csv` / `.json` | the ten counter-examples | `discriminate_counterexamples.py` | 2026-09-27 |
+| `counterexample_discrimination.csv` / `.json` | sign-rule discriminator over the 60-cell grid: confusion TP 45 / FP 0 / FN 0 / TN 15 (the fifteen counter-examples, T_src band [0.932, 0.997]); the manuscript cites this JSON for the discrimination experiment | `discriminate_counterexamples.py` | 2026-10-09 |
 | `rebuild_shapley_crossfit.csv` / `.json` | cross-fit Shapley rebuild | `rebuild_shapley_crossfit.py` | 2026-09-18 |
 | `rebuild_shapley_slopeT.csv` / `.json` | slope/intercept-T Shapley rebuild | `rebuild_shapley_slopeT.py` | 2026-09-27 |
 | `noise_floor_curve.csv` | signed noise-floor curve | `noise_floor_signed.py` | 2026-09-18 |

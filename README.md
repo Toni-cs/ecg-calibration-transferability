@@ -1,4 +1,4 @@
-# When Does Temperature Scaling Pay Off in Cross-Corpus ECG Transfer? A Multi-Seed Calibration Boundary Study
+# A Deployment-Safety-Oriented Framework for ECG Model Calibration Transferability: A 60-Experiment Boundary Validation Across Three Public Corpora
 
 Official code and data-split release for the accompanying article.
 
@@ -454,9 +454,10 @@ If you use this codebase or the split indices, please cite the accompanying arti
 
 ```bibtex
 @misc{ecgcalib2026,
-  title  = {When Does Temperature Scaling Pay Off in Cross-Corpus ECG Transfer?
-            A Multi-Seed Calibration Boundary Study},
-  author = {Guan, Toni},
+  title  = {A Deployment-Safety-Oriented Framework for ECG Model Calibration
+            Transferability: A 60-Experiment Boundary Validation Across Three
+            Public Corpora},
+  author = {Guan, Toni and Liu, Ziyan and Gao, Yingrui and Feng, Chuhan and Li, Yue},
   year   = {2026},
   note   = {Official code and data-split release},
   url    = {https://github.com/Toni-cs/ecg-calibration-transportability}

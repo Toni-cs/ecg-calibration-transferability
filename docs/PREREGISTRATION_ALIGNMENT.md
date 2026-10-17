@@ -1,4 +1,4 @@
-# Preregistration ↔ manuscript ↔ release: alignment audit
+﻿# Preregistration ↔ manuscript ↔ release: alignment audit
 
 **Method.** Read-only queries against the public OSF API on **2026-10-05**
 (`api.osf.io/v2/nodes/53h64`, `/registrations/wjz3y`, `/nodes/53h64/files/osfstorage`,
@@ -215,3 +215,41 @@ themselves cite. Internal-reference scan: **424 references, 0 unresolved** — s
 
 7. `docs/`, `reports/`, and the audit scripts now ship; all internal references
    resolve; the three OSF-identical protocol files are byte-verified (F7).
+
+---
+
+## Addendum 2026-10-17: resolution status of F1-F8
+
+Disposition as of the 2026-10-15/17 audit-and-fix waves (see
+CORRECTIONS_LEDGER_2026-10-11.md and
+FINAL_ADVERSARIAL_AUDIT_2026-10-15.md [manuscript-tree doc] in the manuscript tree):
+
+- **F1 (OSF description links the old account) - STILL OPEN, author-side.**
+  The replacement description text is prepared
+  (OSF_DESC_FULL_2026-10-12.txt); applying it is an OSF-web/API action on
+  project 53h64 that only the account owner can perform. Unchanged by the
+  frozen-v1 doctrine (the deposit and registration metadata are separate
+  editable surfaces).
+- **F2 (A3 "archived at the OSF DOI" not true) - RESOLVED 2026-10-11.**
+  A3 and A4 were uploaded to the project deposit (53h64, Files, 2026-10-11);
+  SHA-256 verified against the repository copies (A3 2025126e...,
+  A4 cfc8955...). The registration-metadata related-material link itself
+  was corrected on 2026-10-11 (API-verified).
+- **F3 (frozen registration quotes 51/60 -> 45/60) - COVERED in the
+  manuscript.** The archival-status section narrates both retraining events
+  and the frozen figure set (nine counter-examples, 51/60, 45/60-ex-six),
+  states that the delivered values differ by both events, and adds the
+  frozen ID-boundary figure (23/60 = 38.3% -> 30/60 = 50.0%) with the branch
+  trigger unchanged.
+- **F4 (registered analysis plan narrower than reported analysis) - PARTIALLY
+  ADDRESSED; upload of the analysis-plan addendum to the deposit remains an
+  author-side action** (OSF_JUSTIFICATION_2026-10-12.txt /
+  OSF_ADDENDUM_2026-10-12.md prepared).
+- **F5 - no action by design (pre-correction numbers inside the frozen
+  protocol are historical record).**
+- **F6 (one date to correct) - VERIFIED CORRECT in the manuscript**: the
+  baseline freeze (2026-09-05) and the internal snapshot
+  (docs/osf_archive_manifest.json, 2026-09-16) are distinguished explicitly.
+- **F7 - shipped and reference-closure-checked (424 internal references,
+  0 unresolved at last run).**
+- **F8 - standing agreement, unchanged.**

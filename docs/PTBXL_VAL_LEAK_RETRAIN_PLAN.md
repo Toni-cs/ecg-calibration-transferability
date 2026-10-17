@@ -1,4 +1,4 @@
-# PTB-XL 早停验证集未留出：重训方案与影响评估
+﻿# PTB-XL 早停验证集未留出：重训方案与影响评估
 
 **日期**：2026-10-05　**状态**：待拍板（未执行任何重训）
 **性质**：本文档只做方案与影响评估，不含任何已运行的结果。
@@ -174,7 +174,7 @@ train_pos = np.setdiff1d(train_pos, val_pos)   # val 真正离开训练加载器
 
 **合计量级：约 2–3 GPU 日 + 数 CPU 时**（单卡 8GB，协议 §3.5 结语口径）。
 
-⚠️ **上述单价来自协议预算表，不是实测**。`docs/adversarial_r9_attack_repro.md:267,302`
+⚠️ **上述单价来自协议预算表，不是实测**。`adversarial_r9_attack_repro.md [manuscript-tree doc, not shipped here]:267,302`
 已记录：`transfer_result.json` **没有 `train_time_sec` 字段**，论文也没有报告训练
 wall-clock。**因此第 5 节的 pilot 阶段必须顺便量一次真实耗时**，再回来修正本表。
 
@@ -287,7 +287,7 @@ seed44-46 是 09-06 02:00 的第二批；09-08 的 BCa10000 全网格重跑用�
 （注意：`parameters()` 计数比 `state_dict()` 计数少 1,029 —— BatchNorm running
 stats + log_temperature buffer，前者不算 BN 统计量；对比时必须用同一口径。）
 
-**PILOT 命令**（`scripts/valleak_pilot_retrain.py`，新脚本）：
+**PILOT 命令**（`valleak_pilot_retrain.py [manuscript-tree script, not shipped here]`，新脚本）：
 `eval_transfer.py --source ptbxl --target chapman --arch inceptiontime --seeds 44 45
 --methods ts platt isotonic vector matrix dirichlet em_prior bbse_prior --epochs 50
 --batch-size 16 --bootstrap 10000 --bci-method bca --n-jobs 8 --gpu-inference
@@ -347,7 +347,7 @@ base 与 pilot 的 ts meta 逐项一致（n_bootstrap=10000, bci_method=bca, ts_
 | 3 | ptbxl_cpsc | inceptiontime | 42–46 |
 | 4 | ptbxl_cpsc | resnet1d | 42–46 |
 
-执行器：`scripts/valleak_p0c_retrain.py`（每格独立调用 eval_transfer、逐格计时、
+执行器：`valleak_p0c_retrain.py [manuscript-tree script, not shipped here]`（每格独立调用 eval_transfer、逐格计时、
 断点可续——已有 `transfer_result.json` 且 `reused_checkpoint=false` 的格自动跳过）。
 输出到 `checkpoints/transfer_valleak_p0c`（不覆盖 canonical）；原 20 格已备份至
 `checkpoints/_PRE_VALLEAK_BACKUP_20261007/`（24.6 MB，含 `SHA256SUMS_best_model.txt`）。
