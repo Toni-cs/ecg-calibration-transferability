@@ -22,8 +22,11 @@
   files are recomputations under the *original* `SUBSPACE_CPSC` label ordering —
   the ordering the checkpoints behind these tables were trained with — so they
   hold **corrected** values, not obsolete ones.
-  `discrimination_metrics_60exp.OLD_ENCODING.csv` is the table the article cites
-  for its per-direction AUROC range (0.735–0.843).
+  `discrimination_metrics_60exp.OLD_ENCODING.csv` holds a per-direction AUROC
+  range of (0.735\endash 0.843) (62 cells incl. 2 mamba toys), but the
+  **manuscript-cited table is the unmarked `discrimination_metrics_60exp.csv`**,
+  whose test/ts 60-grid direction means span 0.7355\endash 0.8498 \Dash the
+  article's 0.735\endash 0.850 (re-verified 2026-10-17).
 - Generators were verified by grepping the writer (the `to_csv`/`open(..., "w")`
   target), not by guessing from the file name.
 
@@ -84,7 +87,7 @@ to this checkout to close the result↔script gap; the rest were already here.
 | File | Holds | Generator | Generated |
 |---|---|---|---|
 | `discrimination_metrics_60exp.csv` | per-direction AUROC/AUPRC/F1/… over **64 cells** (the 60-cell grid plus 4 mamba cells) × {cal, test} × {raw, ts, binned, threshold}; full re-run under the corrected labels. Its six direction means span 0.7313–0.8425, not the article's 0.735–0.843, because it adds two mamba cells to the Chapman directions — quote the sidecar below for the article's range | `run_e2_ablation_discrimination.py` | 2026-09-27 |
-| `discrimination_metrics_60exp.OLD_ENCODING.csv` | **corrected** recompute under the original label encoding: 62 cells × {cal, test} × {raw, ts} — **the table the article cites** (per-direction means 0.7353–0.8425) | `recompute_discrimination_old_encoding.py` | 2026-09-17 |
+| `discrimination_metrics_60exp.OLD_ENCODING.csv` | **corrected** recompute under the original label encoding: 62 cells × {cal, test} × {raw, ts} — release-lineage recompute only (its own per-direction test/ts means 0.7353–0.8425); the manuscript-cited table is the unmarked `discrimination_metrics_60exp.csv` (60-grid test/ts direction means 0.7355–0.8498, the article's 0.735–0.850) | `recompute_discrimination_old_encoding.py` | 2026-09-17 |
 | `c1_brier_reliability.csv`, `c1_brier_reliability_summary.csv` | E3 Brier reliability (full scale) | `run_e3_brier_dcr_ncv.py` | 2026-09-17 |
 | `c1_dcr_ncv_multiclass.csv`, `c1_dcr_ncv_summary.csv` | E3 DCR / NCV (full scale) — **multi-block files** | `run_e3_brier_dcr_ncv.py` | 2026-09-17 |
 | `temperature_distribution_analysis.csv` | fitted temperatures per cell | `run_e4_temperature_analysis.py` | 2026-09-28 |

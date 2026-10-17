@@ -273,8 +273,12 @@ notices inside [`results/`](results/) — read them before quoting a number:
 > and the 2026-09-09 change to that ordering is what later broke agreement
 > between cached `probs` and `labels`; recomputing under the original encoding is
 > therefore the **correction**, not the obsolete run. Both `.OLD_ENCODING.csv`
-> files here hold corrected values, and `discrimination_metrics_60exp.OLD_ENCODING.csv`
-> is the table the article itself cites for its AUROC range (0.735–0.843).
+> files here hold corrected values. Note on attribution: the OLD_ENCODING
+> discrimination table's own per-direction AUROC range is (0.735–0.843)
+> (62 cells incl. 2 mamba toys), but the **manuscript-cited table is the
+> unmarked `discrimination_metrics_60exp.csv`**, whose test/ts 60-grid
+> direction means span 0.7355–0.8498 — the article's 0.735–0.850
+> (re-verified 2026-10-17).
 
 Residual status notes:
 
@@ -338,7 +342,7 @@ stays re-runnable; it is *not* part of the reproduction pipeline above.
 | Pooled estimates (simple means + Dersimonian–Laird) | regenerated 2026-10-10 from `robustness_validation_5seeds.csv` (method documented in `_VAL_LEAK_RETRAIN_NOTICE_2026-10-10.md`) | `results/meta_analytic_pooled.csv` |
 | Multiple-testing control | `regenerate_stats_60exp.py` (repo root) | `results/bh_fdr_correction.csv` |
 | Bootstrap bookkeeping | `scripts/p2_optional_fixes.py` | `results/bootstrap_diagnostics.csv` |
-| Discrimination (per-direction AUROC/AUPRC) | `scripts/run_e2_ablation_discrimination.py`; original-encoding recompute: `scripts/recompute_discrimination_old_encoding.py` | `results/discrimination_metrics_60exp.csv` (64 cells × 4 variants) and `results/discrimination_metrics_60exp.OLD_ENCODING.csv` (62 cells × {raw, ts} — **the table the article cites**) |
+| Discrimination (per-direction AUROC/AUPRC) | `scripts/run_e2_ablation_discrimination.py`; original-encoding recompute: `scripts/recompute_discrimination_old_encoding.py` | `results/discrimination_metrics_60exp.csv` (64 cells × 4 variants; **the manuscript-cited table**) and `results/discrimination_metrics_60exp.OLD_ENCODING.csv` (62 cells × {raw, ts}; release-lineage recompute only) |
 | Recalibration deployment safety (780-eval detail grid, strict caliber) | original 2026-09-05 snapshot: `scripts/step3_deployment.py` (not re-derivable); regenerated 2026-10-10 from the shipped detail grid by `scripts/regenerate_deployment_metrics.py` | `results/deployment_metrics.csv` |
 | Holdout / Youden threshold recompute | `scripts/deployment_holdout_recompute.py` | `results/deployment_holdout_recompute.csv` |
 | L2 shift sensitivity grid | `scripts/run_e1a_l2_shift_full.py` | `results/l2_shift_full_390cells.csv`, `results/l2_shift_full_780cells_detail.csv`, `results/l2_shift_full_summary.json` |
