@@ -469,3 +469,25 @@ Please also cite the source databases (PTB-XL: Wagner et al., *Scientific Data* 
 ## Contact
 
 Questions and issues: please open a [GitHub issue](https://github.com/Toni-cs/ecg-calibration-transportability/issues).
+
+## Manuscript alignment (2026-10-17)
+
+- The manuscript (paper/main_cmpb.tex in the submission tree) is titled
+  **"A Deployment-Safety-Oriented Framework for ECG Model Calibration
+  Transferability: A 60-Experiment Boundary Validation Across Three Public
+  Corpora"**; CITATION.cff and the BibTeX block above carry the same title.
+- The full protocol-provenance record (amendments A1-A4, the 2026-09-17
+  checkpoint retrain, the 2026-10-07 validation-leak repair, and the
+  retrospective-registration disclosure) is consolidated as **Appendix A**
+  of the manuscript; a one-paragraph-per-event summary lives in the Methods
+  section.
+- **Reporting compliance:** the manuscript follows TRIPOD+AI
+  (Collins et al., *BMJ* 2024;385:e078378). The completed item-level map is
+  in [docs/TRIPOD_AI_item_map.csv](docs/TRIPOD_AI_item_map.csv) (39 rows;
+  every not-applicable item is disclosed, none silently marked).
+- **Artifact gate:** never quote the files listed in
+  [esults/DO_NOT_QUOTE.md](results/DO_NOT_QUOTE.md) as current readouts;
+  each row names the correct replacement source.
+- The per-seed values of the primary endpoint now live as **Supplementary
+  Table S1** (supplementary.pdf, section S2); the main text carries the
+  12-stratum summary table.
