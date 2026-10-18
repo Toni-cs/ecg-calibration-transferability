@@ -224,12 +224,20 @@ Disposition as of the 2026-10-15/17 audit-and-fix waves (see
 CORRECTIONS_LEDGER_2026-10-11.md and
 FINAL_ADVERSARIAL_AUDIT_2026-10-15.md [manuscript-tree doc] in the manuscript tree):
 
-- **F1 (OSF description links the old account) - STILL OPEN, author-side.**
-  The replacement description text is prepared
-  (OSF_DESC_FULL_2026-10-12.txt); applying it is an OSF-web/API action on
-  project 53h64 that only the account owner can perform. Unchanged by the
-  frozen-v1 doctrine (the deposit and registration metadata are separate
-  editable surfaces).
+- **F1 (OSF description links the old account) - RESOLVED 2026-10-11,
+  live-API-verified 2026-10-18** (previous status "STILL OPEN, author-side"
+  is superseded by direct evidence). The public OSF API reports
+  `date_modified: 2026-10-11T12:33:27.787363Z` for project 53h64, and the
+  live `description` attribute is the full replacement text verbatim --
+  original description preserved (old manuscript title and the superseded
+  "CPSC2018+2019" wording included, per the frozen-snapshot doctrine), plus
+  the appended ADDENDUM (2026-10-12) carrying all three review closures
+  (A3/A4 deposited; dead-link correction history; 51/60 -> 50/60 -> 45/60
+  frozen-value evolution). The registration's own description was likewise
+  link-corrected on 2026-10-11T09:42:59Z (corrected Toni-cs URL, no
+  ADDENDUM block -- correct per the doctrine: the registration is the
+  record of its date). No further OSF action is pending; a referee
+  following the Data-availability DOI lands on the corrected description.
 - **F2 (A3 "archived at the OSF DOI" not true) - RESOLVED 2026-10-11.**
   A3 and A4 were uploaded to the project deposit (53h64, Files, 2026-10-11);
   SHA-256 verified against the repository copies (A3 2025126e...,
