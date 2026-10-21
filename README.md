@@ -1,4 +1,4 @@
-﻿# A Deployment-Safety-Oriented Framework for ECG Model Calibration Transferability: A 60-Experiment Boundary Validation Across Three Public Corpora
+﻿# Calibration Transferability in Cross-Corpus ECG Deployment: A 60-Experiment Boundary Validation
 
 Official code and data-split release for the accompanying article.
 
@@ -458,9 +458,8 @@ If you use this codebase or the split indices, please cite the accompanying arti
 
 ```bibtex
 @misc{ecgcalib2026,
-  title  = {A Deployment-Safety-Oriented Framework for ECG Model Calibration
-            Transferability: A 60-Experiment Boundary Validation Across Three
-            Public Corpora},
+  title  = {Calibration Transferability in Cross-Corpus ECG Deployment:
+            A 60-Experiment Boundary Validation},,
   author = {Guan, Toni and Liu, Ziyan and Gao, Yingrui and Feng, Chuhan and Li, Yue},
   year   = {2026},
   note   = {Official code and data-split release},
@@ -477,9 +476,7 @@ Questions and issues: please open a [GitHub issue](https://github.com/Toni-cs/ec
 ## Manuscript alignment (2026-10-17)
 
 - The manuscript (paper/main_cmpb.tex in the submission tree) is titled
-  **"A Deployment-Safety-Oriented Framework for ECG Model Calibration
-  Transferability: A 60-Experiment Boundary Validation Across Three Public
-  Corpora"**; CITATION.cff and the BibTeX block above carry the same title.
+  **"Calibration Transferability in Cross-Corpus ECG Deployment: A 60-Experiment Boundary Validation"**; CITATION.cff and the BibTeX block above carry the same title.
 - The full protocol-provenance record (amendments A1-A4, the 2026-09-17
   checkpoint retrain, the 2026-10-07 validation-leak repair, and the
   retrospective-registration disclosure) is consolidated as **Appendix A**
@@ -490,7 +487,8 @@ Questions and issues: please open a [GitHub issue](https://github.com/Toni-cs/ec
   in [docs/TRIPOD_AI_item_map.csv](docs/TRIPOD_AI_item_map.csv) (39 rows;
   every not-applicable item is disclosed, none silently marked).
 - **Artifact gate:** never quote the files listed in
-  [esults/DO_NOT_QUOTE.md](results/DO_NOT_QUOTE.md) as current readouts;
+  [
+esults/DO_NOT_QUOTE.md](results/DO_NOT_QUOTE.md) as current readouts;
   each row names the correct replacement source.
 - The per-seed values of the primary endpoint now live as **Supplementary
   Table S1** (supplementary.pdf, section S2); the main text carries the

@@ -1,5 +1,5 @@
 ﻿cff-version: 1.2.0
-title: "A Deployment-Safety-Oriented Framework for ECG Model Calibration Transferability: A 60-Experiment Boundary Validation Across Three Public Corpora"
+title: "Calibration Transferability in Cross-Corpus ECG Deployment: A 60-Experiment Boundary Validation"
 message: >-
   If you use this codebase or the released data-split indices, please cite it using this metadata.
 type: software
