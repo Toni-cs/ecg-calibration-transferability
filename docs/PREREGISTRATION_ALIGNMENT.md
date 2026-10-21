@@ -38,7 +38,7 @@ The OSF **project description** (and its frozen copy inside the registration)
 contains, under `RELATED MATERIAL`:
 
 ```
-https://github.com/gt17641001169-design/ecg-calibration-transportability
+https://github.com/gt17641001169-design/ecg-calibration-transferability
 ```
 
 Repository side, the old handle now appears **nowhere**: `git grep gt17641001169`
@@ -46,9 +46,9 @@ over the working tree returns nothing, and over `HEAD` it returns exactly one hi
 `LICENSE:3`, the copyright-holder string, already corrected to `Toni Guan`. Every
 GitHub URL in the repository already uses the current account:
 
-- `CITATION.cff:14` `repository-code: "https://github.com/Toni-cs/ecg-calibration-transportability"`
+- `CITATION.cff:14` `repository-code: "https://github.com/Toni-cs/ecg-calibration-transferability"`
 - `README.md:112` (release asset), `README.md:315` (BibTeX `url`), `README.md:323` (issues)
-- `git remote -v` → `origin https://github.com/Toni-cs/ecg-calibration-transportability.git`
+- `git remote -v` → `origin https://github.com/Toni-cs/ecg-calibration-transferability.git`
 
 So the citation block the reviewer would check is clean; **the stale URL is on OSF**,
 which is exactly where a referee follows the Data-availability DOI. The paste source
@@ -56,7 +56,7 @@ still sits in the lab tree at `paper/osf_upload/_local_notes/OSF_PASTE_VALUES.md
 and `OSF_PROJECT_DESCRIPTION.md:31`.
 
 **Action.** Edit the OSF *project* description (Metadata → Description) to
-`https://github.com/Toni-cs/ecg-calibration-transportability`. The registration
+`https://github.com/Toni-cs/ecg-calibration-transferability`. The registration
 froze the same text on 2026-09-14 and cannot be edited; note that fact in the
 manuscript only if a referee raises it.
 

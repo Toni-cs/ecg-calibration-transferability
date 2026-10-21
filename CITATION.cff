@@ -1,4 +1,4 @@
-cff-version: 1.2.0
+﻿cff-version: 1.2.0
 title: "A Deployment-Safety-Oriented Framework for ECG Model Calibration Transferability: A 60-Experiment Boundary Validation Across Three Public Corpora"
 message: >-
   If you use this codebase or the released data-split indices, please cite it using this metadata.
@@ -27,7 +27,7 @@ authors:
 version: v1.1.1
 date-released: "2026-10-17"
 license: MIT
-repository-code: "https://github.com/Toni-cs/ecg-calibration-transportability"
+repository-code: "https://github.com/Toni-cs/ecg-calibration-transferability"
 keywords:
   - ECG
   - calibration

@@ -1,4 +1,4 @@
-# A Deployment-Safety-Oriented Framework for ECG Model Calibration Transferability: A 60-Experiment Boundary Validation Across Three Public Corpora
+﻿# A Deployment-Safety-Oriented Framework for ECG Model Calibration Transferability: A 60-Experiment Boundary Validation Across Three Public Corpora
 
 Official code and data-split release for the accompanying article.
 
@@ -7,7 +7,7 @@ Official code and data-split release for the accompanying article.
 > semantics (the 2026-10-05 val-leak repair ships from 2026-10-11 onward),
 > and the v1.0.0 checkpoint asset contains two byte-duplicate direction
 > weights. **Re-clone or checkout
-> [`v1.1.0`](https://github.com/Toni-cs/ecg-calibration-transportability/releases/tag/v1.1.0)**
+> [`v1.1.0`](https://github.com/Toni-cs/ecg-calibration-transferability/releases/tag/v1.1.0)**
 > (tag commit `46dadf1`: leak-free code line, 60 unique-hash grid weights,
 > gate-verified against the delivered result tables). Details and the fix
 > history: `docs/CORRECTIONS_LEDGER_2026-10-11.md`.
@@ -131,7 +131,7 @@ python -m pytest -q
 ```
 
 Licensed checkpoint assets (62 `best_model.pt` + SHA-256 manifest) are provided
-as assets of [release v1.0.0](https://github.com/Toni-cs/ecg-calibration-transportability/releases/tag/v1.0.0).
+as assets of [release v1.0.0](https://github.com/Toni-cs/ecg-calibration-transferability/releases/tag/v1.0.0).
 Unpack them under `checkpoints/` so the paths used above resolve, then verify:
 
 ```bash
@@ -155,7 +155,7 @@ cd checkpoints && sha256sum -c CHECKSUMS.sha256                   # expect 62/62
 > [`reports/CHECKPOINT_INDEPENDENCE_AUDIT_2026-09-17.md`](reports/CHECKPOINT_INDEPENDENCE_AUDIT_2026-09-17.md)).
 > **A post-repair asset resolves this**:
 > `ecg-release_assets_transfer_checkpoints_post_repair_2026-10-11.zip`
-> (GitHub release [**v1.1.0**](https://github.com/Toni-cs/ecg-calibration-transportability/releases/tag/v1.1.0),
+> (GitHub release [**v1.1.0**](https://github.com/Toni-cs/ecg-calibration-transferability/releases/tag/v1.1.0),
 > published 2026-10-11) ships 60 unique-hash grid
 > weights including all 20 post-val-leak retrained cells, gate-verified cell by
 > cell against `results/robustness_validation_5seeds.csv` (methods.ts ood/id
@@ -464,7 +464,7 @@ If you use this codebase or the split indices, please cite the accompanying arti
   author = {Guan, Toni and Liu, Ziyan and Gao, Yingrui and Feng, Chuhan and Li, Yue},
   year   = {2026},
   note   = {Official code and data-split release},
-  url    = {https://github.com/Toni-cs/ecg-calibration-transportability}
+  url    = {https://github.com/Toni-cs/ecg-calibration-transferability}
 }
 ```
 
@@ -472,7 +472,7 @@ Please also cite the source databases (PTB-XL: Wagner et al., *Scientific Data* 
 
 ## Contact
 
-Questions and issues: please open a [GitHub issue](https://github.com/Toni-cs/ecg-calibration-transportability/issues).
+Questions and issues: please open a [GitHub issue](https://github.com/Toni-cs/ecg-calibration-transferability/issues).
 
 ## Manuscript alignment (2026-10-17)
 
