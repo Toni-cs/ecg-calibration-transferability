@@ -41,7 +41,7 @@ Three public databases, unified to five superclasses (`NORM / MI / STTC / CD / H
 | Database | Records (after preprocessing) | Source |
 |---|---|---|
 | PTB-XL | 21,522 | [PhysioNet v1.0.3](https://physionet.org/content/ptb-xl/1.0.3/) |
-| Chapman–Shaoxing | 20,243 | PhysioNet (Chapman–Shaoxing ECG) |
+| Chapman–Shaoxing (mixed cohort) | 20,243 (48.6% Chapman–Shaoxing + 51.4% Ningbo) | [PhysioNet ecg-arrhythmia](https://physionet.org/content/ecg-arrhythmia/1.0.0/); composition audit: [`reports/MIXING_AUDIT_DATA_LAYER_2026-10-22.md`](reports/MIXING_AUDIT_DATA_LAYER_2026-10-22.md) |
 | CPSC2018 | 10,285 | [PhysioNet/CinC 2020](https://physionet.org/content/challenge-2018/) |
 
 The CPSC corpus is **CPSC2018 only**, i.e. the union of the *CPSC Database*
@@ -351,7 +351,7 @@ stays re-runnable; it is *not* part of the reproduction pipeline above.
 | E3 Brier / DCR / NCV | `scripts/run_e3_brier_dcr_ncv.py` | `results/c1_brier_reliability*.csv`, `results/c1_dcr_ncv_*.csv` |
 | Fitted temperatures and shift sensitivity | `scripts/run_e4_temperature_analysis.py` | `results/temperature_distribution_analysis.csv`, `results/temperature_shift_sensitivity.csv` |
 | Label-free predictability experiment | `scripts/step2_predictability.py` | `results/predictability_3arch.csv` |
-| T-based directional discrimination (v2) | `scripts/predictability_corrected_v2.py` | `results/predictability_corrected_v2.csv` |
+| T-based directional discrimination (v2) | `scripts/predictability_corrected_v2.py` | `results/predictability_corrected_v2.csv` (pre-retrain era snapshot, mtime 2026-09-27; its `const_positive_baseline = 0.8333` reflects the pre-retrain 50/60 grid — do not quote its counts; regenerate on post-retrain cells before citing any number from it) |
 | Small-sample dose-response (protocol §S2) | `scripts/run_s2_small_sample.py` | `results/s2_dose_response.csv`, `results/s2_dose_response_summary.json` |
 | Counter-example discrimination | `scripts/discriminate_counterexamples.py` | `results/counterexample_discrimination.csv`, `.json` |
 | Shapley decomposition rebuilds | `scripts/rebuild_shapley_crossfit.py`, `scripts/rebuild_shapley_slopeT.py` | `results/rebuild_shapley_*.csv/.json` |
@@ -487,8 +487,7 @@ Questions and issues: please open a [GitHub issue](https://github.com/Toni-cs/ec
   in [docs/TRIPOD_AI_item_map.csv](docs/TRIPOD_AI_item_map.csv) (39 rows;
   every not-applicable item is disclosed, none silently marked).
 - **Artifact gate:** never quote the files listed in
-  [
-esults/DO_NOT_QUOTE.md](results/DO_NOT_QUOTE.md) as current readouts;
+  [results/DO_NOT_QUOTE.md](results/DO_NOT_QUOTE.md) as current readouts;
   each row names the correct replacement source.
 - The per-seed values of the primary endpoint now live as **Supplementary
   Table S1** (supplementary.pdf, section S2); the main text carries the
