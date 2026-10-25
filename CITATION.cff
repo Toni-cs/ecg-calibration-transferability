@@ -24,8 +24,8 @@ authors:
     given-names: Yue
     affiliation: "College of Information Technology, Shenyang Institute of Technology, Shenyang, China"
     email: 3394481360@qq.com
-version: v1.1.1
-date-released: "2026-10-17"
+version: v1.1.2
+date-released: "2026-10-25"
 license: MIT
 repository-code: "https://github.com/Toni-cs/ecg-calibration-transferability"
 keywords:

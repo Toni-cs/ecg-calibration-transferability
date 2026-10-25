@@ -459,7 +459,7 @@ If you use this codebase or the split indices, please cite the accompanying arti
 ```bibtex
 @misc{ecgcalib2026,
   title  = {Calibration Transferability in Cross-Corpus ECG Deployment:
-            A 60-Experiment Boundary Validation},,
+            A 60-Experiment Boundary Validation},
   author = {Guan, Toni and Liu, Ziyan and Gao, Yingrui and Feng, Chuhan and Li, Yue},
   year   = {2026},
   note   = {Official code and data-split release},
