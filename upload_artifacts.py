@@ -55,7 +55,7 @@ SNAPSHOT_ONLY = {
 SKIP_DIRS = {'.git', '__pycache__', 'repo_audit', 'dr:20261106020004', 'recheck'}
 SKIP_FILES = {'audit.log', 'audit_github.py', 'audit_github2.py',
               'UPLOAD_DRYRUN.log', 'UPLOAD_EXECUTE.log', 'PRUNE_EXECUTE.log',
-              'prune_branch.py', '分支精简完成回执.md',
+              'prune_branch.py', 'sync_branch.py', 'SYNC_EXECUTE.log', '分支精简完成回执.md',
               '.upload_blobs.json', '.gh_token'}  # logs / maintenance / credential
 SKIP_SUFFIX = {'.pyc'}
 
