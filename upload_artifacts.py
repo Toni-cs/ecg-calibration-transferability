@@ -36,21 +36,27 @@ PRIVATE_TOPLEVEL = {
     '一区构想与实施蓝图.md',
     '直到一区执行计划.md',
     '上传前核查与归档清单.md',
+    '成功论文架构漏洞与补洞报告.md',
     'UPLOAD_MANIFEST.sha256',   # full local manifest references private files
 }
-# Aggregate snapshot zips and the offline-only manifest are convenience copies
-# for the user's local disk. All of their contents are shipped as loose files,
-# and including a zip of the archive inside the archive creates a self-referential
-# hash that can never be consistent. Excluded from ALL tiers.
+# 11 single-round zips duplicate their loose directories exactly; the offline
+# aggregate snapshots would create self-referential hashes. Excluded from ALL
+# tiers after the 2026-11-06 prune (branch commit 263d9e6b33).
 SNAPSHOT_ONLY = {
     'W1_W12_全量产物_上传候选.zip',
     'W12_数据准入方案_交付.zip',
     'UPLOAD_MANIFEST.sha256',
+    'W10_全部产物.zip', 'W11B_百级验收_全部产物.zip', 'W11_全部产物.zip',
+    'W8_W9_继续优化_全部产物.zip', 'gsgt_experiment_w2.zip',
+    'mamba600_w3.zip', 'pari_experiment_w1.zip', 'w4_论文复现与补洞.zip',
+    'w5_GSGST_成功结果.zip', 'w6_Tier1内核_全部产物.zip',
+    'w7_60k_全部产物.zip',
 }
 SKIP_DIRS = {'.git', '__pycache__', 'repo_audit', 'dr:20261106020004', 'recheck'}
 SKIP_FILES = {'audit.log', 'audit_github.py', 'audit_github2.py',
-              'UPLOAD_DRYRUN.log', 'UPLOAD_EXECUTE.log', '.upload_blobs.json',
-              '.gh_token'}  # logs / transient progress / credential: never shipped
+              'UPLOAD_DRYRUN.log', 'UPLOAD_EXECUTE.log', 'PRUNE_EXECUTE.log',
+              'prune_branch.py', '分支精简完成回执.md',
+              '.upload_blobs.json', '.gh_token'}  # logs / maintenance / credential
 SKIP_SUFFIX = {'.pyc'}
 
 # Files that exist locally but are generated/verification-only for the branch.
