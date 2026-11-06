@@ -1,0 +1,2 @@
+[start] next_seed=21000 done=0 shards=0
+[box 1] +240 rows  total 240/60000  47s  -> shard_000.npz

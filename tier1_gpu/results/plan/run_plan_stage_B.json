@@ -1,0 +1,870 @@
+{
+  "prereg": "T2 v1.0",
+  "plan": [
+    {
+      "run_id": "T2-B-0000",
+      "model": "ECGFounder",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0001",
+      "model": "ECGFounder",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0002",
+      "model": "ECGFounder",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0003",
+      "model": "ECGFounder",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0004",
+      "model": "ECGFounder",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0005",
+      "model": "ECGFounder",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0006",
+      "model": "ECGFounder",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0007",
+      "model": "ECGFounder",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0008",
+      "model": "ECGFounder",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0009",
+      "model": "ECGFounder",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0010",
+      "model": "ECGFounder",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0011",
+      "model": "ECGFounder",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0012",
+      "model": "ECGFounder",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0013",
+      "model": "ECGFounder",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0014",
+      "model": "ECGFounder",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0015",
+      "model": "ECGFounder",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0016",
+      "model": "ECGFounder",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0017",
+      "model": "ECGFounder",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0018",
+      "model": "ECGFounder",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0019",
+      "model": "ECGFounder",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0020",
+      "model": "ECGFounder",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0021",
+      "model": "ECGFounder",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0022",
+      "model": "ECGFounder",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0023",
+      "model": "ECGFounder",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0024",
+      "model": "ECGFounder",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0025",
+      "model": "ECGFounder",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0026",
+      "model": "ECGFounder",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0027",
+      "model": "ECGFM",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0028",
+      "model": "ECGFM",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0029",
+      "model": "ECGFM",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0030",
+      "model": "ECGFM",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0031",
+      "model": "ECGFM",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0032",
+      "model": "ECGFM",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0033",
+      "model": "ECGFM",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0034",
+      "model": "ECGFM",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0035",
+      "model": "ECGFM",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0036",
+      "model": "ECGFM",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0037",
+      "model": "ECGFM",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0038",
+      "model": "ECGFM",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0039",
+      "model": "ECGFM",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0040",
+      "model": "ECGFM",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0041",
+      "model": "ECGFM",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0042",
+      "model": "ECGFM",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0043",
+      "model": "ECGFM",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0044",
+      "model": "ECGFM",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0045",
+      "model": "ECGFM",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0046",
+      "model": "ECGFM",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0047",
+      "model": "ECGFM",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0048",
+      "model": "ECGFM",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0049",
+      "model": "ECGFM",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0050",
+      "model": "ECGFM",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0051",
+      "model": "ECGFM",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0052",
+      "model": "ECGFM",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0053",
+      "model": "ECGFM",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0054",
+      "model": "HuBERTECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0055",
+      "model": "HuBERTECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0056",
+      "model": "HuBERTECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0057",
+      "model": "HuBERTECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0058",
+      "model": "HuBERTECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0059",
+      "model": "HuBERTECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0060",
+      "model": "HuBERTECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0061",
+      "model": "HuBERTECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0062",
+      "model": "HuBERTECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0063",
+      "model": "HuBERTECG",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0064",
+      "model": "HuBERTECG",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0065",
+      "model": "HuBERTECG",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0066",
+      "model": "HuBERTECG",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0067",
+      "model": "HuBERTECG",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0068",
+      "model": "HuBERTECG",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0069",
+      "model": "HuBERTECG",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0070",
+      "model": "HuBERTECG",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0071",
+      "model": "HuBERTECG",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0072",
+      "model": "HuBERTECG",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0073",
+      "model": "HuBERTECG",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0074",
+      "model": "HuBERTECG",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0075",
+      "model": "HuBERTECG",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0076",
+      "model": "HuBERTECG",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0077",
+      "model": "HuBERTECG",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0078",
+      "model": "HuBERTECG",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0079",
+      "model": "HuBERTECG",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0080",
+      "model": "HuBERTECG",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0081",
+      "model": "xECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0082",
+      "model": "xECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0083",
+      "model": "xECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0084",
+      "model": "xECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0085",
+      "model": "xECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0086",
+      "model": "xECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0087",
+      "model": "xECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0088",
+      "model": "xECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0089",
+      "model": "xECG",
+      "mode": "frozen_linear_probe",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0090",
+      "model": "xECG",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0091",
+      "model": "xECG",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0092",
+      "model": "xECG",
+      "mode": "full_finetune",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0093",
+      "model": "xECG",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0094",
+      "model": "xECG",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0095",
+      "model": "xECG",
+      "mode": "full_finetune",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0096",
+      "model": "xECG",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0097",
+      "model": "xECG",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0098",
+      "model": "xECG",
+      "mode": "full_finetune",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0099",
+      "model": "xECG",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0100",
+      "model": "xECG",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0101",
+      "model": "xECG",
+      "mode": "lora",
+      "corpus": "PTBXL",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0102",
+      "model": "xECG",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0103",
+      "model": "xECG",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0104",
+      "model": "xECG",
+      "mode": "lora",
+      "corpus": "CODETEST",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0105",
+      "model": "xECG",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 7,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0106",
+      "model": "xECG",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 8,
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-B-0107",
+      "model": "xECG",
+      "mode": "lora",
+      "corpus": "CPSC",
+      "seed": 9,
+      "status": "PLANNED_NOT_EXECUTED"
+    }
+  ],
+  "gpu_training_executed": false
+}

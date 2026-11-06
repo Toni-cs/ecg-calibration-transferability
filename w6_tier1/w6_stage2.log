@@ -1,0 +1,39 @@
+[stage2] loaded 600 main seeds (0s)
+   F0 = {'manipulation_mean': 0.06818228885445854, 'manipulation_positive_frac': 0.9716666666666667, 'AUROC_mean': 0.6265517573236324, 'AUROC_n_undefined_of_600': 18, 'AUROC_note': 'tiny single-class subgroups make AUROC undefined; nan-aware mean is used, main-seed JSON untouched', 'oracle_nll_pass': True, 'n_seeds_failing_nll': 0, 'PASS': True}
+   [cache] proposition1
+   [cache] patient_bootstrap
+
+[H]
+    H1_primary PASS = True
+         harm_CERTGATE 0.0133
+         relative_reduction 0.8621
+        conditions: {'harm_le_0.025': True, 'reduction_ge_0.50': True, 'paired_CI_lower_gt_0': True}
+    H2_certificate PASS = True
+         A_accuracy_expect_GST 1.0
+         B_accuracy_expect_GLOBAL 0.94
+        conditions: {'A_ge_0.85': True, 'B_ge_0.85': True}
+    H3_metric_chain PASS = True
+         n_improved_of_9 9
+        conditions: {'n_improved_ge_7': True, 'primary_CI_upper_lt_0': True}
+    H4_LOCO PASS = False
+        conditions: {'site_ge_two_thirds': False, 'cart_ge_two_thirds': False, 'year_ge_two_thirds': False}
+    H5_proposition1 PASS = False
+         mean_loglog_slope -1.071
+        conditions: {'P_ge_0.95': False, 'slope_le_-0.7': True}
+    H6_patient_stats PASS = False
+         mean_n_eff_over_n 0.5133
+         patient_block_width_ratio_mean 0.7917
+        conditions: {'neff_in_range': True, 'width_ratio_ge_1.05': False}
+   [cache] falsification
+
+[F] {'FM1_merge_groups': {'mean_delta_CERT': 0.0, 'PASS': True}, 'FM2_shuffle_group_id': {'mean_delta_CERT_minus_GST': 5.319181234555876e-05, 'PASS': True}, 'FM3_homogeneous': {'mean_delta_GST': -0.0014584130875230073, 'PASS': True}, 'FM4_lam1_equals_GST': {'max_abs_diff': 0.0, 'PASS': True}, 'FM4_lam0_equals_GLOBAL': {'max_abs_diff': 2.7755575615628914e-17, 'PASS': True}, 'FM5_random_certificate': {'mean_delta_CERT': -0.002341988901300312, 'PASS': True}}
+   [cache] cnn_control
+
+[C] CNN mean delta -0.0031 neg 72 /100
+
+=== W6 FINAL VERDICT ===
+{'F0': True, 'H1': True, 'H2': True, 'H3': True, 'H4': False, 'H5': False, 'H6': False, 'FM1_merge_groups': True, 'FM2_shuffle_group_id': True, 'FM3_homogeneous': True, 'FM4_lam1_equals_GST': True, 'FM4_lam0_equals_GLOBAL': True, 'FM5_random_certificate': True, 'ARCH': True} | pass 11 / 14
+elapsed 1.0 s
+/data/workspace/w6_tier1/run_w6_stage2.py:385: UserWarning: Glyph 770 (\N{COMBINING CIRCUMFLEX ACCENT}) missing from font(s) WenQuanYi Micro Hei.
+  fig.tight_layout(); fig.savefig(HERE / 'fig_w6_theory_external.png'); plt.close(fig)
+DONE

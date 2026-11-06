@@ -1,0 +1,13 @@
+=== T2 GRID PLANNER (CPU, spec self-check) ===
+  catalog               : 13 corpora (12 open + 1 academic-request)
+  open layer            : 575,242 records / 390,930 patients
+  main queue (+CODE-II) : 3,310,438 records / 2,484,678 patients
+  Stage A / B / C       : 150 / 108 / 108 cells   (total GPU runs 258)
+  seed disjointness     : PASS []
+  gates / ontologies    : 12 / 4
+  GPU-hour sensitivity (ASSUMPTION-DRIVEN, not measured):
+      500 sps -> A≈   191.8 h | B≈    4.7 h | fwd≈1.84 h
+     1000 sps -> A≈    95.9 h | B≈    2.4 h | fwd≈0.92 h
+     2400 sps -> A≈    40.0 h | B≈    1.0 h | fwd≈0.38 h
+  structural checks     : ALL PASS
+written /data/workspace/tier1_gpu/results/grid_plan.json

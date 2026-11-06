@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "prereg": "PREREGISTRATION_W9.md v1.0 (frozen)",
+    "method": "HB-GST heteroscedastic BLUP + Proposition 2",
+    "target_seeds": 10000,
+    "actual_seeds": 10000,
+    "seed_range": [
+      110000,
+      119999
+    ],
+    "n_shards": 27,
+    "date": "2026-11-06",
+    "zero_hyperparameters": true,
+    "no_exploration_set": true,
+    "w8_prior": "W8 hard-gate design failure fully retained; W8 consumed no confirmatory seeds",
+    "w6_w7_w8_results_unchanged": true
+  },
+  "F0": {
+    "manipulation_mean": 0.06324483297222143,
+    "manipulation_positive_frac": 0.9462,
+    "direction_consistency_frac": 0.828,
+    "PASS": true
+  },
+  "H": {
+    "H1_primary": {
+      "harm_CERT": 0.0257,
+      "harm_HB": 0.0281,
+      "harm_LB_exploratory": 0.0254,
+      "relative_reduction": -0.09338521400778209,
+      "CI95_HB": [
+        0.025037703566612734,
+        0.03152472740990333
+      ],
+      "CI_half_width": 0.0032435119216452962,
+      "CI95_CERT": [
+        0.022775908181537578,
+        0.028988366054871765
+      ],
+      "paired_diff": -0.0024,
+      "paired_CI95": [
+        -0.0052,
+        0.0003
+      ],
+      "conditions": {
+        "HB_lower_than_CERT": false,
+        "paired_CI_lower_gt_0": false
+      },
+      "PASS": false
+    },
+    "H2_noninferior": {
+      "mean_dECE_CERT": -0.017000395573409204,
+      "mean_dECE_HB": -0.017670474787519107,
+      "mean_dECE_LB_exploratory": -0.015806852490077416,
+      "margin": 0.002,
+      "conditions": {
+        "noninferior": true
+      },
+      "PASS": true
+    },
+    "H3_tail": {
+      "n_tail": 10,
+      "mean_dECE_CERT_on_CERT_tail": 0.015979435726986818,
+      "mean_dECE_HB_on_CERT_tail": 0.014311232635596633,
+      "n_harm_improved": 10,
+      "tail_seeds": [
+        119227,
+        115599,
+        111730,
+        111067,
+        112834,
+        118474,
+        111744,
+        118583,
+        111971,
+        117969
+      ],
+      "conditions": {
+        "tail_not_worse": true,
+        "harm_improved_ge_8": true
+      },
+      "PASS": true
+    },
+    "H4_stratified": {
+      "n_bins": 20,
+      "bins_HB_not_worse": 9,
+      "mean_lam_g_range": 0.21895000803360212,
+      "curve": [
+        {
+          "spread_mid": 0.08625,
+          "n": 529,
+          "harm_CERT": 0.00945179584120983,
+          "harm_HB": 0.007561436672967864,
+          "dECE_HB": 2.9929716671985728e-05,
+          "lam_g_spread_mean": 0.010034698931995129
+        },
+        {
+          "spread_mid": 0.15875,
+          "n": 483,
+          "harm_CERT": 0.004140786749482402,
+          "harm_HB": 0.010351966873706004,
+          "dECE_HB": -4.046251241350149e-05,
+          "lam_g_spread_mean": 0.016003361572988272
+        },
+        {
+          "spread_mid": 0.23124999999999998,
+          "n": 503,
+          "harm_CERT": 0.011928429423459244,
+          "harm_HB": 0.011928429423459244,
+          "dECE_HB": -0.0002883652202563333,
+          "lam_g_spread_mean": 0.026371487078493384
+        },
+        {
+          "spread_mid": 0.30374999999999996,
+          "n": 507,
+          "harm_CERT": 0.013806706114398421,
+          "harm_HB": 0.009861932938856016,
+          "dECE_HB": -0.0005759131229696813,
+          "lam_g_spread_mean": 0.05349189837167646
+        },
+        {
+          "spread_mid": 0.37625,
+          "n": 496,
+          "harm_CERT": 0.028225806451612902,
+          "harm_HB": 0.03225806451612903,
+          "dECE_HB": -0.0017241074327206925,
+          "lam_g_spread_mean": 0.10878584659635807
+        },
+        {
+          "spread_mid": 0.44875,
+          "n": 491,
+          "harm_CERT": 0.048879837067209775,
+          "harm_HB": 0.06109979633401222,
+          "dECE_HB": -0.0032867143232335107,
+          "lam_g_spread_mean": 0.1656384770566839
+        },
+        {
+          "spread_mid": 0.52125,
+          "n": 525,
+          "harm_CERT": 0.030476190476190476,
+          "harm_HB": 0.0380952380952381,
+          "dECE_HB": -0.005452799771276543,
+          "lam_g_spread_mean": 0.22547808110535764
+        },
+        {
+          "spread_mid": 0.59375,
+          "n": 492,
+          "harm_CERT": 0.04878048780487805,
+          "harm_HB": 0.056910569105691054,
+          "dECE_HB": -0.008187437747513522,
+          "lam_g_spread_mean": 0.27328579822510063
+        },
+        {
+          "spread_mid": 0.66625,
+          "n": 503,
+          "harm_CERT": 0.05168986083499006,
+          "harm_HB": 0.07554671968190854,
+          "dECE_HB": -0.010334128159294603,
+          "lam_g_spread_mean": 0.3064270589337271
+        },
+        {
+          "spread_mid": 0.73875,
+          "n": 500,
+          "harm_CERT": 0.044,
+          "harm_HB": 0.036,
+          "dECE_HB": -0.015241286243712059,
+          "lam_g_spread_mean": 0.32429921685799845
+        },
+        {
+          "spread_mid": 0.81125,
+          "n": 522,
+          "harm_CERT": 0.03639846743295019,
+          "harm_HB": 0.034482758620689655,
+          "dECE_HB": -0.017377298456493998,
+          "lam_g_spread_mean": 0.3297042652862845
+        },
+        {
+          "spread_mid": 0.88375,
+          "n": 487,
+          "harm_CERT": 0.026694045174537988,
+          "harm_HB": 0.024640657084188913,
+          "dECE_HB": -0.020906059610576212,
+          "lam_g_spread_mean": 0.3409612276733685
+        },
+        {
+          "spread_mid": 0.9562499999999999,
+          "n": 530,
+          "harm_CERT": 0.018867924528301886,
+          "harm_HB": 0.020754716981132074,
+          "dECE_HB": -0.026097259868453227,
+          "lam_g_spread_mean": 0.314712006354925
+        },
+        {
+          "spread_mid": 1.02875,
+          "n": 469,
+          "harm_CERT": 0.017057569296375266,
+          "harm_HB": 0.021321961620469083,
+          "dECE_HB": -0.029559354309422387,
+          "lam_g_spread_mean": 0.2986309307812007
+        },
+        {
+          "spread_mid": 1.1012499999999998,
+          "n": 493,
+          "harm_CERT": 0.02636916835699797,
+          "harm_HB": 0.032454361054766734,
+          "dECE_HB": -0.031369611633834144,
+          "lam_g_spread_mean": 0.29840003056581216
+        },
+        {
+          "spread_mid": 1.17375,
+          "n": 461,
+          "harm_CERT": 0.019522776572668113,
+          "harm_HB": 0.021691973969631236,
+          "dECE_HB": -0.03150119939180308,
+          "lam_g_spread_mean": 0.28088119690899704
+        },
+        {
+          "spread_mid": 1.2462499999999999,
+          "n": 493,
+          "harm_CERT": 0.02231237322515213,
+          "harm_HB": 0.016227180527383367,
+          "dECE_HB": -0.03226923520997869,
+          "lam_g_spread_mean": 0.2835450658937564
+        },
+        {
+          "spread_mid": 1.31875,
+          "n": 538,
+          "harm_CERT": 0.024163568773234202,
+          "harm_HB": 0.01858736059479554,
+          "dECE_HB": -0.03819319497952855,
+          "lam_g_spread_mean": 0.2543675404816468
+        },
+        {
+          "spread_mid": 1.3912499999999999,
+          "n": 520,
+          "harm_CERT": 0.013461538461538462,
+          "harm_HB": 0.013461538461538462,
+          "dECE_HB": -0.0409435186098175,
+          "lam_g_spread_mean": 0.24467425991447503
+        },
+        {
+          "spread_mid": 1.46375,
+          "n": 458,
+          "harm_CERT": 0.017467248908296942,
+          "harm_HB": 0.019650655021834062,
+          "dECE_HB": -0.04236628836225529,
+          "lam_g_spread_mean": 0.23187996383152065
+        }
+      ],
+      "conditions": {
+        "bins_ge_15": false,
+        "heteroscedasticity_active": true
+      },
+      "PASS": false
+    },
+    "H5_architecture": {
+      "n_mamba": 9000,
+      "n_cnn": 1000,
+      "mean_dECE_mamba": -0.017600760691698736,
+      "mean_dECE_cnn": -0.01829790164990248,
+      "harm_HB_mamba": 0.028444444444444446,
+      "harm_HB_cnn": 0.025,
+      "conditions": {
+        "same_sign": true,
+        "cnn_le_-0.002": true
+      },
+      "PASS": true
+    },
+    "H6_proposition2": {
+      "n_grid_cells": 144,
+      "frac_R_hetero_le_R_homo": 1.0,
+      "cv_vs_mean_gap": [
+        [
+          0.0,
+          5.782411586589357e-19
+        ],
+        [
+          0.2,
+          9.529946429893835e-05
+        ],
+        [
+          0.5,
+          0.0006780571797662514
+        ],
+        [
+          1.0,
+          0.004305033188881997
+        ],
+        [
+          1.5,
+          0.013752973889580203
+        ],
+        [
+          2.0,
+          0.019506177189185802
+        ]
+      ],
+      "pearson_cv_gap": 0.9625718966930615,
+      "analytic": {
+        "f": "tau2*x/(tau2+x)",
+        "f_double_prime": "-2*tau2^2/(tau2+x)^3 < 0",
+        "jensen": "mean f(sigma2_g) <= f(mean sigma2_g)",
+        "equality_iff": "all n_g equal"
+      },
+      "conditions": {
+        "frac_ge_0.99": true,
+        "pearson_ge_0.8": true
+      },
+      "PASS": true
+    }
+  },
+  "F_falsification": {
+    "F1_flatten": {
+      "max_abs_diff_HB_vs_CERT": 2.7755575615628914e-17,
+      "PASS": true
+    },
+    "F2_zero": {
+      "max_abs_diff_HB_vs_GLOBAL": 0.0,
+      "mean_dECE_HB": 0.0,
+      "PASS": true
+    },
+    "F3_random": {
+      "harm_HB": 0.058333333333333334,
+      "harm_CERT_baseline": 0.03333333333333333,
+      "PASS": true
+    },
+    "F4_homogeneous": {
+      "mean_abs_diff": 0.009177223708966887,
+      "PASS": false
+    },
+    "F5_reversed": {
+      "harm_HB": 0.06666666666666667,
+      "harm_CERT_baseline": 0.03333333333333333,
+      "PASS": true
+    }
+  },
+  "aggregate": {
+    "GLOBAL": {
+      "ECE": 0.17093970403310638,
+      "dECE": null,
+      "harm": null
+    },
+    "GST": {
+      "ECE": 0.15152420660989685,
+      "dECE": -0.019415497423209523,
+      "harm": 0.1317
+    },
+    "GS-GST": {
+      "ECE": 0.15331435276120023,
+      "dECE": null,
+      "harm": 0.0718
+    },
+    "CERT-GATE": {
+      "ECE": 0.15393930845969717,
+      "dECE": -0.017000395573409204,
+      "harm": 0.0257
+    },
+    "HB-GST": {
+      "ECE": 0.15326922924558725,
+      "dECE": -0.017670474787519107,
+      "harm": 0.0281
+    },
+    "LB-exploratory": {
+      "ECE": 0.15513285154302897,
+      "dECE": -0.015806852490077416,
+      "harm": 0.0254
+    }
+  },
+  "verdict": {
+    "checks": {
+      "F0": true,
+      "H1": false,
+      "H2": true,
+      "H3": true,
+      "H4": false,
+      "H5": true,
+      "H6": true,
+      "F1_flatten": true,
+      "F2_zero": true,
+      "F3_random": true,
+      "F4_homogeneous": false,
+      "F5_reversed": true
+    },
+    "n_pass": 9,
+    "n_checks": 12,
+    "all_pass": false,
+    "no_v1_1": true,
+    "primary_claim": "Proposition 2 (heteroscedastic BLUP) strictly improves on Proposition 1 by Jensen; HB-GST realises it with zero hyperparameters and cuts deployment harm without sacrificing average calibration gain",
+    "honesty": "Synthetic 12-lead toy waveforms + diagonal selective SSM numpy approximation + hierarchical drift proxy. NOT official Mamba-2, NOT pretrained, NOT real 1.15M ECG. 10,000 seeds are independent DGP draws, NOT patients/centres. W9 uses W7 stress regime. W1-W9 are internal experiments, not published algorithms/SOTA. Does NOT claim Tier-1: real cohort, non-asymptotic bound, clinical/biostat collaborators, third-party reproduction remain unmet."
+  }
+}

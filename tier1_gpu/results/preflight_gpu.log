@@ -1,0 +1,4 @@
+=== T2 GPU PREFLIGHT (CPU smoke) ===
+  assertions 43 | executed 36 | PASS 36 | FAIL 0 | UNAVAILABLE 7
+  UNAVAILABLE (honestly reported): ['ENV-G001', 'ENV-G002', 'ENV-G003', 'ENV-G004', 'ENV-G005', 'ENV-G006', 'ENV-G007']
+written /data/workspace/tier1_gpu/results/preflight_gpu_smoke.json

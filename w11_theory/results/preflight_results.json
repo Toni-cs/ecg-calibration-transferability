@@ -1,0 +1,53 @@
+{
+  "checks": {
+    "1_patient_level_disjoint": {
+      "PASS": true,
+      "n_groups": 36,
+      "n_patients": 351,
+      "n_records": 1018,
+      "n_unique_sum_per_group": 351,
+      "groups_pairwise_patient_disjoint": true,
+      "split_is_patient_level_disjoint": true,
+      "record_counts_match": true
+    },
+    "2_lead_alignment_by_name": {
+      "PASS": true,
+      "rule": "ALIGN_BY_NAME_NOT_CHANNEL_INDEX",
+      "n_leads": 12,
+      "mimic_aVF_aVL_issue_declared": true
+    },
+    "3_CODE15_not_confident_negative": {
+      "PASS": true,
+      "code15_rule": "173,347 CODE-15% records (50.13%) are neither one of six abnormalities nor normal; they MUST NOT be treated as confident negatives",
+      "clinical_review_required": true
+    },
+    "4_deff_and_n_eff": {
+      "PASS": true,
+      "W10_mean_deff": 1.9442294978193473,
+      "deff_from_ICC_formula": 1.912,
+      "n_eff_over_n": 0.514342571759971,
+      "note": "n_rec is NOT the independent sample size"
+    },
+    "5_seed_ranges_disjoint": {
+      "PASS": true,
+      "n_ranges": 27,
+      "overlaps": [],
+      "n_mismatches": []
+    },
+    "6_cache_schema_complete": {
+      "PASS": true,
+      "missing_fields": [],
+      "not_marked_required": [],
+      "n_invariants": 8,
+      "status": "CONTRACT ONLY - no real patient data present"
+    },
+    "7_code_hash_consistency": {
+      "PASS": true,
+      "n_files": 62,
+      "mismatches": []
+    }
+  },
+  "n_pass": 7,
+  "n_checks": 7,
+  "all_pass": true
+}

@@ -1,0 +1,12 @@
+{
+  "prereg": "T2 v1.0",
+  "plan": [
+    {
+      "run_id": "T2-FWD-0000",
+      "corpus": "main_queue",
+      "n_records": 3310438,
+      "status": "PLANNED_NOT_EXECUTED"
+    }
+  ],
+  "gpu_training_executed": false
+}

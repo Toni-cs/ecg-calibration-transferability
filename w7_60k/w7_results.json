@@ -1,0 +1,1094 @@
+{
+  "meta": {
+    "prereg": "PREREGISTRATION_W7.md v1.0 (frozen)",
+    "run_type": "CONFIRMATORY STRESS TEST",
+    "target_seeds": 60000,
+    "actual_seeds": 60000,
+    "seed_range": [
+      21000,
+      80999
+    ],
+    "n_shards": 143,
+    "date": "2026-11-06",
+    "regime": "n_total=1000, L=32, n_ref=700, T_GRID=101, spread~Uniform(0.05,1.50), every 10th seed CNN-1D",
+    "w6_results_unchanged": true,
+    "not_a_substitute_for_tier1": true
+  },
+  "F0": {
+    "manipulation_mean": 0.06338128975764673,
+    "manipulation_positive_frac": 0.9473666666666667,
+    "direction_consistency_frac": 0.8293,
+    "PASS": true
+  },
+  "tail_60_seeds": [
+    {
+      "seed": 64546,
+      "spread": 1.4399109673313415,
+      "lam": 0.9135674592402876,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.02676122780275675,
+      "dECE_GST": 0.02108011588229136,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 30120,
+      "spread": 1.4862226211989213,
+      "lam": 0.9478996240718354,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.0265914800108204,
+      "dECE_GST": 0.023296464806838335,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 34165,
+      "spread": 1.3366982661501374,
+      "lam": 0.8795156156266293,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.02527717552512776,
+      "dECE_GST": 0.029602103269278174,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 49489,
+      "spread": 0.8602740829504857,
+      "lam": 0.8907109912306697,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.02361391868902793,
+      "dECE_GST": 0.024960261606317202,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 73497,
+      "spread": 0.9868194653327643,
+      "lam": 0.7533954547987757,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.02350322848641964,
+      "dECE_GST": 0.023260837955429242,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 66279,
+      "spread": 0.730299318484354,
+      "lam": 0.8423466416177616,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.02145377479965796,
+      "dECE_GST": 0.012173747736391266,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 24320,
+      "spread": 1.0701167822860465,
+      "lam": 0.7105321566026689,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.021428961772044564,
+      "dECE_GST": 0.016211369603962494,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 68457,
+      "spread": 1.4637430411135437,
+      "lam": 0.7385970419555864,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.020194914085376076,
+      "dECE_GST": 0.017148371082347652,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 40778,
+      "spread": 0.40538010117545764,
+      "lam": 0.6441661987687333,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.019960773935641385,
+      "dECE_GST": 0.015550820607480087,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 47795,
+      "spread": 1.2644939673769682,
+      "lam": 0.8849229902245906,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.019735004677711027,
+      "dECE_GST": 0.016679567483714963,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 33840,
+      "spread": 0.6968802274281918,
+      "lam": 0.5801346514105321,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.019396765051683945,
+      "dECE_GST": 0.010564385644321994,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 28752,
+      "spread": 1.2769412851652928,
+      "lam": 0.9206110632349227,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.01931710168941797,
+      "dECE_GST": 0.018170700708899173,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 51994,
+      "spread": 1.2130284844893167,
+      "lam": 0.7363830717421497,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.01917288819689339,
+      "dECE_GST": 0.021843269024200196,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 35480,
+      "spread": 0.527168678335143,
+      "lam": 0.6935295943839748,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.018980143043793862,
+      "dECE_GST": 0.027906888759872628,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 21114,
+      "spread": 1.33561367747067,
+      "lam": 0.857739446988127,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.01892163846453701,
+      "dECE_GST": 0.01740707672079775,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 30489,
+      "spread": 0.8255321470011203,
+      "lam": 0.7815434800968805,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.018896323447658653,
+      "dECE_GST": 0.02161285544936964,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 41315,
+      "spread": 1.1222866897002606,
+      "lam": 0.8214044517473083,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.018870977882622653,
+      "dECE_GST": 0.02318918052339561,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 48926,
+      "spread": 1.3496457664087511,
+      "lam": 0.9286491512328485,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.01863543994121708,
+      "dECE_GST": 0.024686625794401895,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 53960,
+      "spread": 1.3278747255891876,
+      "lam": 0.660681200880029,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.01856756946535737,
+      "dECE_GST": 0.019819360406898495,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 45125,
+      "spread": 1.4840184449453737,
+      "lam": 0.8798298240702478,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.018520387987208065,
+      "dECE_GST": 0.01790045709104307,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 51983,
+      "spread": 0.623233035552868,
+      "lam": 0.6763000432478584,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.018415343415183943,
+      "dECE_GST": 0.020817803874728202,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 50231,
+      "spread": 1.3416062129162614,
+      "lam": 0.925203254124656,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.01826618437965774,
+      "dECE_GST": 0.01583357806917371,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 41405,
+      "spread": 0.5422903242512052,
+      "lam": 0.6345428187900386,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.0180889291237106,
+      "dECE_GST": 0.01766126025701434,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 21140,
+      "spread": 0.571676784715457,
+      "lam": 0.6547620888847696,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.017788757978794312,
+      "dECE_GST": 0.013535366243805885,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 62070,
+      "spread": 0.8958092151777122,
+      "lam": 0.5015994136331305,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.017365576401101424,
+      "dECE_GST": 0.019718991143659687,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 74500,
+      "spread": 0.9356205802347825,
+      "lam": 0.7009454986029434,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.01730492008101403,
+      "dECE_GST": 0.01680766357735619,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 31683,
+      "spread": 0.3108802654308213,
+      "lam": 0.5821640814197326,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.017239880946922442,
+      "dECE_GST": 0.009920270904720169,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 54157,
+      "spread": 0.7893623683315338,
+      "lam": 0.6256569580154674,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.017054349536707675,
+      "dECE_GST": 0.011307090960215704,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 23821,
+      "spread": 0.6286173934623907,
+      "lam": 0.6326414533634847,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.017047436091046003,
+      "dECE_GST": 0.019960144893717002,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 64379,
+      "spread": 0.2045678213620225,
+      "lam": 0.5292872761842764,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.016942320582942344,
+      "dECE_GST": 0.012911196009004089,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 56548,
+      "spread": 0.7419946613537608,
+      "lam": 0.572673076572159,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.01673451716256874,
+      "dECE_GST": 0.0070602060952094925,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 77156,
+      "spread": 0.7862782729582934,
+      "lam": 0.7232216957046693,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.01630393704745453,
+      "dECE_GST": 0.02154958412682778,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 76251,
+      "spread": 1.090944736066144,
+      "lam": 0.931674390181445,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.01625654217417416,
+      "dECE_GST": 0.014529309533750479,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 36993,
+      "spread": 0.680770552342513,
+      "lam": 0.5618263017431737,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.016107937908569347,
+      "dECE_GST": 0.018231770762035526,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 80128,
+      "spread": 0.7642027958389834,
+      "lam": 0.5167169858889602,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.016105708366215943,
+      "dECE_GST": 0.0007229083946201087,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 42708,
+      "spread": 0.3641732501897843,
+      "lam": 0.5570834425375315,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.016031493381089584,
+      "dECE_GST": 0.017947518528070833,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 60080,
+      "spread": 1.0938646104578233,
+      "lam": 0.8519849863558172,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.015463287067325665,
+      "dECE_GST": 0.016271298188342498,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 27690,
+      "spread": 0.5278050105855919,
+      "lam": 0.5977578955186862,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.015314094712070792,
+      "dECE_GST": 0.01654154657377796,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 56846,
+      "spread": 1.1207155140933873,
+      "lam": 0.7673564574850313,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.015285231075607614,
+      "dECE_GST": 0.011282469025102243,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 66086,
+      "spread": 0.8088204424406922,
+      "lam": 0.5826735437310927,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.015171110223684364,
+      "dECE_GST": 0.019124767500568463,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 23878,
+      "spread": 0.21733420849777463,
+      "lam": 0.5261228836265469,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.015096627545878843,
+      "dECE_GST": 0.012287564634624215,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 35833,
+      "spread": 0.9479261516632776,
+      "lam": 0.7062141241315378,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.015065231958894115,
+      "dECE_GST": 0.013613289430985276,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 65538,
+      "spread": 0.5397679020405751,
+      "lam": 0.5473371633118104,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014990187263113824,
+      "dECE_GST": 0.02107204504464258,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 55555,
+      "spread": 0.43777100872141395,
+      "lam": 0.5572724861036455,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014929817476518073,
+      "dECE_GST": 0.008232623221764282,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 47274,
+      "spread": 0.8251246378869109,
+      "lam": 0.5044151384810358,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014804128781158804,
+      "dECE_GST": 0.014072182007294154,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 72973,
+      "spread": 0.30292654421407067,
+      "lam": 0.6946673339944873,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014778276055283424,
+      "dECE_GST": 0.022684598308839704,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 49177,
+      "spread": 0.756906015019503,
+      "lam": 0.6462716679191762,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014628707490672188,
+      "dECE_GST": 0.010530399305440141,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 24974,
+      "spread": 1.043317407769984,
+      "lam": 0.9327092339593597,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014476024673669846,
+      "dECE_GST": 0.01667047066213251,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 79292,
+      "spread": 0.19197890395084827,
+      "lam": 0.609122630592247,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014349993382733961,
+      "dECE_GST": 0.01317214509383724,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 44534,
+      "spread": 1.3482727102743963,
+      "lam": 0.911998718587358,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014336981554696482,
+      "dECE_GST": 0.012441958470427561,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 60445,
+      "spread": 0.6903604145468917,
+      "lam": 0.8042915789247405,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014307601504561646,
+      "dECE_GST": 0.013042059743653633,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 28987,
+      "spread": 1.0540845682608517,
+      "lam": 0.7293442907605324,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014288726663561402,
+      "dECE_GST": 0.013271178564104341,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 30060,
+      "spread": 0.6196818780974174,
+      "lam": 0.631197724898988,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.01423819911267582,
+      "dECE_GST": 0.016697298344282047,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 32679,
+      "spread": 0.12281580100040934,
+      "lam": 0.5134040274443931,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014227344566604433,
+      "dECE_GST": 0.014988210824881276,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 22648,
+      "spread": 1.0610339424221609,
+      "lam": 0.6399336089850626,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014147658589172524,
+      "dECE_GST": 0.015972035366735388,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 69867,
+      "spread": 0.21869390738953853,
+      "lam": 0.5564148402414886,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.014004949288759116,
+      "dECE_GST": 0.011932769921832398,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 46694,
+      "spread": 0.525894712528378,
+      "lam": 0.6750755862621958,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.013985832266483034,
+      "dECE_GST": 0.010613995754274852,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 48154,
+      "spread": 1.019202151955423,
+      "lam": 0.7428704921687095,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.013936816961407639,
+      "dECE_GST": 0.01068559841958125,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 29439,
+      "spread": 1.3694326238933974,
+      "lam": 0.8686154587464546,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.013905680145460841,
+      "dECE_GST": 0.01976781226598351,
+      "harm_CERT": 1
+    },
+    {
+      "seed": 71971,
+      "spread": 0.9629250965839165,
+      "lam": 0.6149655156722923,
+      "cert": 1,
+      "n_min": 8,
+      "dECE_CERT": 0.013885486049958706,
+      "dECE_GST": 0.006849214416817018,
+      "harm_CERT": 1
+    }
+  ],
+  "P": {
+    "P0_bridge": {
+      "n": 600,
+      "harm_GST": 0.10666666666666667,
+      "harm_CERTGATE": 0.02,
+      "relative_reduction": 0.8125,
+      "W6_confirmatory": {
+        "harm_GST": 0.0967,
+        "harm_CERTGATE": 0.0133
+      },
+      "conditions": {
+        "bridge_harm_CERT_le_0.025": true,
+        "bridge_reduction_ge_0.50": true,
+        "same_direction_as_W6": true
+      },
+      "PASS": true
+    },
+    "P1_precision": {
+      "harm_CERTGATE": 0.0234,
+      "CI95_Wilson": [
+        0.02222055326565915,
+        0.02464047304569622
+      ],
+      "half_width": 0.0012099598900185337,
+      "n": 60000,
+      "conditions": {
+        "half_width_le_0.0015": true
+      },
+      "PASS": true
+    },
+    "P2_primary": {
+      "harm_GST": 0.12908333333333333,
+      "harm_GSGST": 0.06848333333333333,
+      "harm_CERTGATE": 0.0234,
+      "relative_reduction": 0.8187217559715947,
+      "paired_diff": 0.10568333333333334,
+      "paired_CI95": [
+        0.10301666666666667,
+        0.10838333333333333
+      ],
+      "conditions": {
+        "harm_le_0.025": true,
+        "reduction_ge_0.50": true,
+        "paired_CI_lower_gt_0": true
+      },
+      "PASS": true
+    },
+    "P3_rare_cell": {
+      "pre_declared_cell": "lambda lowest quintile x spread lowest tertile x n_min lowest tertile",
+      "n_in_cell": 11132,
+      "cell_harm_rate": 0.0,
+      "overall_harm_rate": 0.0234,
+      "ratio": 0.0,
+      "worst_cell_overall": {
+        "lambda": "lam_q2_4",
+        "spread": "spread_low",
+        "n_min": "nmin_low",
+        "n": 8808,
+        "harm_rate": 0.042461398728428704
+      },
+      "n_grid_cells_reported": 7,
+      "grid": [
+        {
+          "lambda": "lam_q2_4",
+          "spread": "spread_low",
+          "n_min": "nmin_low",
+          "n": 8808,
+          "harm_rate": 0.042461398728428704
+        },
+        {
+          "lambda": "lam_q2_4",
+          "spread": "spread_mid",
+          "n_min": "nmin_low",
+          "n": 17038,
+          "harm_rate": 0.0413780960206597
+        },
+        {
+          "lambda": "lam_q2_4",
+          "spread": "spread_high",
+          "n_min": "nmin_low",
+          "n": 10080,
+          "harm_rate": 0.023214285714285715
+        },
+        {
+          "lambda": "lam_q5",
+          "spread": "spread_mid",
+          "n_min": "nmin_low",
+          "n": 2102,
+          "harm_rate": 0.009039010466222646
+        },
+        {
+          "lambda": "lam_q5",
+          "spread": "spread_high",
+          "n_min": "nmin_low",
+          "n": 9846,
+          "harm_rate": 0.006804793824903514
+        },
+        {
+          "lambda": "lam_q1",
+          "spread": "spread_low",
+          "n_min": "nmin_low",
+          "n": 11132,
+          "harm_rate": 0.0
+        },
+        {
+          "lambda": "lam_q1",
+          "spread": "spread_mid",
+          "n_min": "nmin_low",
+          "n": 818,
+          "harm_rate": 0.0
+        }
+      ],
+      "conditions": {
+        "cell_n_ge_200": true,
+        "ratio_ge_3": false
+      },
+      "PASS": false
+    },
+    "P4_cross_round": {
+      "W6_point_estimate": 0.0133,
+      "W7_CI95": [
+        0.02222055326565915,
+        0.02464047304569622
+      ],
+      "PASS": false,
+      "note": "W6 confirmatory regime (1800/48/181) vs W7 stress regime (1000/32/101); a miss is reported as-is, not reconciled"
+    },
+    "P5_tail": {
+      "n_tail": 60,
+      "tail_definition": "largest dECE_CERT (CERT-GATE minus GLOBAL)",
+      "frac_cert_GST_in_tail": 1.0,
+      "frac_cert_GST_overall": 0.6561333333333333,
+      "tail_mean_dECE": 0.017341192065701325,
+      "tail_worst_dECE": 0.02676122780275675,
+      "conditions": {
+        "tail_GST_frac_le_overall": false
+      },
+      "PASS": false
+    },
+    "P6_architecture": {
+      "n_mamba": 54000,
+      "n_cnn": 6000,
+      "mean_dECE_mamba": -0.017115643521764905,
+      "mean_dECE_cnn": -0.01769814394236174,
+      "harm_CERT_mamba": 0.02275925925925926,
+      "harm_CERT_cnn": 0.029166666666666667,
+      "conditions": {
+        "same_sign": true,
+        "cnn_le_-0.002": true
+      },
+      "PASS": true
+    },
+    "P7_proposition1": {
+      "overall_certificate_accuracy_vs_DGP_truth": 0.8476166666666667,
+      "spearman_spread_vs_frac_GST": 0.9984962406015038,
+      "spearman_spread_vs_accuracy": 0.593984962406015,
+      "n_spread_bins": 20,
+      "curve": [
+        {
+          "spread_mid": 0.08625,
+          "n": 2892,
+          "frac_cert_GST": 0.01970954356846473,
+          "frac_truth_GST": 0.0,
+          "accuracy": 0.9802904564315352,
+          "harm_CERT": 0.0038035961272475795,
+          "harm_GST": 0.3876210235131397
+        },
+        {
+          "spread_mid": 0.15875,
+          "n": 2993,
+          "frac_cert_GST": 0.024056130972268625,
+          "frac_truth_GST": 0.0,
+          "accuracy": 0.9759438690277313,
+          "harm_CERT": 0.006682258603407952,
+          "harm_GST": 0.35883728700300704
+        },
+        {
+          "spread_mid": 0.23124999999999998,
+          "n": 2820,
+          "frac_cert_GST": 0.046453900709219856,
+          "frac_truth_GST": 0.0,
+          "accuracy": 0.9535460992907802,
+          "harm_CERT": 0.009929078014184398,
+          "harm_GST": 0.3173758865248227
+        },
+        {
+          "spread_mid": 0.30374999999999996,
+          "n": 2967,
+          "frac_cert_GST": 0.09740478597910347,
+          "frac_truth_GST": 0.0013481631277384564,
+          "accuracy": 0.901247050893158,
+          "harm_CERT": 0.015166835187057633,
+          "harm_GST": 0.28345129760701043
+        },
+        {
+          "spread_mid": 0.37625,
+          "n": 2978,
+          "frac_cert_GST": 0.1974479516453996,
+          "frac_truth_GST": 0.551040967092008,
+          "accuracy": 0.5040295500335796,
+          "harm_CERT": 0.02719946272666219,
+          "harm_GST": 0.2531900604432505
+        },
+        {
+          "spread_mid": 0.44875,
+          "n": 2968,
+          "frac_cert_GST": 0.33456873315363883,
+          "frac_truth_GST": 0.9979784366576819,
+          "accuracy": 0.3365902964959569,
+          "harm_CERT": 0.03537735849056604,
+          "harm_GST": 0.216644204851752
+        },
+        {
+          "spread_mid": 0.52125,
+          "n": 3040,
+          "frac_cert_GST": 0.4832236842105263,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.4832236842105263,
+          "harm_CERT": 0.035526315789473684,
+          "harm_GST": 0.17203947368421052
+        },
+        {
+          "spread_mid": 0.59375,
+          "n": 3075,
+          "frac_cert_GST": 0.6071544715447155,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.6071544715447155,
+          "harm_CERT": 0.04975609756097561,
+          "harm_GST": 0.13073170731707318
+        },
+        {
+          "spread_mid": 0.66625,
+          "n": 3029,
+          "frac_cert_GST": 0.7434796962693958,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.7434796962693958,
+          "harm_CERT": 0.04489930670188181,
+          "harm_GST": 0.10003301419610433
+        },
+        {
+          "spread_mid": 0.73875,
+          "n": 3078,
+          "frac_cert_GST": 0.8242365172189734,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.8242365172189734,
+          "harm_CERT": 0.03313840155945419,
+          "harm_GST": 0.08382066276803118
+        },
+        {
+          "spread_mid": 0.81125,
+          "n": 3035,
+          "frac_cert_GST": 0.8797364085667215,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.8797364085667215,
+          "harm_CERT": 0.03986820428336079,
+          "harm_GST": 0.05403624382207578
+        },
+        {
+          "spread_mid": 0.88375,
+          "n": 2968,
+          "frac_cert_GST": 0.9181266846361186,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.9181266846361186,
+          "harm_CERT": 0.03032345013477089,
+          "harm_GST": 0.04481132075471698
+        },
+        {
+          "spread_mid": 0.9562499999999999,
+          "n": 2980,
+          "frac_cert_GST": 0.951006711409396,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.951006711409396,
+          "harm_CERT": 0.024161073825503355,
+          "harm_GST": 0.0436241610738255
+        },
+        {
+          "spread_mid": 1.02875,
+          "n": 3118,
+          "frac_cert_GST": 0.9640795381654907,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.9640795381654907,
+          "harm_CERT": 0.021167415009621552,
+          "harm_GST": 0.03624118024374599
+        },
+        {
+          "spread_mid": 1.1012499999999998,
+          "n": 3069,
+          "frac_cert_GST": 0.9801238188334963,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.9801238188334963,
+          "harm_CERT": 0.022808732486151843,
+          "harm_GST": 0.030954708374063212
+        },
+        {
+          "spread_mid": 1.17375,
+          "n": 2941,
+          "frac_cert_GST": 0.9836790207412445,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.9836790207412445,
+          "harm_CERT": 0.016660999659979598,
+          "harm_GST": 0.02448146888813329
+        },
+        {
+          "spread_mid": 1.2462499999999999,
+          "n": 2995,
+          "frac_cert_GST": 0.9919866444073456,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.9919866444073456,
+          "harm_CERT": 0.012353923205342237,
+          "harm_GST": 0.019365609348914858
+        },
+        {
+          "spread_mid": 1.31875,
+          "n": 2965,
+          "frac_cert_GST": 0.9919055649241146,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.9919055649241146,
+          "harm_CERT": 0.01585160202360877,
+          "harm_GST": 0.016526138279932545
+        },
+        {
+          "spread_mid": 1.3912499999999999,
+          "n": 3113,
+          "frac_cert_GST": 0.9942177963379377,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.9942177963379377,
+          "harm_CERT": 0.012206874397687119,
+          "harm_GST": 0.019595245743655638
+        },
+        {
+          "spread_mid": 1.46375,
+          "n": 2976,
+          "frac_cert_GST": 0.9979838709677419,
+          "frac_truth_GST": 1.0,
+          "accuracy": 0.9979838709677419,
+          "harm_CERT": 0.008400537634408602,
+          "harm_GST": 0.01881720430107527
+        }
+      ],
+      "boundary_region_n": 11992,
+      "boundary_region_accuracy": 0.6382588392261508,
+      "conditions": {
+        "rho_ge_0.8": true,
+        "overall_acc_ge_0.8": true
+      },
+      "PASS": true
+    }
+  },
+  "convergence_trajectory": {
+    "checkpoints": [
+      {
+        "n": 2000,
+        "harm_CERT": 0.0205,
+        "CI95": [
+          0.015147075079115231,
+          0.02769144069977668
+        ],
+        "half_width": 0.006272182810330725,
+        "harm_GST": 0.13,
+        "relative_reduction": 0.8423076923076923
+      },
+      {
+        "n": 5000,
+        "harm_CERT": 0.02,
+        "CI95": [
+          0.016471933678631395,
+          0.024265087253446074
+        ],
+        "half_width": 0.003896576787407338,
+        "harm_GST": 0.132,
+        "relative_reduction": 0.8484848484848485
+      },
+      {
+        "n": 10000,
+        "harm_CERT": 0.0227,
+        "CI95": [
+          0.019958772038196758,
+          0.02580780627307918
+        ],
+        "half_width": 0.00292451711744121,
+        "harm_GST": 0.1325,
+        "relative_reduction": 0.8286792452830188
+      },
+      {
+        "n": 20000,
+        "harm_CERT": 0.02235,
+        "CI95": [
+          0.02039120556025251,
+          0.02449225322498402
+        ],
+        "half_width": 0.002050523832365754,
+        "harm_GST": 0.1289,
+        "relative_reduction": 0.8266097750193949
+      },
+      {
+        "n": 30000,
+        "harm_CERT": 0.023266666666666668,
+        "CI95": [
+          0.02162083551544171,
+          0.025034576770163745
+        ],
+        "half_width": 0.0017068706273610174,
+        "harm_GST": 0.12946666666666667,
+        "relative_reduction": 0.8202883625128733
+      },
+      {
+        "n": 40000,
+        "harm_CERT": 0.023125,
+        "CI95": [
+          0.021697208942459346,
+          0.024644380411299117
+        ],
+        "half_width": 0.0014735857344198857,
+        "harm_GST": 0.1294,
+        "relative_reduction": 0.82129057187017
+      },
+      {
+        "n": 50000,
+        "harm_CERT": 0.02322,
+        "CI95": [
+          0.0219360908209587,
+          0.024577167472380108
+        ],
+        "half_width": 0.0013205383257107058,
+        "harm_GST": 0.12942,
+        "relative_reduction": 0.8205841446453407
+      },
+      {
+        "n": 60000,
+        "harm_CERT": 0.0234,
+        "CI95": [
+          0.02222055326565915,
+          0.02464047304569622
+        ],
+        "half_width": 0.0012099598900185337,
+        "harm_GST": 0.12908333333333333,
+        "relative_reduction": 0.8187217559715946
+      }
+    ],
+    "note": "cumulative in seed order; no reselection, no subsampling",
+    "interpretation": "shows the estimate stabilises well before 60,000 and that 600 seeds could not resolve the 0.1% tail"
+  },
+  "verdict": {
+    "checks": {
+      "F0": true,
+      "P0": true,
+      "P1": true,
+      "P2": true,
+      "P3": false,
+      "P4": false,
+      "P5": false,
+      "P6": true,
+      "P7": true
+    },
+    "n_pass": 6,
+    "n_checks": 9,
+    "all_pass": false,
+    "actual_seeds": 60000,
+    "no_v1_1": true,
+    "primary_claim": "60,000 independent deployment scenarios resolve the 0.1%-level rare-failure structure of the certificate, which 600 seeds cannot statistically resolve",
+    "does_not_substitute_tier1": "Real 1.15M cohort, non-asymptotic bound, clinical/biostat collaborators, third-party reproduction remain unmet; see 一区构想与实施蓝图.md",
+    "honesty": "Synthetic toy waveforms + diagonal selective SSM numpy approximation. NOT official Mamba-2, NOT pretrained, NOT real ECG. 60,000 seeds are independent DGP draws, NOT patients or centres. W7 stress regime differs from W6 confirmatory regime. W1-W7 are internal experiments, not published algorithms/SOTA.",
+    "failed_checks_interpretation": {
+      "P3": "Pre-declared cell (lambda lowest quintile x spread lowest tertile x n_min lowest tertile) has harm 0.0000 by construction: low lambda means the certificate falls back to GLOBAL, and harm is defined relative to GLOBAL. The real high-risk cell is lambda MIDDLE quintiles x low spread x low n_min: harm 0.0425 (1.8x overall), i.e. the decision boundary tau2~sigma2 with small groups.",
+      "P4": "W7 stress regime (continuous spread, 1000/32/101) gives harm 0.02340 CI [0.02222, 0.02464], which does not cover the W6 confirmatory point estimate 0.0133. This is an estimand difference, not a replication failure: the 600-seed W6-regime bridge (P0) gives 0.1067 -> 0.0200, -81.2%, same direction and magnitude as W6.",
+      "P5": "Strongest finding: all 60 worst-0.1% scenarios have cert=GST (100.00%) vs 65.61% overall. Residual harm occurs almost entirely when the certificate decides splitting IS safe but the per-group temperature estimate overfits small groups. Independently reproduces W4-F4 and W6-H4. Next step is a SECOND gate on minimum group size / lambda confidence lower bound, to be pre-registered and tested on fresh seeds (no threshold picking on this dataset).",
+      "disposition": "Per PREREGISTRATION_W7.md section 6: thresholds unchanged, no cell/bin swapping, no extra seeds, no v1.1. All three are reported as falsified pre-registered hypotheses."
+    }
+  }
+}

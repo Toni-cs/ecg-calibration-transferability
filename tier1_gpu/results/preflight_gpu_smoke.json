@@ -1,0 +1,444 @@
+{
+  "prereg": "PREREGISTRATION_T2.md v1.0",
+  "mode": "CPU smoke test on SYNTHETIC metadata",
+  "n_assertions": 43,
+  "n_executed": 36,
+  "n_pass": 36,
+  "n_fail": 0,
+  "n_unavailable": 7,
+  "real_gpu_training_performed": false,
+  "real_waveform_data_used": false,
+  "assertions": [
+    {
+      "id": "PF-G001",
+      "family": "lead_by_name",
+      "claim": "canonical lead I unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=I, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G002",
+      "family": "lead_by_name",
+      "claim": "canonical lead II unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=II, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G003",
+      "family": "lead_by_name",
+      "claim": "canonical lead III unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=III, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G004",
+      "family": "lead_by_name",
+      "claim": "canonical lead aVR unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=aVR, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G005",
+      "family": "lead_by_name",
+      "claim": "canonical lead aVL unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=aVL, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G006",
+      "family": "lead_by_name",
+      "claim": "canonical lead aVF unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=aVF, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G007",
+      "family": "lead_by_name",
+      "claim": "canonical lead V1 unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=V1, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G008",
+      "family": "lead_by_name",
+      "claim": "canonical lead V2 unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=V2, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G009",
+      "family": "lead_by_name",
+      "claim": "canonical lead V3 unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=V3, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G010",
+      "family": "lead_by_name",
+      "claim": "canonical lead V4 unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=V4, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G011",
+      "family": "lead_by_name",
+      "claim": "canonical lead V5 unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=V5, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G012",
+      "family": "lead_by_name",
+      "claim": "canonical lead V6 unique and declared",
+      "expected": "unique in canonical list",
+      "observed": "count=1",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "lead=V6, rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX, n=12"
+    },
+    {
+      "id": "PF-G013",
+      "family": "lead_by_name",
+      "claim": "alignment rule is by name not channel index",
+      "expected": "ALIGN_BY_NAME_NOT_CHANNEL_INDEX",
+      "observed": "ALIGN_BY_NAME_NOT_CHANNEL_INDEX",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "rule=ALIGN_BY_NAME_NOT_CHANNEL_INDEX"
+    },
+    {
+      "id": "PF-G014",
+      "family": "lead_by_name",
+      "claim": "MIMIC aVF/aVL swap is declared",
+      "expected": "known_issue mentions aVF/aVL",
+      "observed": "['MIMIC-IV-ECG: aVF/aVL swapped relative to other corpora', 'CODE-II: DIII/AVR/AVL/AVF reconstructed from 8 essential leads by standard equations', 'CODE-test limb-lead order differs from CODE-15%']",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "known_issues=['MIMIC-IV-ECG: aVF/aVL swapped relative to other corpora', 'CODE-II: DIII/AVR/AVL/AVF reconstructed from 8 essential leads by standard equations', 'CODE-test limb-lead order differs from CODE-15%']"
+    },
+    {
+      "id": "PF-G015",
+      "family": "lead_by_name",
+      "claim": "CODE-II reconstructed leads declared",
+      "expected": "known_issue mentions reconstructed",
+      "observed": "['MIMIC-IV-ECG: aVF/aVL swapped relative to other corpora', 'CODE-II: DIII/AVR/AVL/AVF reconstructed from 8 essential leads by standard equations', 'CODE-test limb-lead order differs from CODE-15%']",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "CODE-II DIII/AVR/AVL/AVF from 8 essential leads"
+    },
+    {
+      "id": "PF-G016",
+      "family": "resampling",
+      "claim": "target 500 Hz / 10 s declared and sources enumerated",
+      "expected": "target_fs=500 target_len=10 and >=4 source rates",
+      "observed": "fs=500 len=10 src=[300, 400, 500, 600, 1000]",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "source_rates=[300, 400, 500, 600, 1000]"
+    },
+    {
+      "id": "PF-G017",
+      "family": "overlap",
+      "claim": "CODE-15% subset-of-older-CODE rule declared",
+      "expected": "rule mentions CODE-15% and CODE",
+      "observed": "['CODE-15% is a 15% patient sample of older CODE (2010-2016); CODE-II is 2019-2022 -> disjoint', 'If CODE full is obtained, dedupe by exam_id + patient_id against CODE-15%', 'PTB-XL / CSN / CPSC overlap the original 60-cell pilot -> external/pressure-test only, not counted in main total']",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "overlap_rules=['CODE-15% is a 15% patient sample of older CODE (2010-2016); CODE-II is 2019-2022 -> disjoint', 'If CODE full is obtained, dedupe by exam_id + patient_id against CODE-15%', 'PTB-XL / CSN / CPSC overlap the original 60-cell pilot -> external/pressure-test only, not counted in main total']"
+    },
+    {
+      "id": "PF-G018",
+      "family": "overlap",
+      "claim": "dedupe rule declared",
+      "expected": "rule mentions exam_id + patient_id",
+      "observed": "['CODE-15% is a 15% patient sample of older CODE (2010-2016); CODE-II is 2019-2022 -> disjoint', 'If CODE full is obtained, dedupe by exam_id + patient_id against CODE-15%', 'PTB-XL / CSN / CPSC overlap the original 60-cell pilot -> external/pressure-test only, not counted in main total']",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "dedupe by exam_id + patient_id"
+    },
+    {
+      "id": "PF-G019",
+      "family": "overlap",
+      "claim": "pilot-overlap corpora excluded from main count",
+      "expected": "rule mentions PTB-XL / CSN / CPSC",
+      "observed": "['CODE-15% is a 15% patient sample of older CODE (2010-2016); CODE-II is 2019-2022 -> disjoint', 'If CODE full is obtained, dedupe by exam_id + patient_id against CODE-15%', 'PTB-XL / CSN / CPSC overlap the original 60-cell pilot -> external/pressure-test only, not counted in main total']",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "pilot corpora -> external/pressure-test only"
+    },
+    {
+      "id": "PF-G020",
+      "family": "code15_ambiguous",
+      "claim": "CODE-15% 173,347 ambiguous records must not be confident negatives",
+      "expected": "explicit rule",
+      "observed": "declared in TIER1_GPU_UPGRADE.md / preflight contract",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "only normal_ecg flag is a clean negative; 50.13% of release is neither"
+    },
+    {
+      "id": "PF-G021",
+      "family": "patient_level_split",
+      "claim": "synthetic instance 1/10: one fold per patient, records inherit patient fold",
+      "expected": "no patient in two folds AND record folds consistent",
+      "observed": "ok=True, consistent=True, n_pat=500, n_rec=800",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "seed=930000, n_pat=500, n_rec=800, k=5"
+    },
+    {
+      "id": "PF-G022",
+      "family": "patient_level_split",
+      "claim": "synthetic instance 2/10: one fold per patient, records inherit patient fold",
+      "expected": "no patient in two folds AND record folds consistent",
+      "observed": "ok=True, consistent=True, n_pat=500, n_rec=800",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "seed=930001, n_pat=500, n_rec=800, k=5"
+    },
+    {
+      "id": "PF-G023",
+      "family": "patient_level_split",
+      "claim": "synthetic instance 3/10: one fold per patient, records inherit patient fold",
+      "expected": "no patient in two folds AND record folds consistent",
+      "observed": "ok=True, consistent=True, n_pat=500, n_rec=800",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "seed=930002, n_pat=500, n_rec=800, k=5"
+    },
+    {
+      "id": "PF-G024",
+      "family": "patient_level_split",
+      "claim": "synthetic instance 4/10: one fold per patient, records inherit patient fold",
+      "expected": "no patient in two folds AND record folds consistent",
+      "observed": "ok=True, consistent=True, n_pat=500, n_rec=800",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "seed=930003, n_pat=500, n_rec=800, k=5"
+    },
+    {
+      "id": "PF-G025",
+      "family": "patient_level_split",
+      "claim": "synthetic instance 5/10: one fold per patient, records inherit patient fold",
+      "expected": "no patient in two folds AND record folds consistent",
+      "observed": "ok=True, consistent=True, n_pat=500, n_rec=800",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "seed=930004, n_pat=500, n_rec=800, k=5"
+    },
+    {
+      "id": "PF-G026",
+      "family": "patient_level_split",
+      "claim": "synthetic instance 6/10: one fold per patient, records inherit patient fold",
+      "expected": "no patient in two folds AND record folds consistent",
+      "observed": "ok=True, consistent=True, n_pat=500, n_rec=800",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "seed=930005, n_pat=500, n_rec=800, k=5"
+    },
+    {
+      "id": "PF-G027",
+      "family": "patient_level_split",
+      "claim": "synthetic instance 7/10: one fold per patient, records inherit patient fold",
+      "expected": "no patient in two folds AND record folds consistent",
+      "observed": "ok=True, consistent=True, n_pat=500, n_rec=800",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "seed=930006, n_pat=500, n_rec=800, k=5"
+    },
+    {
+      "id": "PF-G028",
+      "family": "patient_level_split",
+      "claim": "synthetic instance 8/10: one fold per patient, records inherit patient fold",
+      "expected": "no patient in two folds AND record folds consistent",
+      "observed": "ok=True, consistent=True, n_pat=500, n_rec=800",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "seed=930007, n_pat=500, n_rec=800, k=5"
+    },
+    {
+      "id": "PF-G029",
+      "family": "patient_level_split",
+      "claim": "synthetic instance 9/10: one fold per patient, records inherit patient fold",
+      "expected": "no patient in two folds AND record folds consistent",
+      "observed": "ok=True, consistent=True, n_pat=500, n_rec=800",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "seed=930008, n_pat=500, n_rec=800, k=5"
+    },
+    {
+      "id": "PF-G030",
+      "family": "patient_level_split",
+      "claim": "synthetic instance 10/10: one fold per patient, records inherit patient fold",
+      "expected": "no patient in two folds AND record folds consistent",
+      "observed": "ok=True, consistent=True, n_pat=500, n_rec=800",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "seed=930009, n_pat=500, n_rec=800, k=5"
+    },
+    {
+      "id": "PF-G031",
+      "family": "label_ontology",
+      "claim": "ontology SUPER5 declared with n classes",
+      "expected": "n >= 4",
+      "observed": "n=5",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "ontology={'id': 'SUPER5', 'classes': ['NORM', 'MI', 'STTC', 'CD', 'HYP'], 'n': 5}, clinical_review_required=not declared"
+    },
+    {
+      "id": "PF-G032",
+      "family": "label_ontology",
+      "claim": "ontology CPSC9 declared with n classes",
+      "expected": "n >= 4",
+      "observed": "n=9",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "ontology={'id': 'CPSC9', 'n': 9}, clinical_review_required=not declared"
+    },
+    {
+      "id": "PF-G033",
+      "family": "label_ontology",
+      "claim": "ontology CHAP4 declared with n classes",
+      "expected": "n >= 4",
+      "observed": "n=4",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "ontology={'id': 'CHAP4', 'n': 4}, clinical_review_required=not declared"
+    },
+    {
+      "id": "PF-G034",
+      "family": "label_ontology",
+      "claim": "ontology CODE66 declared with n classes",
+      "expected": "n >= 4",
+      "observed": "n=66",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "ontology={'id': 'CODE66', 'n': 66, 'reviewed_by': 'cardiologists'}, clinical_review_required=cardiologists"
+    },
+    {
+      "id": "PF-G035",
+      "family": "patient_statistics",
+      "claim": "deff >= 1 and n_eff/n <= 1 with declared ICC/mbar",
+      "expected": "both inequalities",
+      "observed": "deff=1.9120, n_eff/n=0.5230",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "ICC=0.48, mbar=2.9, deff=1.912, n_eff/n=0.5230125523012552"
+    },
+    {
+      "id": "PF-G036",
+      "family": "compliance",
+      "claim": "US credentialed corpora excluded from committed main queue",
+      "expected": "3 excluded entries with reasons",
+      "observed": "n=3",
+      "PASS": true,
+      "status": "executed",
+      "evidence": "['MIMIC4ECG', 'HEEDB', 'CODEFULL']"
+    },
+    {
+      "id": "ENV-G001",
+      "family": "gpu_environment",
+      "claim": "torch importable on the target machine",
+      "expected": "module present (required for real GPU run)",
+      "observed": "ABSENT",
+      "PASS": false,
+      "status": "UNAVAILABLE",
+      "evidence": "module=torch; sandbox has no GPU device and no real waveform files"
+    },
+    {
+      "id": "ENV-G002",
+      "family": "gpu_environment",
+      "claim": "wfdb importable on the target machine",
+      "expected": "module present (required for real GPU run)",
+      "observed": "ABSENT",
+      "PASS": false,
+      "status": "UNAVAILABLE",
+      "evidence": "module=wfdb; sandbox has no GPU device and no real waveform files"
+    },
+    {
+      "id": "ENV-G003",
+      "family": "gpu_environment",
+      "claim": "h5py importable on the target machine",
+      "expected": "module present (required for real GPU run)",
+      "observed": "ABSENT",
+      "PASS": false,
+      "status": "UNAVAILABLE",
+      "evidence": "module=h5py; sandbox has no GPU device and no real waveform files"
+    },
+    {
+      "id": "ENV-G004",
+      "family": "gpu_environment",
+      "claim": "mamba_ssm importable on the target machine",
+      "expected": "module present (required for real GPU run)",
+      "observed": "ABSENT",
+      "PASS": false,
+      "status": "UNAVAILABLE",
+      "evidence": "module=mamba_ssm; sandbox has no GPU device and no real waveform files"
+    },
+    {
+      "id": "ENV-G005",
+      "family": "gpu_environment",
+      "claim": "causal_conv1d importable on the target machine",
+      "expected": "module present (required for real GPU run)",
+      "observed": "ABSENT",
+      "PASS": false,
+      "status": "UNAVAILABLE",
+      "evidence": "module=causal_conv1d; sandbox has no GPU device and no real waveform files"
+    },
+    {
+      "id": "ENV-G006",
+      "family": "gpu_environment",
+      "claim": "CUDA device available",
+      "expected": "torch.cuda.is_available() == True",
+      "observed": "cuda=False, device_count=0",
+      "PASS": false,
+      "status": "UNAVAILABLE",
+      "evidence": "nvidia-smi not found in sandbox; no GPU device"
+    },
+    {
+      "id": "ENV-G007",
+      "family": "gpu_environment",
+      "claim": "real waveform / weight files staged",
+      "expected": ">=1 real signal or weight file",
+      "observed": "files=0",
+      "PASS": false,
+      "status": "UNAVAILABLE",
+      "evidence": "no .dat/.hea/.hdf5/.mat/.pt/.safetensors files in sandbox"
+    }
+  ],
+  "honesty": "Structural assertions are REAL CPU checks of the spec. ENV-G* are UNAVAILABLE because the sandbox has no GPU / torch / wfdb / waveforms. UNAVAILABLE is reported, not hidden or converted into a PASS."
+}

@@ -1,0 +1,22 @@
+[F0] validity gate ...
+    {'oracle_ECE': 0.0859145447188701, 'best_estimator_ECE': 0.08576698330643279, 'ECE_PASS': True, 'oracle_NLL': 1.0585834217640506, 'best_estimator_NLL': 1.0589986251335812, 'NLL_PASS': True, 'PASS': True}
+[H1] primary endpoint ...
+   SOURCE          ECE=0.2302±0.0528  NLL=1.6654  small=0.2528
+   GLOBAL          ECE=0.1386±0.0429  NLL=1.1262  small=0.1876
+   INDEP           ECE=0.0858±0.0115  NLL=1.0590  small=0.1446
+   SHRINK-GLOBAL   ECE=0.0860±0.0117  NLL=1.0590  small=0.1439
+   GSGT            ECE=0.0862±0.0116  NLL=1.0591  small=0.1460
+   ORACLE          ECE=0.0859±0.0119  NLL=1.0586  small=0.1483
+   H1: {'delta_ECE_mean': -0.05239268074133156, 'delta_ECE_sd': 0.041109144658112114, 'n_negative_of_30': 28, 't': -6.980600868456903, 'bootstrap_seed1000': {'delta_ECE': -0.00010817935562752734, 'ci95': [-0.020060025872649538, 0.0205028270800874], 'p_two_sided_approx': 0.923}, 'threshold': -0.02, 'PASS': False}
+   attribution: {'GLOBAL_to_INDEP': -0.05281678139190629, 'INDEP_to_SHRINK': 0.00021675942753306143, 'SHRINK_to_GSGT_graph': 0.000207341223041696, 'GSGT_vs_INDEP': 0.0004241006505747408, 'GSGT_vs_SHRINK': 0.00020734122304169069, 'small_group_GSGT_minus_INDEP': 0.0014063599484859801}
+[H2] lambda ...
+[F-A..F-D] falsification ...
+   F-A -0.00115 | F-B 0.00338 | F-C 7e-05
+[S2] pre-registered long-tail stress test ...
+   long-tail -2e-05 | control 0.00059 | PASS True
+[S1] sensitivity grid ...
+
+=== CONFIRMATORY VERDICT ===
+{'F0': True, 'H1': False, 'FA': True, 'FB': True, 'FC': True} | all_pass = False
+NARROWED per pre-registered clause: the dominant contribution is GROUP-STRUCTURED ESTIMATION (single T -> G temperatures). Graph shrinkage is a robustness component with a small main-setting gain; it must NOT be presented as the primary novelty.
+DONE

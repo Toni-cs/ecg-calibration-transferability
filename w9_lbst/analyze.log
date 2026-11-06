@@ -1,0 +1,13 @@
+loaded 10,000 confirmatory rows from 27 shards
+loaded 600 falsification rows from 2 shards
+
+[F] {'F1_flatten': True, 'F2_zero': True, 'F3_random': True, 'F4_homogeneous': False, 'F5_reversed': True}
+
+=== W9 VERDICT === {'F0': True, 'H1': False, 'H2': True, 'H3': True, 'H4': False, 'H5': True, 'H6': True, 'F1_flatten': True, 'F2_zero': True, 'F3_random': True, 'F4_homogeneous': False, 'F5_reversed': True} | pass 9 / 12
+    H1_primary PASS = False
+    H2_noninferior PASS = True
+    H3_tail PASS = True
+    H4_stratified PASS = False
+    H5_architecture PASS = True
+    H6_proposition2 PASS = True
+DONE

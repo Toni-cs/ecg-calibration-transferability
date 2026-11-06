@@ -1,0 +1,6 @@
+W11-B THEORY: 117/120 PASS, 3 FAIL
+  by kind: {'verify': 110, 'falsify': 10, 'meta': 0}
+  FAIL TH054 T2_V_closed_form | ratio=0.96501
+  FAIL TH064 T2_V_closed_form | ratio=1.03072
+  FAIL TH099 T3_misspec_noise | rel_err=0.000e+00, zero_c1=0.000e+00, monotone=False
+written /data/workspace/w11_theory/results/w11b_theory_120.json

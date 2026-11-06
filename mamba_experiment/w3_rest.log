@@ -1,0 +1,10 @@
+[F] falsification 60 seeds 3600-3659 ...
+   F-M1 0.0 | F-M2 0.00079 | F-M3 -0.00139 | elapsed 42 s
+[C] CNN-1D control 100 seeds 3700-3799 ...
+   CNN mean delta -0.0266 neg 88 /100
+
+=== W3 FINAL VERDICT ===
+{'F0': True, 'H1': False, 'FM1': True, 'FM2': True, 'FM3': True, 'ARCH': True} | all_pass = False
+mean -0.0248 PASSES threshold -0.020; cross-seed bootstrap CI [-0.0269,-0.0228] PASSES; but 534/600 (89.0%) negative vs the pre-registered >=540 (90%). SHORT BY 6 SEEDS. Threshold NOT changed, no v0.4.
+elapsed 56.7 s
+STAGE 2 DONE

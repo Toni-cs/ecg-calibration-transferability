@@ -1,0 +1,4 @@
+[start falsify] next=120000 done=0 shards=0
+  [flush] +400 total 400 35s -> shard_000.npz
+  [flush-end] +200 total 600 53s -> shard_001.npz
+[falsify box 1] total 600 54s

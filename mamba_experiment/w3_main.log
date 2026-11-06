@@ -1,0 +1,16 @@
+[MAIN] 600 independent Mamba seeds 3000-3599 ...
+   150/600 mean=-0.0252 neg=141/150 elapsed=40s
+   300/600 mean=-0.0244 neg=276/300 elapsed=80s
+   450/600 mean=-0.0239 neg=405/450 elapsed=120s
+   600/600 mean=-0.0248 neg=534/600 elapsed=156s
+   F0 PASS = True | ece_reversals = 75 | max gap = 0.0185
+   H1: {'mean_delta_ECE': -0.02483492758212454, 'sd': 0.025463107390583946, 'n_negative_of_600': 534, 'negative_fraction': 0.89, 'median': -0.019234701084373175, 'q25': -0.03625662462347682, 'q75': -0.005925820469717846, 'min': -0.1374220254321611, 'max': 0.03317933615218377, 'cross_seed_bootstrap_CI95': [-0.026895462123982354, -0.0227915096366702], 'bootstrap_p': 0.0, 'threshold': -0.02, 'PASS': False}
+   conditions: {'mean_le_-0.020': True, 'ge_540_of_600_negative': False, 'CI_upper_lt_0': True} => PASS = False
+   SOURCE   ECE=0.2239±0.0703 NLL=1.7216
+   GLOBAL   ECE=0.1039±0.0295 NLL=1.3330
+   GST      ECE=0.0791±0.0190 NLL=1.2878
+   SHRINK   ECE=0.0790±0.0190 NLL=1.2877
+   ORACLE   ECE=0.0670±0.0151 NLL=1.2764
+   TRUE-T   ECE=0.0820±0.0214 NLL=1.2903
+   elapsed 156.5 s
+STAGE 1 DONE

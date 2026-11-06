@@ -1,0 +1,8 @@
+{
+  "done": 600,
+  "shards": [
+    "loco/shard_000.npz",
+    "loco/shard_001.npz"
+  ],
+  "boxes": 1
+}

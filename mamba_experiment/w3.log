@@ -1,0 +1,5 @@
+[MAIN] 600 independent Mamba seeds 3000-3599 ...
+   100/600  mean=-0.0257  neg=94/100  elapsed=31s
+   200/600  mean=-0.0245  neg=185/200  elapsed=82s
+   300/600  mean=-0.0244  neg=276/300  elapsed=151s
+   400/600  mean=-0.0238  neg=362/400  elapsed=219s

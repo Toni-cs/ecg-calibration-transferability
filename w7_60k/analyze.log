@@ -1,0 +1,13 @@
+loaded 60000 rows from 143 shards
+
+=== W7 VERDICT ===
+{'F0': True, 'P0': True, 'P1': True, 'P2': True, 'P3': False, 'P4': False, 'P5': False, 'P6': True, 'P7': True} | pass 6 / 9
+    P0_bridge PASS = True
+    P1_precision PASS = True
+    P2_primary PASS = True
+    P3_rare_cell PASS = False
+    P4_cross_round PASS = False
+    P5_tail PASS = False
+    P6_architecture PASS = True
+    P7_proposition1 PASS = True
+DONE

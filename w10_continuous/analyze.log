@@ -1,0 +1,23 @@
+loaded 20,000 confirmatory rows from 55 shards
+loaded 1800 LOCO rows from 2 shards
+loaded 600 falsification rows from 2 shards
+
+[descriptive]
+  CERT  L 0.000951  A -0.017015  CVaR 0.014734  harm 0.0263
+  HB    L 0.000973  A -0.017725  CVaR 0.017005  harm 0.0278
+  M1    L 0.001291  A -0.013491  CVaR 0.012229  harm 0.0056
+  M2    L 0.000957  A -0.017642  CVaR 0.016258  harm 0.0271
+  M3    L 0.001474  A -0.011230  CVaR 0.020199  harm 0.0840
+bootstrap replicates done (B=10000, shared stream)
+
+[F] {'F1_deff1': True, 'F2_rel1': True, 'F3_rel0': True, 'F4_random_strata': False, 'F5_homogeneous': True}
+
+=== W10 VERDICT === {'F0': True, 'H1': False, 'H2': False, 'H3': False, 'H4': False, 'H5': False, 'H6': True, 'F1_deff1': True, 'F2_rel1': True, 'F3_rel0': True, 'F4_random_strata': False, 'F5_homogeneous': True} | pass 6 / 12
+    H1_selection PASS = False
+    H2_vs_CERT PASS = False
+    H3_no_new_tail PASS = False
+    H4_LOCO PASS = False
+    H5_architecture PASS = False
+    H6_mechanism PASS = True
+    qualified = [] | selected = None
+DONE

@@ -1,0 +1,17 @@
+[v1.1] 30 fresh seeds 2000-2029 ...
+   F0: {'ECE_PASS': True, 'NLL_PASS': True, 'PASS': True}
+   SOURCE          ECE=0.2550±0.0584  NLL=1.8411
+   GLOBAL          ECE=0.1232±0.0276  NLL=1.1012
+   INDEP           ECE=0.0839±0.0122  NLL=1.0601
+   SHRINK-GLOBAL   ECE=0.0837±0.0121  NLL=1.0600
+   GSGT            ECE=0.0842±0.0124  NLL=1.0602
+   ORACLE          ECE=0.0821±0.0114  NLL=1.0593
+   H1: {'delta_ECE_mean': -0.03899845602461083, 'delta_ECE_sd': 0.026932174674561157, 'n_negative_of_30': 29, 't': -7.931158300680615, 'cross_seed_bootstrap_CI95': [-0.04900556021064417, -0.030022650987233796], 'cross_seed_bootstrap_p': 0.0, 'conditions': {'mean_le_-0.020': True, 'ge_27_of_30_negative': True, 'cross_seed_CI_upper_lt_0': True}, 'threshold': -0.02, 'PASS': True}
+   attribution: {'GLOBAL_to_INDEP': -0.03930924621175501, 'INDEP_to_SHRINK': -0.00016338548305531997, 'SHRINK_to_GSGT_graph': 0.0004741756701994726, 'GSGT_vs_INDEP': 0.00031079018714415263, 'small_group_GSGT_minus_INDEP': -0.0009602452610639189}
+   F-A 6e-05 | F-B -0.00348 | F-C 5e-05
+
+=== v1.1 FINAL VERDICT ===
+{'F0': True, 'H1': True, 'FA': True, 'FB': False, 'FC': True} | all_pass = False
+NARROWED (locked by v1.0 clause): primary contribution is GROUP-STRUCTURED TEMPERATURE ESTIMATION (single T -> G temperatures from observable deployment metadata). Graph shrinkage is a robustness component with a small main-setting gain; NOT the primary novelty, NOT in the title.
+v1.0 H1=False RETAINED: True
+DONE

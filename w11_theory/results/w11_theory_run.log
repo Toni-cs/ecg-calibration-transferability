@@ -1,0 +1,19 @@
+W11 theory grid — PREREGISTRATION_W11.md v1.0 (frozen)
+grid: G6 x tau24 x deff4 x cv6 = 576 cells, B=2000 MC each
+  grid   0/576 G=  4 tau2=0.05 deff=1.000 cv=0.0 gap=0.00000 bound=1.0000 emp=1.0000
+  grid 100/576 G=  8 tau2=0.05 deff=1.000 cv=1.5 gap=0.01172 bound=1.0000 emp=0.4560
+  grid 200/576 G= 16 tau2=0.05 deff=1.500 cv=0.5 gap=0.00050 bound=1.0000 emp=0.7210
+  grid 300/576 G= 32 tau2=0.05 deff=1.944 cv=0.0 gap=0.00000 bound=1.0000 emp=1.0000
+  grid 400/576 G= 64 tau2=0.05 deff=1.944 cv=1.5 gap=0.01169 bound=1.0000 emp=0.2650
+  grid 500/576 G=128 tau2=0.05 deff=3.000 cv=0.5 gap=0.00189 bound=1.0000 emp=0.1835
+
+=== W11 THEORY VERDICT ===
+   A1_T1_exact PASS = True
+   A2_T2_validity PASS = True
+   A3_T2_slope PASS = False
+   A4_T3_exact PASS = True
+   A5_T4_gap PASS = False
+   A6_W10_alignment PASS = True
+   A7_nonidentifiable PASS = None
+  pass 4 / 6
+written /data/workspace/w11_theory/results/w11_theory_results.json

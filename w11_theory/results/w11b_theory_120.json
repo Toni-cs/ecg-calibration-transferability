@@ -1,0 +1,1244 @@
+{
+  "prereg": "PREREGISTRATION_W11B.md v1.0 (frozen)",
+  "group": "theory",
+  "n_checks": 120,
+  "n_pass": 117,
+  "n_fail": 3,
+  "n_by_kind": {
+    "verify": 110,
+    "falsify": 10,
+    "meta": 0
+  },
+  "TH071_TH085_frozen_indices": [
+    413,
+    418,
+    437,
+    442,
+    443,
+    449,
+    454,
+    455,
+    473,
+    478,
+    479,
+    483,
+    507,
+    508,
+    509
+  ],
+  "TH086_TH095_frozen_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "assertions": [
+    {
+      "id": "TH001",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.05, G=4, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "9.156e-16",
+      "PASS": true,
+      "evidence": "seed=20262106, n_groups=4, n_draws=20, max_rel_err=9.156e-16"
+    },
+    {
+      "id": "TH002",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.05, G=8, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "6.920e-16",
+      "PASS": true,
+      "evidence": "seed=20262107, n_groups=8, n_draws=20, max_rel_err=6.920e-16"
+    },
+    {
+      "id": "TH003",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.05, G=16, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "6.743e-16",
+      "PASS": true,
+      "evidence": "seed=20262108, n_groups=16, n_draws=20, max_rel_err=6.743e-16"
+    },
+    {
+      "id": "TH004",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.05, G=32, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "2.052e-15",
+      "PASS": true,
+      "evidence": "seed=20262109, n_groups=32, n_draws=20, max_rel_err=2.052e-15"
+    },
+    {
+      "id": "TH005",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.05, G=64, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "1.786e-14",
+      "PASS": true,
+      "evidence": "seed=20262110, n_groups=64, n_draws=20, max_rel_err=1.786e-14"
+    },
+    {
+      "id": "TH006",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.05, G=128, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "5.461e-15",
+      "PASS": true,
+      "evidence": "seed=20262111, n_groups=128, n_draws=20, max_rel_err=5.461e-15"
+    },
+    {
+      "id": "TH007",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.2, G=4, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "1.505e-14",
+      "PASS": true,
+      "evidence": "seed=20262206, n_groups=4, n_draws=20, max_rel_err=1.505e-14"
+    },
+    {
+      "id": "TH008",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.2, G=8, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "1.017e-15",
+      "PASS": true,
+      "evidence": "seed=20262207, n_groups=8, n_draws=20, max_rel_err=1.017e-15"
+    },
+    {
+      "id": "TH009",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.2, G=16, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "4.272e-14",
+      "PASS": true,
+      "evidence": "seed=20262208, n_groups=16, n_draws=20, max_rel_err=4.272e-14"
+    },
+    {
+      "id": "TH010",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.2, G=32, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "1.290e-14",
+      "PASS": true,
+      "evidence": "seed=20262209, n_groups=32, n_draws=20, max_rel_err=1.290e-14"
+    },
+    {
+      "id": "TH011",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.2, G=64, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "3.476e-15",
+      "PASS": true,
+      "evidence": "seed=20262210, n_groups=64, n_draws=20, max_rel_err=3.476e-15"
+    },
+    {
+      "id": "TH012",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.2, G=128, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "3.366e-14",
+      "PASS": true,
+      "evidence": "seed=20262211, n_groups=128, n_draws=20, max_rel_err=3.366e-14"
+    },
+    {
+      "id": "TH013",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.5, G=4, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "2.337e-14",
+      "PASS": true,
+      "evidence": "seed=20262306, n_groups=4, n_draws=20, max_rel_err=2.337e-14"
+    },
+    {
+      "id": "TH014",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.5, G=8, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "8.445e-15",
+      "PASS": true,
+      "evidence": "seed=20262307, n_groups=8, n_draws=20, max_rel_err=8.445e-15"
+    },
+    {
+      "id": "TH015",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.5, G=16, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "7.133e-15",
+      "PASS": true,
+      "evidence": "seed=20262308, n_groups=16, n_draws=20, max_rel_err=7.133e-15"
+    },
+    {
+      "id": "TH016",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.5, G=32, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "9.155e-15",
+      "PASS": true,
+      "evidence": "seed=20262309, n_groups=32, n_draws=20, max_rel_err=9.155e-15"
+    },
+    {
+      "id": "TH017",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.5, G=64, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "3.136e-14",
+      "PASS": true,
+      "evidence": "seed=20262310, n_groups=64, n_draws=20, max_rel_err=3.136e-14"
+    },
+    {
+      "id": "TH018",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=0.5, G=128, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "9.963e-15",
+      "PASS": true,
+      "evidence": "seed=20262311, n_groups=128, n_draws=20, max_rel_err=9.963e-15"
+    },
+    {
+      "id": "TH019",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=1.0, G=4, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "1.590e-14",
+      "PASS": true,
+      "evidence": "seed=20262406, n_groups=4, n_draws=20, max_rel_err=1.590e-14"
+    },
+    {
+      "id": "TH020",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=1.0, G=8, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "4.108e-15",
+      "PASS": true,
+      "evidence": "seed=20262407, n_groups=8, n_draws=20, max_rel_err=4.108e-15"
+    },
+    {
+      "id": "TH021",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=1.0, G=16, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "1.323e-14",
+      "PASS": true,
+      "evidence": "seed=20262408, n_groups=16, n_draws=20, max_rel_err=1.323e-14"
+    },
+    {
+      "id": "TH022",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=1.0, G=32, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "1.950e-14",
+      "PASS": true,
+      "evidence": "seed=20262409, n_groups=32, n_draws=20, max_rel_err=1.950e-14"
+    },
+    {
+      "id": "TH023",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=1.0, G=64, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "2.637e-14",
+      "PASS": true,
+      "evidence": "seed=20262410, n_groups=64, n_draws=20, max_rel_err=2.637e-14"
+    },
+    {
+      "id": "TH024",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=1.0, G=128, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "5.821e-15",
+      "PASS": true,
+      "evidence": "seed=20262411, n_groups=128, n_draws=20, max_rel_err=5.821e-15"
+    },
+    {
+      "id": "TH025",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=2.0, G=4, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "6.687e-13",
+      "PASS": true,
+      "evidence": "seed=20262506, n_groups=4, n_draws=20, max_rel_err=6.687e-13"
+    },
+    {
+      "id": "TH026",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=2.0, G=8, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "2.082e-14",
+      "PASS": true,
+      "evidence": "seed=20262507, n_groups=8, n_draws=20, max_rel_err=2.082e-14"
+    },
+    {
+      "id": "TH027",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=2.0, G=16, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "1.556e-14",
+      "PASS": true,
+      "evidence": "seed=20262508, n_groups=16, n_draws=20, max_rel_err=1.556e-14"
+    },
+    {
+      "id": "TH028",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=2.0, G=32, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "9.168e-15",
+      "PASS": true,
+      "evidence": "seed=20262509, n_groups=32, n_draws=20, max_rel_err=9.168e-15"
+    },
+    {
+      "id": "TH029",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=2.0, G=64, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "1.332e-14",
+      "PASS": true,
+      "evidence": "seed=20262510, n_groups=64, n_draws=20, max_rel_err=1.332e-14"
+    },
+    {
+      "id": "TH030",
+      "family": "T1_exact_identity",
+      "claim": "T1 closed form equals direct risk at tau2=2.0, G=128, 20 random tau2hat",
+      "kind": "verify",
+      "expected": "max relative error < 1e-10",
+      "observed": "1.069e-14",
+      "PASS": true,
+      "evidence": "seed=20262511, n_groups=128, n_draws=20, max_rel_err=1.069e-14"
+    },
+    {
+      "id": "TH031",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.2439, s=0.1921, e2=0.5953)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=3.139414e-03 mid=4.145753e-01 coarse=4.786018e-01",
+      "PASS": true,
+      "evidence": "seed=20263106, exact=3.139414e-03, mid=4.145753e-01, coarse=4.786018e-01"
+    },
+    {
+      "id": "TH032",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=0.7702, s=0.0723, e2=0.2854)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=9.350852e-04 mid=3.387985e-01 coarse=3.706163e-01",
+      "PASS": true,
+      "evidence": "seed=20263107, exact=9.350852e-04, mid=3.387985e-01, coarse=3.706163e-01"
+    },
+    {
+      "id": "TH033",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=0.7123, s=0.4321, e2=0.8989)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=3.350090e-02 mid=7.854910e-01 coarse=1.262061e+00",
+      "PASS": true,
+      "evidence": "seed=20263108, exact=3.350090e-02, mid=7.854910e-01, coarse=1.262061e+00"
+    },
+    {
+      "id": "TH034",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.9365, s=0.5413, e2=0.6717)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=7.305408e-03 mid=2.711033e-01 coarse=3.468810e-01",
+      "PASS": true,
+      "evidence": "seed=20263109, exact=7.305408e-03, mid=2.711033e-01, coarse=3.468810e-01"
+    },
+    {
+      "id": "TH035",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.4078, s=0.7625, e2=0.8758)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=2.431838e-02 mid=4.035418e-01 coarse=6.221137e-01",
+      "PASS": true,
+      "evidence": "seed=20263110, exact=2.431838e-02, mid=4.035418e-01, coarse=6.221137e-01"
+    },
+    {
+      "id": "TH036",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.9562, s=0.1258, e2=0.2298)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=2.664482e-04 mid=1.103882e-01 coarse=1.174895e-01",
+      "PASS": true,
+      "evidence": "seed=20263111, exact=2.664482e-04, mid=1.103882e-01, coarse=1.174895e-01"
+    },
+    {
+      "id": "TH037",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=0.1066, s=2.0680, e2=0.4124)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=1.022304e-01 mid=1.896610e-01 coarse=3.870691e+00",
+      "PASS": true,
+      "evidence": "seed=20263112, exact=1.022304e-01, mid=1.896610e-01, coarse=3.870691e+00"
+    },
+    {
+      "id": "TH038",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=0.3409, s=1.0592, e2=0.0137)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=4.761241e-03 mid=9.766513e-03 coarse=4.011433e-02",
+      "PASS": true,
+      "evidence": "seed=20263113, exact=4.761241e-03, mid=9.766513e-03, coarse=4.011433e-02"
+    },
+    {
+      "id": "TH039",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.8982, s=1.6316, e2=0.0041)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=2.372330e-04 mid=1.150764e-03 coarse=2.139914e-03",
+      "PASS": true,
+      "evidence": "seed=20263114, exact=2.372330e-04, mid=1.150764e-03, coarse=2.139914e-03"
+    },
+    {
+      "id": "TH040",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=0.2777, s=1.2558, e2=0.4947)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=1.016762e-01 mid=3.226182e-01 coarse=1.781294e+00",
+      "PASS": true,
+      "evidence": "seed=20263115, exact=1.016762e-01, mid=3.226182e-01, coarse=1.781294e+00"
+    },
+    {
+      "id": "TH041",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.6016, s=1.6627, e2=0.0856)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=5.729252e-03 mid=2.621774e-02 coarse=5.343597e-02",
+      "PASS": true,
+      "evidence": "seed=20263116, exact=5.729252e-03, mid=2.621774e-02, coarse=5.343597e-02"
+    },
+    {
+      "id": "TH042",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=0.3975, s=0.2486, e2=0.0901)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=9.626811e-03 mid=1.394427e-01 coarse=2.266672e-01",
+      "PASS": true,
+      "evidence": "seed=20263117, exact=9.626811e-03, mid=1.394427e-01, coarse=2.266672e-01"
+    },
+    {
+      "id": "TH043",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=0.7317, s=0.8135, e2=0.9859)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=6.554950e-02 mid=6.380622e-01 coarse=1.347505e+00",
+      "PASS": true,
+      "evidence": "seed=20263118, exact=6.554950e-02, mid=6.380622e-01, coarse=1.347505e+00"
+    },
+    {
+      "id": "TH044",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.8473, s=2.1039, e2=0.8295)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=3.930867e-02 mid=2.099237e-01 coarse=4.490038e-01",
+      "PASS": true,
+      "evidence": "seed=20263119, exact=3.930867e-02, mid=2.099237e-01, coarse=4.490038e-01"
+    },
+    {
+      "id": "TH045",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.1930, s=2.8673, e2=0.6729)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=5.719947e-02 mid=1.657212e-01 coarse=5.640411e-01",
+      "PASS": true,
+      "evidence": "seed=20263120, exact=5.719947e-02, mid=1.657212e-01, coarse=5.640411e-01"
+    },
+    {
+      "id": "TH046",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.6793, s=0.1578, e2=0.1746)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=4.654482e-04 mid=9.504825e-02 coarse=1.039796e-01",
+      "PASS": true,
+      "evidence": "seed=20263121, exact=4.654482e-04, mid=9.504825e-02, coarse=1.039796e-01"
+    },
+    {
+      "id": "TH047",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.4218, s=2.8377, e2=0.5052)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=3.866049e-02 mid=1.186010e-01 coarse=3.553153e-01",
+      "PASS": true,
+      "evidence": "seed=20263122, exact=3.866049e-02, mid=1.186010e-01, coarse=3.553153e-01"
+    },
+    {
+      "id": "TH048",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.3220, s=0.8368, e2=0.4727)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=1.892417e-02 mid=2.189627e-01 coarse=3.575550e-01",
+      "PASS": true,
+      "evidence": "seed=20263123, exact=1.892417e-02, mid=2.189627e-01, coarse=3.575550e-01"
+    },
+    {
+      "id": "TH049",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=0.6147, s=2.1566, e2=0.0416)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=7.885593e-03 mid=1.500838e-02 coarse=6.766515e-02",
+      "PASS": true,
+      "evidence": "seed=20263124, exact=7.885593e-03, mid=1.500838e-02, coarse=6.766515e-02"
+    },
+    {
+      "id": "TH050",
+      "family": "T1_two_step_bound",
+      "claim": "exact <= e^2/(tau2+s) <= e^2/tau2 at (tau2=1.6275, s=1.9537, e2=0.6665)",
+      "kind": "verify",
+      "expected": "both inequalities hold",
+      "observed": "exact=3.673316e-02 mid=1.861177e-01 coarse=4.095318e-01",
+      "PASS": true,
+      "evidence": "seed=20263125, exact=3.673316e-02, mid=1.861177e-01, coarse=4.095318e-01"
+    },
+    {
+      "id": "TH051",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=128,tau2=0.5,deff=1.944,cv=0.2)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=0.99593",
+      "PASS": true,
+      "evidence": "seed=20264106, analytic_V=0.00494194, MC_V=0.00492183, B=20000, ratio=0.99593"
+    },
+    {
+      "id": "TH052",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=128,tau2=0.5,deff=1.5,cv=0.2)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=0.99663",
+      "PASS": true,
+      "evidence": "seed=20264107, analytic_V=0.00469573, MC_V=0.00467992, B=20000, ratio=0.99663"
+    },
+    {
+      "id": "TH053",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=128,tau2=0.5,deff=1.5,cv=0.5)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=1.01271",
+      "PASS": true,
+      "evidence": "seed=20264108, analytic_V=0.00490187, MC_V=0.00496417, B=20000, ratio=1.01271"
+    },
+    {
+      "id": "TH054",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=4,tau2=0.05,deff=1.944,cv=2.0)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=0.96501",
+      "PASS": false,
+      "evidence": "seed=20264109, analytic_V=0.62601018, MC_V=0.60410385, B=20000, ratio=0.96501"
+    },
+    {
+      "id": "TH055",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=8,tau2=0.2,deff=1.5,cv=1.0)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=0.99393",
+      "PASS": true,
+      "evidence": "seed=20264110, analytic_V=0.02030951, MC_V=0.02018615, B=20000, ratio=0.99393"
+    },
+    {
+      "id": "TH056",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=64,tau2=0.05,deff=1.5,cv=1.5)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=0.99475",
+      "PASS": true,
+      "evidence": "seed=20264111, analytic_V=0.00117838, MC_V=0.00117220, B=20000, ratio=0.99475"
+    },
+    {
+      "id": "TH057",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=128,tau2=1.0,deff=1.944,cv=1.5)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=0.99512",
+      "PASS": true,
+      "evidence": "seed=20264112, analytic_V=0.02120733, MC_V=0.02110377, B=20000, ratio=0.99512"
+    },
+    {
+      "id": "TH058",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=4,tau2=0.5,deff=3.0,cv=0.0)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=0.98017",
+      "PASS": true,
+      "evidence": "seed=20264113, analytic_V=0.23253273, MC_V=0.22792197, B=20000, ratio=0.98017"
+    },
+    {
+      "id": "TH059",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=64,tau2=0.05,deff=1.944,cv=1.5)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=1.00112",
+      "PASS": true,
+      "evidence": "seed=20264114, analytic_V=0.00345226, MC_V=0.00345612, B=20000, ratio=1.00112"
+    },
+    {
+      "id": "TH060",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=64,tau2=0.2,deff=3.0,cv=1.5)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=1.00967",
+      "PASS": true,
+      "evidence": "seed=20264115, analytic_V=0.02090020, MC_V=0.02110229, B=20000, ratio=1.00967"
+    },
+    {
+      "id": "TH061",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=16,tau2=0.5,deff=1.944,cv=0.5)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=0.99511",
+      "PASS": true,
+      "evidence": "seed=20264116, analytic_V=0.04415122, MC_V=0.04393534, B=20000, ratio=0.99511"
+    },
+    {
+      "id": "TH062",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=32,tau2=0.5,deff=1.0,cv=0.5)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=0.98665",
+      "PASS": true,
+      "evidence": "seed=20264117, analytic_V=0.01839479, MC_V=0.01814916, B=20000, ratio=0.98665"
+    },
+    {
+      "id": "TH063",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=128,tau2=0.05,deff=1.944,cv=0.5)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=1.00763",
+      "PASS": true,
+      "evidence": "seed=20264118, analytic_V=0.00020811, MC_V=0.00020970, B=20000, ratio=1.00763"
+    },
+    {
+      "id": "TH064",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=8,tau2=0.5,deff=1.5,cv=0.2)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=1.03072",
+      "PASS": false,
+      "evidence": "seed=20264119, analytic_V=0.08766500, MC_V=0.09035817, B=20000, ratio=1.03072"
+    },
+    {
+      "id": "TH065",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=32,tau2=1.0,deff=3.0,cv=0.2)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=1.00168",
+      "PASS": true,
+      "evidence": "seed=20264120, analytic_V=0.07742845, MC_V=0.07755846, B=20000, ratio=1.00168"
+    },
+    {
+      "id": "TH066",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=128,tau2=0.5,deff=1.0,cv=0.2)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=0.98380",
+      "PASS": true,
+      "evidence": "seed=20264121, analytic_V=0.00444764, MC_V=0.00437559, B=20000, ratio=0.98380"
+    },
+    {
+      "id": "TH067",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=64,tau2=1.0,deff=1.944,cv=1.0)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=0.99329",
+      "PASS": true,
+      "evidence": "seed=20264122, analytic_V=0.04048222, MC_V=0.04021058, B=20000, ratio=0.99329"
+    },
+    {
+      "id": "TH068",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=8,tau2=1.0,deff=1.944,cv=0.2)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=1.01835",
+      "PASS": true,
+      "evidence": "seed=20264123, analytic_V=0.32131241, MC_V=0.32720916, B=20000, ratio=1.01835"
+    },
+    {
+      "id": "TH069",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=128,tau2=0.5,deff=3.0,cv=0.5)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=1.00932",
+      "PASS": true,
+      "evidence": "seed=20264124, analytic_V=0.00583416, MC_V=0.00588853, B=20000, ratio=1.00932"
+    },
+    {
+      "id": "TH070",
+      "family": "T2_V_closed_form",
+      "claim": "analytic Var(S2hat) matches 20,000-sample MC at (G=32,tau2=0.2,deff=3.0,cv=1.5)",
+      "kind": "verify",
+      "expected": "analytic/empirical ratio in [0.97,1.03]",
+      "observed": "ratio=1.00615",
+      "PASS": true,
+      "evidence": "seed=20264125, analytic_V=0.05939486, MC_V=0.05975986, B=20000, ratio=1.00615"
+    },
+    {
+      "id": "TH071",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=413 (rank 1/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.79145",
+      "PASS": true,
+      "evidence": "grid_index=413, G=64, tau2=0.2, deff=1.0, cv=2.0, V=0.003687, gap=0.023294, emp=0.00000, bound=0.79145"
+    },
+    {
+      "id": "TH072",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=418 (rank 2/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00050 bound=0.87450",
+      "PASS": true,
+      "evidence": "grid_index=418, G=64, tau2=0.2, deff=1.5, cv=1.5, V=0.004385, gap=0.025072, emp=0.00050, bound=0.87450"
+    },
+    {
+      "id": "TH073",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=437 (rank 3/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.91017",
+      "PASS": true,
+      "evidence": "grid_index=437, G=64, tau2=0.5, deff=1.0, cv=2.0, V=0.014477, gap=0.031811, emp=0.00000, bound=0.91017"
+    },
+    {
+      "id": "TH074",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=442 (rank 4/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.98685",
+      "PASS": true,
+      "evidence": "grid_index=442, G=64, tau2=0.5, deff=1.5, cv=1.5, V=0.013899, gap=0.028169, emp=0.00000, bound=0.98685"
+    },
+    {
+      "id": "TH075",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=443 (rank 5/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.79523",
+      "PASS": true,
+      "evidence": "grid_index=443, G=64, tau2=0.5, deff=1.5, cv=2.0, V=0.014920, gap=0.037523, emp=0.00000, bound=0.79523"
+    },
+    {
+      "id": "TH076",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=449 (rank 6/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.77275",
+      "PASS": true,
+      "evidence": "grid_index=449, G=64, tau2=0.5, deff=1.944, cv=2.0, V=0.018568, gap=0.048057, emp=0.00000, bound=0.77275"
+    },
+    {
+      "id": "TH077",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=454 (rank 7/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.90752",
+      "PASS": true,
+      "evidence": "grid_index=454, G=64, tau2=0.5, deff=3.0, cv=1.5, V=0.027857, gap=0.061392, emp=0.00000, bound=0.90752"
+    },
+    {
+      "id": "TH078",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=455 (rank 8/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00100 bound=0.88543",
+      "PASS": true,
+      "evidence": "grid_index=455, G=64, tau2=0.5, deff=3.0, cv=2.0, V=0.042096, gap=0.095087, emp=0.00100, bound=0.88543"
+    },
+    {
+      "id": "TH079",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=473 (rank 9/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.75388",
+      "PASS": true,
+      "evidence": "grid_index=473, G=64, tau2=1.0, deff=1.944, cv=2.0, V=0.061508, gap=0.081589, emp=0.00000, bound=0.75388"
+    },
+    {
+      "id": "TH080",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=478 (rank 10/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.86324",
+      "PASS": true,
+      "evidence": "grid_index=478, G=64, tau2=1.0, deff=3.0, cv=1.5, V=0.061337, gap=0.071054, emp=0.00000, bound=0.86324"
+    },
+    {
+      "id": "TH081",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=479 (rank 11/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.95754",
+      "PASS": true,
+      "evidence": "grid_index=479, G=64, tau2=1.0, deff=3.0, cv=2.0, V=0.062365, gap=0.065131, emp=0.00000, bound=0.95754"
+    },
+    {
+      "id": "TH082",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=483 (rank 12/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00250 bound=0.88107",
+      "PASS": true,
+      "evidence": "grid_index=483, G=128, tau2=0.05, deff=1.0, cv=1.0, V=0.000217, gap=0.004921, emp=0.00250, bound=0.88107"
+    },
+    {
+      "id": "TH083",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=507 (rank 13/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.74479",
+      "PASS": true,
+      "evidence": "grid_index=507, G=128, tau2=0.2, deff=1.0, cv=1.0, V=0.001062, gap=0.007132, emp=0.00000, bound=0.74479"
+    },
+    {
+      "id": "TH084",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=508 (rank 14/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.45470",
+      "PASS": true,
+      "evidence": "grid_index=508, G=128, tau2=0.2, deff=1.0, cv=1.5, V=0.001734, gap=0.019064, emp=0.00000, bound=0.45470"
+    },
+    {
+      "id": "TH085",
+      "family": "T2_bound_coverage",
+      "claim": "T2 bound covers empirical failure at grid_index=509 (rank 15/15)",
+      "kind": "verify",
+      "expected": "empirical_fail_rate <= bound",
+      "observed": "emp=0.00000 bound=0.44151",
+      "PASS": true,
+      "evidence": "grid_index=509, G=128, tau2=0.2, deff=1.0, cv=2.0, V=0.003297, gap=0.037338, emp=0.00000, bound=0.44151"
+    },
+    {
+      "id": "TH086",
+      "family": "T2_expected_failure_FALSIFY",
+      "claim": "non-identifiable regime at grid_index=0 must produce a trivial/divergent bound",
+      "kind": "falsify",
+      "expected": "trivial or divergent bound IS detected",
+      "observed": "bound=1.0000, gap*tau2=0.000e+00, triggered=True",
+      "PASS": true,
+      "evidence": "grid_index=0, G=4, tau2=0.05, gap=0.000e+00, V=0.004288, bound=1.0000, denom=0.000e+00. PASS here means the negative fact was correctly detected, NOT hidden."
+    },
+    {
+      "id": "TH087",
+      "family": "T2_expected_failure_FALSIFY",
+      "claim": "non-identifiable regime at grid_index=1 must produce a trivial/divergent bound",
+      "kind": "falsify",
+      "expected": "trivial or divergent bound IS detected",
+      "observed": "bound=1.0000, gap*tau2=3.451e-06, triggered=True",
+      "PASS": true,
+      "evidence": "grid_index=1, G=4, tau2=0.05, gap=6.902e-05, V=0.004433, bound=1.0000, denom=3.451e-06. PASS here means the negative fact was correctly detected, NOT hidden."
+    },
+    {
+      "id": "TH088",
+      "family": "T2_expected_failure_FALSIFY",
+      "claim": "non-identifiable regime at grid_index=2 must produce a trivial/divergent bound",
+      "kind": "falsify",
+      "expected": "trivial or divergent bound IS detected",
+      "observed": "bound=1.0000, gap*tau2=8.265e-06, triggered=True",
+      "PASS": true,
+      "evidence": "grid_index=2, G=4, tau2=0.05, gap=1.653e-04, V=0.004347, bound=1.0000, denom=8.265e-06. PASS here means the negative fact was correctly detected, NOT hidden."
+    },
+    {
+      "id": "TH089",
+      "family": "T2_expected_failure_FALSIFY",
+      "claim": "non-identifiable regime at grid_index=3 must produce a trivial/divergent bound",
+      "kind": "falsify",
+      "expected": "trivial or divergent bound IS detected",
+      "observed": "bound=1.0000, gap*tau2=3.225e-04, triggered=True",
+      "PASS": true,
+      "evidence": "grid_index=3, G=4, tau2=0.05, gap=6.449e-03, V=0.010442, bound=1.0000, denom=3.225e-04. PASS here means the negative fact was correctly detected, NOT hidden."
+    },
+    {
+      "id": "TH090",
+      "family": "T2_expected_failure_FALSIFY",
+      "claim": "non-identifiable regime at grid_index=4 must produce a trivial/divergent bound",
+      "kind": "falsify",
+      "expected": "trivial or divergent bound IS detected",
+      "observed": "bound=1.0000, gap*tau2=1.218e-05, triggered=True",
+      "PASS": true,
+      "evidence": "grid_index=4, G=4, tau2=0.05, gap=2.437e-04, V=0.003994, bound=1.0000, denom=1.218e-05. PASS here means the negative fact was correctly detected, NOT hidden."
+    },
+    {
+      "id": "TH091",
+      "family": "T2_expected_failure_FALSIFY",
+      "claim": "non-identifiable regime at grid_index=5 must produce a trivial/divergent bound",
+      "kind": "falsify",
+      "expected": "trivial or divergent bound IS detected",
+      "observed": "bound=1.0000, gap*tau2=1.225e-03, triggered=True",
+      "PASS": true,
+      "evidence": "grid_index=5, G=4, tau2=0.05, gap=2.450e-02, V=0.125981, bound=1.0000, denom=1.225e-03. PASS here means the negative fact was correctly detected, NOT hidden."
+    },
+    {
+      "id": "TH092",
+      "family": "T2_expected_failure_FALSIFY",
+      "claim": "non-identifiable regime at grid_index=6 must produce a trivial/divergent bound",
+      "kind": "falsify",
+      "expected": "trivial or divergent bound IS detected",
+      "observed": "bound=1.0000, gap*tau2=0.000e+00, triggered=True",
+      "PASS": true,
+      "evidence": "grid_index=6, G=4, tau2=0.05, gap=0.000e+00, V=0.006054, bound=1.0000, denom=0.000e+00. PASS here means the negative fact was correctly detected, NOT hidden."
+    },
+    {
+      "id": "TH093",
+      "family": "T2_expected_failure_FALSIFY",
+      "claim": "non-identifiable regime at grid_index=7 must produce a trivial/divergent bound",
+      "kind": "falsify",
+      "expected": "trivial or divergent bound IS detected",
+      "observed": "bound=1.0000, gap*tau2=1.766e-05, triggered=True",
+      "PASS": true,
+      "evidence": "grid_index=7, G=4, tau2=0.05, gap=3.531e-04, V=0.006642, bound=1.0000, denom=1.766e-05. PASS here means the negative fact was correctly detected, NOT hidden."
+    },
+    {
+      "id": "TH094",
+      "family": "T2_expected_failure_FALSIFY",
+      "claim": "non-identifiable regime at grid_index=8 must produce a trivial/divergent bound",
+      "kind": "falsify",
+      "expected": "trivial or divergent bound IS detected",
+      "observed": "bound=1.0000, gap*tau2=3.373e-05, triggered=True",
+      "PASS": true,
+      "evidence": "grid_index=8, G=4, tau2=0.05, gap=6.747e-04, V=0.006220, bound=1.0000, denom=3.373e-05. PASS here means the negative fact was correctly detected, NOT hidden."
+    },
+    {
+      "id": "TH095",
+      "family": "T2_expected_failure_FALSIFY",
+      "claim": "non-identifiable regime at grid_index=9 must produce a trivial/divergent bound",
+      "kind": "falsify",
+      "expected": "trivial or divergent bound IS detected",
+      "observed": "bound=1.0000, gap*tau2=1.226e-04, triggered=True",
+      "PASS": true,
+      "evidence": "grid_index=9, G=4, tau2=0.05, gap=2.451e-03, V=0.014946, bound=1.0000, denom=1.226e-04. PASS here means the negative fact was correctly detected, NOT hidden."
+    },
+    {
+      "id": "TH096",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=0.5000, tau2=0.05",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=9.179e-16, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265106, c=0.500000, tau2=0.05, rel_err=9.179e-16, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.002174"
+    },
+    {
+      "id": "TH097",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=0.5000, tau2=0.5",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=1.608e-15, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265107, c=0.500000, tau2=0.5, rel_err=1.608e-15, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.001879"
+    },
+    {
+      "id": "TH098",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=0.5000, tau2=1.0",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=1.637e-15, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265108, c=0.500000, tau2=1.0, rel_err=1.637e-15, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.000974"
+    },
+    {
+      "id": "TH099",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=1.0000, tau2=0.05",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=0.000e+00, zero_c1=0.000e+00, monotone=False",
+      "PASS": false,
+      "evidence": "seed=20265116, c=1.000000, tau2=0.05, rel_err=0.000e+00, zero_at_c1=0.000e+00, monotone=False, mean_excess=0.000000"
+    },
+    {
+      "id": "TH100",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=1.0000, tau2=0.5",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=0.000e+00, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265117, c=1.000000, tau2=0.5, rel_err=0.000e+00, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.000000"
+    },
+    {
+      "id": "TH101",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=1.0000, tau2=1.0",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=0.000e+00, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265118, c=1.000000, tau2=1.0, rel_err=0.000e+00, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.000000"
+    },
+    {
+      "id": "TH102",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=1.5000, tau2=0.05",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=2.443e-15, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265126, c=1.500000, tau2=0.05, rel_err=2.443e-15, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.000646"
+    },
+    {
+      "id": "TH103",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=1.5000, tau2=0.5",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=1.236e-15, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265127, c=1.500000, tau2=0.5, rel_err=1.236e-15, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.001254"
+    },
+    {
+      "id": "TH104",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=1.5000, tau2=1.0",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=5.411e-15, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265128, c=1.500000, tau2=1.0, rel_err=5.411e-15, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.000410"
+    },
+    {
+      "id": "TH105",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=1.9442, tau2=0.05",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=9.887e-16, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265136, c=1.944229, tau2=0.05, rel_err=9.887e-16, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.001750"
+    },
+    {
+      "id": "TH106",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=1.9442, tau2=0.5",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=1.220e-15, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265137, c=1.944229, tau2=0.5, rel_err=1.220e-15, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.001962"
+    },
+    {
+      "id": "TH107",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=1.9442, tau2=1.0",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=2.499e-15, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265138, c=1.944229, tau2=1.0, rel_err=2.499e-15, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.001464"
+    },
+    {
+      "id": "TH108",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=3.0000, tau2=0.05",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=8.353e-16, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265146, c=3.000000, tau2=0.05, rel_err=8.353e-16, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.004035"
+    },
+    {
+      "id": "TH109",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=3.0000, tau2=0.5",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=5.940e-16, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265147, c=3.000000, tau2=0.5, rel_err=5.940e-16, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.011569"
+    },
+    {
+      "id": "TH110",
+      "family": "T3_misspec_noise",
+      "claim": "T3 closed form / c=1 zero / |c-1| monotonicity at c=3.0000, tau2=1.0",
+      "kind": "verify",
+      "expected": "error<1e-10 AND c=1 identically 0 AND monotone in |c-1|",
+      "observed": "rel_err=3.741e-16, zero_c1=0.000e+00, monotone=True",
+      "PASS": true,
+      "evidence": "seed=20265148, c=3.000000, tau2=1.0, rel_err=3.741e-16, zero_at_c1=0.000e+00, monotone=True, mean_excess=0.011204"
+    },
+    {
+      "id": "TH111",
+      "family": "T4_gap_nonmonotone",
+      "claim": "Jensen gap lower bound + two-end decay at (G=64,cv=2.0,deff=3.0)",
+      "kind": "verify",
+      "expected": "lower bound holds AND both deff extremes < deff=1 gap",
+      "observed": "lb_ok=True, nm_ok=True",
+      "PASS": true,
+      "evidence": "seed=20266106, gap=0.0573413, lower_bound=0.0006944, gap(0)=3.160e-13, gap(1)=0.0340686, gap(inf)=5.660e-06, Var(S)=0.568839"
+    },
+    {
+      "id": "TH112",
+      "family": "T4_gap_nonmonotone",
+      "claim": "Jensen gap lower bound + two-end decay at (G=8,cv=0.5,deff=1.944)",
+      "kind": "verify",
+      "expected": "lower bound holds AND both deff extremes < deff=1 gap",
+      "observed": "lb_ok=True, nm_ok=True",
+      "PASS": true,
+      "evidence": "seed=20266107, gap=0.0007201, lower_bound=0.0005062, gap(0)=4.300e-16, gap(1)=0.0002744, gap(inf)=1.260e-07, Var(S)=0.000325"
+    },
+    {
+      "id": "TH113",
+      "family": "T4_gap_nonmonotone",
+      "claim": "Jensen gap lower bound + two-end decay at (G=64,cv=1.0,deff=1.944)",
+      "kind": "verify",
+      "expected": "lower bound holds AND both deff extremes < deff=1 gap",
+      "observed": "lb_ok=True, nm_ok=True",
+      "PASS": true,
+      "evidence": "seed=20266108, gap=0.0148425, lower_bound=0.0005695, gap(0)=2.771e-14, gap(1)=0.0077950, gap(inf)=1.126e-06, Var(S)=0.020942"
+    },
+    {
+      "id": "TH114",
+      "family": "T4_gap_nonmonotone",
+      "claim": "Jensen gap lower bound + two-end decay at (G=16,cv=1.5,deff=1.0)",
+      "kind": "verify",
+      "expected": "lower bound holds AND both deff extremes < deff=1 gap",
+      "observed": "lb_ok=True, nm_ok=True",
+      "PASS": true,
+      "evidence": "seed=20266109, gap=0.0096396, lower_bound=0.0015763, gap(0)=3.784e-14, gap(1)=0.0096396, gap(inf)=1.048e-06, Var(S)=0.007567"
+    },
+    {
+      "id": "TH115",
+      "family": "T4_gap_nonmonotone",
+      "claim": "Jensen gap lower bound + two-end decay at (G=64,cv=1.5,deff=1.0)",
+      "kind": "verify",
+      "expected": "lower bound holds AND both deff extremes < deff=1 gap",
+      "observed": "lb_ok=True, nm_ok=True",
+      "PASS": true,
+      "evidence": "seed=20266110, gap=0.0128469, lower_bound=0.0008724, gap(0)=5.338e-14, gap(1)=0.0128469, gap(inf)=4.594e-06, Var(S)=0.010676"
+    },
+    {
+      "id": "TH116",
+      "family": "T4_gap_nonmonotone",
+      "claim": "Jensen gap lower bound + two-end decay at (G=32,cv=0.2,deff=1.0)",
+      "kind": "verify",
+      "expected": "lower bound holds AND both deff extremes < deff=1 gap",
+      "observed": "lb_ok=True, nm_ok=True",
+      "PASS": true,
+      "evidence": "seed=20266111, gap=0.0000789, lower_bound=0.0000685, gap(0)=1.197e-16, gap(1)=0.0000789, gap(inf)=3.846e-08, Var(S)=0.000024"
+    },
+    {
+      "id": "TH117",
+      "family": "T4_gap_nonmonotone",
+      "claim": "Jensen gap lower bound + two-end decay at (G=8,cv=1.0,deff=1.944)",
+      "kind": "verify",
+      "expected": "lower bound holds AND both deff extremes < deff=1 gap",
+      "observed": "lb_ok=True, nm_ok=True",
+      "PASS": true,
+      "evidence": "seed=20266112, gap=0.0609690, lower_bound=0.0016985, gap(0)=4.391e-13, gap(1)=0.0426912, gap(inf)=2.501e-06, Var(S)=0.331920"
+    },
+    {
+      "id": "TH118",
+      "family": "T4_gap_nonmonotone",
+      "claim": "Jensen gap lower bound + two-end decay at (G=64,cv=0.2,deff=1.944)",
+      "kind": "verify",
+      "expected": "lower bound holds AND both deff extremes < deff=1 gap",
+      "observed": "lb_ok=True, nm_ok=True",
+      "PASS": true,
+      "evidence": "seed=20266113, gap=0.0004109, lower_bound=0.0002373, gap(0)=2.460e-16, gap(1)=0.0001568, gap(inf)=6.708e-08, Var(S)=0.000186"
+    },
+    {
+      "id": "TH119",
+      "family": "T4_gap_nonmonotone",
+      "claim": "Jensen gap lower bound + two-end decay at (G=32,cv=2.0,deff=1.944)",
+      "kind": "verify",
+      "expected": "lower bound holds AND both deff extremes < deff=1 gap",
+      "observed": "lb_ok=True, nm_ok=True",
+      "PASS": true,
+      "evidence": "seed=20266114, gap=0.0389965, lower_bound=0.0006747, gap(0)=2.199e-13, gap(1)=0.0262006, gap(inf)=1.686e-05, Var(S)=0.166244"
+    },
+    {
+      "id": "TH120",
+      "family": "T4_gap_nonmonotone",
+      "claim": "Jensen gap lower bound + two-end decay at (G=32,cv=0.2,deff=1.944)",
+      "kind": "verify",
+      "expected": "lower bound holds AND both deff extremes < deff=1 gap",
+      "observed": "lb_ok=True, nm_ok=True",
+      "PASS": true,
+      "evidence": "seed=20266115, gap=0.0001965, lower_bound=0.0001568, gap(0)=1.198e-16, gap(1)=0.0000757, gap(inf)=2.791e-08, Var(S)=0.000091"
+    }
+  ],
+  "honesty": "120 independent assertions, NOT 120 copies of one check. No new experiment, no new seeds, no change to W11 original verdict."
+}

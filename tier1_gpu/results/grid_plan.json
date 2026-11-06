@@ -1,0 +1,128 @@
+{
+  "prereg": "PREREGISTRATION_T2.md v1.0 (frozen before any real waveform forward)",
+  "executed_on": "CPU / stdlib only",
+  "real_gpu_training_performed": false,
+  "real_waveform_forward_performed": false,
+  "assumption_driven": true,
+  "open_layer": {
+    "corpora": [
+      "CODE15",
+      "PTBXL",
+      "CSN",
+      "IKEM",
+      "SPH",
+      "CPSC",
+      "CPSCX",
+      "GEORGIA",
+      "SAMITROP",
+      "CODETEST",
+      "CODE2OPEN",
+      "MIMICDEMO"
+    ],
+    "records": 575242,
+    "patients": 390930
+  },
+  "academic_request_layer": {
+    "corpora": [
+      "CODE2FULL"
+    ],
+    "records": 2735196,
+    "patients": 2093748
+  },
+  "main_queue": {
+    "records": 3310438,
+    "patients": 2484678,
+    "countries_ge": 8,
+    "note": "CODE-II is BR / SciLifeLab academic request, not US DSP"
+  },
+  "excluded_from_commitment": [
+    "MIMIC4ECG",
+    "HEEDB",
+    "CODEFULL"
+  ],
+  "grid": {
+    "stage_a_runs": 150,
+    "stage_b_runs": 108,
+    "stage_c_eval_cells": 108,
+    "total_gpu_runs": 258
+  },
+  "seed_ranges": {
+    "T2-A": [
+      900000,
+      900149
+    ],
+    "T2-B": [
+      910000,
+      910107
+    ],
+    "T2-C": [
+      920000,
+      920011
+    ],
+    "T2-FWD": [
+      930000,
+      930001
+    ]
+  },
+  "seed_conflicts_with_W1_W12": [],
+  "gpu_hour_budget_sensitivity": [
+    {
+      "throughput_samples_per_s": 500,
+      "stage_a_150runs_gpu_h": 191.8,
+      "stage_b_108runs_gpu_h": 4.7,
+      "forward_only_3_3M_gpu_h": 1.839,
+      "stage_a_records_x_epochs": 345282750,
+      "stage_b_records_x_epochs": 8496864,
+      "assumption_driven": true
+    },
+    {
+      "throughput_samples_per_s": 1000,
+      "stage_a_150runs_gpu_h": 95.9,
+      "stage_b_108runs_gpu_h": 2.4,
+      "forward_only_3_3M_gpu_h": 0.92,
+      "stage_a_records_x_epochs": 345282750,
+      "stage_b_records_x_epochs": 8496864,
+      "assumption_driven": true
+    },
+    {
+      "throughput_samples_per_s": 2400,
+      "stage_a_150runs_gpu_h": 40.0,
+      "stage_b_108runs_gpu_h": 1.0,
+      "forward_only_3_3M_gpu_h": 0.383,
+      "stage_a_records_x_epochs": 345282750,
+      "stage_b_records_x_epochs": 8496864,
+      "assumption_driven": true
+    }
+  ],
+  "compute_assumption_references": [
+    "ECG-FM pretraining: 8x A100 ~10 days / 4x A100 80GB 16.5 days",
+    "HuBERT-ECG full finetune: <2.5 h on single A100",
+    "ECGFounder original: 20 epochs, batch 1024"
+  ],
+  "checks": {
+    "catalog_n": 13,
+    "open_corpora_n": 12,
+    "request_corpora_n": 1,
+    "stage_a_runs": 150,
+    "stage_b_runs": 108,
+    "stage_c_eval_cells": 108,
+    "acceptance_gates": 12,
+    "stage_a_runs_match_seed_range_width": true,
+    "stage_b_runs_match_seed_range_width": true,
+    "all_t2_seed_ranges_disjoint_from_W1_W12": true,
+    "lead_alignment_by_name": true,
+    "canonical_leads_n": 12,
+    "label_ontologies_n": 4,
+    "statistical_unit_is_patient": true,
+    "primary_queue_records": 3310438,
+    "primary_queue_patients": 2484678,
+    "excluded_from_commitment_n": 3
+  },
+  "honesty": [
+    "GPU-hour numbers are formula outputs from PLACEHOLDER throughput; must be replaced by measured throughput",
+    "Corpus counts come from published pages and require per-source re-verification",
+    "CODE-II access requires a PI-submitted academic request; not yet granted",
+    "No GPU, no torch, no wfdb, no real waveform exists in this sandbox",
+    "This planner verifies SPEC internals only; it is not a scientific result"
+  ]
+}

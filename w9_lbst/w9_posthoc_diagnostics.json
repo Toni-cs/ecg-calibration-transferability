@@ -1,0 +1,43 @@
+{
+  "status": "POST-HOC / EXPLORATORY — excluded from all confirmatory H judgements",
+  "n_seeds": 10000,
+  "margin": 0.002,
+  "CERT_GATE": {
+    "mean_dECE": -0.017000395573409204,
+    "mean_continuous_loss": 0.0009546091598325255,
+    "p95_dECE": 0.0,
+    "p99_dECE": 0.006158350980531979,
+    "CVaR_0.1pct": 0.015979435726986818,
+    "max_dECE": 0.02514301151930258,
+    "binary_harm": 0.0257,
+    "frac_near_margin": 0.4069
+  },
+  "HB_GST": {
+    "mean_dECE": -0.017670474787519107,
+    "mean_continuous_loss": 0.0009752350970962747,
+    "p95_dECE": 0.0,
+    "p99_dECE": 0.006675022647877088,
+    "CVaR_0.1pct": 0.017313584131926223,
+    "max_dECE": 0.026676088244221755,
+    "binary_harm": 0.0281,
+    "frac_near_margin": 0.4012
+  },
+  "paired_dH_minus_dC": {
+    "mean": -0.0006700792141099031,
+    "CI95": [
+      -0.0007432369895934358,
+      -0.0005964724204553739
+    ]
+  },
+  "boundary_artefact": {
+    "n_harm_flips_CERT_ok_to_HB_harm": 111,
+    "n_harm_flips_HB_ok_to_CERT_harm": 87,
+    "among_flips_CERT_ok_to_HB_harm": {
+      "n": 111,
+      "mean_abs_dECE_CERT": 0.0024350970685045135,
+      "frac_within_0.003_of_margin": 0.0
+    },
+    "interpretation": "If HB reduces continuous loss / CVaR / mean dECE but raises the binary harm rate, and the new harm events cluster within +-0.003 of the 0.002 margin, then the H1 failure is a threshold artefact of the proxy, not a degradation of the calibration estimator."
+  },
+  "conclusion_honesty": "This does NOT overturn H1. H1 remains FAILED per PREREGISTRATION_W9.md section 6. It only diagnoses why, and motivates a pre-registered continuous endpoint in W10."
+}

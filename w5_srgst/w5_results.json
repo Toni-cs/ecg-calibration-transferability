@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "prereg": "PREREGISTRATION_W5.md v1.0 (frozen)",
+    "run_type": "CONFIRMATORY",
+    "method": "GS-GST (zero hyperparams)",
+    "seeds_A": [
+      7000,
+      7299,
+      300
+    ],
+    "seeds_B": [
+      7300,
+      7599,
+      300
+    ],
+    "falsification_seeds": [
+      7600,
+      7659,
+      60
+    ],
+    "cnn_control_seeds": [
+      7700,
+      7799,
+      100
+    ],
+    "bootstrap_B": 10000,
+    "date": "2026-11-06",
+    "no_pilot": "zero tunable hyperparameters, no threshold selection",
+    "execution_split": "stage1 600 seeds + stage2 analysis/falsification",
+    "history_retained": [
+      "W1 PARI falsified",
+      "W2 v1.0 H1=False",
+      "W2 v1.1 F-B FAIL / graph removed",
+      "W3 600 Mamba seeds -0.0248, 534/600",
+      "W4 H2/H3 confirmed, H4/F4 falsified"
+    ]
+  },
+  "F0_validity_gate": {
+    "oracle_nll_gate_pass": true,
+    "n_seeds_failing_nll": 0,
+    "manipulation_mean": 0.11378593520891528,
+    "manipulation_positive_frac": 0.9833333333333333,
+    "manipulation_pass": true,
+    "PASS": true,
+    "ece_oracle_reversals": 108,
+    "max_ece_reversal_gap": 0.01698335794393971
+  },
+  "aggregate": {
+    "SOURCE": {
+      "ECE": {
+        "mean": 0.21047396295947027,
+        "sd": 0.0719801701666843
+      },
+      "NLL": {
+        "mean": 1.6835665552856998,
+        "sd": 0.29314480653937947
+      },
+      "Brier": {
+        "mean": 0.771766898542236,
+        "sd": 0.053339309067460164
+      },
+      "harm_rate": 0.9833333333333333
+    },
+    "GLOBAL": {
+      "ECE": {
+        "mean": 0.09668802775055499,
+        "sd": 0.030015157247025852
+      },
+      "NLL": {
+        "mean": 1.3345638326590512,
+        "sd": 0.06667228555816353
+      },
+      "Brier": {
+        "mean": 0.7051149152287128,
+        "sd": 0.02032977070580023
+      },
+      "harm_rate": 0.0
+    },
+    "GLOBAL-SHRINK": {
+      "ECE": {
+        "mean": 0.10610149601460762,
+        "sd": 0.03980492153506143
+      },
+      "NLL": {
+        "mean": 1.3558418268072967,
+        "sd": 0.11825995317220149
+      },
+      "Brier": {
+        "mean": 0.709898044450663,
+        "sd": 0.027154506771350877
+      },
+      "harm_rate": 0.765
+    },
+    "GST": {
+      "ECE": {
+        "mean": 0.07099152444227463,
+        "sd": 0.017371218632232687
+      },
+      "NLL": {
+        "mean": 1.2899276958282198,
+        "sd": 0.025169143571612495
+      },
+      "Brier": {
+        "mean": 0.6932180955159047,
+        "sd": 0.013916096586425657
+      },
+      "harm_rate": 0.105
+    },
+    "SHRINK-GLOBAL": {
+      "ECE": {
+        "mean": 0.07103686058680106,
+        "sd": 0.0174746743710137
+      },
+      "NLL": {
+        "mean": 1.2899208434332494,
+        "sd": 0.025181267043789996
+      },
+      "Brier": {
+        "mean": 0.6932073254970328,
+        "sd": 0.013926762560337392
+      },
+      "harm_rate": 0.11333333333333333
+    },
+    "SR-GST": {
+      "ECE": {
+        "mean": 0.08021779825993375,
+        "sd": 0.03723686712996654
+      },
+      "NLL": {
+        "mean": 1.3091665314136187,
+        "sd": 0.10820534463285464
+      },
+      "Brier": {
+        "mean": 0.6975813331030623,
+        "sd": 0.02468085462110921
+      },
+      "harm_rate": 0.235
+    },
+    "CW-GST": {
+      "ECE": {
+        "mean": 0.07316626154841402,
+        "sd": 0.01754578821192387
+      },
+      "NLL": {
+        "mean": 1.2930545819331234,
+        "sd": 0.0264244594985568
+      },
+      "Brier": {
+        "mean": 0.6941393099836761,
+        "sd": 0.014290256742144986
+      },
+      "harm_rate": 0.09166666666666666
+    },
+    "GS-GST": {
+      "ECE": {
+        "mean": 0.07203139152169331,
+        "sd": 0.01761340558857136
+      },
+      "NLL": {
+        "mean": 1.2910769798652157,
+        "sd": 0.025778439967163138
+      },
+      "Brier": {
+        "mean": 0.6935445491094306,
+        "sd": 0.014116084594570196
+      },
+      "harm_rate": 0.06666666666666667
+    },
+    "ORACLE": {
+      "ECE": {
+        "mean": 0.05932697607455398,
+        "sd": 0.013553356851648051
+      },
+      "NLL": {
+        "mean": 1.2791789999545078,
+        "sd": 0.021549188883908457
+      },
+      "Brier": {
+        "mean": 0.6894250800220855,
+        "sd": 0.01291314743328357
+      },
+      "harm_rate": 0.03
+    }
+  },
+  "H": {
+    "H1_primary": {
+      "stratum": "B (300 seeds)",
+      "harm_GST": 0.08,
+      "harm_GSGST": 0.05333333333333334,
+      "relative_reduction": 0.33333333333333337,
+      "paired_diff": 0.02666666666666667,
+      "paired_CI95": [
+        0.0033333333333333335,
+        0.05333333333333334
+      ],
+      "conditions": {
+        "harm_GSGST_le_0.05": false,
+        "relative_reduction_ge_0.50": false,
+        "paired_CI_lower_gt_0": true
+      },
+      "PASS": false
+    },
+    "H2_noninferiority": {
+      "mean_delta_ECE_GSGST_minus_GLOBAL": -0.024656636228861682,
+      "sd": 0.025699622810242934,
+      "CI95": [
+        -0.02671259319788675,
+        -0.022606786234814685
+      ],
+      "n_negative_of_600": 543,
+      "negative_fraction": 0.905,
+      "mean_delta_ECE_GST_minus_GLOBAL": -0.025696503308280355,
+      "noninferiority_gap": 0.0010398670794186703,
+      "noninferiority_CI95": [
+        0.0006758990728860815,
+        0.0014036817754126544
+      ],
+      "conditions": {
+        "mean_le_-0.020": true,
+        "CI_upper_lt_0": true,
+        "gap_le_0.010": true
+      },
+      "PASS": true
+    },
+    "H3_tail_risk": {
+      "p95_GST": 0.003763425950293462,
+      "p95_GSGST": 0.0010984782047227452,
+      "p95_improvement": 0.0026649477455707167,
+      "worst_GST": 0.015979741636956257,
+      "worst_GSGST": 0.013083005102014086,
+      "worst_improvement": 0.002896736534942171,
+      "conditions": {
+        "p95_improve_ge_0.002": true,
+        "worst_improve_ge_0.002": true
+      },
+      "PASS": true
+    },
+    "H4_mechanism": {
+      "mean_delta_ECE_GLOBALSHRINK_minus_GLOBAL": 0.009413468264052623,
+      "GLOBALSHRINK_no_gain": true,
+      "mean_ECE_SRGST": 0.08021779825993375,
+      "mean_ECE_GSGST": 0.07203139152169331,
+      "SRGST_worse_than_GSGST": true,
+      "PASS": true
+    }
+  },
+  "strata": {
+    "A_W3DGP": {
+      "SOURCE": {
+        "mean_delta_ECE": null,
+        "harm_rate": 0.98
+      },
+      "GLOBAL": {
+        "mean_delta_ECE": null,
+        "harm_rate": 0.0
+      },
+      "GLOBAL-SHRINK": {
+        "mean_delta_ECE": 0.007867612586255002,
+        "harm_rate": 0.7766666666666666
+      },
+      "GST": {
+        "mean_delta_ECE": -0.02351504581504378,
+        "harm_rate": 0.13
+      },
+      "SHRINK-GLOBAL": {
+        "mean_delta_ECE": null,
+        "harm_rate": 0.14333333333333334
+      },
+      "SR-GST": {
+        "mean_delta_ECE": -0.016209415178350117,
+        "harm_rate": 0.25
+      },
+      "CW-GST": {
+        "mean_delta_ECE": -0.021253895310211927,
+        "harm_rate": 0.10333333333333333
+      },
+      "GS-GST": {
+        "mean_delta_ECE": -0.023256977562377604,
+        "harm_rate": 0.08
+      },
+      "ORACLE": {
+        "mean_delta_ECE": null,
+        "harm_rate": 0.03333333333333333
+      },
+      "lam_gs_mean": 0.8000765925490383,
+      "mean_n_per_group": 138.23277777777776
+    },
+    "B_longtail": {
+      "SOURCE": {
+        "mean_delta_ECE": null,
+        "harm_rate": 0.9866666666666667
+      },
+      "GLOBAL": {
+        "mean_delta_ECE": null,
+        "harm_rate": 0.0
+      },
+      "GLOBAL-SHRINK": {
+        "mean_delta_ECE": 0.010959323941850242,
+        "harm_rate": 0.7533333333333333
+      },
+      "GST": {
+        "mean_delta_ECE": -0.02787796080151693,
+        "harm_rate": 0.08
+      },
+      "SHRINK-GLOBAL": {
+        "mean_delta_ECE": null,
+        "harm_rate": 0.08333333333333333
+      },
+      "SR-GST": {
+        "mean_delta_ECE": -0.016731043802892375,
+        "harm_rate": 0.22
+      },
+      "CW-GST": {
+        "mean_delta_ECE": -0.025789637094070023,
+        "harm_rate": 0.08
+      },
+      "GS-GST": {
+        "mean_delta_ECE": -0.02605629489534576,
+        "harm_rate": 0.05333333333333334
+      },
+      "ORACLE": {
+        "mean_delta_ECE": null,
+        "harm_rate": 0.02666666666666667
+      },
+      "lam_gs_mean": 0.706288951283182,
+      "mean_n_per_group": 188.23694444444442
+    }
+  },
+  "F_falsification": {
+    "FM1_merge_groups": {
+      "mean_delta": -2.8912057932946783e-19,
+      "PASS": true
+    },
+    "FM2_shuffle_group_id": {
+      "mean_delta": -0.0007434689315544973,
+      "PASS": true
+    },
+    "FM3_homogeneous": {
+      "mean_delta": -0.0003506661566060702,
+      "PASS": true
+    },
+    "FM5_lam1_equals_GST": {
+      "max_abs_diff": 2.7755575615628914e-17,
+      "PASS": true
+    },
+    "FM6_lam0_equals_GLOBAL": {
+      "max_abs_diff": 1.3877787807814457e-17,
+      "PASS": true
+    }
+  },
+  "CNN_control": {
+    "mean_delta_ECE": -0.03049584359043459,
+    "sd": 0.0268587519986835,
+    "n_negative_of_100": 91,
+    "PASS": true
+  },
+  "verdict": {
+    "checks": {
+      "F0": true,
+      "H1": false,
+      "H2": true,
+      "H3": true,
+      "H4": true,
+      "FM1": true,
+      "FM2": true,
+      "FM3": true,
+      "FM5": true,
+      "FM6": true,
+      "ARCH": true
+    },
+    "all_pass": false,
+    "citable": false,
+    "confirmed_success": [
+      "H2_noninferiority",
+      "H3_tail_risk",
+      "H4_mechanism"
+    ],
+    "H1_detail": "Significant harm reduction (paired CI lower>0) but 33.3% < pre-registered 50% and harm 0.0533 > 0.05. Threshold NOT changed, no v1.1.",
+    "W3_line_crossed": "543/600 (90.5%) negative seeds on GS-GST vs W3 GST 534/600 (89.0%); the 90% deployment line W3 missed is now crossed on 600 FRESH independent seeds.",
+    "no_v1_1": true,
+    "honesty": "Synthetic 12-lead toy waveforms + diagonal selective SSM numpy approximation. NOT official Mamba kernel, NOT pretrained, NOT real 1.15M ECG. Real-data forward requires PhysioNet DUA + T1 preflight.",
+    "W3_success_statement": "W3 average effect -0.0248 (CI [-0.0269,-0.0228]) and mechanism F-M1/M2/M3 remain SUCCESSFUL and are retained."
+  }
+}

@@ -1,0 +1,74 @@
+[start main] next=131916 done=1916 shards=5 all=True
+  [flush] +400 seeds (400 rows)  total 2316  36s -> shard_005.npz
+lush] +400 seeds (400 rows)  total 800  70s -> shard_001.npz
+  [flush] +400 seeds (400 rows)  total 1200  105s -> shard_002.npz
+  [flush] +400 seeds (400 rows)  total 1600  140s -> shard_003.npz
+  [flush-end] +316 seeds (316 rows)  total 1916  169s -> shard_004.npz
+[main box 1] next=131916 done=1916  169s
+[start main] next=132716 done=2716 shards=7 all=True
+  [flush] +400 seeds (400 rows)  total 3116  34s -> shard_007.npz
+  [flush] +400 seeds (400 rows)  total 3516  68s -> shard_008.npz
+  [flush] +400 seeds (400 rows)  total 3916  104s -> shard_009.npz
+  [flush] +400 seeds (400 rows)  total 4316  142s -> shard_010.npz
+  [flush-end] +279 seeds (279 rows)  total 4595  169s -> shard_011.npz
+[main box 2] next=134595 done=4595  169s
+[start main] next=134595 done=4595 shards=12 all=True
+  [flush] +400 seeds (400 rows)  total 4995  35s -> shard_012.npz
+  [flush] +400 seeds (400 rows)  total 5395  70s -> shard_013.npz
+  [flush] +400 seeds (400 rows)  total 5795  104s -> shard_014.npz
+  [flush] +400 seeds (400 rows)  total 6195  138s -> shard_015.npz
+[start main] next=136195 done=6195 shards=16 all=True
+  [flush] +400 seeds (400 rows)  total 6595  33s -> shard_016.npz
+  [flush] +400 seeds (400 rows)  total 6995  66s -> shard_017.npz
+  [flush] +400 seeds (400 rows)  total 7395  99s -> shard_018.npz
+  [flush] +400 seeds (400 rows)  total 7795  132s -> shard_019.npz
+  [flush] +400 seeds (400 rows)  total 8195  166s -> shard_020.npz
+  [flush-end] +32 seeds (32 rows)  total 8227  169s -> shard_021.npz
+[main box 3] next=138227 done=8227  169s
+[start main] next=138227 done=8227 shards=22 all=True
+  [flush] +400 seeds (400 rows)  total 8627  34s -> shard_022.npz
+  [flush] +400 seeds (400 rows)  total 9027  66s -> shard_023.npz
+  [flush] +400 seeds (400 rows)  total 9427  100s -> shard_024.npz
+  [flush] +400 seeds (400 rows)  total 9827  133s -> shard_025.npz
+  [flush] +400 seeds (400 rows)  total 10227  166s -> shard_026.npz
+  [flush-end] +26 seeds (26 rows)  total 10253  168s -> shard_027.npz
+[main box 4] next=140253 done=10253  169s
+[start main] next=140253 done=10253 shards=28 all=True
+  [flush] +400 seeds (400 rows)  total 10653  33s -> shard_028.npz
+  [flush] +400 seeds (400 rows)  total 11053  68s -> shard_029.npz
+  [flush] +400 seeds (400 rows)  total 11453  104s -> shard_030.npz
+  [flush] +400 seeds (400 rows)  total 11853  137s -> shard_031.npz
+  [flush-end] +381 seeds (381 rows)  total 12234  168s -> shard_032.npz
+[main box 5] next=142234 done=12234  169s
+[start main] next=142234 done=12234 shards=33 all=True
+  [flush] +400 seeds (400 rows)  total 12634  34s -> shard_033.npz
+  [flush] +400 seeds (400 rows)  total 13034  66s -> shard_034.npz
+  [flush] +400 seeds (400 rows)  total 13434  99s -> shard_035.npz
+  [flush] +400 seeds (400 rows)  total 13834  134s -> shard_036.npz
+  [flush] +400 seeds (400 rows)  total 14234  166s -> shard_037.npz
+  [flush-end] +27 seeds (27 rows)  total 14261  169s -> shard_038.npz
+[main box 6] next=144261 done=14261  169s
+[start main] next=144261 done=14261 shards=39 all=True
+  [flush] +400 seeds (400 rows)  total 14661  36s -> shard_039.npz
+  [flush] +400 seeds (400 rows)  total 15061  70s -> shard_040.npz
+  [flush] +400 seeds (400 rows)  total 15461  105s -> shard_041.npz
+  [flush] +400 seeds (400 rows)  total 15861  138s -> shard_042.npz
+  [flush-end] +351 seeds (351 rows)  total 16212  169s -> shard_043.npz
+[main box 7] next=146212 done=16212  169s
+[start main] next=146212 done=16212 shards=44 all=True
+  [flush] +400 seeds (400 rows)  total 16612  35s -> shard_044.npz
+  [flush] +400 seeds (400 rows)  total 17012  69s -> shard_045.npz
+  [flush] +400 seeds (400 rows)  total 17412  103s -> shard_046.npz
+  [flush] +400 seeds (400 rows)  total 17812  137s -> shard_047.npz
+  [flush-end] +366 seeds (366 rows)  total 18178  169s -> shard_048.npz
+[main box 8] next=148178 done=18178  169s
+[start main] next=148178 done=18178 shards=49 all=True
+  [flush] +400 seeds (400 rows)  total 18578  51s -> shard_049.npz
+  [flush] +400 seeds (400 rows)  total 18978  100s -> shard_050.npz
+  [flush] +400 seeds (400 rows)  total 19378  152s -> shard_051.npz
+  [flush-end] +134 seeds (134 rows)  total 19512  168s -> shard_052.npz
+[main box 9] next=149512 done=19512  169s
+[start main] next=149512 done=19512 shards=53 all=True
+  [flush] +400 seeds (400 rows)  total 19912  51s -> shard_053.npz
+  [flush-end] +88 seeds (88 rows)  total 20000  63s -> shard_054.npz
+[main box 10] next=150000 done=20000  63s

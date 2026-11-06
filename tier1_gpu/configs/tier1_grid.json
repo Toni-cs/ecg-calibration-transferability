@@ -1,0 +1,114 @@
+{
+  "schema_version": "T2-v1.0",
+  "frozen_at": "2026-11-06",
+  "note": "Frozen BEFORE any real waveform forward. All throughput values are PLACEHOLDER assumptions, not measurements.",
+
+  "catalog": [
+    {"id": "CODE15",   "name": "CODE-15%",                 "records": 345779,  "patients": 233770, "country": "BR", "tier": "open",       "license": "CC BY 4.0", "role": "train+track"},
+    {"id": "PTBXL",    "name": "PTB-XL v1.0.3",            "records": 21799,   "patients": 18869,  "country": "DE", "tier": "open",       "license": "CC BY 4.0", "role": "train+external"},
+    {"id": "CSN",      "name": "Chapman-Shaoxing/Ningbo",  "records": 45152,   "patients": 45152,  "country": "CN/US", "tier": "open",     "license": "CC BY 4.0", "role": "train"},
+    {"id": "IKEM",     "name": "IKEM",                     "records": 98130,   "patients": 30290,  "country": "CZ", "tier": "open",       "license": "CC BY 4.0", "role": "train"},
+    {"id": "SPH",      "name": "SPH (Shandong)",           "records": 25770,   "patients": 24666,  "country": "CN", "tier": "open",       "license": "CC BY 4.0", "role": "train"},
+    {"id": "CPSC",     "name": "CPSC2018",                 "records": 6877,    "patients": 6877,   "country": "CN", "tier": "open",       "license": "open",  "role": "train+external"},
+    {"id": "CPSCX",    "name": "CPSC2018-Extra",           "records": 3412,    "patients": 3412,   "country": "CN", "tier": "open",       "license": "open",  "role": "train"},
+    {"id": "GEORGIA",  "name": "Georgia 12-lead",          "records": 10206,   "patients": 10344,  "country": "US", "tier": "open",       "license": "Academic PhysioNet", "role": "stress"},
+    {"id": "SAMITROP", "name": "SaMi-Trop",                "records": 1631,    "patients": 1631,   "country": "BR", "tier": "open",       "license": "CC BY 4.0", "role": "stress"},
+    {"id": "CODETEST", "name": "CODE-test",                "records": 827,     "patients": 827,    "country": "BR", "tier": "open",       "license": "CC BY 4.0", "role": "external-only"},
+    {"id": "CODE2OPEN","name": "CODE-II-open",             "records": 15000,   "patients": 15000,  "country": "BR", "tier": "open-subset","license": "open",  "role": "train"},
+    {"id": "MIMICDEMO","name": "MIMIC-IV-ECG-Demo",        "records": 659,     "patients": 92,     "country": "US", "tier": "open",       "license": "ODbL 1.0",  "role": "smoke-only"},
+    {"id": "CODE2FULL","name": "CODE-II full",             "records": 2735196, "patients": 2093748,"country": "BR", "tier": "academic-request", "license": "SciLifeLab DUA", "role": "train"}
+  ],
+
+  "excluded_from_commitment": [
+    {"id": "MIMIC4ECG", "records": 800035, "patients": 161352, "reason": "PhysioNet credentialed DUA + DOJ DSP 2025-07-08 China restriction"},
+    {"id": "HEEDB",     "records": 11607261,"patients": 2167795,"reason": "BDSP Credentialed Health Data License 1.5.0; US data"},
+    {"id": "CODEFULL",  "records": 2322513,"patients": 1676384,"reason": "restricted DUA; overlaps CODE-15%"}
+  ],
+
+  "overlap_rules": [
+    "CODE-15% is a 15% patient sample of older CODE (2010-2016); CODE-II is 2019-2022 -> disjoint",
+    "If CODE full is obtained, dedupe by exam_id + patient_id against CODE-15%",
+    "PTB-XL / CSN / CPSC overlap the original 60-cell pilot -> external/pressure-test only, not counted in main total"
+  ],
+
+  "lead_alignment": {
+    "canonical": ["I","II","III","aVR","aVL","aVF","V1","V2","V3","V4","V5","V6"],
+    "rule": "ALIGN_BY_NAME_NOT_CHANNEL_INDEX",
+    "known_issues": [
+      "MIMIC-IV-ECG: aVF/aVL swapped relative to other corpora",
+      "CODE-II: DIII/AVR/AVL/AVF reconstructed from 8 essential leads by standard equations",
+      "CODE-test limb-lead order differs from CODE-15%"
+    ],
+    "target_fs_hz": 500,
+    "target_length_s": 10,
+    "source_fs_hz": [300,400,500,600,1000]
+  },
+
+  "label_ontologies": [
+    {"id": "SUPER5",  "classes": ["NORM","MI","STTC","CD","HYP"], "n": 5},
+    {"id": "CPSC9",   "n": 9},
+    {"id": "CHAP4",   "n": 4},
+    {"id": "CODE66",  "n": 66, "reviewed_by": "cardiologists"}
+  ],
+
+  "stage_a": {
+    "corpora": ["PTBXL","CSN","CPSC","SPH","CODE15","CODE2OPEN"],
+    "architectures": ["InceptionTime","ResNet1D","MambaPyRepo","ECGFounderRegNet_scratch","CNN_SSM_Attention"],
+    "seeds": [42,43,44,45,46],
+    "epochs": 30,
+    "batch": 256,
+    "optimizer": "AdamW",
+    "precision": "bf16",
+    "schedule": "cosine",
+    "gradient_checkpointing": true,
+    "early_stop": "patient-level validation fold",
+    "seed_range": [900000, 900149]
+  },
+
+  "stage_b": {
+    "foundation_models": ["ECGFounder","ECGFM","HuBERTECG","xECG"],
+    "modes": ["frozen_linear_probe","full_finetune","lora"],
+    "external_corpora": ["PTBXL","CODETEST","CPSC"],
+    "seeds": [7,8,9],
+    "seed_range": [910000, 910107],
+    "optional_pretrain": {"corpus": "CODE2FULL", "arch": "MambaPyRepo", "objective": "JEPA_or_WCR", "in_primary_endpoint": false}
+  },
+
+  "stage_c": {
+    "gpu": false,
+    "estimators": ["SOURCE","GLOBAL","GST","GS_GST","CERT_GATE","HB","M1","M2","M3"],
+    "theory": ["Proposition1","Proposition2","T1","T2","T3","T4","mixed_drift_identifiability"],
+    "assertions": 360,
+    "seed_range": [920000, 920011]
+  },
+
+  "compute_assumptions": {
+    "note": "PLACEHOLDER. Replace with measured throughput on your GPU before using any budget number.",
+    "throughput_candidates_sps": [500, 1000, 2400],
+    "stage_a_effective_epochs": 30,
+    "stage_b_effective_epochs": 8,
+    "forward_only_epochs": 1,
+    "external_references": [
+      "ECG-FM pretraining: 8x A100 ~10 days / 4x A100 80GB 16.5 days",
+      "HuBERT-ECG full finetune: <2.5 h on single A100",
+      "ECGFounder original: 20 epochs, batch 1024"
+    ]
+  },
+
+  "external_validation": {
+    "loco_corpora": 12,
+    "additional": ["leave_one_center_out","leave_one_device_out","leave_one_year_out"],
+    "rule": "no threshold selected on evaluation set"
+  },
+
+  "statistics": {
+    "unit": "patient",
+    "bootstrap": ["patient_block","center_cluster"],
+    "deff_formula": "1 + (mbar - 1) * ICC",
+    "metrics": ["canonical_ECE","classwise_ECE","Brier","NLL","calibration_slope","calibration_intercept","AUROC","AUPRC","DCA_net_benefit","continuous_deployment_loss","CVaR_0.1pct","subgroup_interaction"],
+    "correction": "Holm"
+  },
+
+  "acceptance_gates": 12,
+  "stopping_rule": "Any failed gate reported verbatim; no criterion/threshold/subset change; no v1.1"
+}

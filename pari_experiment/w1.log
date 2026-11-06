@@ -1,0 +1,21 @@
+[E0] repo pilot audit ...
+[E1] identifiability curve ...
+[E2] variance reduction over n_pat x m ...
+   n=  25  PARI=0.1722  POOLED=0.1423  SHUF=0.1797  gain=0.83x
+   n=  50  PARI=0.1314  POOLED=0.1338  SHUF=0.1423  gain=1.02x
+   n= 100  PARI=0.0958  POOLED=0.0800  SHUF=0.0836  gain=0.84x
+   n= 200  PARI=0.0536  POOLED=0.0528  SHUF=0.0524  gain=0.99x
+   n= 400  PARI=0.0400  POOLED=0.0485  SHUF=0.0474  gain=1.21x
+   n= 800  PARI=0.0283  POOLED=0.0297  SHUF=0.0295  gain=1.05x
+[E3] four falsification tests ...
+[E4] convergence on effective unit ...
+[E5] group heterogeneity -> single-T regret ...
+
+=== W1 SUMMARY ===
+E0 real-data runnable locally: False
+E1 T_hat PARI = 2.3676 | pooled = 2.3676 | true = 2.4 | unimodal: True
+E2 gain @n=800: 1.05 x | slope on n = -0.544
+E3 F1/F2/F4 degrade: True True False
+E4 slope on n*m = -0.556
+E5 regret @s=1.2: 0.155724
+done in 42.9 s

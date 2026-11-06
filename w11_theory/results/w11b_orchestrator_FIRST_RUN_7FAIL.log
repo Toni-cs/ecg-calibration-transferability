@@ -1,0 +1,15 @@
+W11-B ORCHESTRATOR — 244 original numerical artefacts
+  S1 (BEFORE) computed
+  re-ran theory_assertions.py     rc=0 | written /data/workspace/w11_theory/results/w11b_theory_120.json
+  re-ran preflight_120.py         rc=0 | written /data/workspace/w11_theory/results/w11b_preflight_120.json
+  re-ran verify_120.py            rc=0 | written /data/workspace/w11_theory/results/w11b_verify_120.json
+  S2 (AFTER) computed | B5=PASS changed=0
+
+=== W11-B VERDICT ===
+  theory     117/120  FAIL=3
+  preflight  116/120  FAIL=4
+  verify     120/120  FAIL=0
+  TOTAL      353/360  FAIL=7
+  B1=True B2=True B3=True B5=True B6=True
+  FAIL ids: ['TH054', 'TH064', 'TH099', 'PF041', 'PF048', 'PF049', 'PF117']
+written /data/workspace/w11_theory/results/w11b_final_verdict.json

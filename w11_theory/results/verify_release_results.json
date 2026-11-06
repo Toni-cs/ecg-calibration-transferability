@@ -1,0 +1,302 @@
+{
+  "gates": {
+    "01_env_lock": {
+      "PASS": true,
+      "locked": {
+        "python": "3.10.12",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "matplotlib": "3.10.9"
+      },
+      "runtime": {
+        "python": "3.10.12",
+        "numpy": "2.2.6",
+        "scipy": "1.15.3",
+        "matplotlib": "3.10.9"
+      },
+      "mismatches": {}
+    },
+    "02_seed_manifest": {
+      "PASS": true,
+      "n_ranges": 29,
+      "n_pairwise_checked": 27,
+      "overlaps": []
+    },
+    "03_prereg_complete": {
+      "PASS": true,
+      "missing": [],
+      "found": {
+        "W2": [
+          "PREREGISTRATION_T1_v0_2_GST.md",
+          "PREREGISTRATION_W2_GSGT.md",
+          "PREREGISTRATION_W2_GSGT_v1_1.md"
+        ],
+        "W3": [
+          "PREREGISTRATION_W3_MAMBA600.md"
+        ],
+        "W4": [
+          "PREREGISTRATION_W4.md"
+        ],
+        "W5": [
+          "PREREGISTRATION_W5.md"
+        ],
+        "W6": [
+          "PREREGISTRATION_W6.md"
+        ],
+        "W7": [
+          "PREREGISTRATION_W7.md"
+        ],
+        "W8": [
+          "PREREGISTRATION_W8.md"
+        ],
+        "W9": [
+          "PREREGISTRATION_W9.md"
+        ],
+        "W10": [
+          "PREREGISTRATION_W10.md"
+        ],
+        "W11": [
+          "PREREGISTRATION_W11.md",
+          "PREREGISTRATION_W11B.md"
+        ]
+      }
+    },
+    "04_shard_integrity": {
+      "PASS": true,
+      "shard_sets": {
+        "W7_main": {
+          "PASS": true,
+          "n_files": 143,
+          "n_rows": 60000,
+          "n_unique_seeds": 60000,
+          "exact_range": true,
+          "duplicate_rows": 0
+        },
+        "W9_main": {
+          "PASS": true,
+          "n_files": 27,
+          "n_rows": 10000,
+          "n_unique_seeds": 10000,
+          "exact_range": true,
+          "duplicate_rows": 0
+        },
+        "W9_falsify": {
+          "PASS": true,
+          "n_files": 2,
+          "n_rows": 600,
+          "n_unique_seeds": 600,
+          "exact_range": true,
+          "duplicate_rows": 0
+        },
+        "W10_main": {
+          "PASS": true,
+          "n_files": 55,
+          "n_rows": 20000,
+          "n_unique_seeds": 20000,
+          "exact_range": true,
+          "duplicate_rows": 0
+        },
+        "W10_loco": {
+          "PASS": true,
+          "n_files": 2,
+          "n_rows": 1800,
+          "n_unique_seeds": 600,
+          "exact_range": true,
+          "duplicate_rows": 0
+        },
+        "W10_falsify": {
+          "PASS": true,
+          "n_files": 2,
+          "n_rows": 600,
+          "n_unique_seeds": 600,
+          "exact_range": true,
+          "duplicate_rows": 0
+        }
+      }
+    },
+    "05_result_json": {
+      "PASS": true,
+      "rounds": {
+        "W1": {
+          "PASS": true,
+          "bytes": 11506,
+          "conclusion_field": false,
+          "structured_result_block": true
+        },
+        "W2": {
+          "PASS": true,
+          "bytes": 13653,
+          "conclusion_field": true,
+          "structured_result_block": true
+        },
+        "W3": {
+          "PASS": true,
+          "bytes": 43083,
+          "conclusion_field": true,
+          "structured_result_block": true
+        },
+        "W4": {
+          "PASS": true,
+          "bytes": 451778,
+          "conclusion_field": true,
+          "structured_result_block": true
+        },
+        "W5": {
+          "PASS": true,
+          "bytes": 9921,
+          "conclusion_field": true,
+          "structured_result_block": true
+        },
+        "W6": {
+          "PASS": true,
+          "bytes": 32386,
+          "conclusion_field": true,
+          "structured_result_block": true
+        },
+        "W7": {
+          "PASS": true,
+          "bytes": 30294,
+          "conclusion_field": true,
+          "structured_result_block": true
+        },
+        "W8": {
+          "PASS": true,
+          "bytes": 2808,
+          "conclusion_field": true,
+          "structured_result_block": false
+        },
+        "W9": {
+          "PASS": true,
+          "bytes": 11085,
+          "conclusion_field": true,
+          "structured_result_block": true
+        },
+        "W10": {
+          "PASS": true,
+          "bytes": 19357,
+          "conclusion_field": true,
+          "structured_result_block": true
+        },
+        "W11": {
+          "PASS": true,
+          "bytes": 448566,
+          "conclusion_field": true,
+          "structured_result_block": false
+        }
+      }
+    },
+    "06_code_hash": {
+      "PASS": true,
+      "n_listed": 62,
+      "mismatches": [],
+      "missing_files": [],
+      "uncovered_py": [],
+      "n_uncovered": 0
+    },
+    "07_figure_existence": {
+      "PASS": true,
+      "rounds": {
+        "W1": {
+          "PASS": true,
+          "n_png": 5
+        },
+        "W2": {
+          "PASS": true,
+          "n_png": 7
+        },
+        "W3": {
+          "PASS": true,
+          "n_png": 3
+        },
+        "W4": {
+          "PASS": true,
+          "n_png": 3
+        },
+        "W5": {
+          "PASS": true,
+          "n_png": 2
+        },
+        "W6": {
+          "PASS": true,
+          "n_png": 2
+        },
+        "W7": {
+          "PASS": true,
+          "n_png": 4
+        },
+        "W8": {
+          "PASS": true,
+          "n_png": 1
+        },
+        "W9": {
+          "PASS": true,
+          "n_png": 2
+        },
+        "W10": {
+          "PASS": true,
+          "n_png": 2
+        },
+        "W11": {
+          "PASS": true,
+          "n_png": 3
+        }
+      }
+    },
+    "08_cache_schema": {
+      "PASS": true,
+      "missing": [],
+      "n_invariants": 8,
+      "blocked_until": [
+        "PhysioNet credentialed DUA approval for MIMIC-IV-ECG v1.0",
+        "clinical collaborator review of label ontology",
+        "third-party independent reproduction environment"
+      ]
+    },
+    "09_preflight_7of7": {
+      "PASS": true,
+      "returncode": 0,
+      "n_pass": 7,
+      "stdout_tail": [
+        "  7_code_hash_consistency            PASS",
+        "preflight: 7/7"
+      ]
+    },
+    "10_no_overclaim": {
+      "PASS": true,
+      "n_md_scanned": 36,
+      "violations": [],
+      "n_violations": 0
+    },
+    "11_direction_ledger": {
+      "PASS": true,
+      "n_entries": 55,
+      "n_negative_or_falsified": 27,
+      "rounds_covered": [
+        "W1",
+        "W10",
+        "W11",
+        "W2",
+        "W3",
+        "W4",
+        "W5",
+        "W6",
+        "W7",
+        "W8",
+        "W9"
+      ],
+      "n_rounds": 11
+    },
+    "12_one_command_reproduce": {
+      "PASS": true,
+      "equivalent_verification": "this process IS the documented command: gates 1-11 all PASS",
+      "command_documented": true,
+      "previous_gates_all_pass": true
+    }
+  },
+  "n_pass": 12,
+  "n_checks": 12,
+  "all_pass": true,
+  "prereg": "PREREGISTRATION_W11.md v1.0 (frozen)",
+  "no_real_patient_data": true,
+  "note": "A8 requires 12/12; any FAIL is reported, never skipped."
+}

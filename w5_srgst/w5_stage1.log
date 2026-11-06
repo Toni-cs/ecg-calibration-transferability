@@ -1,0 +1,9 @@
+[MAIN-A] 300 Mamba seeds 7000-7299 (W3 DGP) ...
+   A 150/300 119s
+  A 300/300 116s
+   A checkpointed 116s
+[MAIN-B] 300 Mamba seeds 7300-7599 (long-tail small groups) ...
+   B 150/300 196s
+   B 300/300 343s
+   B checkpointed 343s
+STAGE 1 DONE

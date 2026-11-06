@@ -1,0 +1,5 @@
+W11-B PREFLIGHT: 117/120 PASS, 3 FAIL
+  FAIL PF041 cache_schema_field | required=True, dtype=float32, keys=['dtype', 'required', 'shape']
+  FAIL PF048 cache_schema_field | required=True, dtype=int64, keys=['dtype', 'required']
+  FAIL PF049 cache_schema_field | required=True, dtype=int64, keys=['dtype', 'required']
+written /data/workspace/w11_theory/results/w11b_preflight_120.json

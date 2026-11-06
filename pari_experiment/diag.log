@@ -1,0 +1,22 @@
+[D1] orbit imbalance sweep ...
+  imbalance=0.00  PARI=0.0383  POOLED=0.0383  gain=1.00x
+  imbalance=0.25  PARI=0.0747  POOLED=0.0792  gain=1.06x
+  imbalance=0.50  PARI=0.0846  POOLED=0.0774  gain=0.91x
+  imbalance=1.00  PARI=0.0773  POOLED=0.0767  gain=0.99x
+  imbalance=2.00  PARI=0.0709  POOLED=0.0773  gain=1.09x
+[D2] falsification under the winning regime ...
+[D3] patient-heterogeneity sweep (balanced, control) ...
+  spread=0.05  PARI=0.0549  POOLED=0.0549  gain=1.00x
+  spread=0.15  PARI=0.0578  POOLED=0.0578  gain=1.00x
+  spread=0.30  PARI=0.0531  POOLED=0.0531  gain=1.00x
+  spread=0.50  PARI=0.0625  POOLED=0.0625  gain=1.00x
+[D4] informative orbit size (selection bias) ...
+  informative=0.5  PARI=0.0701  POOLED=0.0660  bias(PARI/POOLED)=+0.0022/-0.0057  gain=0.94x
+  informative=1.0  PARI=0.0522  POOLED=0.0449  bias(PARI/POOLED)=+0.0010/-0.0108  gain=0.86x
+  informative=2.0  PARI=0.0556  POOLED=0.0463  bias(PARI/POOLED)=+0.0015/-0.0098  gain=0.83x
+
+=== DIAGNOSTIC SUMMARY ===
+best gain: 1.09 x at imbalance = 2.0
+F1 erases gain: False
+D4 best gain (informative orbit): 0.94 x
+FALSIFIED. No tested regime gives PARI a consistent advantage: balanced orbits 1.00x (D3), skewed orbits 0.91-1.09x (D1), informative orbits 0.83-0.94x (D4, PARI worse). D4 does show the expected bias mechanism (PARI bias ~+0.001 vs POOLED ~-0.010) but pairing pays for it with larger variance, so RMSE is worse. Under this DGP family the patient-anchored estimator is NOT a better estimator of a global temperature than a simple pooled histogram matcher. Per the registered failure clause, PARI as specified must be DOWNGRADED / abandoned; it cannot be the novelty claim of the T1 paper. The surviving empirical finding is E5: group heterogeneity makes a single global T untransferable (regret 0 -> 0.156), which supports the PROBLEM, not this solution.

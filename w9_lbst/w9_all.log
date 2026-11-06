@@ -1,0 +1,37 @@
+[start main] next=110000 done=0 shards=0
+  [flush] +400 total 400 34s -> shard_000.npz
+  [flush] +400 total 800 69s -> shard_001.npz
+  [flush] +400 total 1200 104s -> shard_002.npz
+  [flush] +400 total 1600 139s -> shard_003.npz
+  [flush] +400 total 2000 175s -> shard_004.npz
+  [flush-end] +5 total 2005 176s -> shard_005.npz
+[main box 1] total 2005 176s
+[start main] next=112005 done=2005 shards=6
+  [flush] +400 total 2405 34s -> shard_006.npz
+  [flush] +400 total 2805 68s -> shard_007.npz
+  [flush] +400 total 3205 102s -> shard_008.npz
+  [flush] +400 total 3605 137s -> shard_009.npz
+  [flush] +400 total 4005 171s -> shard_010.npz
+  [flush-end] +45 total 4050 176s -> shard_011.npz
+[main box 2] total 4050 176s
+[start main] next=114050 done=4050 shards=12
+  [flush] +400 total 4450 35s -> shard_012.npz
+  [flush] +400 total 4850 71s -> shard_013.npz
+  [flush] +400 total 5250 106s -> shard_014.npz
+  [flush] +400 total 5650 141s -> shard_015.npz
+  [flush] +400 total 6050 175s -> shard_016.npz
+[main box 3] total 6050 175s
+[start main] next=116050 done=6050 shards=17
+  [flush] +400 total 6450 34s -> shard_017.npz
+  [flush] +400 total 6850 69s -> shard_018.npz
+  [flush] +400 total 7250 105s -> shard_019.npz
+  [flush] +400 total 7650 142s -> shard_020.npz
+  [flush-end] +377 total 8027 176s -> shard_021.npz
+[main box 4] total 8027 176s
+[start main] next=118027 done=8027 shards=22
+  [flush] +400 total 8427 35s -> shard_022.npz
+  [flush] +400 total 8827 69s -> shard_023.npz
+  [flush] +400 total 9227 103s -> shard_024.npz
+  [flush] +400 total 9627 138s -> shard_025.npz
+  [flush-end] +373 total 10000 171s -> shard_026.npz
+[main box 5] total 10000 171s

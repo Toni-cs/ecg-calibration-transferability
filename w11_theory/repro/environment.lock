@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-11-06 Asia/Shanghai",
+  "python": "3.10.12",
+  "platform": "Linux-6.6.69-cube.bm.guest.005.x-g039db8913c80-x86_64-with-glibc2.35",
+  "machine": "x86_64",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "matplotlib": "3.10.9",
+  "pillow": "10.4.0",
+  "blas_threads_policy": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1",
+  "font": "WenQuanYi Micro Hei",
+  "timezone": "Asia/Shanghai (UTC+8)",
+  "note": "Frozen environment for W1-W11 reproduction. Results are bit-reproducible under these versions with fixed RNG seeds."
+}

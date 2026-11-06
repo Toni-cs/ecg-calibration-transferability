@@ -1,0 +1,4 @@
+[start loco] next=150000 done=0 shards=0 all=True
+  [flush] +400 seeds (1200 rows)  total 400  53s -> shard_000.npz
+  [flush-end] +200 seeds (600 rows)  total 600  79s -> shard_001.npz
+[loco box 1] next=150600 done=600  79s

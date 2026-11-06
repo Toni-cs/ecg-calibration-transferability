@@ -1,0 +1,1506 @@
+{
+  "prereg": "T2 v1.0",
+  "plan": [
+    {
+      "run_id": "T2-A-0000",
+      "corpus": "PTBXL",
+      "arch": "InceptionTime",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0001",
+      "corpus": "PTBXL",
+      "arch": "InceptionTime",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0002",
+      "corpus": "PTBXL",
+      "arch": "InceptionTime",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0003",
+      "corpus": "PTBXL",
+      "arch": "InceptionTime",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0004",
+      "corpus": "PTBXL",
+      "arch": "InceptionTime",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0005",
+      "corpus": "PTBXL",
+      "arch": "ResNet1D",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0006",
+      "corpus": "PTBXL",
+      "arch": "ResNet1D",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0007",
+      "corpus": "PTBXL",
+      "arch": "ResNet1D",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0008",
+      "corpus": "PTBXL",
+      "arch": "ResNet1D",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0009",
+      "corpus": "PTBXL",
+      "arch": "ResNet1D",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0010",
+      "corpus": "PTBXL",
+      "arch": "MambaPyRepo",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0011",
+      "corpus": "PTBXL",
+      "arch": "MambaPyRepo",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0012",
+      "corpus": "PTBXL",
+      "arch": "MambaPyRepo",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0013",
+      "corpus": "PTBXL",
+      "arch": "MambaPyRepo",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0014",
+      "corpus": "PTBXL",
+      "arch": "MambaPyRepo",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0015",
+      "corpus": "PTBXL",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0016",
+      "corpus": "PTBXL",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0017",
+      "corpus": "PTBXL",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0018",
+      "corpus": "PTBXL",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0019",
+      "corpus": "PTBXL",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0020",
+      "corpus": "PTBXL",
+      "arch": "CNN_SSM_Attention",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0021",
+      "corpus": "PTBXL",
+      "arch": "CNN_SSM_Attention",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0022",
+      "corpus": "PTBXL",
+      "arch": "CNN_SSM_Attention",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0023",
+      "corpus": "PTBXL",
+      "arch": "CNN_SSM_Attention",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0024",
+      "corpus": "PTBXL",
+      "arch": "CNN_SSM_Attention",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0025",
+      "corpus": "CSN",
+      "arch": "InceptionTime",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0026",
+      "corpus": "CSN",
+      "arch": "InceptionTime",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0027",
+      "corpus": "CSN",
+      "arch": "InceptionTime",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0028",
+      "corpus": "CSN",
+      "arch": "InceptionTime",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0029",
+      "corpus": "CSN",
+      "arch": "InceptionTime",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0030",
+      "corpus": "CSN",
+      "arch": "ResNet1D",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0031",
+      "corpus": "CSN",
+      "arch": "ResNet1D",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0032",
+      "corpus": "CSN",
+      "arch": "ResNet1D",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0033",
+      "corpus": "CSN",
+      "arch": "ResNet1D",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0034",
+      "corpus": "CSN",
+      "arch": "ResNet1D",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0035",
+      "corpus": "CSN",
+      "arch": "MambaPyRepo",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0036",
+      "corpus": "CSN",
+      "arch": "MambaPyRepo",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0037",
+      "corpus": "CSN",
+      "arch": "MambaPyRepo",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0038",
+      "corpus": "CSN",
+      "arch": "MambaPyRepo",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0039",
+      "corpus": "CSN",
+      "arch": "MambaPyRepo",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0040",
+      "corpus": "CSN",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0041",
+      "corpus": "CSN",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0042",
+      "corpus": "CSN",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0043",
+      "corpus": "CSN",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0044",
+      "corpus": "CSN",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0045",
+      "corpus": "CSN",
+      "arch": "CNN_SSM_Attention",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0046",
+      "corpus": "CSN",
+      "arch": "CNN_SSM_Attention",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0047",
+      "corpus": "CSN",
+      "arch": "CNN_SSM_Attention",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0048",
+      "corpus": "CSN",
+      "arch": "CNN_SSM_Attention",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0049",
+      "corpus": "CSN",
+      "arch": "CNN_SSM_Attention",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0050",
+      "corpus": "CPSC",
+      "arch": "InceptionTime",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0051",
+      "corpus": "CPSC",
+      "arch": "InceptionTime",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0052",
+      "corpus": "CPSC",
+      "arch": "InceptionTime",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0053",
+      "corpus": "CPSC",
+      "arch": "InceptionTime",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0054",
+      "corpus": "CPSC",
+      "arch": "InceptionTime",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0055",
+      "corpus": "CPSC",
+      "arch": "ResNet1D",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0056",
+      "corpus": "CPSC",
+      "arch": "ResNet1D",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0057",
+      "corpus": "CPSC",
+      "arch": "ResNet1D",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0058",
+      "corpus": "CPSC",
+      "arch": "ResNet1D",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0059",
+      "corpus": "CPSC",
+      "arch": "ResNet1D",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0060",
+      "corpus": "CPSC",
+      "arch": "MambaPyRepo",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0061",
+      "corpus": "CPSC",
+      "arch": "MambaPyRepo",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0062",
+      "corpus": "CPSC",
+      "arch": "MambaPyRepo",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0063",
+      "corpus": "CPSC",
+      "arch": "MambaPyRepo",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0064",
+      "corpus": "CPSC",
+      "arch": "MambaPyRepo",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0065",
+      "corpus": "CPSC",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0066",
+      "corpus": "CPSC",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0067",
+      "corpus": "CPSC",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0068",
+      "corpus": "CPSC",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0069",
+      "corpus": "CPSC",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0070",
+      "corpus": "CPSC",
+      "arch": "CNN_SSM_Attention",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0071",
+      "corpus": "CPSC",
+      "arch": "CNN_SSM_Attention",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0072",
+      "corpus": "CPSC",
+      "arch": "CNN_SSM_Attention",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0073",
+      "corpus": "CPSC",
+      "arch": "CNN_SSM_Attention",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0074",
+      "corpus": "CPSC",
+      "arch": "CNN_SSM_Attention",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0075",
+      "corpus": "SPH",
+      "arch": "InceptionTime",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0076",
+      "corpus": "SPH",
+      "arch": "InceptionTime",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0077",
+      "corpus": "SPH",
+      "arch": "InceptionTime",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0078",
+      "corpus": "SPH",
+      "arch": "InceptionTime",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0079",
+      "corpus": "SPH",
+      "arch": "InceptionTime",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0080",
+      "corpus": "SPH",
+      "arch": "ResNet1D",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0081",
+      "corpus": "SPH",
+      "arch": "ResNet1D",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0082",
+      "corpus": "SPH",
+      "arch": "ResNet1D",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0083",
+      "corpus": "SPH",
+      "arch": "ResNet1D",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0084",
+      "corpus": "SPH",
+      "arch": "ResNet1D",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0085",
+      "corpus": "SPH",
+      "arch": "MambaPyRepo",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0086",
+      "corpus": "SPH",
+      "arch": "MambaPyRepo",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0087",
+      "corpus": "SPH",
+      "arch": "MambaPyRepo",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0088",
+      "corpus": "SPH",
+      "arch": "MambaPyRepo",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0089",
+      "corpus": "SPH",
+      "arch": "MambaPyRepo",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0090",
+      "corpus": "SPH",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0091",
+      "corpus": "SPH",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0092",
+      "corpus": "SPH",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0093",
+      "corpus": "SPH",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0094",
+      "corpus": "SPH",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0095",
+      "corpus": "SPH",
+      "arch": "CNN_SSM_Attention",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0096",
+      "corpus": "SPH",
+      "arch": "CNN_SSM_Attention",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0097",
+      "corpus": "SPH",
+      "arch": "CNN_SSM_Attention",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0098",
+      "corpus": "SPH",
+      "arch": "CNN_SSM_Attention",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0099",
+      "corpus": "SPH",
+      "arch": "CNN_SSM_Attention",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0100",
+      "corpus": "CODE15",
+      "arch": "InceptionTime",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0101",
+      "corpus": "CODE15",
+      "arch": "InceptionTime",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0102",
+      "corpus": "CODE15",
+      "arch": "InceptionTime",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0103",
+      "corpus": "CODE15",
+      "arch": "InceptionTime",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0104",
+      "corpus": "CODE15",
+      "arch": "InceptionTime",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0105",
+      "corpus": "CODE15",
+      "arch": "ResNet1D",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0106",
+      "corpus": "CODE15",
+      "arch": "ResNet1D",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0107",
+      "corpus": "CODE15",
+      "arch": "ResNet1D",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0108",
+      "corpus": "CODE15",
+      "arch": "ResNet1D",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0109",
+      "corpus": "CODE15",
+      "arch": "ResNet1D",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0110",
+      "corpus": "CODE15",
+      "arch": "MambaPyRepo",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0111",
+      "corpus": "CODE15",
+      "arch": "MambaPyRepo",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0112",
+      "corpus": "CODE15",
+      "arch": "MambaPyRepo",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0113",
+      "corpus": "CODE15",
+      "arch": "MambaPyRepo",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0114",
+      "corpus": "CODE15",
+      "arch": "MambaPyRepo",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0115",
+      "corpus": "CODE15",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0116",
+      "corpus": "CODE15",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0117",
+      "corpus": "CODE15",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0118",
+      "corpus": "CODE15",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0119",
+      "corpus": "CODE15",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0120",
+      "corpus": "CODE15",
+      "arch": "CNN_SSM_Attention",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0121",
+      "corpus": "CODE15",
+      "arch": "CNN_SSM_Attention",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0122",
+      "corpus": "CODE15",
+      "arch": "CNN_SSM_Attention",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0123",
+      "corpus": "CODE15",
+      "arch": "CNN_SSM_Attention",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0124",
+      "corpus": "CODE15",
+      "arch": "CNN_SSM_Attention",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0125",
+      "corpus": "CODE2OPEN",
+      "arch": "InceptionTime",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0126",
+      "corpus": "CODE2OPEN",
+      "arch": "InceptionTime",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0127",
+      "corpus": "CODE2OPEN",
+      "arch": "InceptionTime",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0128",
+      "corpus": "CODE2OPEN",
+      "arch": "InceptionTime",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0129",
+      "corpus": "CODE2OPEN",
+      "arch": "InceptionTime",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0130",
+      "corpus": "CODE2OPEN",
+      "arch": "ResNet1D",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0131",
+      "corpus": "CODE2OPEN",
+      "arch": "ResNet1D",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0132",
+      "corpus": "CODE2OPEN",
+      "arch": "ResNet1D",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0133",
+      "corpus": "CODE2OPEN",
+      "arch": "ResNet1D",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0134",
+      "corpus": "CODE2OPEN",
+      "arch": "ResNet1D",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0135",
+      "corpus": "CODE2OPEN",
+      "arch": "MambaPyRepo",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0136",
+      "corpus": "CODE2OPEN",
+      "arch": "MambaPyRepo",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0137",
+      "corpus": "CODE2OPEN",
+      "arch": "MambaPyRepo",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0138",
+      "corpus": "CODE2OPEN",
+      "arch": "MambaPyRepo",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0139",
+      "corpus": "CODE2OPEN",
+      "arch": "MambaPyRepo",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0140",
+      "corpus": "CODE2OPEN",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0141",
+      "corpus": "CODE2OPEN",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0142",
+      "corpus": "CODE2OPEN",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0143",
+      "corpus": "CODE2OPEN",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0144",
+      "corpus": "CODE2OPEN",
+      "arch": "ECGFounderRegNet_scratch",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0145",
+      "corpus": "CODE2OPEN",
+      "arch": "CNN_SSM_Attention",
+      "seed": 42,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0146",
+      "corpus": "CODE2OPEN",
+      "arch": "CNN_SSM_Attention",
+      "seed": 43,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0147",
+      "corpus": "CODE2OPEN",
+      "arch": "CNN_SSM_Attention",
+      "seed": 44,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0148",
+      "corpus": "CODE2OPEN",
+      "arch": "CNN_SSM_Attention",
+      "seed": 45,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    },
+    {
+      "run_id": "T2-A-0149",
+      "corpus": "CODE2OPEN",
+      "arch": "CNN_SSM_Attention",
+      "seed": 46,
+      "epochs": 30,
+      "batch": 256,
+      "precision": "bf16",
+      "status": "PLANNED_NOT_EXECUTED"
+    }
+  ],
+  "gpu_training_executed": false
+}

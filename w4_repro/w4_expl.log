@@ -1,0 +1,17 @@
+[EXPLORATORY] 60 fresh seeds 5500-5559, NOT confirmatory ...
+valid seeds: 60
+  PAPER-ISOTONIC   harm=0.152±0.132  dBrier=-0.0606  ECE=0.0472  Brier=0.2542
+  SHRINK-0.5       harm=0.054±0.078  dBrier=-0.0599  ECE=0.1214  Brier=0.2549
+  BIG-CAL-400      harm=0.144±0.121  dBrier=-0.0627  ECE=0.0334  Brier=0.2521
+  GROUP-ISOTONIC   harm=0.267±0.160  dBrier=-0.0483  ECE=0.0886  Brier=0.2664
+
+relative harm reduction vs paper isotonic:
+  SHRINK-0.5       +64.4%
+  BIG-CAL-400      +5.5%
+  GROUP-ISOTONIC   -75.3%
+
+paired CI (paper - remedy) on harm rate:
+  SHRINK-0.5       [0.0708, 0.1250]  excludes zero = True
+  BIG-CAL-400      [-0.0042, 0.0208]  excludes zero = False
+  GROUP-ISOTONIC   [-0.1458, -0.0854]  excludes zero = True
+DONE (exploratory)

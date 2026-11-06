@@ -1,0 +1,196 @@
+[start] next_seed=21240 done=240 shards=1 workers=1
+[box 2] +1802 rows  total 2042/60000  150s  -> shard_001.npz
+[box 3] +1818 rows  total 3860/60000  151s  -> shard_002.npz
+[box 4] +1831 rows  total 5691/60000  151s  -> shard_003.npz
+[box 5] +1827 rows  total 7518/60000  151s  -> shard_004.npz
+[start] next_seed=28518 done=7518 shards=5 workers=1
+  [flush] +400  total 7918/60000  33s -> shard_005.npz
+  [flush] +400  total 8318/60000  64s -> shard_006.npz
+  [flush] +400  total 8718/60000  96s -> shard_007.npz
+  [flush] +400  total 9118/60000  129s -> shard_008.npz
+  [flush] +400  total 9518/60000  164s -> shard_009.npz
+[start] next_seed=30518 done=9518 shards=10 workers=1
+  [flush-end] +184  total 9702/60000  181s -> shard_010.npz
+[box 6] total 9702/60000  181s
+  [flush] +400  total 9918/60000  35s -> shard_010.npz
+  [flush] +400  total 10318/60000  70s -> shard_011.npz
+  [flush] +400  total 10718/60000  106s -> shard_012.npz
+  [flush] +400  total 11118/60000  141s -> shard_013.npz
+[start] next_seed=32118 done=11118 shards=14 workers=1
+  [flush] +400  total 11518/60000  34s -> shard_014.npz
+  [flush] +400  total 11918/60000  68s -> shard_015.npz
+  [flush] +400  total 12318/60000  101s -> shard_016.npz
+  [flush] +400  total 12718/60000  136s -> shard_017.npz
+  [flush-end] +176  total 12894/60000  151s -> shard_018.npz
+[box 6] total 12894/60000  151s
+  [flush] +400  total 13294/60000  33s -> shard_019.npz
+  [flush] +400  total 13694/60000  67s -> shard_020.npz
+  [flush] +400  total 14094/60000  102s -> shard_021.npz
+  [flush] +400  total 14494/60000  138s -> shard_022.npz
+  [flush-end] +137  total 14631/60000  151s -> shard_023.npz
+[box 7] total 14631/60000  151s
+  [flush] +400  total 15031/60000  37s -> shard_024.npz
+  [flush] +400  total 15431/60000  70s -> shard_025.npz
+  [flush] +400  total 15831/60000  103s -> shard_026.npz
+  [flush] +400  total 16231/60000  135s -> shard_027.npz
+  [flush-end] +182  total 16413/60000  151s -> shard_028.npz
+[box 8] total 16413/60000  151s
+  [flush] +400  total 16813/60000  34s -> shard_029.npz
+  [flush] +400  total 17213/60000  67s -> shard_030.npz
+[start] next_seed=38213 done=17213 shards=31 workers=1
+  [flush] +400  total 17613/60000  32s -> shard_031.npz
+  [flush] +400  total 18013/60000  64s -> shard_032.npz
+  [flush] +400  total 18413/60000  98s -> shard_033.npz
+  [flush] +400  total 18813/60000  132s -> shard_034.npz
+  [flush-end] +342  total 19155/60000  161s -> shard_035.npz
+[box 9] total 19155/60000  161s
+[start] next_seed=40155 done=19155 shards=36 workers=1
+  [flush] +400  total 19555/60000  35s -> shard_036.npz
+  [flush] +400  total 19955/60000  70s -> shard_037.npz
+  [flush] +400  total 20355/60000  105s -> shard_038.npz
+  [flush] +400  total 20755/60000  139s -> shard_039.npz
+  [flush-end] +249  total 21004/60000  161s -> shard_040.npz
+[box 10] total 21004/60000  161s
+[start] next_seed=42004 done=21004 shards=41 workers=1
+  [flush] +400  total 21404/60000  34s -> shard_041.npz
+  [flush] +400  total 21804/60000  69s -> shard_042.npz
+  [flush] +400  total 22204/60000  101s -> shard_043.npz
+  [flush] +400  total 22604/60000  133s -> shard_044.npz
+  [flush-end] +313  total 22917/60000  161s -> shard_045.npz
+[box 11] total 22917/60000  161s
+[start] next_seed=43917 done=22917 shards=46 workers=1
+  [flush] +400  total 23317/60000  37s -> shard_046.npz
+  [flush] +400  total 23717/60000  72s -> shard_047.npz
+  [flush] +400  total 24117/60000  109s -> shard_048.npz
+  [flush] +400  total 24517/60000  144s -> shard_049.npz
+  [flush-end] +74  total 24591/60000  151s -> shard_050.npz
+[box 12] total 24591/60000  151s
+[start] next_seed=45591 done=24591 shards=51 workers=1
+[start] next_seed=45591 done=24591 shards=51 workers=1
+  [flush] +400  total 24991/60000  40s -> shard_051.npz
+  [flush] +400  total 24991/60000  73s -> shard_051.npz
+  [flush] +400  total 25391/60000  111s -> shard_052.npz
+  [flush-end] +211  total 25602/60000  151s -> shard_053.npz
+[box 13] total 25602/60000  151s
+[start] next_seed=46602 done=25602 shards=54 workers=1
+[start] next_seed=46602 done=25602 shards=54 workers=1
+  [flush] +400  total 26002/60000  54s -> shard_054.npz
+  [flush] +400  total 26402/60000  110s -> shard_055.npz
+  [flush] +400  total 26802/60000  164s -> shard_056.npz
+[start] next_seed=47802 done=26802 shards=57 workers=1
+  [flush-end] +296  total 27098/60000  231s -> shard_057.npz
+[box 14] total 27098/60000  231s
+  [flush] +400  total 27202/60000  78s -> shard_057.npz
+  [flush] +400  total 27602/60000  131s -> shard_058.npz
+[start] next_seed=48602 done=27602 shards=59 workers=1
+  [flush] +400  total 28002/60000  34s -> shard_059.npz
+  [flush] +400  total 28402/60000  70s -> shard_060.npz
+  [flush] +400  total 28802/60000  108s -> shard_061.npz
+  [flush] +400  total 29202/60000  144s -> shard_062.npz
+  [flush] +400  total 29602/60000  180s -> shard_063.npz
+[start] next_seed=50602 done=29602 shards=64 workers=1
+  [flush-end] +280  total 29882/60000  230s -> shard_064.npz
+[box 14] total 29882/60000  231s
+  [flush] +400  total 30002/60000  61s -> shard_064.npz
+  [flush] +400  total 30402/60000  95s -> shard_065.npz
+  [flush] +400  total 30802/60000  129s -> shard_066.npz
+[start] next_seed=51802 done=30802 shards=67 workers=1
+  [flush] +400  total 31202/60000  57s -> shard_067.npz
+  [flush] +400  total 31602/60000  112s -> shard_068.npz
+  [flush] +400  total 32002/60000  167s -> shard_069.npz
+[start] next_seed=53002 done=32002 shards=70 workers=1
+  [flush-end] +272  total 32274/60000  231s -> shard_070.npz
+[box 14] total 32274/60000  231s
+  [flush] +400  total 32402/60000  81s -> shard_070.npz
+  [flush] +400  total 32802/60000  136s -> shard_071.npz
+[start] next_seed=53802 done=32802 shards=72 workers=1
+  [flush] +400  total 33202/60000  33s -> shard_072.npz
+  [flush] +400  total 33602/60000  66s -> shard_073.npz
+  [flush] +400  total 34002/60000  100s -> shard_074.npz
+  [flush] +400  total 34402/60000  133s -> shard_075.npz
+  [flush] +400  total 34802/60000  165s -> shard_076.npz
+  [flush-end] +122  total 34924/60000  176s -> shard_077.npz
+[box 14] total 34924/60000  176s
+[start] next_seed=55924 done=34924 shards=78 workers=1
+  [flush] +400  total 35324/60000  33s -> shard_078.npz
+  [flush] +400  total 35724/60000  67s -> shard_079.npz
+  [flush] +400  total 36124/60000  100s -> shard_080.npz
+  [flush] +400  total 36524/60000  133s -> shard_081.npz
+  [flush] +400  total 36924/60000  170s -> shard_082.npz
+  [flush-end] +66  total 36990/60000  176s -> shard_083.npz
+[box 15] total 36990/60000  176s
+[start] next_seed=57990 done=36990 shards=84 workers=1
+  [flush] +400  total 37390/60000  34s -> shard_084.npz
+  [flush] +400  total 37790/60000  69s -> shard_085.npz
+  [flush] +400  total 38190/60000  105s -> shard_086.npz
+  [flush] +400  total 38590/60000  139s -> shard_087.npz
+  [flush] +400  total 38990/60000  174s -> shard_088.npz
+[start] next_seed=59990 done=38990 shards=89 workers=1
+  [flush] +400  total 39390/60000  36s -> shard_089.npz
+  [flush] +400  total 39790/60000  71s -> shard_090.npz
+  [flush] +400  total 40190/60000  106s -> shard_091.npz
+  [flush] +400  total 40590/60000  139s -> shard_092.npz
+[start] next_seed=61590 done=40590 shards=93 workers=1
+  [flush] +400  total 40990/60000  61s -> shard_093.npz
+  [flush] +400  total 41390/60000  119s -> shard_094.npz
+  [flush] +400  total 41790/60000  177s -> shard_095.npz
+[start] next_seed=62790 done=41790 shards=96 workers=1
+  [flush] +400  total 42190/60000  57s -> shard_096.npz
+  [flush] +400  total 42590/60000  114s -> shard_097.npz
+  [flush] +400  total 42990/60000  171s -> shard_098.npz
+[start] next_seed=63990 done=42990 shards=99 workers=1
+  [flush] +400  total 43390/60000  34s -> shard_099.npz
+  [flush] +400  total 43790/60000  67s -> shard_100.npz
+  [flush] +400  total 44190/60000  99s -> shard_101.npz
+  [flush] +400  total 44590/60000  133s -> shard_102.npz
+  [flush] +400  total 44990/60000  164s -> shard_103.npz
+[start] next_seed=65990 done=44990 shards=104 workers=1
+  [flush] +400  total 45390/60000  33s -> shard_104.npz
+  [flush] +400  total 45790/60000  64s -> shard_105.npz
+  [flush] +400  total 46190/60000  97s -> shard_106.npz
+  [flush] +400  total 46590/60000  129s -> shard_107.npz
+  [flush] +400  total 46990/60000  163s -> shard_108.npz
+[start] next_seed=67990 done=46990 shards=109 workers=1
+  [flush] +400  total 47390/60000  33s -> shard_109.npz
+  [flush] +400  total 47790/60000  66s -> shard_110.npz
+  [flush] +400  total 48190/60000  99s -> shard_111.npz
+  [flush] +400  total 48590/60000  133s -> shard_112.npz
+  [flush] +400  total 48990/60000  168s -> shard_113.npz
+[start] next_seed=69990 done=48990 shards=114 workers=1
+  [flush] +400  total 49390/60000  33s -> shard_114.npz
+  [flush] +400  total 49790/60000  66s -> shard_115.npz
+  [flush] +400  total 50190/60000  100s -> shard_116.npz
+  [flush] +400  total 50590/60000  134s -> shard_117.npz
+  [flush] +400  total 50990/60000  168s -> shard_118.npz
+[start] next_seed=71990 done=50990 shards=119 workers=1
+  [flush] +400  total 51390/60000  33s -> shard_119.npz
+  [flush] +400  total 51790/60000  67s -> shard_120.npz
+  [flush] +400  total 52190/60000  100s -> shard_121.npz
+  [flush] +400  total 52590/60000  134s -> shard_122.npz
+  [flush] +400  total 52990/60000  168s -> shard_123.npz
+[start] next_seed=73990 done=52990 shards=124 workers=1
+  [flush] +400  total 53390/60000  35s -> shard_124.npz
+  [flush] +400  total 53790/60000  70s -> shard_125.npz
+  [flush] +400  total 54190/60000  102s -> shard_126.npz
+  [flush] +400  total 54590/60000  135s -> shard_127.npz
+  [flush] +400  total 54990/60000  167s -> shard_128.npz
+[start] next_seed=75990 done=54990 shards=129 workers=1
+  [flush] +400  total 55390/60000  34s -> shard_129.npz
+  [flush] +400  total 55790/60000  69s -> shard_130.npz
+  [flush] +400  total 56190/60000  102s -> shard_131.npz
+  [flush] +400  total 56590/60000  135s -> shard_132.npz
+  [flush] +400  total 56990/60000  167s -> shard_133.npz
+[start] next_seed=77990 done=56990 shards=134 workers=1
+  [flush] +400  total 57390/60000  35s -> shard_134.npz
+  [flush] +400  total 57790/60000  69s -> shard_135.npz
+  [flush] +400  total 58190/60000  103s -> shard_136.npz
+  [flush] +400  total 58590/60000  138s -> shard_137.npz
+  [flush] +400  total 58990/60000  172s -> shard_138.npz
+[start] next_seed=79990 done=58990 shards=139 workers=1
+  [flush] +400  total 59390/60000  52s -> shard_139.npz
+  [flush] +400  total 59790/60000  105s -> shard_140.npz
+  [flush-end] +179  total 59969/60000  131s -> shard_141.npz
+[box 16] total 59969/60000  131s
+[start] next_seed=80969 done=59969 shards=142 workers=1
+  [flush-end] +31  total 60000/60000  4s -> shard_142.npz
+[box 17] total 60000/60000  5s

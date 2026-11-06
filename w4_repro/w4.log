@@ -1,0 +1,26 @@
+[F0] self-tests ...
+    PASS = True
+[PILOT] 50 seeds 5000-5049 -> gate threshold ...
+    pilot AUC(raw)=0.490  direction=-1  AUC(aligned)=0.510  threshold=-0.44152
+    pilot gate validity (AUC>=0.60): False
+[MAIN] 300 independent Mamba seeds 5100-5399 ...
+    100/300 elapsed=141s
+   200/300 elapsed=111s
+    300/300 elapsed=154s
+    [F0] composite AUROC mean=0.590 min=0.470 PASS=True
+
+[H]
+    H1 {'mean_gap': 0.0138, 'sd': 0.0322, 'frac_positive': 0.73, 'CI95': [0.010144845510154316, 0.0174256746186828], 'PASS': False}
+    H2 {'mean_harm_rate': 0.184, 'sd': 0.151, 'CI95': [0.1670828373015873, 0.20115128968253965], 'PASS': True}
+    H3 {'mean_ci_ratio': 3.6217, 'median_ci_ratio': 3.5291, 'CI95': [3.529979595954877, 3.7158782843892535], 'PASS': True}
+    H4 {'harm_rate_unconditional': 0.184, 'harm_rate_gated': 0.1197, 'relative_reduction': 0.3495, 'false_gate_rate': 0.1365, 'fallback_rate': 0.1983, 'delta_dBrier_gated_minus_uncond': 0.0068, 'delta_dBrier_CI95': [0.005345993425898865, 0.008384114029803847], 'pilot_gate_auc': 0.5104, 'pilot_gate_valid': False, 'PASS': False}
+    paper-protocol ECE = 0.043 | classwise macro ECE = 0.0568 | source-only ECE = 0.2661
+    paper AUROC = 0.5902 | source cal slope = 0.0444
+[F] falsification 60 seeds 5400-5459 ...
+    {'F1_shuffle_subgroups': {'gate_auc': 0.4561, 'PASS': True}, 'F2_classwise_endpoint': {'mean_gap': 0.0, 'PASS': True}, 'F3_stress_800': {'mean_ci_ratio': 3.6055, 'PASS': True}, 'F4_homogeneous': {'mean_harm_rate': 0.7152, 'PASS': False}}
+
+=== W4 FINAL VERDICT ===
+{'F0': True, 'H1': False, 'H2': True, 'H3': True, 'H4': False, 'F1': True, 'F2': True, 'F3': True, 'F4': False} | all_pass = False
+holes confirmed: ['H2', 'H3'] | patch: GATE FAILED (report as-is)
+elapsed 347.1 s
+DONE

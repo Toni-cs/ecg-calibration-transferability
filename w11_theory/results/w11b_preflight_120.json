@@ -1,0 +1,1218 @@
+{
+  "prereg": "PREREGISTRATION_W11B.md v1.0 (frozen)",
+  "group": "preflight",
+  "n_checks": 120,
+  "n_pass": 117,
+  "n_fail": 3,
+  "n_by_kind": {
+    "verify": 120,
+    "falsify": 0,
+    "meta": 0
+  },
+  "n_seed_ranges": 29,
+  "n_bounded_ranges": 27,
+  "assertions": [
+    {
+      "id": "PF001",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 1/28 (n=3000, spread=0.156) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=1034, n_sum=1034",
+      "PASS": true,
+      "evidence": "seed=20267106, n_groups=36, n_records=3000, n_patients=1034, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF002",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 2/28 (n=600, spread=0.667) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=218, n_sum=218",
+      "PASS": true,
+      "evidence": "seed=20267107, n_groups=36, n_records=627, n_patients=218, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF003",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 3/28 (n=1000, spread=0.473) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=352, n_sum=352",
+      "PASS": true,
+      "evidence": "seed=20267108, n_groups=36, n_records=1015, n_patients=352, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF004",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 4/28 (n=3000, spread=0.209) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=1036, n_sum=1036",
+      "PASS": true,
+      "evidence": "seed=20267109, n_groups=36, n_records=3000, n_patients=1036, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF005",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 5/28 (n=1000, spread=0.353) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=348, n_sum=348",
+      "PASS": true,
+      "evidence": "seed=20267110, n_groups=36, n_records=1006, n_patients=348, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF006",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 6/28 (n=3000, spread=1.206) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=1034, n_sum=1034",
+      "PASS": true,
+      "evidence": "seed=20267111, n_groups=36, n_records=3000, n_patients=1034, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF007",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 7/28 (n=600, spread=1.224) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=216, n_sum=216",
+      "PASS": true,
+      "evidence": "seed=20267112, n_groups=36, n_records=625, n_patients=216, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF008",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 8/28 (n=1000, spread=0.622) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=343, n_sum=343",
+      "PASS": true,
+      "evidence": "seed=20267113, n_groups=36, n_records=1000, n_patients=343, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF009",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 9/28 (n=1000, spread=0.982) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=346, n_sum=346",
+      "PASS": true,
+      "evidence": "seed=20267114, n_groups=36, n_records=1000, n_patients=346, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF010",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 10/28 (n=3000, spread=0.963) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=1036, n_sum=1036",
+      "PASS": true,
+      "evidence": "seed=20267115, n_groups=36, n_records=3000, n_patients=1036, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF011",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 11/28 (n=1800, spread=1.448) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=620, n_sum=620",
+      "PASS": true,
+      "evidence": "seed=20267116, n_groups=36, n_records=1800, n_patients=620, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF012",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 12/28 (n=600, spread=1.328) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=214, n_sum=214",
+      "PASS": true,
+      "evidence": "seed=20267117, n_groups=36, n_records=620, n_patients=214, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF013",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 13/28 (n=1000, spread=1.459) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=343, n_sum=343",
+      "PASS": true,
+      "evidence": "seed=20267118, n_groups=36, n_records=1000, n_patients=343, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF014",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 14/28 (n=600, spread=1.121) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=220, n_sum=220",
+      "PASS": true,
+      "evidence": "seed=20267119, n_groups=36, n_records=634, n_patients=220, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF015",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 15/28 (n=1800, spread=0.866) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=619, n_sum=619",
+      "PASS": true,
+      "evidence": "seed=20267120, n_groups=36, n_records=1800, n_patients=619, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF016",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 16/28 (n=1000, spread=0.271) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=351, n_sum=351",
+      "PASS": true,
+      "evidence": "seed=20267121, n_groups=36, n_records=1016, n_patients=351, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF017",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 17/28 (n=3000, spread=0.454) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=1033, n_sum=1033",
+      "PASS": true,
+      "evidence": "seed=20267122, n_groups=36, n_records=3000, n_patients=1033, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF018",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 18/28 (n=1000, spread=1.145) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=347, n_sum=347",
+      "PASS": true,
+      "evidence": "seed=20267123, n_groups=36, n_records=1002, n_patients=347, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF019",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 19/28 (n=3000, spread=1.069) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=1036, n_sum=1036",
+      "PASS": true,
+      "evidence": "seed=20267124, n_groups=36, n_records=3000, n_patients=1036, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF020",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 20/28 (n=600, spread=1.353) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=214, n_sum=214",
+      "PASS": true,
+      "evidence": "seed=20267125, n_groups=36, n_records=613, n_patients=214, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF021",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 21/28 (n=3000, spread=1.491) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=1035, n_sum=1035",
+      "PASS": true,
+      "evidence": "seed=20267126, n_groups=36, n_records=3000, n_patients=1035, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF022",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 22/28 (n=3000, spread=0.313) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=1035, n_sum=1035",
+      "PASS": true,
+      "evidence": "seed=20267127, n_groups=36, n_records=3000, n_patients=1035, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF023",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 23/28 (n=600, spread=0.527) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=211, n_sum=211",
+      "PASS": true,
+      "evidence": "seed=20267128, n_groups=36, n_records=607, n_patients=211, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF024",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 24/28 (n=1800, spread=1.488) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=621, n_sum=621",
+      "PASS": true,
+      "evidence": "seed=20267129, n_groups=36, n_records=1800, n_patients=621, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF025",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 25/28 (n=3000, spread=0.742) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=1037, n_sum=1037",
+      "PASS": true,
+      "evidence": "seed=20267130, n_groups=36, n_records=3000, n_patients=1037, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF026",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 26/28 (n=1000, spread=1.308) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=355, n_sum=355",
+      "PASS": true,
+      "evidence": "seed=20267131, n_groups=36, n_records=1020, n_patients=355, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF027",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 27/28 (n=3000, spread=0.506) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=1036, n_sum=1036",
+      "PASS": true,
+      "evidence": "seed=20267132, n_groups=36, n_records=3000, n_patients=1036, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF028",
+      "family": "patient_level_disjoint",
+      "claim": "hierarchical_groups instance 28/28 (n=600, spread=0.626) has group-wise disjoint patient ids",
+      "kind": "verify",
+      "expected": "disjoint AND record counts match AND unique count equals per-group sum",
+      "observed": "disjoint=True, lens_ok=True, n_unique=214, n_sum=214",
+      "PASS": true,
+      "evidence": "seed=20267133, n_groups=36, n_records=617, n_patients=214, disjoint=True, lens_ok=True"
+    },
+    {
+      "id": "PF029",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead I (1/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=I, index=1, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF030",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead II (2/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=II, index=2, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF031",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead III (3/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=III, index=3, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF032",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead aVR (4/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=aVR, index=4, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF033",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead aVL (5/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=aVL, index=5, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF034",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead aVF (6/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=aVF, index=6, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF035",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead V1 (7/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=V1, index=7, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF036",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead V2 (8/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=V2, index=8, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF037",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead V3 (9/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=V3, index=9, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF038",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead V4 (10/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=V4, index=10, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF039",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead V5 (11/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=V5, index=11, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF040",
+      "family": "lead_alignment_by_name",
+      "claim": "canonical lead V6 (12/12) is unique, declared, aligned by name, MIMIC swap declared",
+      "kind": "verify",
+      "expected": "all 5 sub-checks true",
+      "observed": "unique=True; in_list=True; dtype_declared=True; align_by_name=True; mimic_declared=True",
+      "PASS": true,
+      "evidence": "lead=V6, index=12, n_canonical=12, checks={'unique': True, 'in_list': True, 'dtype_declared': True, 'align_by_name': True, 'mimic_declared': True}, mimic_note=\"MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapp\""
+    },
+    {
+      "id": "PF041",
+      "family": "cache_schema_field",
+      "claim": "required field \"logits\" (1/10) has required=true, dtype and a structural spec",
+      "kind": "verify",
+      "expected": "required=true AND dtype AND structural spec present",
+      "observed": "required=True, dtype=float32, keys=['dtype', 'required', 'shape']",
+      "PASS": false,
+      "evidence": "field=logits, required=True, dtype=float32, keys=['dtype', 'required', 'shape'], schema_status=\"CONTRACT ONLY - no real patient data present\""
+    },
+    {
+      "id": "PF042",
+      "family": "cache_schema_field",
+      "claim": "required field \"patient_id\" (2/10) has required=true, dtype and a structural spec",
+      "kind": "verify",
+      "expected": "required=true AND dtype AND structural spec present",
+      "observed": "required=True, dtype=int64, keys=['dtype', 'note', 'required', 'shape']",
+      "PASS": true,
+      "evidence": "field=patient_id, required=True, dtype=int64, keys=['dtype', 'note', 'required', 'shape'], schema_status=\"CONTRACT ONLY - no real patient data present\""
+    },
+    {
+      "id": "PF043",
+      "family": "cache_schema_field",
+      "claim": "required field \"group_meta\" (3/10) has required=true, dtype and a structural spec",
+      "kind": "verify",
+      "expected": "required=true AND dtype AND structural spec present",
+      "observed": "required=True, dtype=struct, keys=['dtype', 'note', 'required', 'subfields']",
+      "PASS": true,
+      "evidence": "field=group_meta, required=True, dtype=struct, keys=['dtype', 'note', 'required', 'subfields'], schema_status=\"CONTRACT ONLY - no real patient data present\""
+    },
+    {
+      "id": "PF044",
+      "family": "cache_schema_field",
+      "claim": "required field \"split\" (4/10) has required=true, dtype and a structural spec",
+      "kind": "verify",
+      "expected": "required=true AND dtype AND structural spec present",
+      "observed": "required=True, dtype=string, keys=['allowed', 'dtype', 'note', 'required']",
+      "PASS": true,
+      "evidence": "field=split, required=True, dtype=string, keys=['allowed', 'dtype', 'note', 'required'], schema_status=\"CONTRACT ONLY - no real patient data present\""
+    },
+    {
+      "id": "PF045",
+      "family": "cache_schema_field",
+      "claim": "required field \"lead_names\" (5/10) has required=true, dtype and a structural spec",
+      "kind": "verify",
+      "expected": "required=true AND dtype AND structural spec present",
+      "observed": "required=True, dtype=string_list, keys=['alignment_rule', 'canonical', 'dtype', 'mimic_known_issue', 'required']",
+      "PASS": true,
+      "evidence": "field=lead_names, required=True, dtype=string_list, keys=['alignment_rule', 'canonical', 'dtype', 'mimic_known_issue', 'required'], schema_status=\"CONTRACT ONLY - no real patient data present\""
+    },
+    {
+      "id": "PF046",
+      "family": "cache_schema_field",
+      "claim": "required field \"label_semantics\" (6/10) has required=true, dtype and a structural spec",
+      "kind": "verify",
+      "expected": "required=true AND dtype AND structural spec present",
+      "observed": "required=True, dtype=struct, keys=['clinical_review_required', 'code15_rule', 'dtype', 'required', 'subfields']",
+      "PASS": true,
+      "evidence": "field=label_semantics, required=True, dtype=struct, keys=['clinical_review_required', 'code15_rule', 'dtype', 'required', 'subfields'], schema_status=\"CONTRACT ONLY - no real patient data present\""
+    },
+    {
+      "id": "PF047",
+      "family": "cache_schema_field",
+      "claim": "required field \"checksum\" (7/10) has required=true, dtype and a structural spec",
+      "kind": "verify",
+      "expected": "required=true AND dtype AND structural spec present",
+      "observed": "required=True, dtype=sha256, keys=['dtype', 'required']",
+      "PASS": true,
+      "evidence": "field=checksum, required=True, dtype=sha256, keys=['dtype', 'required'], schema_status=\"CONTRACT ONLY - no real patient data present\""
+    },
+    {
+      "id": "PF048",
+      "family": "cache_schema_field",
+      "claim": "required field \"n_rec\" (8/10) has required=true, dtype and a structural spec",
+      "kind": "verify",
+      "expected": "required=true AND dtype AND structural spec present",
+      "observed": "required=True, dtype=int64, keys=['dtype', 'required']",
+      "PASS": false,
+      "evidence": "field=n_rec, required=True, dtype=int64, keys=['dtype', 'required'], schema_status=\"CONTRACT ONLY - no real patient data present\""
+    },
+    {
+      "id": "PF049",
+      "family": "cache_schema_field",
+      "claim": "required field \"n_patient\" (9/10) has required=true, dtype and a structural spec",
+      "kind": "verify",
+      "expected": "required=true AND dtype AND structural spec present",
+      "observed": "required=True, dtype=int64, keys=['dtype', 'required']",
+      "PASS": false,
+      "evidence": "field=n_patient, required=True, dtype=int64, keys=['dtype', 'required'], schema_status=\"CONTRACT ONLY - no real patient data present\""
+    },
+    {
+      "id": "PF050",
+      "family": "cache_schema_field",
+      "claim": "required field \"n_eff\" (10/10) has required=true, dtype and a structural spec",
+      "kind": "verify",
+      "expected": "required=true AND dtype AND structural spec present",
+      "observed": "required=True, dtype=float64, keys=['dtype', 'note', 'required']",
+      "PASS": true,
+      "evidence": "field=n_eff, required=True, dtype=float64, keys=['dtype', 'note', 'required'], schema_status=\"CONTRACT ONLY - no real patient data present\""
+    },
+    {
+      "id": "PF051",
+      "family": "cache_invariant",
+      "claim": "invariant #1/8 declares the required rule about \"1,145,814\"",
+      "kind": "verify",
+      "expected": "invariant text contains \"1,145,814\" and is non-trivial",
+      "observed": "len=79, contains=True",
+      "PASS": true,
+      "evidence": "invariant[0]=\"n_rec = 1,145,814 for the full cohort (MIMIC-IV-ECG 800,035 + CODE-15% 345,779)\""
+    },
+    {
+      "id": "PF052",
+      "family": "cache_invariant",
+      "claim": "invariant #2/8 declares the required rule about \"395,122\"",
+      "kind": "verify",
+      "expected": "invariant text contains \"395,122\" and is non-trivial",
+      "observed": "len=61, contains=True",
+      "PASS": true,
+      "evidence": "invariant[1]=\"n_patient ~ 395,122; n_rec is NOT the independent sample size\""
+    },
+    {
+      "id": "PF053",
+      "family": "cache_invariant",
+      "claim": "invariant #3/8 declares the required rule about \"deff\"",
+      "kind": "verify",
+      "expected": "invariant text contains \"deff\" and is non-trivial",
+      "observed": "len=46, contains=True",
+      "PASS": true,
+      "evidence": "invariant[2]=\"deff = 1 + (mbar - 1) * ICC >= 1; n_eff/n <= 1\""
+    },
+    {
+      "id": "PF054",
+      "family": "cache_invariant",
+      "claim": "invariant #4/8 declares the required rule about \"patient_id\"",
+      "kind": "verify",
+      "expected": "invariant text contains \"patient_id\" and is non-trivial",
+      "observed": "len=44, contains=True",
+      "PASS": true,
+      "evidence": "invariant[3]=\"no patient_id appears in more than one split\""
+    },
+    {
+      "id": "PF055",
+      "family": "cache_invariant",
+      "claim": "invariant #5/8 declares the required rule about \"lead\"",
+      "kind": "verify",
+      "expected": "invariant text contains \"lead\" and is non-trivial",
+      "observed": "len=46, contains=True",
+      "PASS": true,
+      "evidence": "invariant[4]=\"lead alignment by name, never by channel index\""
+    },
+    {
+      "id": "PF056",
+      "family": "cache_invariant",
+      "claim": "invariant #6/8 declares the required rule about \"ambiguous_flag\"",
+      "kind": "verify",
+      "expected": "invariant text contains \"ambiguous_flag\" and is non-trivial",
+      "observed": "len=105, contains=True",
+      "PASS": true,
+      "evidence": "invariant[5]=\"unlabeled / ambiguous records carry ambiguous_flag=true and are excluded from confident-negative training\""
+    },
+    {
+      "id": "PF057",
+      "family": "cache_invariant",
+      "claim": "invariant #7/8 declares the required rule about \"hash\"",
+      "kind": "verify",
+      "expected": "invariant text contains \"hash\" and is non-trivial",
+      "observed": "len=85, contains=True",
+      "PASS": true,
+      "evidence": "invariant[6]=\"checkpoint weights and logits cache are hash-pinned before any calibration experiment\""
+    },
+    {
+      "id": "PF058",
+      "family": "cache_invariant",
+      "claim": "invariant #8/8 declares the required rule about \"ZERO GPU\"",
+      "kind": "verify",
+      "expected": "invariant text contains \"ZERO GPU\" and is non-trivial",
+      "observed": "len=92, contains=True",
+      "PASS": true,
+      "evidence": "invariant[7]=\"all calibration experiments run on cached logits with ZERO GPU after one frozen forward pass\""
+    },
+    {
+      "id": "PF059",
+      "family": "seed_range_self_consistency",
+      "claim": "range W1/synthetic_grid (1/29, class=no-seed) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class no-seed",
+      "observed": "n=None, note_present=True",
+      "PASS": true,
+      "evidence": "round=W1, tag=synthetic_grid, class=no-seed, start=None, end=None, n=None, note=\"E0-E5 analytic/synthetic grid, 60 repeats per cell; no independent integer seed range recorded\""
+    },
+    {
+      "id": "PF060",
+      "family": "seed_range_self_consistency",
+      "claim": "range W2/v1_0_confirmatory (2/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=30, n=30",
+      "PASS": true,
+      "evidence": "round=W2, tag=v1_0_confirmatory, class=continuous, start=1000, end=1029, n=30, note=\"\""
+    },
+    {
+      "id": "PF061",
+      "family": "seed_range_self_consistency",
+      "claim": "range W2/v1_1_confirmatory (3/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=30, n=30",
+      "PASS": true,
+      "evidence": "round=W2, tag=v1_1_confirmatory, class=continuous, start=2000, end=2029, n=30, note=\"\""
+    },
+    {
+      "id": "PF062",
+      "family": "seed_range_self_consistency",
+      "claim": "range W3/main (4/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=600, n=600",
+      "PASS": true,
+      "evidence": "round=W3, tag=main, class=continuous, start=3000, end=3599, n=600, note=\"\""
+    },
+    {
+      "id": "PF063",
+      "family": "seed_range_self_consistency",
+      "claim": "range W3/falsification (5/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=60, n=60",
+      "PASS": true,
+      "evidence": "round=W3, tag=falsification, class=continuous, start=3600, end=3659, n=60, note=\"\""
+    },
+    {
+      "id": "PF064",
+      "family": "seed_range_self_consistency",
+      "claim": "range W3/cnn_control (6/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=100, n=100",
+      "PASS": true,
+      "evidence": "round=W3, tag=cnn_control, class=continuous, start=3700, end=3799, n=100, note=\"\""
+    },
+    {
+      "id": "PF065",
+      "family": "seed_range_self_consistency",
+      "claim": "range W4/pilot (7/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=50, n=50",
+      "PASS": true,
+      "evidence": "round=W4, tag=pilot, class=continuous, start=5000, end=5049, n=50, note=\"\""
+    },
+    {
+      "id": "PF066",
+      "family": "seed_range_self_consistency",
+      "claim": "range W4/main (8/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=300, n=300",
+      "PASS": true,
+      "evidence": "round=W4, tag=main, class=continuous, start=5100, end=5399, n=300, note=\"\""
+    },
+    {
+      "id": "PF067",
+      "family": "seed_range_self_consistency",
+      "claim": "range W4/falsification (9/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=60, n=60",
+      "PASS": true,
+      "evidence": "round=W4, tag=falsification, class=continuous, start=5400, end=5459, n=60, note=\"\""
+    },
+    {
+      "id": "PF068",
+      "family": "seed_range_self_consistency",
+      "claim": "range W5/stageA (10/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=300, n=300",
+      "PASS": true,
+      "evidence": "round=W5, tag=stageA, class=continuous, start=7000, end=7299, n=300, note=\"\""
+    },
+    {
+      "id": "PF069",
+      "family": "seed_range_self_consistency",
+      "claim": "range W5/stageB (11/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=300, n=300",
+      "PASS": true,
+      "evidence": "round=W5, tag=stageB, class=continuous, start=7300, end=7599, n=300, note=\"\""
+    },
+    {
+      "id": "PF070",
+      "family": "seed_range_self_consistency",
+      "claim": "range W5/falsification (12/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=60, n=60",
+      "PASS": true,
+      "evidence": "round=W5, tag=falsification, class=continuous, start=7600, end=7659, n=60, note=\"\""
+    },
+    {
+      "id": "PF071",
+      "family": "seed_range_self_consistency",
+      "claim": "range W5/cnn_control (13/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=100, n=100",
+      "PASS": true,
+      "evidence": "round=W5, tag=cnn_control, class=continuous, start=7700, end=7799, n=100, note=\"\""
+    },
+    {
+      "id": "PF072",
+      "family": "seed_range_self_consistency",
+      "claim": "range W6/stageA (14/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=300, n=300",
+      "PASS": true,
+      "evidence": "round=W6, tag=stageA, class=continuous, start=10000, end=10299, n=300, note=\"\""
+    },
+    {
+      "id": "PF073",
+      "family": "seed_range_self_consistency",
+      "claim": "range W6/stageB (15/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=300, n=300",
+      "PASS": true,
+      "evidence": "round=W6, tag=stageB, class=continuous, start=10300, end=10599, n=300, note=\"\""
+    },
+    {
+      "id": "PF074",
+      "family": "seed_range_self_consistency",
+      "claim": "range W6/falsification (16/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=60, n=60",
+      "PASS": true,
+      "evidence": "round=W6, tag=falsification, class=continuous, start=10600, end=10659, n=60, note=\"\""
+    },
+    {
+      "id": "PF075",
+      "family": "seed_range_self_consistency",
+      "claim": "range W6/cnn_control (17/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=100, n=100",
+      "PASS": true,
+      "evidence": "round=W6, tag=cnn_control, class=continuous, start=10700, end=10799, n=100, note=\"\""
+    },
+    {
+      "id": "PF076",
+      "family": "seed_range_self_consistency",
+      "claim": "range W6/bootstrap (18/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=10, n=10",
+      "PASS": true,
+      "evidence": "round=W6, tag=bootstrap, class=continuous, start=10800, end=10809, n=10, note=\"\""
+    },
+    {
+      "id": "PF077",
+      "family": "seed_range_self_consistency",
+      "claim": "range W7/main_60k (19/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=60000, n=60000",
+      "PASS": true,
+      "evidence": "round=W7, tag=main_60k, class=continuous, start=21000, end=80999, n=60000, note=\"\""
+    },
+    {
+      "id": "PF078",
+      "family": "seed_range_self_consistency",
+      "claim": "range W8/none (20/29, class=no-seed) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class no-seed",
+      "observed": "n=0, note_present=True",
+      "PASS": true,
+      "evidence": "round=W8, tag=none, class=no-seed, start=None, end=None, n=0, note=\"W8 reused the W7 60,000 immutable shards as exploration only; NO new confirmatory seeds consumed\""
+    },
+    {
+      "id": "PF079",
+      "family": "seed_range_self_consistency",
+      "claim": "range W9/debug (21/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=2100, n=2100",
+      "PASS": true,
+      "evidence": "round=W9, tag=debug, class=continuous, start=100000, end=102099, n=2100, note=\"implementation smoke tests only; excluded from all H judgements\""
+    },
+    {
+      "id": "PF080",
+      "family": "seed_range_self_consistency",
+      "claim": "range W9/main (22/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=10000, n=10000",
+      "PASS": true,
+      "evidence": "round=W9, tag=main, class=continuous, start=110000, end=119999, n=10000, note=\"\""
+    },
+    {
+      "id": "PF081",
+      "family": "seed_range_self_consistency",
+      "claim": "range W9/falsification (23/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=600, n=600",
+      "PASS": true,
+      "evidence": "round=W9, tag=falsification, class=continuous, start=120000, end=120599, n=600, note=\"\""
+    },
+    {
+      "id": "PF082",
+      "family": "seed_range_self_consistency",
+      "claim": "range W10/main (24/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=20000, n=20000",
+      "PASS": true,
+      "evidence": "round=W10, tag=main, class=continuous, start=130000, end=149999, n=20000, note=\"\""
+    },
+    {
+      "id": "PF083",
+      "family": "seed_range_self_consistency",
+      "claim": "range W10/loco (25/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=600, n=600",
+      "PASS": true,
+      "evidence": "round=W10, tag=loco, class=continuous, start=150000, end=150599, n=600, note=\"\""
+    },
+    {
+      "id": "PF084",
+      "family": "seed_range_self_consistency",
+      "claim": "range W10/falsification (26/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=600, n=600",
+      "PASS": true,
+      "evidence": "round=W10, tag=falsification, class=continuous, start=151000, end=151599, n=600, note=\"\""
+    },
+    {
+      "id": "PF085",
+      "family": "seed_range_self_consistency",
+      "claim": "range W10/debug (27/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=2100, n=2100",
+      "PASS": true,
+      "evidence": "round=W10, tag=debug, class=continuous, start=160000, end=162099, n=2100, note=\"implementation smoke tests only; excluded from all H judgements\""
+    },
+    {
+      "id": "PF086",
+      "family": "seed_range_self_consistency",
+      "claim": "range W11/theory_mc_grid (28/29, class=continuous) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class continuous",
+      "observed": "width=576, n=576",
+      "PASS": true,
+      "evidence": "round=W11, tag=theory_mc_grid, class=continuous, start=20261106, end=20261681, n=576, note=\"MC_SEED_BASE + grid_index (0..575); analytic grid, not deployment seeds\""
+    },
+    {
+      "id": "PF087",
+      "family": "seed_range_self_consistency",
+      "claim": "range W11/gap_nonmonotone_grid (29/29, class=NON-CONTIGUOUS) is self-consistent",
+      "kind": "verify",
+      "expected": "frozen rule for class NON-CONTIGUOUS",
+      "observed": "n=144, start=20731506, end=20744026",
+      "PASS": true,
+      "evidence": "round=W11, tag=gap_nonmonotone_grid, class=NON-CONTIGUOUS, start=20731506, end=20744026, n=144, note=\"NON-CONTIGUOUS: 144 discrete values of MC_SEED_BASE + 700000 + G*100 + int(tau2*10)*10 + int(cv*10);\""
+    },
+    {
+      "id": "PF088",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W1/synthetic_grid (1/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "no-seed range, note_present=True",
+      "PASS": true,
+      "evidence": "round=W1, tag=synthetic_grid, note=\"E0-E5 analytic/synthetic grid, 60 repeats per cell; no independent integer seed range recorded\""
+    },
+    {
+      "id": "PF089",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W2/v1_0_confirmatory (2/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W2, tag=v1_0_confirmatory, range=[1000,1029], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF090",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W2/v1_1_confirmatory (3/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W2, tag=v1_1_confirmatory, range=[2000,2029], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF091",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W3/main (4/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W3, tag=main, range=[3000,3599], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF092",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W3/falsification (5/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W3, tag=falsification, range=[3600,3659], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF093",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W3/cnn_control (6/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W3, tag=cnn_control, range=[3700,3799], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF094",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W4/pilot (7/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W4, tag=pilot, range=[5000,5049], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF095",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W4/main (8/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W4, tag=main, range=[5100,5399], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF096",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W4/falsification (9/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W4, tag=falsification, range=[5400,5459], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF097",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W5/stageA (10/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W5, tag=stageA, range=[7000,7299], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF098",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W5/stageB (11/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W5, tag=stageB, range=[7300,7599], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF099",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W5/falsification (12/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W5, tag=falsification, range=[7600,7659], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF100",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W5/cnn_control (13/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W5, tag=cnn_control, range=[7700,7799], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF101",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W6/stageA (14/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W6, tag=stageA, range=[10000,10299], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF102",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W6/stageB (15/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W6, tag=stageB, range=[10300,10599], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF103",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W6/falsification (16/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W6, tag=falsification, range=[10600,10659], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF104",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W6/cnn_control (17/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W6, tag=cnn_control, range=[10700,10799], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF105",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W6/bootstrap (18/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W6, tag=bootstrap, range=[10800,10809], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF106",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W7/main_60k (19/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W7, tag=main_60k, range=[21000,80999], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF107",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W8/none (20/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "no-seed range, note_present=True",
+      "PASS": true,
+      "evidence": "round=W8, tag=none, note=\"W8 reused the W7 60,000 immutable shards as exploration only; NO new confirmatory seeds consumed\""
+    },
+    {
+      "id": "PF108",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W9/debug (21/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W9, tag=debug, range=[100000,102099], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF109",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W9/main (22/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W9, tag=main, range=[110000,119999], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF110",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W9/falsification (23/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W9, tag=falsification, range=[120000,120599], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF111",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W10/main (24/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W10, tag=main, range=[130000,149999], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF112",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W10/loco (25/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W10, tag=loco, range=[150000,150599], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF113",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W10/falsification (26/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W10, tag=falsification, range=[151000,151599], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF114",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W10/debug (27/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W10, tag=debug, range=[160000,162099], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF115",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W11/theory_mc_grid (28/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W11, tag=theory_mc_grid, range=[20261106,20261681], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF116",
+      "family": "seed_range_pairwise_disjoint",
+      "claim": "range W11/gap_nonmonotone_grid (29/29) does not overlap any other bounded range",
+      "kind": "verify",
+      "expected": "zero overlaps (or note-declared no-seed)",
+      "observed": "conflicts=0",
+      "PASS": true,
+      "evidence": "round=W11, tag=gap_nonmonotone_grid, range=[20731506,20744026], checked_against=26 bounded ranges, conflicts=[]"
+    },
+    {
+      "id": "PF117",
+      "family": "code_hash_all",
+      "claim": "every hash-pinned file matches its SHA256",
+      "kind": "verify",
+      "expected": "zero mismatches",
+      "observed": "n_files=62, mismatches=0",
+      "PASS": true,
+      "evidence": "n_listed=62, mismatches=[]"
+    },
+    {
+      "id": "PF118",
+      "family": "deff_and_n_eff",
+      "claim": "deff >= 1 and n_eff/n <= 1 with W10 measured deff",
+      "kind": "verify",
+      "expected": "all three inequalities hold",
+      "observed": "deff=1.944229, calc=1.9120, n_eff/n=0.514343",
+      "PASS": true,
+      "evidence": "W10_mean_deff=1.9442294978193473, deff_from_ICC=1.912, mbar=2.9, ICC=0.48, n_eff_over_n=0.514342571759971"
+    },
+    {
+      "id": "PF119",
+      "family": "CODE15_ambiguous",
+      "claim": "CODE-15% ambiguous records are explicitly barred from confident-negative training",
+      "kind": "verify",
+      "expected": "rule present AND clinical review required AND ambiguous_flag declared",
+      "observed": "rule_present=True, clinical=True",
+      "PASS": true,
+      "evidence": "code15_rule=\"173,347 CODE-15% records (50.13%) are neither one of six abnormalities nor normal; they MUST NOT be treated as confident negatives\", subfields=['class_map', 'ontology_version', 'ambiguous_flag', 'confident_negative_allowed'], clinical_review=True"
+    },
+    {
+      "id": "PF120",
+      "family": "environment_lock",
+      "claim": "locked Python / NumPy / SciPy / Matplotlib versions match runtime",
+      "kind": "verify",
+      "expected": "zero version mismatches",
+      "observed": "mismatches={}",
+      "PASS": true,
+      "evidence": "locked={'python': '3.10.12', 'numpy': '2.2.6', 'scipy': '1.15.3', 'matplotlib': '3.10.9'}, runtime={'python': '3.10.12', 'numpy': '2.2.6', 'scipy': '1.15.3', 'matplotlib': '3.10.9'}, font=WenQuanYi Micro Hei, threads=OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1"
+    }
+  ],
+  "contract_only": true,
+  "no_real_patient_data": true
+}

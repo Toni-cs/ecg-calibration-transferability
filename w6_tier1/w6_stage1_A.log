@@ -1,0 +1,5 @@
+[MAIN-A] 200/300 already checkpointed; running 100 more (seeds 10200-10299), spread=1.0 ...
+   A 250/300  30s
+   A 300/300  61s
+   A checkpointed 300/300, 61s
+STAGE 1 A DONE

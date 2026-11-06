@@ -1,0 +1,36 @@
+[stage2] loaded 600 main seeds (0s)
+   F0 PASS = True | ece reversals = 108
+
+   estimator        ECE      harm   (600 seeds)
+   SOURCE           0.2105   0.983
+   GLOBAL           0.0967   0.000
+   GLOBAL-SHRINK    0.1061   0.765
+   GST              0.0710   0.105
+   SHRINK-GLOBAL    0.0710   0.113
+   SR-GST           0.0802   0.235
+   CW-GST           0.0732   0.092
+   GS-GST           0.0720   0.067
+   ORACLE           0.0593   0.030
+
+[H]
+    H1_primary {'stratum': 'B (300 seeds)', 'harm_GST': 0.08, 'harm_GSGST': 0.0533, 'relative_reduction': 0.3333, 'paired_diff': 0.0267, 'paired_CI95': [0.0033333333333333335, 0.05333333333333334], 'PASS': False}
+        conditions: {'harm_GSGST_le_0.05': False, 'relative_reduction_ge_0.50': False, 'paired_CI_lower_gt_0': True} => PASS = False
+    H2_noninferiority {'mean_delta_ECE_GSGST_minus_GLOBAL': -0.0247, 'sd': 0.0257, 'CI95': [-0.02671259319788675, -0.022606786234814685], 'n_negative_of_600': 543, 'negative_fraction': 0.905, 'mean_delta_ECE_GST_minus_GLOBAL': -0.0257, 'noninferiority_gap': 0.001, 'noninferiority_CI95': [0.0006758990728860815, 0.0014036817754126544], 'PASS': True}
+        conditions: {'mean_le_-0.020': True, 'CI_upper_lt_0': True, 'gap_le_0.010': True} => PASS = True
+    H3_tail_risk {'p95_GST': 0.0038, 'p95_GSGST': 0.0011, 'p95_improvement': 0.0027, 'worst_GST': 0.016, 'worst_GSGST': 0.0131, 'worst_improvement': 0.0029, 'PASS': True}
+        conditions: {'p95_improve_ge_0.002': True, 'worst_improve_ge_0.002': True} => PASS = True
+    H4_mechanism {'mean_delta_ECE_GLOBALSHRINK_minus_GLOBAL': 0.0094, 'GLOBALSHRINK_no_gain': True, 'mean_ECE_SRGST': 0.0802, 'mean_ECE_GSGST': 0.072, 'SRGST_worse_than_GSGST': True, 'PASS': True}
+        conditions: {} => PASS = True
+
+[F] falsification 60 seeds 7600-7659 ...
+   loaded checkpointed falsification results
+    {'FM1_merge_groups': {'mean_delta': -0.0, 'PASS': True}, 'FM2_shuffle_group_id': {'mean_delta': -0.000743, 'PASS': True}, 'FM3_homogeneous': {'mean_delta': -0.000351, 'PASS': True}, 'FM5_lam1_equals_GST': {'max_abs_diff': 0.0, 'PASS': True}, 'FM6_lam0_equals_GLOBAL': {'max_abs_diff': 0.0, 'PASS': True}}
+[C] CNN-1D control 100 seeds 7700-7799 ...
+   loaded checkpointed CNN results
+   CNN mean delta -0.0305 neg 91 /100
+
+=== W5 FINAL VERDICT ===
+{'F0': True, 'H1': False, 'H2': True, 'H3': True, 'H4': True, 'FM1': True, 'FM2': True, 'FM3': True, 'FM5': True, 'FM6': True, 'ARCH': True} | all_pass = False
+543/600 (90.5%) negative seeds on GS-GST vs W3 GST 534/600 (89.0%); the 90% deployment line W3 missed is now crossed on 600 FRESH independent seeds.
+elapsed 0.8 s
+DONE

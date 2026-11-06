@@ -1,0 +1,138 @@
+{
+  "prereg": "PREREGISTRATION_T2.md v1.0 §6.2 (12 frozen gates)",
+  "mode": "LOGIC SELF-TEST on synthetic stand-ins",
+  "real_gpu_training_performed": false,
+  "real_waveform_data_used": false,
+  "n_gates": 12,
+  "n_pass": 8,
+  "n_fail": 4,
+  "gates": [
+    {
+      "id": "G01",
+      "claim": "F0 validity: ORACLE NLL not worse than all estimators",
+      "kind": "verify",
+      "expected": "ratio == 1.00",
+      "observed": "1.0",
+      "PASS": true,
+      "evidence": "ORACLE NLL ratio vs best estimator (synthetic stand-in)",
+      "note": "evaluated on SYNTHETIC logits stand-ins"
+    },
+    {
+      "id": "G02",
+      "claim": "primary endpoint three-way non-inferiority",
+      "kind": "verify",
+      "expected": "all 3 CI upper <= 0",
+      "observed": "[-0.0029057149518720415, -0.0008867748285270973, -0.0008779584261877517]",
+      "PASS": true,
+      "evidence": "three paired bootstrap CI uppers (synthetic stand-in)",
+      "note": "evaluated on SYNTHETIC logits stand-ins"
+    },
+    {
+      "id": "G03",
+      "claim": "CVaR_0.1pct improvement",
+      "kind": "verify",
+      "expected": "paired CI upper <= 0",
+      "observed": "-0.0008867748285270973",
+      "PASS": true,
+      "evidence": "CVaR paired CI upper",
+      "note": "evaluated on SYNTHETIC logits stand-ins"
+    },
+    {
+      "id": "G04",
+      "claim": "mean delta-ECE improvement",
+      "kind": "verify",
+      "expected": "paired CI upper <= 0",
+      "observed": "-0.0029057149518720415",
+      "PASS": true,
+      "evidence": "delta-ECE paired CI upper",
+      "note": "evaluated on SYNTHETIC logits stand-ins"
+    },
+    {
+      "id": "G05",
+      "claim": "LOCO non-inferiority",
+      "kind": "verify",
+      "expected": ">= 10 of 12 folds",
+      "observed": "11",
+      "PASS": true,
+      "evidence": "LOCO folds non-inferior / 12",
+      "note": "evaluated on SYNTHETIC logits stand-ins"
+    },
+    {
+      "id": "G06",
+      "claim": "Proposition 1 on real logits",
+      "kind": "verify",
+      "expected": "certificate/truth agreement >= 0.80",
+      "observed": "0.8409681780807119",
+      "PASS": true,
+      "evidence": "certificate vs truth agreement",
+      "note": "evaluated on SYNTHETIC logits stand-ins"
+    },
+    {
+      "id": "G07",
+      "claim": "Proposition 2 on real logits",
+      "kind": "verify",
+      "expected": "Jensen gap >= 0 and >= 95% cells",
+      "observed": "[0.01631789443862311, 0.9977818755602333]",
+      "PASS": true,
+      "evidence": "Jensen gap + cell fraction",
+      "note": "evaluated on SYNTHETIC logits stand-ins"
+    },
+    {
+      "id": "G08",
+      "claim": "T2 bound non-trivial fraction",
+      "kind": "verify",
+      "expected": "> 0.10 (synthetic was 0.066)",
+      "observed": "0.07122267406397248",
+      "PASS": false,
+      "evidence": "T2 bound non-trivial fraction",
+      "note": "evaluated on SYNTHETIC logits stand-ins"
+    },
+    {
+      "id": "G09",
+      "claim": "patient-level deff / ICC consistency",
+      "kind": "verify",
+      "expected": "deff>=1, n_eff/n<=1, ICC in [0,1]",
+      "observed": "[1.8122751431813746, 0.5517925927321063, 0.4275132332533551]",
+      "PASS": true,
+      "evidence": "deff, n_eff/n, ICC",
+      "note": "evaluated on SYNTHETIC logits stand-ins"
+    },
+    {
+      "id": "G10",
+      "claim": "W11-B 360 assertions re-run",
+      "kind": "verify",
+      "expected": ">= 354 of 360",
+      "observed": "350",
+      "PASS": false,
+      "evidence": "W11-B assertions passed / 360",
+      "note": "evaluated on SYNTHETIC logits stand-ins"
+    },
+    {
+      "id": "G11",
+      "claim": "architecture-family sign consistency",
+      "kind": "verify",
+      "expected": ">= 4 of 5 families same sign",
+      "observed": "3",
+      "PASS": false,
+      "evidence": "architecture families with same sign / 5",
+      "note": "evaluated on SYNTHETIC logits stand-ins"
+    },
+    {
+      "id": "G12",
+      "claim": "third-party independent reproduction",
+      "kind": "verify",
+      "expected": "12/12 gates",
+      "observed": "None",
+      "PASS": false,
+      "evidence": "MUST be filled by an independent third party",
+      "note": "self-certification impossible; requires independent third party"
+    }
+  ],
+  "honesty": [
+    "Every number above is a random SYNTHETIC stand-in from seed 920000",
+    "This verifies ONLY that all 12 gates are evaluable and independently fail",
+    "It is NOT a scientific result and must never be cited as one",
+    "G12 is deliberately FAIL: no self-test may certify independent reproduction",
+    "Thresholds were frozen BEFORE this smoke test; none changed"
+  ]
+}

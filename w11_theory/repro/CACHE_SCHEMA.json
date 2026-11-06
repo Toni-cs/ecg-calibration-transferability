@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Frozen logits cache format for the W12 real 1,145,814-record cohort. NOT yet populated; this file defines the contract that preflight.py validates.",
+  "status": "CONTRACT ONLY - no real patient data present",
+  "fields": {
+    "logits": {"dtype": "float32", "shape": ["n_records", "n_classes"], "required": true},
+    "patient_id": {"dtype": "int64", "shape": ["n_records"], "required": true, "note": "patient-level blocking key; all bootstrap / splits must be disjoint on this field"},
+    "group_meta": {
+      "dtype": "struct", "required": true,
+      "subfields": ["site", "cart_id", "year", "corpus", "device_id"],
+      "note": "Observable deployment metadata only; used for group-structured calibration, never for label leakage"
+    },
+    "split": {
+      "dtype": "string", "required": true,
+      "allowed": ["source_fit", "source_cal", "target_unlabeled", "target_holdout", "loco_train", "loco_holdout"],
+      "note": "patient-level disjoint; no patient may appear in two splits"
+    },
+    "lead_names": {
+      "dtype": "string_list", "required": true,
+      "canonical": ["I", "II", "III", "aVR", "aVL", "aVF", "V1", "V2", "V3", "V4", "V5", "V6"],
+      "alignment_rule": "ALIGN_BY_NAME_NOT_CHANNEL_INDEX",
+      "mimic_known_issue": "MIMIC-IV-ECG aVF/aVL are swapped relative to the canonical order; must be remapped by name before any forward pass"
+    },
+    "label_semantics": {
+      "dtype": "struct", "required": true,
+      "subfields": ["class_map", "ontology_version", "ambiguous_flag", "confident_negative_allowed"],
+      "code15_rule": "173,347 CODE-15% records (50.13%) are neither one of six abnormalities nor normal; they MUST NOT be treated as confident negatives",
+      "clinical_review_required": true
+    },
+    "checksum": {"dtype": "sha256", "required": true},
+    "n_rec": {"dtype": "int64", "required": true},
+    "n_patient": {"dtype": "int64", "required": true},
+    "n_eff": {"dtype": "float64", "required": true, "note": "n_rec / deff; all inference must use patient-block bootstrap, not record-level"}
+  },
+  "invariants": [
+    "n_rec = 1,145,814 for the full cohort (MIMIC-IV-ECG 800,035 + CODE-15% 345,779)",
+    "n_patient ~ 395,122; n_rec is NOT the independent sample size",
+    "deff = 1 + (mbar - 1) * ICC >= 1; n_eff/n <= 1",
+    "no patient_id appears in more than one split",
+    "lead alignment by name, never by channel index",
+    "unlabeled / ambiguous records carry ambiguous_flag=true and are excluded from confident-negative training",
+    "checkpoint weights and logits cache are hash-pinned before any calibration experiment",
+    "all calibration experiments run on cached logits with ZERO GPU after one frozen forward pass"
+  ],
+  "blocked_until": [
+    "PhysioNet credentialed DUA approval for MIMIC-IV-ECG v1.0",
+    "clinical collaborator review of label ontology",
+    "third-party independent reproduction environment"
+  ]
+}

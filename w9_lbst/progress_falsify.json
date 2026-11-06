@@ -1,0 +1,9 @@
+{
+  "next_seed": 120600,
+  "done": 600,
+  "shards": [
+    "falsify/shard_000.npz",
+    "falsify/shard_001.npz"
+  ],
+  "boxes": 1
+}

@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "repeats": 60,
+    "tau_t": 2.4,
+    "n_pat": 200,
+    "m_max": 8
+  },
+  "D1_imbalance_sweep": [
+    {
+      "PARI_rmse": 0.03831416352001667,
+      "POOLED_rmse": 0.03831416352001668,
+      "PARI_bias": -0.0025453098029254145,
+      "POOLED_bias": -0.002545309802925422,
+      "gain": 1.0000000000000004,
+      "imbalance": 0.0
+    },
+    {
+      "PARI_rmse": 0.07469516680975438,
+      "POOLED_rmse": 0.07915866339951691,
+      "PARI_bias": 0.005456148875681703,
+      "POOLED_bias": 0.010243080428918949,
+      "gain": 1.0597561633556676,
+      "imbalance": 0.25
+    },
+    {
+      "PARI_rmse": 0.08461702012600125,
+      "POOLED_rmse": 0.07736129426863461,
+      "PARI_bias": 0.001219976669296748,
+      "POOLED_bias": 0.0015061790936646835,
+      "gain": 0.9142521699941417,
+      "imbalance": 0.5
+    },
+    {
+      "PARI_rmse": 0.07732790999987735,
+      "POOLED_rmse": 0.07674665709160962,
+      "PARI_bias": 0.008155504613751481,
+      "POOLED_bias": 0.009966967744973935,
+      "gain": 0.9924832714569856,
+      "imbalance": 1.0
+    },
+    {
+      "PARI_rmse": 0.07094175101224136,
+      "POOLED_rmse": 0.07727833534647287,
+      "PARI_bias": -0.007925835106914463,
+      "POOLED_bias": -0.0050649062219594535,
+      "gain": 1.0893209463231053,
+      "imbalance": 2.0
+    }
+  ],
+  "D2_falsification_in_winning_regime": {
+    "baseline": {
+      "PARI_rmse": 0.06931466419807393,
+      "POOLED_rmse": 0.07781539462716834,
+      "PARI_bias": 0.010106592095044099,
+      "POOLED_bias": 1.7608223445660563e-05,
+      "gain": 1.1226397116316207
+    },
+    "F1_shuffled_pairs": {
+      "PARI_rmse": 0.07687414522532628,
+      "POOLED_rmse": 0.07192867624670837,
+      "PARI_bias": 0.012274536604729125,
+      "POOLED_bias": 0.004076838697183457,
+      "gain": 0.9356679809040841
+    },
+    "F1_erases_gain": false
+  },
+  "D3_heterogeneity_control": [
+    {
+      "prototype_spread": 0.05,
+      "PARI_rmse": 0.054948659455665655,
+      "POOLED_rmse": 0.05494865945566564,
+      "gain": 0.9999999999999998
+    },
+    {
+      "prototype_spread": 0.15,
+      "PARI_rmse": 0.0578192026008146,
+      "POOLED_rmse": 0.057819202600814565,
+      "gain": 0.9999999999999994
+    },
+    {
+      "prototype_spread": 0.3,
+      "PARI_rmse": 0.05312804961981766,
+      "POOLED_rmse": 0.053128049619817645,
+      "gain": 0.9999999999999998
+    },
+    {
+      "prototype_spread": 0.5,
+      "PARI_rmse": 0.06250108530178863,
+      "POOLED_rmse": 0.06250108530178862,
+      "gain": 0.9999999999999998
+    }
+  ],
+  "D4_informative_orbit": [
+    {
+      "imbalance": 0.5,
+      "PARI_rmse": 0.07013563117946987,
+      "POOLED_rmse": 0.06595517465253806,
+      "PARI_bias": 0.0021824005047144323,
+      "POOLED_bias": -0.005694969655653377,
+      "gain": 0.9403946830358672
+    },
+    {
+      "imbalance": 1.0,
+      "PARI_rmse": 0.0522003745259453,
+      "POOLED_rmse": 0.04487662263069769,
+      "PARI_bias": 0.0009782870447507363,
+      "POOLED_bias": -0.01081895785528116,
+      "gain": 0.8596992461882154
+    },
+    {
+      "imbalance": 2.0,
+      "PARI_rmse": 0.05557508435619339,
+      "POOLED_rmse": 0.04634327632196475,
+      "PARI_bias": 0.0015273870293500246,
+      "POOLED_bias": -0.009844373654625642,
+      "gain": 0.8338858475668722
+    }
+  ],
+  "conclusion": "FALSIFIED. No tested regime gives PARI a consistent advantage: balanced orbits 1.00x (D3), skewed orbits 0.91-1.09x (D1), informative orbits 0.83-0.94x (D4, PARI worse). D4 does show the expected bias mechanism (PARI bias ~+0.001 vs POOLED ~-0.010) but pairing pays for it with larger variance, so RMSE is worse. Under this DGP family the patient-anchored estimator is NOT a better estimator of a global temperature than a simple pooled histogram matcher. Per the registered failure clause, PARI as specified must be DOWNGRADED / abandoned; it cannot be the novelty claim of the T1 paper. The surviving empirical finding is E5: group heterogeneity makes a single global T untransferable (regret 0 -> 0.156), which supports the PROBLEM, not this solution."
+}

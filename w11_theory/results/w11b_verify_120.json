@@ -1,0 +1,1220 @@
+{
+  "prereg": "PREREGISTRATION_W11B.md v1.0 (frozen)",
+  "group": "verify",
+  "n_checks": 120,
+  "n_pass": 120,
+  "n_fail": 0,
+  "n_by_kind": {
+    "verify": 101,
+    "falsify": 0,
+    "meta": 19
+  },
+  "gates": [
+    {
+      "id": "VG001",
+      "family": "round_directory",
+      "claim": "W1 round directory exists",
+      "kind": "verify",
+      "expected": "is_dir() true",
+      "observed": "exists=True",
+      "PASS": true,
+      "evidence": "path=pari_experiment, n_files=15"
+    },
+    {
+      "id": "VG002",
+      "family": "round_directory",
+      "claim": "W2 round directory exists",
+      "kind": "verify",
+      "expected": "is_dir() true",
+      "observed": "exists=True",
+      "PASS": true,
+      "evidence": "path=gsgt_experiment, n_files=23"
+    },
+    {
+      "id": "VG003",
+      "family": "round_directory",
+      "claim": "W3 round directory exists",
+      "kind": "verify",
+      "expected": "is_dir() true",
+      "observed": "exists=True",
+      "PASS": true,
+      "evidence": "path=mamba_experiment, n_files=17"
+    },
+    {
+      "id": "VG004",
+      "family": "round_directory",
+      "claim": "W4 round directory exists",
+      "kind": "verify",
+      "expected": "is_dir() true",
+      "observed": "exists=True",
+      "PASS": true,
+      "evidence": "path=w4_repro, n_files=13"
+    },
+    {
+      "id": "VG005",
+      "family": "round_directory",
+      "claim": "W5 round directory exists",
+      "kind": "verify",
+      "expected": "is_dir() true",
+      "observed": "exists=True",
+      "PASS": true,
+      "evidence": "path=w5_srgst, n_files=19"
+    },
+    {
+      "id": "VG006",
+      "family": "round_directory",
+      "claim": "W6 round directory exists",
+      "kind": "verify",
+      "expected": "is_dir() true",
+      "observed": "exists=True",
+      "PASS": true,
+      "evidence": "path=w6_tier1, n_files=16"
+    },
+    {
+      "id": "VG007",
+      "family": "round_directory",
+      "claim": "W7 round directory exists",
+      "kind": "verify",
+      "expected": "is_dir() true",
+      "observed": "exists=True",
+      "PASS": true,
+      "evidence": "path=w7_60k, n_files=20"
+    },
+    {
+      "id": "VG008",
+      "family": "round_directory",
+      "claim": "W8 round directory exists",
+      "kind": "verify",
+      "expected": "is_dir() true",
+      "observed": "exists=True",
+      "PASS": true,
+      "evidence": "path=w8_dualgate, n_files=5"
+    },
+    {
+      "id": "VG009",
+      "family": "round_directory",
+      "claim": "W9 round directory exists",
+      "kind": "verify",
+      "expected": "is_dir() true",
+      "observed": "exists=True",
+      "PASS": true,
+      "evidence": "path=w9_lbst, n_files=17"
+    },
+    {
+      "id": "VG010",
+      "family": "round_directory",
+      "claim": "W10 round directory exists",
+      "kind": "verify",
+      "expected": "is_dir() true",
+      "observed": "exists=True",
+      "PASS": true,
+      "evidence": "path=w10_continuous, n_files=16"
+    },
+    {
+      "id": "VG011",
+      "family": "round_directory",
+      "claim": "W11 round directory exists",
+      "kind": "verify",
+      "expected": "is_dir() true",
+      "observed": "exists=True",
+      "PASS": true,
+      "evidence": "path=w11_theory, n_files=9"
+    },
+    {
+      "id": "VG012",
+      "family": "round_result_json",
+      "claim": "W1 terminal result JSON exists, parses, and is >1KB",
+      "kind": "verify",
+      "expected": "parses as dict with >=3 keys and size >1024 bytes",
+      "observed": "bytes=11506, keys=9",
+      "PASS": true,
+      "evidence": "path=pari_experiment/pari_synthetic_results.json, bytes=11506, top_keys=['meta', 'E0_repo_pilot', 'E1_identifiability', 'E2_variance_reduction', 'E2b_repeat_depth', 'E2_convergence_slope_on_n', 'E3_falsification', 'E4_effective_unit_rate']"
+    },
+    {
+      "id": "VG013",
+      "family": "round_result_json",
+      "claim": "W2 terminal result JSON exists, parses, and is >1KB",
+      "kind": "verify",
+      "expected": "parses as dict with >=3 keys and size >1024 bytes",
+      "observed": "bytes=13653, keys=7",
+      "PASS": true,
+      "evidence": "path=gsgt_experiment/gsgt_v1_1_results.json, bytes=13653, top_keys=['meta', 'F0', 'H1', 'H1_aggregate', 'H1_attribution', 'F', 'verdict']"
+    },
+    {
+      "id": "VG014",
+      "family": "round_result_json",
+      "claim": "W3 terminal result JSON exists, parses, and is >1KB",
+      "kind": "verify",
+      "expected": "parses as dict with >=3 keys and size >1024 bytes",
+      "observed": "bytes=43083, keys=12",
+      "PASS": true,
+      "evidence": "path=mamba_experiment/mamba600_results.json, bytes=43083, top_keys=['meta', 'F0_validity_gate', 'H1_primary', 'aggregate', 'per_seed_deltas', 'per_seed_manipulation', 'tau_s_distribution', 'worst_10_seeds']"
+    },
+    {
+      "id": "VG015",
+      "family": "round_result_json",
+      "claim": "W4 terminal result JSON exists, parses, and is >1KB",
+      "kind": "verify",
+      "expected": "parses as dict with >=3 keys and size >1024 bytes",
+      "observed": "bytes=451778, keys=8",
+      "PASS": true,
+      "evidence": "path=w4_repro/w4_results.json, bytes=451778, top_keys=['meta', 'F0_selftest', 'pilot', 'H', 'F', 'verdict', 'aggregate', 'per_seed']"
+    },
+    {
+      "id": "VG016",
+      "family": "round_result_json",
+      "claim": "W5 terminal result JSON exists, parses, and is >1KB",
+      "kind": "verify",
+      "expected": "parses as dict with >=3 keys and size >1024 bytes",
+      "observed": "bytes=9921, keys=8",
+      "PASS": true,
+      "evidence": "path=w5_srgst/w5_results.json, bytes=9921, top_keys=['meta', 'F0_validity_gate', 'aggregate', 'H', 'strata', 'F_falsification', 'CNN_control', 'verdict']"
+    },
+    {
+      "id": "VG017",
+      "family": "round_result_json",
+      "claim": "W6 terminal result JSON exists, parses, and is >1KB",
+      "kind": "verify",
+      "expected": "parses as dict with >=3 keys and size >1024 bytes",
+      "observed": "bytes=32386, keys=10",
+      "PASS": true,
+      "evidence": "path=w6_tier1/w6_results.json, bytes=32386, top_keys=['meta', 'F0', 'proposition1_rows', 'H', 'F_falsification', 'CNN_control', 'aggregate', 'strata']"
+    },
+    {
+      "id": "VG018",
+      "family": "round_result_json",
+      "claim": "W7 terminal result JSON exists, parses, and is >1KB",
+      "kind": "verify",
+      "expected": "parses as dict with >=3 keys and size >1024 bytes",
+      "observed": "bytes=30294, keys=6",
+      "PASS": true,
+      "evidence": "path=w7_60k/w7_results.json, bytes=30294, top_keys=['meta', 'F0', 'tail_60_seeds', 'P', 'convergence_trajectory', 'verdict']"
+    },
+    {
+      "id": "VG019",
+      "family": "round_result_json",
+      "claim": "W8 terminal result JSON exists, parses, and is >1KB",
+      "kind": "verify",
+      "expected": "parses as dict with >=3 keys and size >1024 bytes",
+      "observed": "bytes=2808, keys=13",
+      "PASS": true,
+      "evidence": "path=w8_dualgate/W8_FROZEN_GATE.json, bytes=2808, top_keys=['frozen_at', 'preregistration', 'exploration_set', 'candidate_grid', 'margin', 'gain_requirement', 'baseline', 'candidates']"
+    },
+    {
+      "id": "VG020",
+      "family": "round_result_json",
+      "claim": "W9 terminal result JSON exists, parses, and is >1KB",
+      "kind": "verify",
+      "expected": "parses as dict with >=3 keys and size >1024 bytes",
+      "observed": "bytes=11085, keys=6",
+      "PASS": true,
+      "evidence": "path=w9_lbst/w9_results.json, bytes=11085, top_keys=['meta', 'F0', 'H', 'F_falsification', 'aggregate', 'verdict']"
+    },
+    {
+      "id": "VG021",
+      "family": "round_result_json",
+      "claim": "W10 terminal result JSON exists, parses, and is >1KB",
+      "kind": "verify",
+      "expected": "parses as dict with >=3 keys and size >1024 bytes",
+      "observed": "bytes=19357, keys=8",
+      "PASS": true,
+      "evidence": "path=w10_continuous/w10_results.json, bytes=19357, top_keys=['meta', 'descriptive', 'vs_CERT_descriptive', 'spread_curve', 'F0', 'H', 'F_falsification', 'verdict']"
+    },
+    {
+      "id": "VG022",
+      "family": "round_result_json",
+      "claim": "W11 terminal result JSON exists, parses, and is >1KB",
+      "kind": "verify",
+      "expected": "parses as dict with >=3 keys and size >1024 bytes",
+      "observed": "bytes=448566, keys=9",
+      "PASS": true,
+      "evidence": "path=w11_theory/results/w11_theory_results.json, bytes=448566, top_keys=['prereg', 'B_MC', 'MC_seed_base', 'grid_axes', 'deltas', 'n_cells', 'verdict', 'rows']"
+    },
+    {
+      "id": "VG023",
+      "family": "round_figure",
+      "claim": "W1 has >=1 non-empty PNG with valid dimensions",
+      "kind": "verify",
+      "expected": "at least one PNG >1KB with positive width/height",
+      "observed": "n_png=5, dim_ok=True",
+      "PASS": true,
+      "evidence": "path=pari_experiment, n_png=5, first=fig_D1_imbalance.png, size=(1430, 533)"
+    },
+    {
+      "id": "VG024",
+      "family": "round_figure",
+      "claim": "W2 has >=1 non-empty PNG with valid dimensions",
+      "kind": "verify",
+      "expected": "at least one PNG >1KB with positive width/height",
+      "observed": "n_png=7, dim_ok=True",
+      "PASS": true,
+      "evidence": "path=gsgt_experiment, n_png=7, first=fig_F_falsification.png, size=(988, 546)"
+    },
+    {
+      "id": "VG025",
+      "family": "round_figure",
+      "claim": "W3 has >=1 non-empty PNG with valid dimensions",
+      "kind": "verify",
+      "expected": "at least one PNG >1KB with positive width/height",
+      "observed": "n_png=3, dim_ok=True",
+      "PASS": true,
+      "evidence": "path=mamba_experiment, n_png=3, first=fig_w3_bootstrap.png, size=(962, 520)"
+    },
+    {
+      "id": "VG026",
+      "family": "round_figure",
+      "claim": "W4 has >=1 non-empty PNG with valid dimensions",
+      "kind": "verify",
+      "expected": "at least one PNG >1KB with positive width/height",
+      "observed": "n_png=3, dim_ok=True",
+      "PASS": true,
+      "evidence": "path=w4_repro, n_png=3, first=fig_w4_gap.png, size=(988, 533)"
+    },
+    {
+      "id": "VG027",
+      "family": "round_figure",
+      "claim": "W5 has >=1 non-empty PNG with valid dimensions",
+      "kind": "verify",
+      "expected": "at least one PNG >1KB with positive width/height",
+      "observed": "n_png=2, dim_ok=True",
+      "PASS": true,
+      "evidence": "path=w5_srgst, n_png=2, first=fig_w5_falsification.png, size=(1066, 546)"
+    },
+    {
+      "id": "VG028",
+      "family": "round_figure",
+      "claim": "W6 has >=1 non-empty PNG with valid dimensions",
+      "kind": "verify",
+      "expected": "at least one PNG >1KB with positive width/height",
+      "observed": "n_png=2, dim_ok=True",
+      "PASS": true,
+      "evidence": "path=w6_tier1, n_png=2, first=fig_w6_main.png, size=(1976, 572)"
+    },
+    {
+      "id": "VG029",
+      "family": "round_figure",
+      "claim": "W7 has >=1 non-empty PNG with valid dimensions",
+      "kind": "verify",
+      "expected": "at least one PNG >1KB with positive width/height",
+      "observed": "n_png=4, dim_ok=True",
+      "PASS": true,
+      "evidence": "path=w7_60k, n_png=4, first=fig_w7_atlas.png, size=(2002, 559)"
+    },
+    {
+      "id": "VG030",
+      "family": "round_figure",
+      "claim": "W8 has >=1 non-empty PNG with valid dimensions",
+      "kind": "verify",
+      "expected": "at least one PNG >1KB with positive width/height",
+      "observed": "n_png=1, dim_ok=True",
+      "PASS": true,
+      "evidence": "path=w8_dualgate, n_png=1, first=fig_w8_gate_diagnosis.png, size=(2002, 559)"
+    },
+    {
+      "id": "VG031",
+      "family": "round_figure",
+      "claim": "W9 has >=1 non-empty PNG with valid dimensions",
+      "kind": "verify",
+      "expected": "at least one PNG >1KB with positive width/height",
+      "observed": "n_png=2, dim_ok=True",
+      "PASS": true,
+      "evidence": "path=w9_lbst, n_png=2, first=fig_w9_main.png, size=(2002, 572)"
+    },
+    {
+      "id": "VG032",
+      "family": "round_figure",
+      "claim": "W10 has >=1 non-empty PNG with valid dimensions",
+      "kind": "verify",
+      "expected": "at least one PNG >1KB with positive width/height",
+      "observed": "n_png=2, dim_ok=True",
+      "PASS": true,
+      "evidence": "path=w10_continuous, n_png=2, first=fig_w10_diagnostics.png, size=(2002, 546)"
+    },
+    {
+      "id": "VG033",
+      "family": "round_figure",
+      "claim": "W11 has >=1 non-empty PNG with valid dimensions",
+      "kind": "verify",
+      "expected": "at least one PNG >1KB with positive width/height",
+      "observed": "n_png=3, dim_ok=True",
+      "PASS": true,
+      "evidence": "path=w11_theory, n_png=3, first=fig_w11_corollaries.png, size=(1378, 546)"
+    },
+    {
+      "id": "VG034",
+      "family": "shard_exists",
+      "claim": "W7_main has >=1 npz shard",
+      "kind": "verify",
+      "expected": "n_files > 0",
+      "observed": "n_files=143",
+      "PASS": true,
+      "evidence": "folder=w7_60k/shards, n_files=143"
+    },
+    {
+      "id": "VG035",
+      "family": "shard_npz_parses",
+      "claim": "every W7_main shard is a readable npz containing key X",
+      "kind": "verify",
+      "expected": "all shards parse and contain X",
+      "observed": "ok=True, errors=[]",
+      "PASS": true,
+      "evidence": "n_files=143, errors=[]"
+    },
+    {
+      "id": "VG036",
+      "family": "shard_seed_continuity",
+      "claim": "W7_main unique seeds equal exactly [21000,80999]",
+      "kind": "verify",
+      "expected": "np.array_equal(seeds, arange(21000,80999+1))",
+      "observed": "n_unique=60000, expected=60000, exact=True",
+      "PASS": true,
+      "evidence": "n_rows=60000, n_unique=60000, min=21000, max=80999"
+    },
+    {
+      "id": "VG037",
+      "family": "shard_no_duplicate",
+      "claim": "W7_main row count matches per-seed contract (loco=3 rows/seed)",
+      "kind": "verify",
+      "expected": "n_rows == 60000 and n_unique == 60000",
+      "observed": "n_rows=60000, expected=60000, n_unique=60000",
+      "PASS": true,
+      "evidence": "n_rows=60000, n_unique=60000, expected_rows=60000"
+    },
+    {
+      "id": "VG038",
+      "family": "shard_column_count",
+      "claim": "W7_main column count matches its schema",
+      "kind": "verify",
+      "expected": "unconstrained",
+      "observed": "ncols=24, expected=None",
+      "PASS": true,
+      "evidence": "shape=(60000, 24), expected_ncols=None"
+    },
+    {
+      "id": "VG039",
+      "family": "shard_dtype",
+      "claim": "W7_main matrix dtype is float64",
+      "kind": "verify",
+      "expected": "dtype == float64",
+      "observed": "dtype=float64",
+      "PASS": true,
+      "evidence": "dtype=float64, shape=(60000, 24)"
+    },
+    {
+      "id": "VG040",
+      "family": "shard_exists",
+      "claim": "W9_main has >=1 npz shard",
+      "kind": "verify",
+      "expected": "n_files > 0",
+      "observed": "n_files=27",
+      "PASS": true,
+      "evidence": "folder=w9_lbst/shards/main, n_files=27"
+    },
+    {
+      "id": "VG041",
+      "family": "shard_npz_parses",
+      "claim": "every W9_main shard is a readable npz containing key X",
+      "kind": "verify",
+      "expected": "all shards parse and contain X",
+      "observed": "ok=True, errors=[]",
+      "PASS": true,
+      "evidence": "n_files=27, errors=[]"
+    },
+    {
+      "id": "VG042",
+      "family": "shard_seed_continuity",
+      "claim": "W9_main unique seeds equal exactly [110000,119999]",
+      "kind": "verify",
+      "expected": "np.array_equal(seeds, arange(110000,119999+1))",
+      "observed": "n_unique=10000, expected=10000, exact=True",
+      "PASS": true,
+      "evidence": "n_rows=10000, n_unique=10000, min=110000, max=119999"
+    },
+    {
+      "id": "VG043",
+      "family": "shard_no_duplicate",
+      "claim": "W9_main row count matches per-seed contract (loco=3 rows/seed)",
+      "kind": "verify",
+      "expected": "n_rows == 10000 and n_unique == 10000",
+      "observed": "n_rows=10000, expected=10000, n_unique=10000",
+      "PASS": true,
+      "evidence": "n_rows=10000, n_unique=10000, expected_rows=10000"
+    },
+    {
+      "id": "VG044",
+      "family": "shard_column_count",
+      "claim": "W9_main column count matches its schema",
+      "kind": "verify",
+      "expected": "unconstrained",
+      "observed": "ncols=37, expected=None",
+      "PASS": true,
+      "evidence": "shape=(10000, 37), expected_ncols=None"
+    },
+    {
+      "id": "VG045",
+      "family": "shard_dtype",
+      "claim": "W9_main matrix dtype is float64",
+      "kind": "verify",
+      "expected": "dtype == float64",
+      "observed": "dtype=float64",
+      "PASS": true,
+      "evidence": "dtype=float64, shape=(10000, 37)"
+    },
+    {
+      "id": "VG046",
+      "family": "shard_exists",
+      "claim": "W9_falsify has >=1 npz shard",
+      "kind": "verify",
+      "expected": "n_files > 0",
+      "observed": "n_files=2",
+      "PASS": true,
+      "evidence": "folder=w9_lbst/shards/falsify, n_files=2"
+    },
+    {
+      "id": "VG047",
+      "family": "shard_npz_parses",
+      "claim": "every W9_falsify shard is a readable npz containing key X",
+      "kind": "verify",
+      "expected": "all shards parse and contain X",
+      "observed": "ok=True, errors=[]",
+      "PASS": true,
+      "evidence": "n_files=2, errors=[]"
+    },
+    {
+      "id": "VG048",
+      "family": "shard_seed_continuity",
+      "claim": "W9_falsify unique seeds equal exactly [120000,120599]",
+      "kind": "verify",
+      "expected": "np.array_equal(seeds, arange(120000,120599+1))",
+      "observed": "n_unique=600, expected=600, exact=True",
+      "PASS": true,
+      "evidence": "n_rows=600, n_unique=600, min=120000, max=120599"
+    },
+    {
+      "id": "VG049",
+      "family": "shard_no_duplicate",
+      "claim": "W9_falsify row count matches per-seed contract (loco=3 rows/seed)",
+      "kind": "verify",
+      "expected": "n_rows == 600 and n_unique == 600",
+      "observed": "n_rows=600, expected=600, n_unique=600",
+      "PASS": true,
+      "evidence": "n_rows=600, n_unique=600, expected_rows=600"
+    },
+    {
+      "id": "VG050",
+      "family": "shard_column_count",
+      "claim": "W9_falsify column count matches its schema",
+      "kind": "verify",
+      "expected": "unconstrained",
+      "observed": "ncols=37, expected=None",
+      "PASS": true,
+      "evidence": "shape=(600, 37), expected_ncols=None"
+    },
+    {
+      "id": "VG051",
+      "family": "shard_dtype",
+      "claim": "W9_falsify matrix dtype is float64",
+      "kind": "verify",
+      "expected": "dtype == float64",
+      "observed": "dtype=float64",
+      "PASS": true,
+      "evidence": "dtype=float64, shape=(600, 37)"
+    },
+    {
+      "id": "VG052",
+      "family": "shard_exists",
+      "claim": "W10_main has >=1 npz shard",
+      "kind": "verify",
+      "expected": "n_files > 0",
+      "observed": "n_files=55",
+      "PASS": true,
+      "evidence": "folder=w10_continuous/shards/main, n_files=55"
+    },
+    {
+      "id": "VG053",
+      "family": "shard_npz_parses",
+      "claim": "every W10_main shard is a readable npz containing key X",
+      "kind": "verify",
+      "expected": "all shards parse and contain X",
+      "observed": "ok=True, errors=[]",
+      "PASS": true,
+      "evidence": "n_files=55, errors=[]"
+    },
+    {
+      "id": "VG054",
+      "family": "shard_seed_continuity",
+      "claim": "W10_main unique seeds equal exactly [130000,149999]",
+      "kind": "verify",
+      "expected": "np.array_equal(seeds, arange(130000,149999+1))",
+      "observed": "n_unique=20000, expected=20000, exact=True",
+      "PASS": true,
+      "evidence": "n_rows=20000, n_unique=20000, min=130000, max=149999"
+    },
+    {
+      "id": "VG055",
+      "family": "shard_no_duplicate",
+      "claim": "W10_main row count matches per-seed contract (loco=3 rows/seed)",
+      "kind": "verify",
+      "expected": "n_rows == 20000 and n_unique == 20000",
+      "observed": "n_rows=20000, expected=20000, n_unique=20000",
+      "PASS": true,
+      "evidence": "n_rows=20000, n_unique=20000, expected_rows=20000"
+    },
+    {
+      "id": "VG056",
+      "family": "shard_column_count",
+      "claim": "W10_main column count matches its schema",
+      "kind": "verify",
+      "expected": "ncols == 41",
+      "observed": "ncols=41, expected=41",
+      "PASS": true,
+      "evidence": "shape=(20000, 41), expected_ncols=41"
+    },
+    {
+      "id": "VG057",
+      "family": "shard_dtype",
+      "claim": "W10_main matrix dtype is float64",
+      "kind": "verify",
+      "expected": "dtype == float64",
+      "observed": "dtype=float64",
+      "PASS": true,
+      "evidence": "dtype=float64, shape=(20000, 41)"
+    },
+    {
+      "id": "VG058",
+      "family": "shard_exists",
+      "claim": "W10_loco has >=1 npz shard",
+      "kind": "verify",
+      "expected": "n_files > 0",
+      "observed": "n_files=2",
+      "PASS": true,
+      "evidence": "folder=w10_continuous/shards/loco, n_files=2"
+    },
+    {
+      "id": "VG059",
+      "family": "shard_npz_parses",
+      "claim": "every W10_loco shard is a readable npz containing key X",
+      "kind": "verify",
+      "expected": "all shards parse and contain X",
+      "observed": "ok=True, errors=[]",
+      "PASS": true,
+      "evidence": "n_files=2, errors=[]"
+    },
+    {
+      "id": "VG060",
+      "family": "shard_seed_continuity",
+      "claim": "W10_loco unique seeds equal exactly [150000,150599]",
+      "kind": "verify",
+      "expected": "np.array_equal(seeds, arange(150000,150599+1))",
+      "observed": "n_unique=600, expected=600, exact=True",
+      "PASS": true,
+      "evidence": "n_rows=1800, n_unique=600, min=150000, max=150599"
+    },
+    {
+      "id": "VG061",
+      "family": "shard_no_duplicate",
+      "claim": "W10_loco row count matches per-seed contract (loco=3 rows/seed)",
+      "kind": "verify",
+      "expected": "n_rows == 1800 and n_unique == 600",
+      "observed": "n_rows=1800, expected=1800, n_unique=600",
+      "PASS": true,
+      "evidence": "n_rows=1800, n_unique=600, expected_rows=1800"
+    },
+    {
+      "id": "VG062",
+      "family": "shard_column_count",
+      "claim": "W10_loco column count matches its schema",
+      "kind": "verify",
+      "expected": "ncols == 5",
+      "observed": "ncols=5, expected=5",
+      "PASS": true,
+      "evidence": "shape=(1800, 5), expected_ncols=5"
+    },
+    {
+      "id": "VG063",
+      "family": "shard_dtype",
+      "claim": "W10_loco matrix dtype is float64",
+      "kind": "verify",
+      "expected": "dtype == float64",
+      "observed": "dtype=float64",
+      "PASS": true,
+      "evidence": "dtype=float64, shape=(1800, 5)"
+    },
+    {
+      "id": "VG064",
+      "family": "shard_exists",
+      "claim": "W10_falsify has >=1 npz shard",
+      "kind": "verify",
+      "expected": "n_files > 0",
+      "observed": "n_files=2",
+      "PASS": true,
+      "evidence": "folder=w10_continuous/shards/falsify, n_files=2"
+    },
+    {
+      "id": "VG065",
+      "family": "shard_npz_parses",
+      "claim": "every W10_falsify shard is a readable npz containing key X",
+      "kind": "verify",
+      "expected": "all shards parse and contain X",
+      "observed": "ok=True, errors=[]",
+      "PASS": true,
+      "evidence": "n_files=2, errors=[]"
+    },
+    {
+      "id": "VG066",
+      "family": "shard_seed_continuity",
+      "claim": "W10_falsify unique seeds equal exactly [151000,151599]",
+      "kind": "verify",
+      "expected": "np.array_equal(seeds, arange(151000,151599+1))",
+      "observed": "n_unique=600, expected=600, exact=True",
+      "PASS": true,
+      "evidence": "n_rows=600, n_unique=600, min=151000, max=151599"
+    },
+    {
+      "id": "VG067",
+      "family": "shard_no_duplicate",
+      "claim": "W10_falsify row count matches per-seed contract (loco=3 rows/seed)",
+      "kind": "verify",
+      "expected": "n_rows == 600 and n_unique == 600",
+      "observed": "n_rows=600, expected=600, n_unique=600",
+      "PASS": true,
+      "evidence": "n_rows=600, n_unique=600, expected_rows=600"
+    },
+    {
+      "id": "VG068",
+      "family": "shard_column_count",
+      "claim": "W10_falsify column count matches its schema",
+      "kind": "verify",
+      "expected": "ncols == 41",
+      "observed": "ncols=41, expected=41",
+      "PASS": true,
+      "evidence": "shape=(600, 41), expected_ncols=41"
+    },
+    {
+      "id": "VG069",
+      "family": "shard_dtype",
+      "claim": "W10_falsify matrix dtype is float64",
+      "kind": "verify",
+      "expected": "dtype == float64",
+      "observed": "dtype=float64",
+      "PASS": true,
+      "evidence": "dtype=float64, shape=(600, 41)"
+    },
+    {
+      "id": "VG070",
+      "family": "core_contract_file",
+      "claim": "core file 1/12 exists and is non-empty: environment.lock",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=557",
+      "PASS": true,
+      "evidence": "path=w11_theory/repro/environment.lock, bytes=557"
+    },
+    {
+      "id": "VG071",
+      "family": "core_contract_file",
+      "claim": "core file 2/12 exists and is non-empty: SEED_MANIFEST.json",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=4116",
+      "PASS": true,
+      "evidence": "path=w11_theory/repro/SEED_MANIFEST.json, bytes=4116"
+    },
+    {
+      "id": "VG072",
+      "family": "core_contract_file",
+      "claim": "core file 3/12 exists and is non-empty: WEIGHT_HASHES.sha256",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=5971",
+      "PASS": true,
+      "evidence": "path=w11_theory/repro/WEIGHT_HASHES.sha256, bytes=5971"
+    },
+    {
+      "id": "VG073",
+      "family": "core_contract_file",
+      "claim": "core file 4/12 exists and is non-empty: CACHE_SCHEMA.json",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=2942",
+      "PASS": true,
+      "evidence": "path=w11_theory/repro/CACHE_SCHEMA.json, bytes=2942"
+    },
+    {
+      "id": "VG074",
+      "family": "core_contract_file",
+      "claim": "core file 5/12 exists and is non-empty: DIRECTION_LEDGER.json",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=9908",
+      "PASS": true,
+      "evidence": "path=w11_theory/repro/DIRECTION_LEDGER.json, bytes=9908"
+    },
+    {
+      "id": "VG075",
+      "family": "core_contract_file",
+      "claim": "core file 6/12 exists and is non-empty: preflight.py",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=7015",
+      "PASS": true,
+      "evidence": "path=w11_theory/repro/preflight.py, bytes=7015"
+    },
+    {
+      "id": "VG076",
+      "family": "core_contract_file",
+      "claim": "core file 7/12 exists and is non-empty: verify_release_results.py",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=12413",
+      "PASS": true,
+      "evidence": "path=w11_theory/repro/verify_release_results.py, bytes=12413"
+    },
+    {
+      "id": "VG077",
+      "family": "core_contract_file",
+      "claim": "core file 8/12 exists and is non-empty: REPRODUCE.md",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=5730",
+      "PASS": true,
+      "evidence": "path=w11_theory/repro/REPRODUCE.md, bytes=5730"
+    },
+    {
+      "id": "VG078",
+      "family": "core_contract_file",
+      "claim": "core file 9/12 exists and is non-empty: PREREGISTRATION_W11.md",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=11348",
+      "PASS": true,
+      "evidence": "path=w11_theory/PREREGISTRATION_W11.md, bytes=11348"
+    },
+    {
+      "id": "VG079",
+      "family": "core_contract_file",
+      "claim": "core file 10/12 exists and is non-empty: PREREGISTRATION_W11B.md",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=10667",
+      "PASS": true,
+      "evidence": "path=w11_theory/PREREGISTRATION_W11B.md, bytes=10667"
+    },
+    {
+      "id": "VG080",
+      "family": "core_contract_file",
+      "claim": "core file 11/12 exists and is non-empty: w11_final_verdict.json",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=3290",
+      "PASS": true,
+      "evidence": "path=w11_theory/results/w11_final_verdict.json, bytes=3290"
+    },
+    {
+      "id": "VG081",
+      "family": "core_contract_file",
+      "claim": "core file 12/12 exists and is non-empty: verify_release_results.json",
+      "kind": "verify",
+      "expected": "is_file() and size > 200 bytes",
+      "observed": "exists=True, bytes=6900",
+      "PASS": true,
+      "evidence": "path=w11_theory/results/verify_release_results.json, bytes=6900"
+    },
+    {
+      "id": "VG082",
+      "family": "original_12_gate_META",
+      "claim": "original gate 1/12 \"01_env_lock\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=01_env_lock, PASS=True, keys=['PASS', 'locked', 'runtime', 'mismatches']"
+    },
+    {
+      "id": "VG083",
+      "family": "original_12_gate_META",
+      "claim": "original gate 2/12 \"02_seed_manifest\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=02_seed_manifest, PASS=True, keys=['PASS', 'n_ranges', 'n_pairwise_checked', 'overlaps']"
+    },
+    {
+      "id": "VG084",
+      "family": "original_12_gate_META",
+      "claim": "original gate 3/12 \"03_prereg_complete\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=03_prereg_complete, PASS=True, keys=['PASS', 'missing', 'found']"
+    },
+    {
+      "id": "VG085",
+      "family": "original_12_gate_META",
+      "claim": "original gate 4/12 \"04_shard_integrity\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=04_shard_integrity, PASS=True, keys=['PASS', 'shard_sets']"
+    },
+    {
+      "id": "VG086",
+      "family": "original_12_gate_META",
+      "claim": "original gate 5/12 \"05_result_json\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=05_result_json, PASS=True, keys=['PASS', 'rounds']"
+    },
+    {
+      "id": "VG087",
+      "family": "original_12_gate_META",
+      "claim": "original gate 6/12 \"06_code_hash\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=06_code_hash, PASS=True, keys=['PASS', 'n_listed', 'mismatches', 'missing_files', 'uncovered_py', 'n_uncovered']"
+    },
+    {
+      "id": "VG088",
+      "family": "original_12_gate_META",
+      "claim": "original gate 7/12 \"07_figure_existence\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=07_figure_existence, PASS=True, keys=['PASS', 'rounds']"
+    },
+    {
+      "id": "VG089",
+      "family": "original_12_gate_META",
+      "claim": "original gate 8/12 \"08_cache_schema\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=08_cache_schema, PASS=True, keys=['PASS', 'missing', 'n_invariants', 'blocked_until']"
+    },
+    {
+      "id": "VG090",
+      "family": "original_12_gate_META",
+      "claim": "original gate 9/12 \"09_preflight_7of7\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=09_preflight_7of7, PASS=True, keys=['PASS', 'returncode', 'n_pass', 'stdout_tail']"
+    },
+    {
+      "id": "VG091",
+      "family": "original_12_gate_META",
+      "claim": "original gate 10/12 \"10_no_overclaim\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=10_no_overclaim, PASS=True, keys=['PASS', 'n_md_scanned', 'violations', 'n_violations']"
+    },
+    {
+      "id": "VG092",
+      "family": "original_12_gate_META",
+      "claim": "original gate 11/12 \"11_direction_ledger\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=11_direction_ledger, PASS=True, keys=['PASS', 'n_entries', 'n_negative_or_falsified', 'rounds_covered', 'n_rounds']"
+    },
+    {
+      "id": "VG093",
+      "family": "original_12_gate_META",
+      "claim": "original gate 12/12 \"12_one_command_reproduce\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "gate=12_one_command_reproduce, PASS=True, keys=['PASS', 'equivalent_verification', 'command_documented', 'previous_gates_all_pass']"
+    },
+    {
+      "id": "VG094",
+      "family": "W11_theory_field",
+      "claim": "w11_theory_results.json field \"prereg\" (1/10) has the frozen value",
+      "kind": "verify",
+      "expected": "frozen condition for prereg",
+      "observed": "condition true",
+      "PASS": true,
+      "evidence": "field=prereg, value=PREREGISTRATION_W11.md v1.0 (frozen)"
+    },
+    {
+      "id": "VG095",
+      "family": "W11_theory_field",
+      "claim": "w11_theory_results.json field \"B_MC\" (2/10) has the frozen value",
+      "kind": "verify",
+      "expected": "frozen condition for B_MC",
+      "observed": "condition true",
+      "PASS": true,
+      "evidence": "field=B_MC, value=2000"
+    },
+    {
+      "id": "VG096",
+      "family": "W11_theory_field",
+      "claim": "w11_theory_results.json field \"MC_seed_base\" (3/10) has the frozen value",
+      "kind": "verify",
+      "expected": "frozen condition for MC_seed_base",
+      "observed": "condition true",
+      "PASS": true,
+      "evidence": "field=MC_seed_base, value=20261106"
+    },
+    {
+      "id": "VG097",
+      "family": "W11_theory_field",
+      "claim": "w11_theory_results.json field \"n_cells\" (4/10) has the frozen value",
+      "kind": "verify",
+      "expected": "frozen condition for n_cells",
+      "observed": "condition true",
+      "PASS": true,
+      "evidence": "field=n_cells, value=576"
+    },
+    {
+      "id": "VG098",
+      "family": "W11_theory_field",
+      "claim": "w11_theory_results.json field \"grid_axes.G\" (5/10) has the frozen value",
+      "kind": "verify",
+      "expected": "frozen condition for grid_axes.G",
+      "observed": "condition true",
+      "PASS": true,
+      "evidence": "field=grid_axes.G, value=[4, 8, 16, 32, 64, 128]"
+    },
+    {
+      "id": "VG099",
+      "family": "W11_theory_field",
+      "claim": "w11_theory_results.json field \"grid_axes.deff\" (6/10) has the frozen value",
+      "kind": "verify",
+      "expected": "frozen condition for grid_axes.deff",
+      "observed": "condition true",
+      "PASS": true,
+      "evidence": "field=grid_axes.deff, value=[1.0, 1.5, 1.944, 3.0]"
+    },
+    {
+      "id": "VG100",
+      "family": "W11_theory_field",
+      "claim": "w11_theory_results.json field \"deltas\" (7/10) has the frozen value",
+      "kind": "verify",
+      "expected": "frozen condition for deltas",
+      "observed": "condition true",
+      "PASS": true,
+      "evidence": "field=deltas, value={'half_gap': 0.5, 'gap': 1.0, 'double_gap': 2.0}"
+    },
+    {
+      "id": "VG101",
+      "family": "W11_theory_field",
+      "claim": "w11_theory_results.json field \"rows_length\" (8/10) has the frozen value",
+      "kind": "verify",
+      "expected": "frozen condition for rows_length",
+      "observed": "condition true",
+      "PASS": true,
+      "evidence": "field=rows_length, value=nested"
+    },
+    {
+      "id": "VG102",
+      "family": "W11_theory_field",
+      "claim": "w11_theory_results.json field \"verdict.n_pass\" (9/10) has the frozen value",
+      "kind": "verify",
+      "expected": "frozen condition for verdict.n_pass",
+      "observed": "condition true",
+      "PASS": true,
+      "evidence": "field=verdict.n_pass, value=nested"
+    },
+    {
+      "id": "VG103",
+      "family": "W11_theory_field",
+      "claim": "w11_theory_results.json field \"exact_checks\" (10/10) has the frozen value",
+      "kind": "verify",
+      "expected": "frozen condition for exact_checks",
+      "observed": "condition true",
+      "PASS": true,
+      "evidence": "field=exact_checks, value={'T1_max_rel_error': 2.052551519132908e-12, 'T3_max_rel_error': 2.29569109665588e-14, 'A5_lower_bound_frac': 1.0, 'A5_no"
+    },
+    {
+      "id": "VG104",
+      "family": "environment_lock_field",
+      "claim": "lock field \"python\" (1/10) is present and matches runtime where applicable",
+      "kind": "verify",
+      "expected": "non-empty AND version matches runtime (for python/numpy/scipy/matplotlib)",
+      "observed": "value=\"3.10.12\", present=True, runtime_match=True",
+      "PASS": true,
+      "evidence": "field=python, locked=\"3.10.12\", runtime=\"3.10.12\""
+    },
+    {
+      "id": "VG105",
+      "family": "environment_lock_field",
+      "claim": "lock field \"platform\" (2/10) is present and matches runtime where applicable",
+      "kind": "verify",
+      "expected": "non-empty AND version matches runtime (for python/numpy/scipy/matplotlib)",
+      "observed": "value=\"Linux-6.6.69-cube.bm.guest.005.x-g039db8913c80-x86_64-with-glibc2.35\", present=True, runtime_match=True",
+      "PASS": true,
+      "evidence": "field=platform, locked=\"Linux-6.6.69-cube.bm.guest.005.x-g039db8913c80-x86_64-with-glibc2.35\", runtime=\"n/a (non-version field)\""
+    },
+    {
+      "id": "VG106",
+      "family": "environment_lock_field",
+      "claim": "lock field \"machine\" (3/10) is present and matches runtime where applicable",
+      "kind": "verify",
+      "expected": "non-empty AND version matches runtime (for python/numpy/scipy/matplotlib)",
+      "observed": "value=\"x86_64\", present=True, runtime_match=True",
+      "PASS": true,
+      "evidence": "field=machine, locked=\"x86_64\", runtime=\"n/a (non-version field)\""
+    },
+    {
+      "id": "VG107",
+      "family": "environment_lock_field",
+      "claim": "lock field \"numpy\" (4/10) is present and matches runtime where applicable",
+      "kind": "verify",
+      "expected": "non-empty AND version matches runtime (for python/numpy/scipy/matplotlib)",
+      "observed": "value=\"2.2.6\", present=True, runtime_match=True",
+      "PASS": true,
+      "evidence": "field=numpy, locked=\"2.2.6\", runtime=\"2.2.6\""
+    },
+    {
+      "id": "VG108",
+      "family": "environment_lock_field",
+      "claim": "lock field \"scipy\" (5/10) is present and matches runtime where applicable",
+      "kind": "verify",
+      "expected": "non-empty AND version matches runtime (for python/numpy/scipy/matplotlib)",
+      "observed": "value=\"1.15.3\", present=True, runtime_match=True",
+      "PASS": true,
+      "evidence": "field=scipy, locked=\"1.15.3\", runtime=\"1.15.3\""
+    },
+    {
+      "id": "VG109",
+      "family": "environment_lock_field",
+      "claim": "lock field \"matplotlib\" (6/10) is present and matches runtime where applicable",
+      "kind": "verify",
+      "expected": "non-empty AND version matches runtime (for python/numpy/scipy/matplotlib)",
+      "observed": "value=\"3.10.9\", present=True, runtime_match=True",
+      "PASS": true,
+      "evidence": "field=matplotlib, locked=\"3.10.9\", runtime=\"3.10.9\""
+    },
+    {
+      "id": "VG110",
+      "family": "environment_lock_field",
+      "claim": "lock field \"pillow\" (7/10) is present and matches runtime where applicable",
+      "kind": "verify",
+      "expected": "non-empty AND version matches runtime (for python/numpy/scipy/matplotlib)",
+      "observed": "value=\"10.4.0\", present=True, runtime_match=True",
+      "PASS": true,
+      "evidence": "field=pillow, locked=\"10.4.0\", runtime=\"n/a (non-version field)\""
+    },
+    {
+      "id": "VG111",
+      "family": "environment_lock_field",
+      "claim": "lock field \"blas_threads_policy\" (8/10) is present and matches runtime where applicable",
+      "kind": "verify",
+      "expected": "non-empty AND version matches runtime (for python/numpy/scipy/matplotlib)",
+      "observed": "value=\"OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1\", present=True, runtime_match=True",
+      "PASS": true,
+      "evidence": "field=blas_threads_policy, locked=\"OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1\", runtime=\"n/a (non-version field)\""
+    },
+    {
+      "id": "VG112",
+      "family": "environment_lock_field",
+      "claim": "lock field \"font\" (9/10) is present and matches runtime where applicable",
+      "kind": "verify",
+      "expected": "non-empty AND version matches runtime (for python/numpy/scipy/matplotlib)",
+      "observed": "value=\"WenQuanYi Micro Hei\", present=True, runtime_match=True",
+      "PASS": true,
+      "evidence": "field=font, locked=\"WenQuanYi Micro Hei\", runtime=\"n/a (non-version field)\""
+    },
+    {
+      "id": "VG113",
+      "family": "environment_lock_field",
+      "claim": "lock field \"timezone\" (10/10) is present and matches runtime where applicable",
+      "kind": "verify",
+      "expected": "non-empty AND version matches runtime (for python/numpy/scipy/matplotlib)",
+      "observed": "value=\"Asia/Shanghai (UTC+8)\", present=True, runtime_match=True",
+      "PASS": true,
+      "evidence": "field=timezone, locked=\"Asia/Shanghai (UTC+8)\", runtime=\"n/a (non-version field)\""
+    },
+    {
+      "id": "VG114",
+      "family": "original_7_preflight_META",
+      "claim": "original preflight item 1/7 \"1_patient_level_disjoint\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "item=1_patient_level_disjoint, PASS=True, keys=['PASS', 'n_groups', 'n_patients', 'n_records', 'n_unique_sum_per_group', 'groups_pairwise_patient_disjoint']"
+    },
+    {
+      "id": "VG115",
+      "family": "original_7_preflight_META",
+      "claim": "original preflight item 2/7 \"2_lead_alignment_by_name\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "item=2_lead_alignment_by_name, PASS=True, keys=['PASS', 'rule', 'n_leads', 'mimic_aVF_aVL_issue_declared']"
+    },
+    {
+      "id": "VG116",
+      "family": "original_7_preflight_META",
+      "claim": "original preflight item 3/7 \"3_CODE15_not_confident_negative\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "item=3_CODE15_not_confident_negative, PASS=True, keys=['PASS', 'code15_rule', 'clinical_review_required']"
+    },
+    {
+      "id": "VG117",
+      "family": "original_7_preflight_META",
+      "claim": "original preflight item 4/7 \"4_deff_and_n_eff\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "item=4_deff_and_n_eff, PASS=True, keys=['PASS', 'W10_mean_deff', 'deff_from_ICC_formula', 'n_eff_over_n', 'note']"
+    },
+    {
+      "id": "VG118",
+      "family": "original_7_preflight_META",
+      "claim": "original preflight item 5/7 \"5_seed_ranges_disjoint\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "item=5_seed_ranges_disjoint, PASS=True, keys=['PASS', 'n_ranges', 'overlaps', 'n_mismatches']"
+    },
+    {
+      "id": "VG119",
+      "family": "original_7_preflight_META",
+      "claim": "original preflight item 6/7 \"6_cache_schema_complete\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "item=6_cache_schema_complete, PASS=True, keys=['PASS', 'missing_fields', 'not_marked_required', 'n_invariants', 'status']"
+    },
+    {
+      "id": "VG120",
+      "family": "original_7_preflight_META",
+      "claim": "original preflight item 7/7 \"7_code_hash_consistency\" is recorded as PASS",
+      "kind": "meta",
+      "expected": "recorded PASS == true",
+      "observed": "PASS=True",
+      "PASS": true,
+      "evidence": "item=7_code_hash_consistency, PASS=True, keys=['PASS', 'n_files', 'mismatches']"
+    }
+  ],
+  "original_verdicts_untouched": {
+    "W11_theory": "4/6",
+    "preflight": "7/7",
+    "verify_release_results": 12,
+    "verify_total": 12
+  }
+}

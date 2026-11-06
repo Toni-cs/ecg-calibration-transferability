@@ -1,0 +1,55 @@
+{
+  "prereg": "PREREGISTRATION_W11.md v1.0 (frozen before execution)",
+  "date": "2026-11-06",
+  "scope": "W11 = non-asymptotic theory + patient repeated-measure formalisation + third-party reproduction package. Synthetic layer only.",
+  "theory": {
+    "source": "results/w11_theory_results.json",
+    "n_grid_cells": 576,
+    "B_MC_per_cell": 2000,
+    "n_pass": 4,
+    "n_checks": 6,
+    "passed": ["A1_T1_exact", "A2_T2_validity", "A4_T3_exact", "A6_W10_alignment"],
+    "not_passed": ["A3_T2_slope", "A5_T4_gap"],
+    "descriptive_only": ["A7_nonidentifiable"],
+    "headline": "T1/T3 exact identities verified to 1e-12; T2 bound valid but vacuous in 538/576 cells; T3 correctly predicts W10-M1's mean-gain loss."
+  },
+  "reproduction": {
+    "preflight": "7/7 PASS (results/preflight_results.json)",
+    "verify_release_results": "12/12 PASS (results/verify_release_results.json)",
+    "gate10_first_run": "FAIL (1 violation: historical table header '架构 SOTA（已发表）' in 成功论文架构漏洞与补洞报告.md line 32). Fixed by rewording to '已发表前沿架构' (a description of OTHERS' published work, not a self-claim), then re-run 12/12. The fix is a document accuracy correction, NOT a change to the frozen gate. Both runs retained in the audit trail.",
+    "n_md_scanned": 33,
+    "n_code_files_hash_pinned": 56,
+    "n_direction_ledger_entries": 55,
+    "contract_only": true,
+    "no_real_patient_data": true
+  },
+  "combined": {
+    "judged_items": 7,
+    "judged_items_passed": 5,
+    "breakdown": "theory 4/6 + reproduction A8 1/1; A7 descriptive, not judged",
+    "no_v1_1": true,
+    "stop_conditions": "A3/A5 not passed are reported verbatim; theorem statements, bounds, grid and criteria unchanged; C1 tighter bound reported as EXPLORATORY only"
+  },
+  "theorems_delivered": [
+    "T1 exact quadratic excess-risk decomposition (deterministic)",
+    "T2 non-asymptotic domination-failure bound P(R_hetero(lambda_hat) > R_homo) <= min(1, V/(gap*tau2)), V = 2[(G-2)M2+vbar^2]/(G-1)^2",
+    "T3 deterministic excess risk under misspecified noise scale c = deff",
+    "T4 Jensen gap under sigma2_g = deff/n_g, non-monotone in deff, with rigorous lower bound"
+  ],
+  "patient_repeated_measures": {
+    "formalised_as": "sigma2_g = deff/n_g, deff = 1+(mbar-1)*ICC",
+    "W10_measured_deff": 1.9442294978193473,
+    "T3_prediction": "using c=1.944 when true c=1 gives positive excess risk (mean 0.00309 in the W10 regime)",
+    "W10_observation": "A(M1)-A(HB) = +0.0042335342244839876",
+    "directions_agree": true
+  },
+  "stage_status": "SYNTHETIC LAYER CAPPED. W12 real cohort blocked by PhysioNet credentialed DUA; W13 blocked by clinical + biostat collaborators, target-journal list, third-party independent reproduction.",
+  "does_not_claim_tier1": true,
+  "honesty": [
+    "A4 assumes the pooled centre log T_global is known; the bound does NOT cover finite-centre estimation error",
+    "A5 Gaussianity is used only for the closed form of Var(S2hat)",
+    "sigma2_g = deff/n_g is a MODELLING ASSUMPTION of the W6-W10 synthetic DGP, not estimated from real ECG",
+    "All W1-W11 results are internal synthetic experiments, not published algorithms or SOTA",
+    "12/12 PASS is a reproduction-package check, NOT peer review, NOT a tier-1 result"
+  ]
+}
